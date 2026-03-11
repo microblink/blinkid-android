@@ -3,14 +3,17 @@ package com.microblink.blinkid.sample.utils
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.microblink.blinkid.core.BlinkIdSdk
 import com.microblink.blinkid.core.BlinkIdSdkSettings
 import com.microblink.blinkid.core.session.BlinkIdScanningResult
 import com.microblink.blinkid.sample.config.BlinkIdConfig.licenseKey
 import com.microblink.blinkid.sample.result.BlinkIdResultHolder
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 
 private const val TAG = "MainViewModel"
 
@@ -66,12 +69,15 @@ class MainViewModel : ViewModel() {
     }
 
     private fun unloadSdk() {
-        try {
-            // don't delete cached resources
-            localSdk?.close()
-        } catch (_: Exception) {
-            Log.w(TAG, "SDK is already closed")
-        }
+        val sdkToClose = localSdk
         localSdk = null
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                // don't delete cached resources
+                sdkToClose?.close()
+            } catch (_: Exception) {
+                Log.w(TAG, "SDK is already closed")
+            }
+        }
     }
 }

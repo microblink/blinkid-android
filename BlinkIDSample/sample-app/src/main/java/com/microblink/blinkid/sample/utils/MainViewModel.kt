@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.microblink.blinkid.core.BlinkIdSdk
 import com.microblink.blinkid.core.BlinkIdSdkSettings
 import com.microblink.blinkid.core.session.BlinkIdScanningResult
@@ -17,9 +18,11 @@ import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
 import com.microblink.core.session.InputImageSource
 import com.microblink.ux.UiSettings
 import com.microblink.ux.camera.CameraSettings
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds
 
@@ -92,12 +95,15 @@ class MainViewModel : ViewModel() {
     }
 
     private fun unloadSdk() {
-        try {
-            // don't delete cached resources
-            localSdk?.close()
-        } catch (_: Exception) {
-            Log.w(TAG, "SDK is already closed")
-        }
+        val sdkToClose = localSdk
         localSdk = null
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                // don't delete cached resources
+                sdkToClose?.close()
+            } catch (_: Exception) {
+                Log.w(TAG, "SDK is already closed")
+            }
+        }
     }
 }
