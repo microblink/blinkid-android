@@ -22,6 +22,7 @@ import com.microblink.ux.state.UiScanningSide
 import com.microblink.ux.utils.ErrorReason
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.Default
+import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -160,7 +161,9 @@ class BlinkIdAnalyzer(
     override fun close() {
         session?.also { s ->
             session = null
-            s.close()
+            CoroutineScope(IO).launch {
+                s.close()
+            }
         }
     }
 }
