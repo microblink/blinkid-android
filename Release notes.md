@@ -1,5 +1,12 @@
 # Release notes
 
+## v7.7.1
+
+### What's new
+- Improved SDK and session shutdown behavior, and removed misleading warning logs during normal cleanup
+- Improved analytics reporting
+- Improved SDK initialization to help reduce failures
+
 ## v7.7.0
 
 ### What's new
