@@ -67,7 +67,7 @@ Add _BlinkID_ as a dependency in module level `build.gradle(.kts)`:
 
 ```
 dependencies {
-    implementation("com.microblink:blinkid-ux:7.7.0")
+    implementation("com.microblink:blinkid-ux:7.7.1")
 }
 ```
 
@@ -489,7 +489,7 @@ Add _blinkid-core_ library as a dependency in module level `build.gradle(.kts)`:
 
 ```
 dependencies {
-    implementation("com.microblink:blinkid-core:7.7.0")
+    implementation("com.microblink:blinkid-core:7.7.1")
 }
 ```
 
