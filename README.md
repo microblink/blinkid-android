@@ -1,5 +1,5 @@
 <p align="center" >
-  <img src="https://raw.githubusercontent.com/wiki/Microblink/blinkid-android/images/logo-microblink.png" alt="Microblink" title="Microblink">
+  <img src="https://raw.githubusercontent.com/wiki/microblink/blinkid-android/images/logo-microblink.png" alt="Microblink" title="Microblink">
 </p>
 
 # BlinkID SDK for Android
@@ -161,7 +161,7 @@ android {
 
 # <a name="pre-bundling-resources"></a> Pre-bundling the SDK resources into your app
 
-If you want to reduce the SDK startup time and network traffic, you have the option to pre-bundle the SDK resources as assets into your application. All required resources are located in [libs/resources/assets/microblink/blinkid](https://github.com/Microblink/blinkid-android/tree/master/libs/resources/assets/microblink/blinkid) folder. You can bundle it to your application by including the mentioned folder to application's assets. Copy the mentioned `libs/resources/assets/microblink` directory to `src/main/assets` folder of your application module (or appropriate folder for desired app flavor).
+If you want to reduce the SDK startup time and network traffic, you have the option to pre-bundle the SDK resources as assets into your application. All required resources are located in [libs/resources/assets/microblink/blinkid](https://github.com/microblink/blinkid-android/tree/master/libs/resources/assets/microblink/blinkid) folder. You can bundle it to your application by including the mentioned folder to application's assets. Copy the mentioned `libs/resources/assets/microblink` directory to `src/main/assets` folder of your application module (or appropriate folder for desired app flavor).
 
 Use `BlinkIdSdkSettings` to set the following options when instantiating the SDK:
 
@@ -210,11 +210,11 @@ When using the `BlinkIdCameraScanningScreen` composable, device rotation trigger
 Almost every UI element can be easily modified in many different ways (color, size, font, background). This chapter provides basic guides regarding each implementation method.
 
 <p align="center" >
-  <img src="https://raw.githubusercontent.com/wiki/Microblink/blinkid-android/images/blinkid_v7_ui_customizations.png" alt="BlinkID SDK">
+  <img src="https://raw.githubusercontent.com/wiki/microblink/blinkid-android/images/blinkid_v7_ui_customizations.png" alt="BlinkID SDK">
 </p>
 
 <p align="center" >
-  <img src="https://raw.githubusercontent.com/wiki/Microblink/blinkid-android/images/blinkid_v7_dialog_customizations.png" alt="BlinkID SDK">
+  <img src="https://raw.githubusercontent.com/wiki/microblink/blinkid-android/images/blinkid_v7_dialog_customizations.png" alt="BlinkID SDK">
 </p>
 
 ## <a name="simple-customizations"></a> Simple customizations
