@@ -282,7 +282,7 @@ val blinkIdLauncher = rememberLauncherForActivityResult(
 #### Old (BlinkID):
 
 Old BlinkID offered several ways of custom UI integration through resource and UI customization.
-More info can be found here [on our GitHub page](https://github.com/BlinkID/blinkid-android/tree/v6.13.0?tab=readme-ov-file#-blinkid-sdk-integration-levels).
+More info can be found here [on our GitHub page](https://github.com/Microblink/blinkid-android/tree/v6.13.0?tab=readme-ov-file#-blinkid-sdk-integration-levels).
 
 #### New (BlinkID):
 
