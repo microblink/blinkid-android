@@ -1,6 +1,6 @@
 Before opening an issue, check that you are using the latest version of the BlinkID SDK.
 
-Also, make sure your issue isn't on [the list of common problems.](https://github.com/BlinkID/blinkid-android#-faq-and-known-issues)
+Also, make sure your issue isn't on [the list of common problems.](https://github.com/Microblink/blinkid-android#-faq-and-known-issues)
 
 ---
 
@@ -22,7 +22,7 @@ Please try to provide steps to reproduce the issue, or minimal code sample. It w
 
 ### Log file
 
-Please enable logging by following instructions [here](https://github.com/BlinkID/blinkid-android#other-problems) and attach full log file.
+Please enable logging by following instructions [here](https://github.com/Microblink/blinkid-android#other-problems) and attach full log file.
 
 ### Additional information
 

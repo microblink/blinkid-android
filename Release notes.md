@@ -262,7 +262,7 @@ These changes were introduced to make the transition to future BlinkID v8000 SDK
 - Camera selection setting is now available for our integrated scanning solutions through `CameraSettings`
 - Torch button is now not shown on devices and cameras that do not support it
 - Accessibility improvements regarding `TalkBack` and navigation
-- 33 new languages (Full list [here](https://github.com/BlinkID/blinkid-android?tab=readme-ov-file#-new-languages-v76))
+- 33 new languages (Full list [here](https://github.com/Microblink/blinkid-android?tab=readme-ov-file#-new-languages-v76))
 - Changed default `tiltDetectionLevel` from `Off` to `Mid`
 #### UI/UX bugs and fixes
 - The correct color from `MaterialTheme` is now applied to the loading screen
@@ -520,7 +520,7 @@ We’re excited to introduce BlinkID v7, a major upgrade designed to simplify yo
   - `...`
 
 ### Plan Your Upgrade
-We have prepared a [Transition Guide](https://github.com/BlinkID/blinkid-android/blob/master/Transition%20guide.md) to help you get started with BlinkID v7.0. It outlines all major API changes and best practices for migrating existing code. Read the transition guide here. For any questions or feedback, reach out to support@microblink.com. We value your input and look forward to hearing how BlinkID v7 improves your app’s experience!
+We have prepared a [Transition Guide](https://github.com/Microblink/blinkid-android/blob/master/Transition%20guide.md) to help you get started with BlinkID v7.0. It outlines all major API changes and best practices for migrating existing code. Read the transition guide here. For any questions or feedback, reach out to support@microblink.com. We value your input and look forward to hearing how BlinkID v7 improves your app’s experience!
 
 ## v6.13.0
 
@@ -2616,7 +2616,7 @@ If you’re using built-in activities, when `onActivityResult` is called with `R
 		- `enableMrzVisa` lets you scan MRZ on visa documents.
 		- `enableMrzPassport` lets you scan MRZ on passports.
 		- `enablePhotoId` lets you scan photo IDs. Use it to enable or disable document and face image extraction on unsupported documents.
-		- `enableFullRecognition` lets you scan all data from our [supported](https://github.com/BlinkID/blinkid-android/blob/master/documentation/BlinkIDRecognizer.md) documents.
+		- `enableFullRecognition` lets you scan all data from our [supported](https://github.com/Microblink/blinkid-android/blob/master/documentation/BlinkIDRecognizer.md) documents.
 		- Your license key still controls which of the above recognition modes are allowed.
 	- We have added a `RecognitionMode` result member describing which recognition mode was used to produce the results.
 	-  We are now retrieving sex and nationality fields from the MRZ in cases where those two fields cannot be found in the document’s VIZ. Previously, we only used to do this for dates, name fields and document numbers.
@@ -2631,7 +2631,7 @@ If you’re using built-in activities, when `onActivityResult` is called with `R
 
 ## Bug fixes:
 - We fixed an issue in default UI that was causing reticle to reappear while card flip animation was showing.
-- We fixed [Issue #220](https://github.com/BlinkID/blinkid-android/issues/220)  - methods marked with `@NonNull` no longer return `null`.
+- We fixed [Issue #220](https://github.com/Microblink/blinkid-android/issues/220)  - methods marked with `@NonNull` no longer return `null`.
 
 ## 5.6.0
 
@@ -2929,7 +2929,7 @@ We distribute SDK with **ARMv7**, **ARM64**, and **x86** native library binaries
 ### New features:
 
 - added 38 new documents for `BlinkIdRecognizer` and `BlinkIdCombinedRecognizer`: Algeria ID, Argentina DL, Australia Victoria DL, Australia Queensland DL, Australia Western Australia DL, Belgium Resident ID, Canada British Columbia DL, Canada Ontario DL, Canada Quebec DL, Cyprus ID, Czechia DL, Czechia ID, Egypt ID, Greece DL, India ID, India Pan Card, Israel DL, Malaysia MyKid, Malaysia MyTentera, Maldives ID, Morocco ID, Nigeria DL, Paraguay ID, Portugal DL, Puerto Rico DL, Qatar DL, Russia DL, Singapore Fin Card, Singapore Resident ID, Slovakia DL, Slovenia DL, South Africa DL, South Africa ID, Thailand ID, Tunisia ID, UAE DL, Uganda ID and Vietnam ID.
-Details on each new document and the complete list of the supported documents is [here](https://github.com/BlinkID/blinkid-android/blob/cf93a77081a1f92806255ca44292c28f2989c472/documentation/BlinkIDRecognizer.md).
+Details on each new document and the complete list of the supported documents is [here](https://github.com/Microblink/blinkid-android/blob/cf93a77081a1f92806255ca44292c28f2989c472/documentation/BlinkIDRecognizer.md).
 
 ### Improvements:
 
@@ -2988,13 +2988,13 @@ One of the main benefits that BlinkID v5 will bring is scalability and faster su
 
 BlinkID v5 mobile SDK release is currently available for native platforms.
 
-- It’s advisable to get familiar with the range of supported document types. We will keep adding support for new documents and regularly update [the list on Github](https://github.com/BlinkID/blinkid-android/blob/master/documentation/BlinkIDRecognizer.md).
+- It’s advisable to get familiar with the range of supported document types. We will keep adding support for new documents and regularly update [the list on Github](https://github.com/Microblink/blinkid-android/blob/master/documentation/BlinkIDRecognizer.md).
 - If currently supported document types are not yet supported in BlinkID v5 please follow future releases.
 - To upgrade to BlinkID v5, you will need to obtain a new license key specifically for the document types that you require.
 - Already licensed production keys will continue to work as usual, until you decide to upgrade.
 - What if you require document types supported in the previous version (and not yet added in BlinkID v5) and another document type supported in BlinkID v5? That’s manageable, and in that case, we will create a custom build for you.
 
-We strongly recommend checking the [list of supported document types](https://github.com/BlinkID/blinkid-android/blob/master/documentation/BlinkIDRecognizer.md) regularly. Please star and watch this repository, and take the time to test BlinkID v5 as much as possible.
+We strongly recommend checking the [list of supported document types](https://github.com/Microblink/blinkid-android/blob/master/documentation/BlinkIDRecognizer.md) regularly. Please star and watch this repository, and take the time to test BlinkID v5 as much as possible.
 
 Your opinion, especially on the performance and redesigned UX is very important for future developments. We would appreciate your feedback at blinkid@microblink.com.
 
@@ -3015,7 +3015,7 @@ Your opinion, especially on the performance and redesigned UX is very important 
 
 ### New features:
 
-- `BlinkIdRecognizer` and `BlinkIdCombinedRecognizer` now support new document types from different countries, all supported document types are listed [here](https://github.com/BlinkID/blinkid-android/blob/c76754bf6dcd1f6c9d39bb1fefe613273dd701f2/documentation/BlinkIDRecognizer.md)
+- `BlinkIdRecognizer` and `BlinkIdCombinedRecognizer` now support new document types from different countries, all supported document types are listed [here](https://github.com/Microblink/blinkid-android/blob/c76754bf6dcd1f6c9d39bb1fefe613273dd701f2/documentation/BlinkIDRecognizer.md)
 
 ### Minor API changes:
 - in combined recognizers results, `documentDataMatch` value is now returned as `DataMatchResult` enum with three possible values: `NotPerformed`,  `Failed` and `Success`
@@ -3062,7 +3062,7 @@ Your opinion, especially on the performance and redesigned UX is very important 
 ### New features:
 - added `BlinkIdRecognizer` for scanning front side of ID cards and `BlinkIdCombinedRecognizer` for combined scanning of front and back side of ID cards
     - for now, these recognizers classify and extract data from **87** different classes of **United States driver's licenses and IDs** (front and back side)
-    - list of all supported document types can be found [here](https://github.com/BlinkID/blinkid-android/blob/d2112fa823377ec932e0c3f123dfc1a8fbdb4e3c/documentation/BlinkIDRecognizer.md)
+    - list of all supported document types can be found [here](https://github.com/Microblink/blinkid-android/blob/d2112fa823377ec932e0c3f123dfc1a8fbdb4e3c/documentation/BlinkIDRecognizer.md)
     - in the upcoming releases, we are planning to add support for more document types from different countries
 - completely new UX for scanning ID cards with new scan activity and overlay: `BlinkIdActivity` and `BlinkIdOverlayController`:
     -  best suited for scanning with `BlinkIdRecognizer` and `BlinkIdCombinedRecognizer`
