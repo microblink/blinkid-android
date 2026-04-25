@@ -355,5 +355,5 @@ Any modifications to classes which do not have this exact header are not allowed
 
 ## Support and Resources
 
-- For API documentation: Visit the BlinkID SDK [Android API](https://blinkid.github.io/blinkid-android/index.html) docs.
+- For API documentation: Visit the BlinkID SDK [Android API](https://microblink.github.io/blinkid-android/index.html) docs.
 - For support: Contact technical support through the support portal

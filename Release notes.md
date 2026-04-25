@@ -2460,7 +2460,7 @@ We added support for scanning the visual inspection zone - VIZ includes everythi
 * **Sweden** Passport
 * **Turkey** Passport (BETA)
 
-If you need to scan the MRZ only, you can always set the "MRZ Passport" [recognition mode](https://blinkid.github.io/blinkid-android/com/microblink/entities/recognizers/blinkid/generic/RecognitionModeFilter.html#enableMrzPassport).
+If you need to scan the MRZ only, you can always set the "MRZ Passport" [recognition mode](https://microblink.github.io/blinkid-android/com/microblink/entities/recognizers/blinkid/generic/RecognitionModeFilter.html#enableMrzPassport).
 ​
 #### Vertical US documents
 
@@ -4118,7 +4118,7 @@ For any questions, you might have, we stand at your service.
 
 ## 2.1.0
 - added Detector Recognizer which gives you ability to use one of provided detectors to obtain location of object in camera frame or in image
-- improved performance of conversion of [Image](https://blinkid.github.io/blinkid-android/com/microblink/image/Image.html) object into Bitmap
+- improved performance of conversion of [Image](https://microblink.github.io/blinkid-android/com/microblink/image/Image.html) object into Bitmap
 - added support for obtaining image of scanned MyKad document
 - added support for obtaining image of scanned UKDL document
 - added support for scanning MyKad document via DirectAPI
@@ -4195,16 +4195,16 @@ For any questions, you might have, we stand at your service.
 - utilize Camera2 API on devices that support it to achieve much better frame grabbing performance
 - new algorithm for determining which video frame is of good enough quality to be processed - it uses much less memory than last one and works in separate thread so it does not impact image recognition thread
 	- this results in much better and faster scanning performance
-- support for [defining camera metering areas](https://blinkid.github.io/blinkid-android/com/microblink/view/BaseCameraView.html#setMeteringAreas(com.microblink.geometry.Rectangle[])) that will camera use to perform focus, exposure and white balance measurement.
+- support for [defining camera metering areas](https://microblink.github.io/blinkid-android/com/microblink/view/BaseCameraView.html#setMeteringAreas(com.microblink.geometry.Rectangle[])) that will camera use to perform focus, exposure and white balance measurement.
 - support for obtaining raw MRZ text even if our internal parser fails to parse it
-	- in order to do that, you must [enable returning of unparsed MRTD results](https://blinkid.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setAllowUnparsedResults(boolean))
-	- when obtaining [MRTD recognition result](https://blinkid.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html), you should check if [MRZ was parsed](https://blinkid.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#isMRZParsed())
+	- in order to do that, you must [enable returning of unparsed MRTD results](https://microblink.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setAllowUnparsedResults(boolean))
+	- when obtaining [MRTD recognition result](https://microblink.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html), you should check if [MRZ was parsed](https://microblink.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#isMRZParsed())
 		- if MRZ was parsed, you can obtain parsed data as ususal
-		- if MRZ was not parsed, you can obtain [raw OCR result](https://blinkid.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#getOcrResult()) and parse it yourself
+		- if MRZ was not parsed, you can obtain [raw OCR result](https://microblink.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognitionResult.html#getOcrResult()) and parse it yourself
 - added support for Visa MRZ format in internal MRZ parser
-- support for obtaining image of [MRZ zone](https://blinkid.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setShowMRZ(boolean)) and [full document image](https://blinkid.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setShowFullDocument(boolean)) via [ImageListener](https://blinkid.github.io/blinkid-android/com/microblink/image/ImageListener.html)
-- bitmaps can now be processed while [RecognizerView](https://blinkid.github.io/blinkid-android/com/microblink/view/recognition/RecognizerView.html) is active using method [recognizeBitmap](https://blinkid.github.io/blinkid-android/com/microblink/view/recognition/RecognizerView.html#recognizeBitmap(android.graphics.Bitmap, com.microblink.hardware.orientation.Orientation, com.microblink.view.recognition.ScanResultListener))
-- removed method `resumeScanningWithoutStateReset` - method [resumeScanning](https://blinkid.github.io/blinkid-android/com/microblink/view/recognition/RecognizerView.html#resumeScanning(boolean)) of [RecognizerView](https://blinkid.github.io/blinkid-android/com/microblink/view/recognition/RecognizerView.html) now receives `boolean` indicating whether internal state should be reset
+- support for obtaining image of [MRZ zone](https://microblink.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setShowMRZ(boolean)) and [full document image](https://microblink.github.io/blinkid-android/com/microblink/recognizers/ocr/mrtd/MRTDRecognizerSettings.html#setShowFullDocument(boolean)) via [ImageListener](https://microblink.github.io/blinkid-android/com/microblink/image/ImageListener.html)
+- bitmaps can now be processed while [RecognizerView](https://microblink.github.io/blinkid-android/com/microblink/view/recognition/RecognizerView.html) is active using method [recognizeBitmap](https://microblink.github.io/blinkid-android/com/microblink/view/recognition/RecognizerView.html#recognizeBitmap(android.graphics.Bitmap, com.microblink.hardware.orientation.Orientation, com.microblink.view.recognition.ScanResultListener))
+- removed method `resumeScanningWithoutStateReset` - method [resumeScanning](https://microblink.github.io/blinkid-android/com/microblink/view/recognition/RecognizerView.html#resumeScanning(boolean)) of [RecognizerView](https://microblink.github.io/blinkid-android/com/microblink/view/recognition/RecognizerView.html) now receives `boolean` indicating whether internal state should be reset
 - by default, null quiet zone is now set to `true` in US Driver's License recognizer
 
 ## 1.6.0
