@@ -6,6 +6,8 @@
 
 The _BlinkID_ Android SDK is a comprehensive solution for implementing secure document scanning and extraction. It offers powerful capabilities for extracting data from a wide range of identification documents.
 
+The list of all supported documents and result fields can be found [here](https://docs.microblink.com/blinkid/supported-documents).
+
 
 # Table of contents
 * [Quick Start](#quick-start)
