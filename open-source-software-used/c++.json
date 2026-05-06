@@ -12,7 +12,7 @@
         "description": "Patches for deficient C++ runtime implementations"
     },
     {
-        "package": "gtest/1.14.9@microblink/main#92cbac29cb2870655027eb912cd72358",
+        "package": "gtest/1.14.10@microblink/main#aeea6cc884a4400edf8084592f7b23ec",
         "url": "https://bitbucket.org/microblink/core-google-test/src",
         "license": "BSD 3-Clause",
         "description": "Google's C++ test framework"

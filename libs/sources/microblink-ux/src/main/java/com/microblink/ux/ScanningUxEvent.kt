@@ -75,6 +75,11 @@ interface ScanningUxEvent {
      */
     object DocumentTooDark: ScanningUxEvent
 
+    /**
+     * Document is not supported.
+     */
+    object UnsupportedDocument: ScanningUxEvent
+
 }
 
 interface ScanningUxEventHandler {

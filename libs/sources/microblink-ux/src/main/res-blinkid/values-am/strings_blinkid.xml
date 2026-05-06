@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">ሰነዱን ይገልብጡት</string>
   <string name="mb_top_page_instructions">የላይኛውን ገጽ ይቃኙ</string>
   <string name="mb_unsupported_document_message">ተቀባይነት ያለው ሰነድ የፊት ገፅን ይቃኙ።</string>
+  <string name="mb_unsupported_document_title">ሰነድ አልታወቀም</string>
 </resources>

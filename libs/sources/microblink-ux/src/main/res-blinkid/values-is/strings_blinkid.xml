@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Snúið skjalinu</string>
   <string name="mb_top_page_instructions">Skannið efstu síðuna</string>
   <string name="mb_unsupported_document_message">Skannið framhliðina á studdu skjali.</string>
+  <string name="mb_unsupported_document_title">Skjal ekki þekkt</string>
 </resources>

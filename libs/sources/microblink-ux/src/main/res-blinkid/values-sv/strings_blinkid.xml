@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Vänd på dokumentet</string>
   <string name="mb_top_page_instructions">Skanna den översta sidan</string>
   <string name="mb_unsupported_document_message">Skanna framsidan på ett dokument som stöds.</string>
+  <string name="mb_unsupported_document_title">Dokumentet kändes inte igen</string>
 </resources>

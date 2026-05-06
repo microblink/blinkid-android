@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">翻转文档</string>
   <string name="mb_top_page_instructions">扫描顶部页面</string>
   <string name="mb_unsupported_document_message">扫描支持文件类型的正面。</string>
+  <string name="mb_unsupported_document_title">文档无法识别</string>
 </resources>

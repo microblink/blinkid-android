@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">翻轉文件</string>
   <string name="mb_top_page_instructions">掃描上方頁面</string>
   <string name="mb_unsupported_document_message">掃描受支援文件的正面。</string>
+  <string name="mb_unsupported_document_title">無法辨識文件</string>
 </resources>

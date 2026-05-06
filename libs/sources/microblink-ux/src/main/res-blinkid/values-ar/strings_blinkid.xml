@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">اقلب المستند</string>
   <string name="mb_top_page_instructions">مسح الصفحة العليا ضوئياً</string>
   <string name="mb_unsupported_document_message">امسح وجه مستند مدعوم.</string>
+  <string name="mb_unsupported_document_title">لم يتم التعرف على المستند</string>
 </resources>

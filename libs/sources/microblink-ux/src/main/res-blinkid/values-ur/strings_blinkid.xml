@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">دستاویز کو پلٹیں</string>
   <string name="mb_top_page_instructions">اوپری صفحے کو اسکین کریں</string>
   <string name="mb_unsupported_document_message">معاونت یافتہ دستاویز کے سامنے والے حصے کو اسکین کریں۔</string>
+  <string name="mb_unsupported_document_title">دستاویز شناخت نہیں ہوئی</string>
 </resources>

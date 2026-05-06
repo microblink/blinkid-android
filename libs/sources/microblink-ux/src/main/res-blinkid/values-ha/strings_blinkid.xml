@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Juya takardar</string>
   <string name="mb_top_page_instructions">Ɗauki hoton shafin sama</string>
   <string name="mb_unsupported_document_message">A ɗauki hoton gaban takardar ƙarin bayanin.</string>
+  <string name="mb_unsupported_document_title">Ba a gane takarda ba</string>
 </resources>

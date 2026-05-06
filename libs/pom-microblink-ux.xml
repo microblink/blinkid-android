@@ -3,15 +3,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.microblink</groupId>
     <artifactId>microblink-ux</artifactId>
-    <version>1.6.0</version>
+    <version>1.7.0</version>
     <packaging>aar</packaging>
     <name>Microblink UX Library for Android</name>
     <description>Base library for all Microblink&apos;s UX modules.</description>
     <url>https://microblink.com/</url>
     <scm>
-        <url>https://github.com/BlinkID/blinkid-android</url>
-        <connection>scm:git:https://github.com/BlinkID/blinkid-android.git</connection>
-        <developerConnection>scm:git:https://github.com/BlinkID/blinkid-android.git</developerConnection>
+        <url>https://github.com/microblink/blinkid-android</url>
+        <connection>scm:git:https://github.com/microblink/blinkid-android.git</connection>
+        <developerConnection>scm:git:https://github.com/microblink/blinkid-android.git</developerConnection>
     </scm>
     <licenses>
         <license>
