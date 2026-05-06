@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Flip the document</string>
   <string name="mb_top_page_instructions">Scan the top page</string>
   <string name="mb_unsupported_document_message">Scan the front side of a supported document.</string>
+  <string name="mb_unsupported_document_title">Document not recognized</string>
 </resources>

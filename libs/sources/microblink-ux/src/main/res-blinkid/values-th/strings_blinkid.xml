@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">พลิกเอกสาร</string>
   <string name="mb_top_page_instructions">สแกนหน้าบนสุด</string>
   <string name="mb_unsupported_document_message">สแกนด้านหน้าของเอกสารที่ได้รับการรองรับ</string>
+  <string name="mb_unsupported_document_title">ไม่รู้จักเอกสาร</string>
 </resources>

@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">कागजात फ्लिप गर्नुहोस्</string>
   <string name="mb_top_page_instructions">माथिल्लो पृष्ठ स्क्यान गर्नुहोस्</string>
   <string name="mb_unsupported_document_message">सपोर्ट हुने कागजातको अगाडि पट्टिको भाग स्क्यान गर्नुहोस्।</string>
+  <string name="mb_unsupported_document_title">कागजात पहिचान हुन सकेन</string>
 </resources>

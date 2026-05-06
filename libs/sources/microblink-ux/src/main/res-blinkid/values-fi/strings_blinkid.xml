@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Käännä asiakirja ympäri</string>
   <string name="mb_top_page_instructions">Skannaa yläsivu</string>
   <string name="mb_unsupported_document_message">Skannaa tuetun asiakirjan etupuoli.</string>
+  <string name="mb_unsupported_document_title">Asiakirjaa ei tunnistettu</string>
 </resources>

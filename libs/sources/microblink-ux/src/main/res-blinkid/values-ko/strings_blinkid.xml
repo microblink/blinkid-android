@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">문서를 뒤집어 주세요</string>
   <string name="mb_top_page_instructions">상단 페이지를 스캔하세요</string>
   <string name="mb_unsupported_document_message">사용 가능한 문서의 앞면을 스캔하세요.</string>
+  <string name="mb_unsupported_document_title">문서 인식 실패</string>
 </resources>

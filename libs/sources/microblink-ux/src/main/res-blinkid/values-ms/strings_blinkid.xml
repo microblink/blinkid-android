@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Putar dokumen</string>
   <string name="mb_top_page_instructions">Imbas halaman sebelah atas</string>
   <string name="mb_unsupported_document_message">Imbas bahagian hadapan dokumen yang disokong.</string>
+  <string name="mb_unsupported_document_title">Dokumen tidak dikenali</string>
 </resources>

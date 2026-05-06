@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Balik dokumen</string>
   <string name="mb_top_page_instructions">Pindai halaman atas</string>
   <string name="mb_unsupported_document_message">Pindai sisi depan dokumen yang didukung.</string>
+  <string name="mb_unsupported_document_title">Dokumen tak dikenali</string>
 </resources>

@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Lật tài liệu</string>
   <string name="mb_top_page_instructions">Quét trang trên cùng</string>
   <string name="mb_unsupported_document_message">Quét mặt trước của tài liệu được hỗ trợ.</string>
+  <string name="mb_unsupported_document_title">Không nhận dạng được tài liệu</string>
 </resources>

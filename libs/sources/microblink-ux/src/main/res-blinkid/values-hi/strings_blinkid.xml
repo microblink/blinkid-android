@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">दस्तावेज़ को पलटें</string>
   <string name="mb_top_page_instructions">टॉप पेज को स्कैन करें</string>
   <string name="mb_unsupported_document_message">समर्थित दस्तावेज़ के सामने वाले भाग को स्कैन करें.</string>
+  <string name="mb_unsupported_document_title">डॉक्यूमेंट पहचाना नहीं गया</string>
 </resources>

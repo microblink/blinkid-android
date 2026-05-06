@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Dane krataa no</string>
   <string name="mb_top_page_instructions">Skane soro</string>
   <string name="mb_unsupported_document_message">Skane krataa a ɛsɔpɔɔte no anim.</string>
+  <string name="mb_unsupported_document_title">Yɛnnye krataa yi ntom</string>
 </resources>

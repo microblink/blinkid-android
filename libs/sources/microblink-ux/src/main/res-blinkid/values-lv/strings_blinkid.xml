@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Apvērst dokumentu</string>
   <string name="mb_top_page_instructions">Skenēt augšējo lapu</string>
   <string name="mb_unsupported_document_message">Skenējiet atbalstītā dokumenta priekšpusi.</string>
+  <string name="mb_unsupported_document_title">Dokuments nav atpazīts</string>
 </resources>

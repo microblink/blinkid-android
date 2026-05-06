@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Retourner le document</string>
   <string name="mb_top_page_instructions">Numériser la première page</string>
   <string name="mb_unsupported_document_message">Numérisez le recto d\'un document pris en charge.</string>
+  <string name="mb_unsupported_document_title">Document non reconnu</string>
 </resources>

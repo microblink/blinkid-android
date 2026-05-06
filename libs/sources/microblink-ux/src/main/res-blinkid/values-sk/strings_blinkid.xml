@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Otočte dokument</string>
   <string name="mb_top_page_instructions">Oskenujte stránku hore</string>
   <string name="mb_unsupported_document_message">Naskenujte prednú stranu podporovaného dokumentu.</string>
+  <string name="mb_unsupported_document_title">Dokument nebol rozpoznaný</string>
 </resources>

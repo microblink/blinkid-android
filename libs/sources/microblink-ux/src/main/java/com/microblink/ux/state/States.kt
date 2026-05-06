@@ -128,7 +128,8 @@ enum class ErrorState {
     ErrorInvalidLicense,
     ErrorNetworkError,
     ErrorTimeoutExpired,
-    ErrorDocumentClassFiltered
+    ErrorDocumentClassFiltered,
+    ErrorUnsupportedDocument
 }
 
 /**

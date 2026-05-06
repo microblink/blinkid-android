@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Geuza hati</string>
   <string name="mb_top_page_instructions">Skani ukurasa wa juu</string>
   <string name="mb_unsupported_document_message">Skani upande wa mbele wa hati inayokubalika.</string>
+  <string name="mb_unsupported_document_title">Hati imeshindwa kutambuliwa</string>
 </resources>

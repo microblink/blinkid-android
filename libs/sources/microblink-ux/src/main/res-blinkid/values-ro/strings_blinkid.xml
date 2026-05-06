@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Întoarceți documentul</string>
   <string name="mb_top_page_instructions">Scanați prima pagină</string>
   <string name="mb_unsupported_document_message">Scanați fața unui document suportat.</string>
+  <string name="mb_unsupported_document_title">Documentul nu a fost recunoscut</string>
 </resources>

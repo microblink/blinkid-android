@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">ලේඛනය අනෙක් පිට හරවන්න</string>
   <string name="mb_top_page_instructions">මුදුන් පිටුව ස්කෑන් කරන්න</string>
   <string name="mb_unsupported_document_message">සහාය දක්වන ලේඛනයක ඉදිරි පැත්ත ස්කෑන් කරන්න.</string>
+  <string name="mb_unsupported_document_title">ලේඛනය හඳුනාගත නොහැක</string>
 </resources>

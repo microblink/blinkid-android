@@ -37,9 +37,10 @@ import com.microblink.blinkid.ux.utils.getPassportPageFromRotation
 import com.microblink.blinkid.ux.utils.pingletOrientationDelayMs
 import com.microblink.core.ping.config.PingSendTriggerPoint
 import com.microblink.core.ping.pinglets.UxEvent
+import com.microblink.core.utils.MbLog
+import com.microblink.ux.R
 import com.microblink.ux.ScanningUxEvent
 import com.microblink.ux.ScanningUxEventHandler
-import com.microblink.ux.R
 import com.microblink.ux.UiSettings
 import com.microblink.ux.camera.CameraHardwareInfoHelper
 import com.microblink.ux.camera.CameraInputDetails
@@ -133,12 +134,14 @@ internal class BlinkIdUxViewModel(
             uxSettings = uxSettings,
             scanningDoneHandler = object : BlinkIdScanningDoneHandler {
                 override fun onScanningFinished(result: BlinkIdScanningResult) {
+                    MbLog.d(TAG) { "Scanning finished successfully." }
                     _uiState.update {
                         it.copy(blinkIdScanningResult = result)
                     }
                 }
 
                 override fun onError(error: ErrorReason) {
+                    MbLog.d(TAG) { "Scanning finished with an error: ${error.toString()}" }
                     lifecyclePauseAnalysis()
                     appearanceCounter.reset()
                     UxPingletTracker.UxEvent.trackAlertDisplayedEvent(
@@ -185,6 +188,7 @@ internal class BlinkIdUxViewModel(
                         }
                     }
                     for (event in events) {
+                        MbLog.d(TAG) { "Received UX event: $event" }
                         when (event) {
                             is ScanningUxEvent.ScanningDone -> {
                                 lifecyclePauseAnalysis()
@@ -800,7 +804,8 @@ internal class BlinkIdUxViewModel(
     }
 
     fun onCameraInputInfoAvailable(context: Context, cameraInputDetails: CameraInputDetails) {
-        UxPingletTracker.CameraInfo.trackCameraInputInfo(cameraInputDetails,
+        UxPingletTracker.CameraInfo.trackCameraInputInfo(
+            cameraInputDetails,
             getSessionNumber()
         )
         if (!cameraHardwareInfoReported) {

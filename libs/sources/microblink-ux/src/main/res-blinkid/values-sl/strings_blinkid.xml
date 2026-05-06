@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Obrnite dokument</string>
   <string name="mb_top_page_instructions">Skenirajte prvo stran</string>
   <string name="mb_unsupported_document_message">Optično preberite sprednjo stran podprtega dokumenta</string>
+  <string name="mb_unsupported_document_title">Dokument ni prepoznan</string>
 </resources>
