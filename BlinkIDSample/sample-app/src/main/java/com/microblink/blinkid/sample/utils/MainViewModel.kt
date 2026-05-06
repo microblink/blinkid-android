@@ -89,6 +89,10 @@ class MainViewModel : ViewModel() {
         unloadSdk()
     }
 
+    fun onScanningCanceled() {
+        unloadSdk()
+    }
+
     fun resetState() {
         BlinkIdResultHolder.blinkIdResult = null
         _mainState.update { MainState() }
@@ -105,5 +109,10 @@ class MainViewModel : ViewModel() {
                 Log.w(TAG, "SDK is already closed")
             }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        unloadSdk()
     }
 }

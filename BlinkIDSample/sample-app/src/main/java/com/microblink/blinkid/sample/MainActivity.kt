@@ -36,7 +36,6 @@ class MainActivity : ComponentActivity() {
             BlinkIDTheme {
                 val navController = rememberNavController()
                 MainNavHost(navController = navController)
-                val mainState by viewModel.mainState.collectAsStateWithLifecycle()
             }
         }
     }
@@ -72,9 +71,6 @@ class MainActivity : ComponentActivity() {
                 )
             }
             composable<Destination.DocumentScanning> {
-                // It is important that camera scanning screen is a separate route to enable
-                // proper resource release when scanning is done (navigating back to main screen)
-                // - this ensures that ViewModel.onCleared will be called.
                 val sdk = viewModel.localSdk
                 if (sdk != null) {
                     BlinkIdCameraScanningScreen(
@@ -94,6 +90,7 @@ class MainActivity : ComponentActivity() {
                                 route = Destination.Main,
                                 inclusive = false
                             )
+                            viewModel.onScanningCanceled()
                         }
                     )
                 }

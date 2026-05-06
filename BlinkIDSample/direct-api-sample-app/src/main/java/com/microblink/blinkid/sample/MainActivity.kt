@@ -42,7 +42,6 @@ class MainActivity : ComponentActivity() {
             BlinkIDTheme {
                 val navController = rememberNavController()
                 MainNavHost(navController = navController)
-                val mainState by viewModel.mainState.collectAsStateWithLifecycle()
             }
         }
     }
@@ -98,7 +97,7 @@ class MainActivity : ComponentActivity() {
                                     getBitmapFromAsset(context, "test-images/front.jpg")
                                 imageFront?.let {
                                     result =
-                                        session?.process(InputImage.createFromBitmap(imageFront))
+                                        session.process(InputImage.createFromBitmap(imageFront))
                                 }
 
                                 // optional - define back image
@@ -106,12 +105,12 @@ class MainActivity : ComponentActivity() {
                                     getBitmapFromAsset(context, "test-images/back.jpg")
                                 imageBack?.let {
                                     result =
-                                        session?.process(InputImage.createFromBitmap(imageBack))
+                                        session.process(InputImage.createFromBitmap(imageBack))
                                 }
 
                                 if (result != null) {
                                     if (result.isSuccess) {
-                                        viewModel.onDirectApiResultAvailable(session!!.getResult())
+                                        viewModel.onDirectApiResultAvailable(session.getResult())
                                         navController.navigate(
                                             route = Destination.BlinkIdResult
                                         )
@@ -120,8 +119,9 @@ class MainActivity : ComponentActivity() {
                                             context,
                                             "Scanning failed.",
                                             Toast.LENGTH_LONG
-                                        )
-                                            .show()
+                                        ).show()
+
+                                        viewModel.unloadSdk()
                                     }
                                 } else {
                                     Toast.makeText(
@@ -129,6 +129,8 @@ class MainActivity : ComponentActivity() {
                                         "Direct API Error",
                                         Toast.LENGTH_LONG
                                     ).show()
+
+                                    viewModel.unloadSdk()
                                 }
                             }
                         }

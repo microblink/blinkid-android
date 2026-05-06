@@ -68,7 +68,7 @@ class MainViewModel : ViewModel() {
         _mainState.update { MainState() }
     }
 
-    private fun unloadSdk() {
+    fun unloadSdk() {
         val sdkToClose = localSdk
         localSdk = null
         viewModelScope.launch(Dispatchers.IO) {
@@ -79,5 +79,10 @@ class MainViewModel : ViewModel() {
                 Log.w(TAG, "SDK is already closed")
             }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        unloadSdk()
     }
 }
