@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Vend dokumentet</string>
   <string name="mb_top_page_instructions">Scan den øverste side</string>
   <string name="mb_unsupported_document_message">Scan forsiden af et understøttet dokument.</string>
+  <string name="mb_unsupported_document_title">Dokument ikke genkendt</string>
 </resources>

@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">להפוך את המסמך</string>
   <string name="mb_top_page_instructions">סרוק את העמוד העליון</string>
   <string name="mb_unsupported_document_message">לסרוק את הצד הקדמי של מסמך נתמך.</string>
+  <string name="mb_unsupported_document_title">המסמך לא זוהה</string>
 </resources>

@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Переверніть документ</string>
   <string name="mb_top_page_instructions">Відскануйте верхню сторінку</string>
   <string name="mb_unsupported_document_message">Відскануйте лицьову сторону підтримуваного документа.</string>
+  <string name="mb_unsupported_document_title">Документ не розпізнано</string>
 </resources>

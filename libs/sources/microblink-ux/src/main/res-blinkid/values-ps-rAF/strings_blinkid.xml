@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">سند واړوئ</string>
   <string name="mb_top_page_instructions">پورته پاڼه سکین کړئ</string>
   <string name="mb_unsupported_document_message">د ملاتړ شوي سند مخکینۍ برخه سکین کړئ.</string>
+  <string name="mb_unsupported_document_title">سند و نه پېژندل شو</string>
 </resources>

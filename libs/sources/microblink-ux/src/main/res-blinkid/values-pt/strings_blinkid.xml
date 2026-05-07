@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Virar o documento</string>
   <string name="mb_top_page_instructions">Digitalizar a página superior</string>
   <string name="mb_unsupported_document_message">Digitalize a frente de um documento suportado.</string>
+  <string name="mb_unsupported_document_title">Documento não reconhecido</string>
 </resources>

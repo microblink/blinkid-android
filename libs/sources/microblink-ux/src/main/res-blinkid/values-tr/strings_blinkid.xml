@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Belgeyi çevir</string>
   <string name="mb_top_page_instructions">En üst sayfayı tara</string>
   <string name="mb_unsupported_document_message">Desteklenen bir belgenin ön tarafını tara.</string>
+  <string name="mb_unsupported_document_title">Belge tanınmadı</string>
 </resources>

@@ -1,9 +1,6 @@
 package com.microblink.blinkid.ux.settings
 
 import android.os.Parcelable
-import com.microblink.blinkid.core.result.classinfo.Country
-import com.microblink.blinkid.core.result.classinfo.Region
-import com.microblink.blinkid.core.result.classinfo.Type
 import kotlinx.parcelize.Parcelize
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds

@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Draai het document om</string>
   <string name="mb_top_page_instructions">Scan de bovenste pagina</string>
   <string name="mb_unsupported_document_message">Scan de voorzijde van een ondersteund document.</string>
+  <string name="mb_unsupported_document_title">Document niet herkend</string>
 </resources>

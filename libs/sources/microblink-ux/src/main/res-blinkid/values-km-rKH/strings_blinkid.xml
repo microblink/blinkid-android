@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">ត្រឡប់ឯកសារ</string>
   <string name="mb_top_page_instructions">ស្កេនទំព័រកំពូល</string>
   <string name="mb_unsupported_document_message">ស្កេនផ្នែកខាងមុខនៃឯកសារដែលគាំទ្រ។</string>
+  <string name="mb_unsupported_document_title">ឯកសារមិនត្រូវបានទទួលស្គាល់ទេ។</string>
 </resources>

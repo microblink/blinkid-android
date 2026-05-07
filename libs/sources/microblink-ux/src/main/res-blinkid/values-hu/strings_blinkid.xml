@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Fordítsa meg a dokumentumot</string>
   <string name="mb_top_page_instructions">A felső oldal beolvasása</string>
   <string name="mb_unsupported_document_message">Szkennelje be egy támogatott dokumentum elülső oldalát.</string>
+  <string name="mb_unsupported_document_title">A dokumentum nincs felismerve</string>
 </resources>

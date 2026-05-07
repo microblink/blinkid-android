@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">سند را ورق بزنید</string>
   <string name="mb_top_page_instructions">اسکن صفحه بالا</string>
   <string name="mb_unsupported_document_message">قسمت جلوی یک سند پشتیبانی شده را اسکن کنید.</string>
+  <string name="mb_unsupported_document_title">سند شناسایی نشده است</string>
 </resources>

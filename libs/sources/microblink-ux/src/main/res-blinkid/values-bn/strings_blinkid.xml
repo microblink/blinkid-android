@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">ডকুমেন্ট উল্টান</string>
   <string name="mb_top_page_instructions">উপরের পৃষ্ঠা স্ক্যান করুন</string>
   <string name="mb_unsupported_document_message">সমর্থিত ডকুমেন্টের সামনের দিক স্ক্যান করুন</string>
+  <string name="mb_unsupported_document_title">ডকুমেন্ট সনাক্ত করা যায়নি</string>
 </resources>

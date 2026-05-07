@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Құжатты айналдырыңыз</string>
   <string name="mb_top_page_instructions">Жоғарғы бетті сканерлеңіз</string>
   <string name="mb_unsupported_document_message">Қолдау көрсетілетін құжаттың алдыңғы жағын сканерлеңіз.</string>
+  <string name="mb_unsupported_document_title">Құжатын танылмады</string>
 </resources>

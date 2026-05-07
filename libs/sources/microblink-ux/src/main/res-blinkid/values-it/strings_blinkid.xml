@@ -38,4 +38,5 @@
   <string name="mb_scanning_wrong_side">Girare il documento</string>
   <string name="mb_top_page_instructions">Scansiona la pagina in alto</string>
   <string name="mb_unsupported_document_message">Scansiona il lato anteriore di un documento supportato.</string>
+  <string name="mb_unsupported_document_title">Documento non riconosciuto</string>
 </resources>
