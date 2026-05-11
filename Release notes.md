@@ -1,5 +1,10 @@
 # Release notes
 
+## v7.8.1
+
+### What's new
+- Fixed a bug in the remote licence check mechanism
+
 ## v7.8.0
 
 ### What's new
