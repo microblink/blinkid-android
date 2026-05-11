@@ -29,7 +29,10 @@ android {
     sourceSets {
         getByName("main") {
             java.srcDirs("../../libs/sources/microblink-ux/src/main/java")
-            res.srcDirs("../../libs/sources/microblink-ux/src/main/res")
+            res.srcDirs(
+                "../../libs/sources/microblink-ux/src/main/res-core",
+                "../../libs/sources/microblink-ux/src/main/res-blinkid"
+            )
         }
     }
 
