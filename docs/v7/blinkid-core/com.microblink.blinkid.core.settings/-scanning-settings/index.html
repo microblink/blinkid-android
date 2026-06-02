@@ -1,0 +1,506 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ScanningSettings</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":blinkid-core:dokkaHtmlPartial/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":blinkid-core:dokkaHtmlPartial/release" data-filter=":blinkid-core:dokkaHtmlPartial/release">
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="blinkid-core::com.microblink.blinkid.core.settings/ScanningSettings///PointingToDeclaration//-747182850">
+  <div class="breadcrumbs"><a href="../../index.html">blinkid-core</a><span class="delimiter">/</span><a href="../index.html">com.microblink.blinkid.core.settings</a><span class="delimiter">/</span><span class="current">ScanningSettings</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Scanning</span><wbr><span><span>Settings</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">ScanningSettings</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>blurDetectionLevel<span class="token operator">: </span><a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a><span class="token operator"> = </span>DetectionLevel.Mid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>skipImagesWithBlur<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>glareDetectionLevel<span class="token operator">: </span><a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a><span class="token operator"> = </span>DetectionLevel.Mid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>skipImagesWithGlare<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tiltDetectionLevel<span class="token operator">: </span><a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a><span class="token operator"> = </span>DetectionLevel.Mid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>skipImagesWithInadequateLightingConditions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>skipImagesOccludedByHand<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>combineResultsFromMultipleInputImages<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>enableBarcodeScanOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>customDocumentRules<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-document-rules/index.html">DocumentRules</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>anonymizationMode<span class="token operator">: </span><a href="../../com.microblink.core.settings/-anonymization-mode/index.html">AnonymizationMode</a><span class="token operator"> = </span>AnonymizationMode.FullResult<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>customDocumentAnonymizationSettings<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-document-anonymization-settings/index.html">DocumentAnonymizationSettings</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>returnInputImages<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scanCroppedDocumentImage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>recognitionModeFilter<span class="token operator">: </span><a href="../-recognition-mode-filter/index.html">RecognitionModeFilter</a><span class="token operator"> = </span>RecognitionModeFilter()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>enableCharacterValidation<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/FloatRange.html"><span class="token annotation builtin">FloatRange</span></a><span class="token punctuation">(</span><span>from<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">0.0</span></span><span class="token punctuation">, </span></span><wbr><span>to<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1.0</span></span></span><wbr><span class="token punctuation">)</span>&nbsp;</span><span class="token keyword">val </span>inputImageMargin<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">0.02f</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scanUnsupportedBack<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>allowUncertainFrontSideScan<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maxAllowedMismatchesPerField<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-int/index.html">UInt</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scanPassportDataPageOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>croppedImageSettings<span class="token operator">: </span><a href="../-cropped-image-settings/index.html">CroppedImageSettings</a><span class="token operator"> = </span>CroppedImageSettings()</span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/os/Parcelable.html">Parcelable</a></div><p class="paragraph">Represents the configurable settings for scanning a document.</p><p class="paragraph">This structure defines various parameters and policies related to the scanning process, including image quality handling, data extraction and anonymization, along with options for frame processing and image extraction.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1561350837%2FConstructors%2F-747182850" anchor-label="ScanningSettings" id="1561350837%2FConstructors%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-scanning-settings.html"><span>Scanning</span><wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1561350837%2FConstructors%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">blurDetectionLevel<span class="token operator">: </span><a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a><span class="token operator"> = </span>DetectionLevel.Mid<span class="token punctuation">, </span></span><span class="parameter ">skipImagesWithBlur<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">glareDetectionLevel<span class="token operator">: </span><a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a><span class="token operator"> = </span>DetectionLevel.Mid<span class="token punctuation">, </span></span><span class="parameter ">skipImagesWithGlare<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">tiltDetectionLevel<span class="token operator">: </span><a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a><span class="token operator"> = </span>DetectionLevel.Mid<span class="token punctuation">, </span></span><span class="parameter ">skipImagesWithInadequateLightingConditions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">skipImagesOccludedByHand<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">combineResultsFromMultipleInputImages<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">enableBarcodeScanOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">customDocumentRules<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-document-rules/index.html">DocumentRules</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">anonymizationMode<span class="token operator">: </span><a href="../../com.microblink.core.settings/-anonymization-mode/index.html">AnonymizationMode</a><span class="token operator"> = </span>AnonymizationMode.FullResult<span class="token punctuation">, </span></span><span class="parameter ">customDocumentAnonymizationSettings<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-document-anonymization-settings/index.html">DocumentAnonymizationSettings</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">returnInputImages<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">scanCroppedDocumentImage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">recognitionModeFilter<span class="token operator">: </span><a href="../-recognition-mode-filter/index.html">RecognitionModeFilter</a><span class="token operator"> = </span>RecognitionModeFilter()<span class="token punctuation">, </span></span><span class="parameter ">enableCharacterValidation<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/FloatRange.html"><span class="token annotation builtin">FloatRange</span></a><span class="token punctuation">(</span><span>from<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">0.0</span></span><span class="token punctuation">, </span></span><wbr><span>to<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1.0</span></span></span><wbr><span class="token punctuation">)</span>&nbsp;</span>inputImageMargin<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">0.02f</span><span class="token punctuation">, </span></span><span class="parameter ">scanUnsupportedBack<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">allowUncertainFrontSideScan<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">maxAllowedMismatchesPerField<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-int/index.html">UInt</a><span class="token punctuation">, </span></span><span class="parameter ">scanPassportDataPageOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">croppedImageSettings<span class="token operator">: </span><a href="../-cropped-image-settings/index.html">CroppedImageSettings</a><span class="token operator"> = </span>CroppedImageSettings()</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-693899266%2FProperties%2F-747182850" anchor-label="allowUncertainFrontSideScan" id="-693899266%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allow-uncertain-front-side-scan.html"><span>allow</span><wbr><span>Uncertain</span><wbr><span>Front</span><wbr><span>Side</span><wbr><span><span>Scan</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-693899266%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="allow-uncertain-front-side-scan.html">allowUncertainFrontSideScan</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">Indicates whether scanning can continue to the next side despite an uncertain front-side scan.     This only applies to images from Photo input image source - for images from Video source, setting will be ignored.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="942269044%2FProperties%2F-747182850" anchor-label="anonymizationMode" id="942269044%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="anonymization-mode.html"><span>anonymization</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="942269044%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="anonymization-mode.html">anonymizationMode</a><span class="token operator">: </span><a href="../../com.microblink.core.settings/-anonymization-mode/index.html">AnonymizationMode</a></div><div class="brief "><p class="paragraph">The mode of anonymization applied to the document.     Redact specific fields based on requirements or laws regarding a specific document.     Data can be redacted from the image, the result or both.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1644356569%2FProperties%2F-747182850" anchor-label="blurDetectionLevel" id="1644356569%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blur-detection-level.html"><span>blur</span><wbr><span>Detection</span><wbr><span><span>Level</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1644356569%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="blur-detection-level.html">blurDetectionLevel</a><span class="token operator">: </span><a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a></div><div class="brief "><p class="paragraph">Defines the severity of blur detected in the document image, as defined in <a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a>.     Values range from <code class="lang-kotlin">Off</code> (detection NotAvailable) to higher levels of blur detection.     Low – less sensitive to blur; if something is detected as blur, it is almost certainly actual blur,         but some amount of blur may not be detected at all.     High – highly sensitive to blur; it may detect as blur even something that only resembles blur.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="688168202%2FProperties%2F-747182850" anchor-label="combineResultsFromMultipleInputImages" id="688168202%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="combine-results-from-multiple-input-images.html"><span>combine</span><wbr><span>Results</span><wbr><span>From</span><wbr><span>Multiple</span><wbr><span>Input</span><wbr><span><span>Images</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="688168202%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="combine-results-from-multiple-input-images.html">combineResultsFromMultipleInputImages</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Indicates whether the aggregation of data from multiple images is enabled.     Disabling this setting will yield higher-quality captured images, but it may slow down the scanning process due to the additional         effort required to find the optimal image.     Enabling this setting will simplify the extraction process, but the extracted data will be aggregated from multiple images instead         of being sourced from a single image.     This only applies to images from Video input image source - for images from Photo source, setting will be ignored.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1439154528%2FProperties%2F-747182850" anchor-label="croppedImageSettings" id="1439154528%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="cropped-image-settings.html"><span>cropped</span><wbr><span>Image</span><wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1439154528%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="cropped-image-settings.html">croppedImageSettings</a><span class="token operator">: </span><a href="../-cropped-image-settings/index.html">CroppedImageSettings</a></div><div class="brief "><p class="paragraph">Configures the image cropping options during scanning process.     Allows customization of cropped image handling, such as dotsPerInch, extensionFactor,     and whether images should be returned for the entire document, face or signature regions.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-13904576%2FProperties%2F-747182850" anchor-label="customDocumentAnonymizationSettings" id="-13904576%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="custom-document-anonymization-settings.html"><span>custom</span><wbr><span>Document</span><wbr><span>Anonymization</span><wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-13904576%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="custom-document-anonymization-settings.html">customDocumentAnonymizationSettings</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-document-anonymization-settings/index.html">DocumentAnonymizationSettings</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Redact fields for specific document class.     Fields specified by requirements or laws for a specific document will be redacted regardless of this setting.     Based on anonymizationMode setting, data will be redacted from the image, the result or both.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="187493392%2FProperties%2F-747182850" anchor-label="customDocumentRules" id="187493392%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="custom-document-rules.html"><span>custom</span><wbr><span>Document</span><wbr><span><span>Rules</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="187493392%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="custom-document-rules.html">customDocumentRules</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-document-rules/index.html">DocumentRules</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Defines custom rules for specific document class.     When defining customDocumentRules, <code class="lang-kotlin">documentFilter</code> is optionally set to specify the document to which the rule applies, and a <code class="lang-kotlin">fields</code> with         the appropriate <code class="lang-kotlin">alphabetType</code> should be specified as mandatory for that document.     If a <code class="lang-kotlin">fields</code> is set to a field that is optional for that document or does not exist on it, all fields on the document become optional.     If a <code class="lang-kotlin">fields</code> is set to a field with an incorrect alphabetType, all fields on the document become optional.     If a <code class="lang-kotlin">fields</code> is set to a field that doesn’t exist in the internal rules, that rule is ignored.     When adding multiple <code class="lang-kotlin">fields</code>, any field that does not match our rules is ignored. Only fields that comply with our rules are set as mandatory.     If the documentFilter fields <code class="lang-kotlin">country</code>, <code class="lang-kotlin">region</code>, or <code class="lang-kotlin">type</code> are set to <code class="lang-kotlin">null</code>, all supported values for those fields will be considered.         For example, if <code class="lang-kotlin">country = null</code>, the rule will apply to all supported countries in BlinkID.     By default, document fields are validated using internal rules that define mandatory fields for the scanned document class. This setting allows         users to narrow down our internal rules on mandatory fields. All undefined fields will become optional. It is not possible to mark fields as         mandatory if they cannot theoretically appear on the document.     The more detailed document filter will have priority over the other.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-185877195%2FProperties%2F-747182850" anchor-label="enableBarcodeScanOnly" id="-185877195%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enable-barcode-scan-only.html"><span>enable</span><wbr><span>Barcode</span><wbr><span>Scan</span><wbr><span><span>Only</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-185877195%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="enable-barcode-scan-only.html">enableBarcodeScanOnly</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">Enables barcode recognition to proceed even if the initial VIZ extraction fails.     If the barcode recognition is successful, the recognizer will still end in a valid state.     This setting is applicable only to images from Photo source.     For multi-side scanning, it is permitted only for the back side.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1350169276%2FProperties%2F-747182850" anchor-label="enableCharacterValidation" id="1350169276%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enable-character-validation.html"><span>enable</span><wbr><span>Character</span><wbr><span><span>Validation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1350169276%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="enable-character-validation.html">enableCharacterValidation</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Indicates whether character validation is enabled.     Allow only results containing expected characters for a given field.     Each field is validated against a set of rules.     All fields have to be successfully validated in order to successfully scan a document.     Setting is used to improve scanning accuracy.     If set to <code class="lang-kotlin">true</code>, when an invalid character is detected <code class="lang-kotlin">ProcessingStatus::InvalidCharactersFound</code> is returned.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-600411923%2FProperties%2F-747182850" anchor-label="glareDetectionLevel" id="-600411923%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="glare-detection-level.html"><span>glare</span><wbr><span>Detection</span><wbr><span><span>Level</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-600411923%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="glare-detection-level.html">glareDetectionLevel</a><span class="token operator">: </span><a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a></div><div class="brief "><p class="paragraph">The level of glare detection in the document image.     Defines the severity of glare detected in the document image, as defined in <a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a>.     Values range from <code class="lang-kotlin">Off</code> (detection NotAvailable) to higher levels of glare detection.     Low – less sensitive to glare; if something is detected as glare, it is almost certainly actual glare,         but some amount of glare may not be detected at all.     High – highly sensitive to glare; it may detect as glare even something that only resembles glare.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1378860544%2FProperties%2F-747182850" anchor-label="inputImageMargin" id="1378860544%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="input-image-margin.html"><span>input</span><wbr><span>Image</span><wbr><span><span>Margin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1378860544%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="input-image-margin.html">inputImageMargin</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">0.02f</span></div><div class="brief "><p class="paragraph">Defines the minimum required margin (in percentage) between the edge of the input image and the document.     Default value is 0.02f (also recommended value).     The setting is applicable only when using images from Video source     The setting is not applicable if <code class="lang-kotlin">scanCroppedDocumentImage = true</code> (it will be ignored).     This setting is implemented to comply with regulations in certain countries that mandate documents     to be stored with adequate margins in the image.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="349274562%2FProperties%2F-747182850" anchor-label="maxAllowedMismatchesPerField" id="349274562%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="max-allowed-mismatches-per-field.html"><span>max</span><wbr><span>Allowed</span><wbr><span>Mismatches</span><wbr><span>Per</span><wbr><span><span>Field</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="349274562%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="max-allowed-mismatches-per-field.html">maxAllowedMismatchesPerField</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-u-int/index.html">UInt</a></div><div class="brief "><p class="paragraph">The maximum allowed mismatches per field during data matching.     Configures the maximum number of characters per field that can be inconsistent during data matching.     By default, no mismatches are allowed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="836338953%2FProperties%2F-747182850" anchor-label="recognitionModeFilter" id="836338953%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="recognition-mode-filter.html"><span>recognition</span><wbr><span>Mode</span><wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="836338953%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Experimental///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Experimental</span></span></div></div><span class="token keyword">val </span><a href="recognition-mode-filter.html">recognitionModeFilter</a><span class="token operator">: </span><a href="../-recognition-mode-filter/index.html">RecognitionModeFilter</a></div><div class="brief "><p class="paragraph">The filter for recognition modes.     Specifies which recognition modes are enabled during the scanning process, with a default value of true to enable all modes.     RecognitionModeFilter is used to enable/disable recognition of specific document groups.     This setting is experimental and it will be removed in upcoming releases.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-542593399%2FProperties%2F-747182850" anchor-label="returnInputImages" id="-542593399%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="return-input-images.html"><span>return</span><wbr><span>Input</span><wbr><span><span>Images</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-542593399%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="return-input-images.html">returnInputImages</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">Indicates whether input images should be returned.     Save the input images at the moment of the data extraction or timeout.     This significantly increases memory consumption.     The scanning performance is not affected.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1732632383%2FProperties%2F-747182850" anchor-label="scanCroppedDocumentImage" id="-1732632383%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scan-cropped-document-image.html"><span>scan</span><wbr><span>Cropped</span><wbr><span>Document</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1732632383%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="scan-cropped-document-image.html">scanCroppedDocumentImage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">Process only cropped document images.     Requires the input image to consist solely of the cropped document image with perspective correction applied.     This only applies to images from Photo input image source - for images from Video input image source, setting will be ignored.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1009575317%2FProperties%2F-747182850" anchor-label="scanPassportDataPageOnly" id="-1009575317%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scan-passport-data-page-only.html"><span>scan</span><wbr><span>Passport</span><wbr><span>Data</span><wbr><span>Page</span><wbr><span><span>Only</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1009575317%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="scan-passport-data-page-only.html">scanPassportDataPageOnly</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Indicates whether only the passport data page should be scanned.     Scan only the data page ( page containing <code class="lang-kotlin">MRZ</code> ) of the passport.     If set to false, it will be required to scan the second page of certain passports.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1074308796%2FProperties%2F-747182850" anchor-label="scanUnsupportedBack" id="1074308796%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scan-unsupported-back.html"><span>scan</span><wbr><span>Unsupported</span><wbr><span><span>Back</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1074308796%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="scan-unsupported-back.html">scanUnsupportedBack</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">Indicates whether backside of unsupported document should be scanned also.     By default, back side of the document will not be scanned if only the front side is supported for a specific document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-476648265%2FProperties%2F-747182850" anchor-label="skipImagesOccludedByHand" id="-476648265%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="skip-images-occluded-by-hand.html"><span>skip</span><wbr><span>Images</span><wbr><span>Occluded</span><wbr><span>By</span><wbr><span><span>Hand</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-476648265%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="skip-images-occluded-by-hand.html">skipImagesOccludedByHand</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Indicates whether images occluded by hand should be rejected.     A value of <code class="lang-kotlin">true</code> means images occluded by hand will be excluded from further processing to prevent occluded images from being used         - If hand occlusion is detected ProcessingStatus will be <code class="lang-kotlin">ImagePreprocessingFailed</code> and hand occlusion status will be reported           in the ProcessResult     This setting is applicable only if <code class="lang-kotlin">scanCroppedDocumentImage</code> = false.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1636470171%2FProperties%2F-747182850" anchor-label="skipImagesWithBlur" id="1636470171%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="skip-images-with-blur.html"><span>skip</span><wbr><span>Images</span><wbr><span>With</span><wbr><span><span>Blur</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1636470171%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="skip-images-with-blur.html">skipImagesWithBlur</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Indicates whether images with blur in the document image should be skipped.     A value of <code class="lang-kotlin">true</code> means images with detected blur will be excluded from further processing to prevent blurred images from being used         - If blurDetectionLevel = Off - blurred images will be processed         - If blur is detected ProcessingStatus will be <code class="lang-kotlin">ImagePreprocessingFailed</code> and blur will be reported in the ProcessResult     A value of <code class="lang-kotlin">false</code> means images with detected blur will not be excluded from further processing         - If blurDetectionLevel != Off - even if blur is detected, the image will be processed and blur will be reported in the ProcessResult.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1179289481%2FProperties%2F-747182850" anchor-label="skipImagesWithGlare" id="1179289481%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="skip-images-with-glare.html"><span>skip</span><wbr><span>Images</span><wbr><span>With</span><wbr><span><span>Glare</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1179289481%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="skip-images-with-glare.html">skipImagesWithGlare</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Indicates whether images with glare in the document image should be skipped.     A value of <code class="lang-kotlin">true</code> means images with detected glare will be excluded from further processing to prevent glared images from being used         - If glareDetectionLevel = Off - glared images will be processed         - If glare is detected ProcessingStatus will be <code class="lang-kotlin">ImagePreprocessingFailed</code> and glare will be reported in the ProcessResult     A value of <code class="lang-kotlin">false</code> means images with detected glare will not be excluded from further processing         - If glareDetectionLevel != Off - even if glare is detected, the image will be processed and glare will be reported in the ProcessResult</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="749470541%2FProperties%2F-747182850" anchor-label="skipImagesWithInadequateLightingConditions" id="749470541%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="skip-images-with-inadequate-lighting-conditions.html"><span>skip</span><wbr><span>Images</span><wbr><span>With</span><wbr><span>Inadequate</span><wbr><span>Lighting</span><wbr><span><span>Conditions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="749470541%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="skip-images-with-inadequate-lighting-conditions.html">skipImagesWithInadequateLightingConditions</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Indicates whether images with inadequate lighting conditions should be rejected.     Inadequate lighting conditions are represented as either <code class="lang-kotlin">TooBright</code> or <code class="lang-kotlin">TooDark</code> document images,         as defined in the <code class="lang-kotlin">ImageAnalysisLightingStatus</code> enum.     A value of <code class="lang-kotlin">true</code> means images with inadequate lighting conditions will be excluded from further processing to prevent images with         inadequate lighting from being used         - If inadequate light conditions are detected ProcessingStatus will be <code class="lang-kotlin">ImagePreprocessingFailed</code> and lighting status will be           reported in the ProcessResult.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="654798019%2FProperties%2F-747182850" anchor-label="tiltDetectionLevel" id="654798019%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tilt-detection-level.html"><span>tilt</span><wbr><span>Detection</span><wbr><span><span>Level</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="654798019%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="tilt-detection-level.html">tiltDetectionLevel</a><span class="token operator">: </span><a href="../../com.microblink.core.settings/-detection-level/index.html">DetectionLevel</a></div><div class="brief "><p class="paragraph">The level of allowed detected tilt of the document in the image.     Defines the severity of allowed detected tilt of the document in the image, as defined in <code class="lang-kotlin">DetectionLevel</code>.     Values range from <code class="lang-kotlin">Off</code> (detection NotAvailable) to higher levels of allowed tilt.     Low – less sensitive to tilt.     High – highly sensitive to tilt.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1578325224%2FFunctions%2F-747182850" anchor-label="describeContents" id="-1578325224%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.microblink.core.network/-request-timeout/index.html#-1578325224%2FFunctions%2F-747182850"><span>describe</span><wbr><span><span>Contents</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1578325224%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.microblink.core.network/-request-timeout/index.html#-1578325224%2FFunctions%2F-747182850"><span class="token function">describeContents</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1754457655%2FFunctions%2F-747182850" anchor-label="writeToParcel" id="-1754457655%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.microblink.core.network/-request-timeout/index.html#-1754457655%2FFunctions%2F-747182850"><span>write</span><wbr><span>To</span><wbr><span><span>Parcel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1754457655%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.microblink.core.network/-request-timeout/index.html#-1754457655%2FFunctions%2F-747182850"><span class="token function">writeToParcel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Parcel.html">Parcel</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

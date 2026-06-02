@@ -1,0 +1,1286 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FieldType</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":blinkid-core:dokkaHtmlPartial/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":blinkid-core:dokkaHtmlPartial/release" data-filter=":blinkid-core:dokkaHtmlPartial/release">
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="blinkid-core::com.microblink.blinkid.core.result/FieldType///PointingToDeclaration//-747182850">
+  <div class="breadcrumbs"><a href="../../index.html">blinkid-core</a><span class="delimiter">/</span><a href="../index.html">com.microblink.blinkid.core.result</a><span class="delimiter">/</span><span class="current">FieldType</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Field</span><wbr><span><span>Type</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">FieldType</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="index.html">FieldType</a><span class="token operator">&gt; </span></div><p class="paragraph">Represents all possible field types that can be extracted from the document.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="">Entries</h2>
+        <div class="table"><a data-name="1393837469%2FClasslikes%2F-747182850" anchor-label="LocalizedName" id="1393837469%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-localized-name/index.html">LocalizedName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1393837469%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-localized-name/index.html">LocalizedName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1720071632%2FClasslikes%2F-747182850" anchor-label="AdditionalAddressInformation" id="-1720071632%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-additional-address-information/index.html">AdditionalAddressInformation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1720071632%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-additional-address-information/index.html">AdditionalAddressInformation</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1353509873%2FClasslikes%2F-747182850" anchor-label="AdditionalNameInformation" id="1353509873%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-additional-name-information/index.html">AdditionalNameInformation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1353509873%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-additional-name-information/index.html">AdditionalNameInformation</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="337335728%2FClasslikes%2F-747182850" anchor-label="AdditionalOptionalAddressInformation" id="337335728%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-additional-optional-address-information/index.html">AdditionalOptionalAddressInformation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="337335728%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-additional-optional-address-information/index.html">AdditionalOptionalAddressInformation</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-860509124%2FClasslikes%2F-747182850" anchor-label="AdditionalPersonalIdNumber" id="-860509124%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-additional-personal-id-number/index.html">AdditionalPersonalIdNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-860509124%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-additional-personal-id-number/index.html">AdditionalPersonalIdNumber</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1860986539%2FClasslikes%2F-747182850" anchor-label="Address" id="1860986539%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-address/index.html">Address</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1860986539%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-address/index.html">Address</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1746182731%2FClasslikes%2F-747182850" anchor-label="BloodType" id="1746182731%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-blood-type/index.html">BloodType</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1746182731%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-blood-type/index.html">BloodType</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="969288750%2FClasslikes%2F-747182850" anchor-label="ClassEffectiveDate" id="969288750%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-class-effective-date/index.html">ClassEffectiveDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="969288750%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-class-effective-date/index.html">ClassEffectiveDate</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="478465040%2FClasslikes%2F-747182850" anchor-label="ClassExpiryDate" id="478465040%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-class-expiry-date/index.html">ClassExpiryDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="478465040%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-class-expiry-date/index.html">ClassExpiryDate</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1188630345%2FClasslikes%2F-747182850" anchor-label="Conditions" id="1188630345%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-conditions/index.html">Conditions</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1188630345%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-conditions/index.html">Conditions</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1253597103%2FClasslikes%2F-747182850" anchor-label="DateOfBirth" id="-1253597103%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-date-of-birth/index.html">DateOfBirth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1253597103%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-date-of-birth/index.html">DateOfBirth</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1251603191%2FClasslikes%2F-747182850" anchor-label="DateOfExpiry" id="-1251603191%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-date-of-expiry/index.html">DateOfExpiry</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1251603191%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-date-of-expiry/index.html">DateOfExpiry</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2046987541%2FClasslikes%2F-747182850" anchor-label="DateOfIssue" id="-2046987541%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-date-of-issue/index.html">DateOfIssue</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2046987541%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-date-of-issue/index.html">DateOfIssue</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-26998756%2FClasslikes%2F-747182850" anchor-label="DocumentAdditionalNumber" id="-26998756%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-additional-number/index.html">DocumentAdditionalNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-26998756%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-additional-number/index.html">DocumentAdditionalNumber</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1457693355%2FClasslikes%2F-747182850" anchor-label="DocumentNumber" id="-1457693355%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-number/index.html">DocumentNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1457693355%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-number/index.html">DocumentNumber</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1875902364%2FClasslikes%2F-747182850" anchor-label="DocumentOptionalAdditionalNumber" id="1875902364%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-optional-additional-number/index.html">DocumentOptionalAdditionalNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1875902364%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-optional-additional-number/index.html">DocumentOptionalAdditionalNumber</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="25907020%2FClasslikes%2F-747182850" anchor-label="Employer" id="25907020%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-employer/index.html">Employer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="25907020%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-employer/index.html">Employer</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1717613206%2FClasslikes%2F-747182850" anchor-label="Endorsements" id="1717613206%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-endorsements/index.html">Endorsements</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1717613206%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-endorsements/index.html">Endorsements</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1151217273%2FClasslikes%2F-747182850" anchor-label="FathersName" id="1151217273%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-fathers-name/index.html">FathersName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1151217273%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-fathers-name/index.html">FathersName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1069976302%2FClasslikes%2F-747182850" anchor-label="FirstName" id="-1069976302%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-first-name/index.html">FirstName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1069976302%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-first-name/index.html">FirstName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1332388341%2FClasslikes%2F-747182850" anchor-label="FullName" id="-1332388341%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-full-name/index.html">FullName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1332388341%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-full-name/index.html">FullName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2075419490%2FClasslikes%2F-747182850" anchor-label="IssuingAuthority" id="-2075419490%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-issuing-authority/index.html">IssuingAuthority</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2075419490%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-issuing-authority/index.html">IssuingAuthority</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1896904786%2FClasslikes%2F-747182850" anchor-label="LastName" id="1896904786%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-last-name/index.html">LastName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1896904786%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-last-name/index.html">LastName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-493066206%2FClasslikes%2F-747182850" anchor-label="LicenceType" id="-493066206%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-licence-type/index.html">LicenceType</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-493066206%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-licence-type/index.html">LicenceType</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1497437949%2FClasslikes%2F-747182850" anchor-label="MaritalStatus" id="1497437949%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-marital-status/index.html">MaritalStatus</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1497437949%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-marital-status/index.html">MaritalStatus</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="25238450%2FClasslikes%2F-747182850" anchor-label="MothersName" id="25238450%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mothers-name/index.html">MothersName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="25238450%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-mothers-name/index.html">MothersName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="92985324%2FClasslikes%2F-747182850" anchor-label="Mrz" id="92985324%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mrz/index.html">Mrz</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="92985324%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-mrz/index.html">Mrz</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="265621747%2FClasslikes%2F-747182850" anchor-label="Nationality" id="265621747%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-nationality/index.html">Nationality</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="265621747%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-nationality/index.html">Nationality</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2034839435%2FClasslikes%2F-747182850" anchor-label="PersonalIdNumber" id="-2034839435%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-personal-id-number/index.html">PersonalIdNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2034839435%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-personal-id-number/index.html">PersonalIdNumber</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1445813838%2FClasslikes%2F-747182850" anchor-label="PlaceOfBirth" id="-1445813838%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-place-of-birth/index.html">PlaceOfBirth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1445813838%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-place-of-birth/index.html">PlaceOfBirth</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-618186099%2FClasslikes%2F-747182850" anchor-label="Profession" id="-618186099%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-profession/index.html">Profession</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-618186099%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-profession/index.html">Profession</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1069746018%2FClasslikes%2F-747182850" anchor-label="Race" id="1069746018%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-race/index.html">Race</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1069746018%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-race/index.html">Race</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1864694594%2FClasslikes%2F-747182850" anchor-label="Religion" id="1864694594%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-religion/index.html">Religion</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1864694594%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-religion/index.html">Religion</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2117872525%2FClasslikes%2F-747182850" anchor-label="ResidentialStatus" id="2117872525%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-residential-status/index.html">ResidentialStatus</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2117872525%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-residential-status/index.html">ResidentialStatus</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-787639496%2FClasslikes%2F-747182850" anchor-label="Restrictions" id="-787639496%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-restrictions/index.html">Restrictions</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-787639496%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-restrictions/index.html">Restrictions</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1484350749%2FClasslikes%2F-747182850" anchor-label="Sex" id="1484350749%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sex/index.html">Sex</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1484350749%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-sex/index.html">Sex</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-584102063%2FClasslikes%2F-747182850" anchor-label="Sponsor" id="-584102063%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sponsor/index.html">Sponsor</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-584102063%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-sponsor/index.html">Sponsor</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="269467645%2FClasslikes%2F-747182850" anchor-label="VehicleClass" id="269467645%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vehicle-class/index.html">VehicleClass</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="269467645%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-vehicle-class/index.html">VehicleClass</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1198508116%2FClasslikes%2F-747182850" anchor-label="VisaType" id="-1198508116%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-visa-type/index.html">VisaType</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1198508116%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-visa-type/index.html">VisaType</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1374719444%2FClasslikes%2F-747182850" anchor-label="DependentDateOfBirth" id="-1374719444%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dependent-date-of-birth/index.html">DependentDateOfBirth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1374719444%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-dependent-date-of-birth/index.html">DependentDateOfBirth</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2040825446%2FClasslikes%2F-747182850" anchor-label="DependentDocumentNumber" id="-2040825446%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dependent-document-number/index.html">DependentDocumentNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2040825446%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-dependent-document-number/index.html">DependentDocumentNumber</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-325365232%2FClasslikes%2F-747182850" anchor-label="DependentFullName" id="-325365232%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dependent-full-name/index.html">DependentFullName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-325365232%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-dependent-full-name/index.html">DependentFullName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="55722488%2FClasslikes%2F-747182850" anchor-label="DependentSex" id="55722488%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dependent-sex/index.html">DependentSex</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="55722488%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-dependent-sex/index.html">DependentSex</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-109324714%2FClasslikes%2F-747182850" anchor-label="DocumentSubtype" id="-109324714%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-subtype/index.html">DocumentSubtype</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-109324714%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-subtype/index.html">DocumentSubtype</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1128294306%2FClasslikes%2F-747182850" anchor-label="EligibilityCategory" id="1128294306%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-eligibility-category/index.html">EligibilityCategory</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1128294306%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-eligibility-category/index.html">EligibilityCategory</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-224830638%2FClasslikes%2F-747182850" anchor-label="ManufacturingYear" id="-224830638%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-manufacturing-year/index.html">ManufacturingYear</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-224830638%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-manufacturing-year/index.html">ManufacturingYear</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-476726422%2FClasslikes%2F-747182850" anchor-label="Remarks" id="-476726422%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-remarks/index.html">Remarks</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-476726422%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-remarks/index.html">Remarks</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2120079982%2FClasslikes%2F-747182850" anchor-label="ResidencePermitType" id="-2120079982%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-residence-permit-type/index.html">ResidencePermitType</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2120079982%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-residence-permit-type/index.html">ResidencePermitType</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-698291632%2FClasslikes%2F-747182850" anchor-label="SpecificDocumentValidity" id="-698291632%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-specific-document-validity/index.html">SpecificDocumentValidity</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-698291632%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-specific-document-validity/index.html">SpecificDocumentValidity</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1138070536%2FClasslikes%2F-747182850" anchor-label="VehicleOwner" id="-1138070536%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vehicle-owner/index.html">VehicleOwner</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1138070536%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-vehicle-owner/index.html">VehicleOwner</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="730004029%2FClasslikes%2F-747182850" anchor-label="VehicleType" id="730004029%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vehicle-type/index.html">VehicleType</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="730004029%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-vehicle-type/index.html">VehicleType</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1302922584%2FClasslikes%2F-747182850" anchor-label="NationalInsuranceNumber" id="-1302922584%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-national-insurance-number/index.html">NationalInsuranceNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1302922584%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-national-insurance-number/index.html">NationalInsuranceNumber</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1782165402%2FClasslikes%2F-747182850" anchor-label="CountryCode" id="1782165402%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-country-code/index.html">CountryCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1782165402%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-country-code/index.html">CountryCode</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-873088585%2FClasslikes%2F-747182850" anchor-label="CertificateNumber" id="-873088585%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-certificate-number/index.html">CertificateNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-873088585%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-certificate-number/index.html">CertificateNumber</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1760492381%2FClasslikes%2F-747182850" anchor-label="MunicipalityOfRegistration" id="1760492381%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-municipality-of-registration/index.html">MunicipalityOfRegistration</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1760492381%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-municipality-of-registration/index.html">MunicipalityOfRegistration</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-845041343%2FClasslikes%2F-747182850" anchor-label="LocalityCode" id="-845041343%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-locality-code/index.html">LocalityCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-845041343%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-locality-code/index.html">LocalityCode</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-558394220%2FClasslikes%2F-747182850" anchor-label="MaidenName" id="-558394220%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-maiden-name/index.html">MaidenName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-558394220%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-maiden-name/index.html">MaidenName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1007032683%2FClasslikes%2F-747182850" anchor-label="StateCode" id="-1007032683%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-state-code/index.html">StateCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1007032683%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-state-code/index.html">StateCode</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-144616252%2FClasslikes%2F-747182850" anchor-label="DateOfEntry" id="-144616252%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-date-of-entry/index.html">DateOfEntry</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-144616252%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-date-of-entry/index.html">DateOfEntry</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1421729690%2FClasslikes%2F-747182850" anchor-label="MunicipalityCode" id="1421729690%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-municipality-code/index.html">MunicipalityCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1421729690%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-municipality-code/index.html">MunicipalityCode</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2021382799%2FClasslikes%2F-747182850" anchor-label="PollingStationCode" id="2021382799%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-polling-station-code/index.html">PollingStationCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2021382799%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-polling-station-code/index.html">PollingStationCode</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="551374633%2FClasslikes%2F-747182850" anchor-label="SectionCode" id="551374633%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-section-code/index.html">SectionCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="551374633%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-section-code/index.html">SectionCode</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="191928140%2FClasslikes%2F-747182850" anchor-label="RegistrationCenterCode" id="191928140%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-registration-center-code/index.html">RegistrationCenterCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="191928140%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-registration-center-code/index.html">RegistrationCenterCode</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="268788403%2FClasslikes%2F-747182850" anchor-label="StateName" id="268788403%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-state-name/index.html">StateName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="268788403%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-state-name/index.html">StateName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1170062676%2FClasslikes%2F-747182850" anchor-label="EffectiveDate" id="-1170062676%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-effective-date/index.html">EffectiveDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1170062676%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-effective-date/index.html">EffectiveDate</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1191336865%2FClasslikes%2F-747182850" anchor-label="ParentsLastName" id="1191336865%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-parents-last-name/index.html">ParentsLastName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1191336865%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-parents-last-name/index.html">ParentsLastName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-803639950%2FClasslikes%2F-747182850" anchor-label="WorkRestriction" id="-803639950%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-work-restriction/index.html">WorkRestriction</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-803639950%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-work-restriction/index.html">WorkRestriction</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1467745373%2FClasslikes%2F-747182850" anchor-label="ParentsFirstName" id="-1467745373%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-parents-first-name/index.html">ParentsFirstName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1467745373%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-parents-first-name/index.html">ParentsFirstName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1194025520%2FClasslikes%2F-747182850" anchor-label="SocialSecurityStatus" id="1194025520%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-social-security-status/index.html">SocialSecurityStatus</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1194025520%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-social-security-status/index.html">SocialSecurityStatus</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1948902654%2FClasslikes%2F-747182850" anchor-label="LegalStatus" id="-1948902654%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-legal-status/index.html">LegalStatus</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1948902654%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-legal-status/index.html">LegalStatus</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1597151005%2FClasslikes%2F-747182850" anchor-label="HusbandName" id="1597151005%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-husband-name/index.html">HusbandName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1597151005%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-husband-name/index.html">HusbandName</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1842283250%2FClasslikes%2F-747182850" anchor-label="CardAccessNumber" id="-1842283250%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-card-access-number/index.html">CardAccessNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1842283250%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-card-access-number/index.html">CardAccessNumber</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1088998667%2FProperties%2F-747182850" anchor-label="entries" id="1088998667%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="entries.html"><span><span>entries</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1088998667%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="entries.html">entries</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.enums/-enum-entries/index.html">EnumEntries</a><span class="token operator">&lt;</span><a href="index.html">FieldType</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns a representation of an immutable list of all enum entries, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-372974862%2FProperties%2F-747182850" anchor-label="name" id="-372974862%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.microblink.core.settings/-detection-level/-high/index.html#-372974862%2FProperties%2F-747182850"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../com.microblink.core.settings/-detection-level/-high/index.html#-372974862%2FProperties%2F-747182850">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739389684%2FProperties%2F-747182850" anchor-label="ordinal" id="-739389684%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.microblink.core.settings/-detection-level/-high/index.html#-739389684%2FProperties%2F-747182850"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../com.microblink.core.settings/-detection-level/-high/index.html#-739389684%2FProperties%2F-747182850">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-991962511%2FFunctions%2F-747182850" anchor-label="valueOf" id="-991962511%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-991962511%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FieldType</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-872066755%2FFunctions%2F-747182850" anchor-label="values" id="-872066755%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-872066755%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">FieldType</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

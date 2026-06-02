@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ProcessingState</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":microblink-ux:dokkaHtmlPartial/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":microblink-ux:dokkaHtmlPartial/release" data-filter=":microblink-ux:dokkaHtmlPartial/release">
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="microblink-ux::com.microblink.ux.state/ProcessingState///PointingToDeclaration//-1777851091">
+  <div class="breadcrumbs"><a href="../../index.html">microblink-ux</a><span class="delimiter">/</span><a href="../index.html">com.microblink.ux.state</a><span class="delimiter">/</span><span class="current">ProcessingState</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Processing</span><wbr><span><span>State</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="index.html">ProcessingState</a></div><p class="paragraph">Represents the different states of the reticle and UI elements during the scanning process.</p><p class="paragraph">This sealed class defines the various states that the UI can be in while a document is being captured and processed. Each state is associated with a specific <a href="../-reticle-state/index.html">ReticleState</a> and a minimum duration.</p><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-sensing/index.html">Sensing</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-processing/index.html">Processing</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-card-animation/index.html">CardAnimation</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-success/index.html">Success</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-error/index.html">Error</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-error-dialog/index.html">ErrorDialog</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-success-animation/index.html">SuccessAnimation</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="414196653%2FClasslikes%2F-1777851091" anchor-label="CardAnimation" id="414196653%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-card-animation/index.html"><span>Card</span><wbr><span><span>Animation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="414196653%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-card-animation/index.html">CardAnimation</a> : <a href="index.html">ProcessingState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="636561017%2FClasslikes%2F-1777851091" anchor-label="Error" id="636561017%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-error/index.html"><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="636561017%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-error/index.html">Error</a> : <a href="index.html">ProcessingState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="654887953%2FClasslikes%2F-1777851091" anchor-label="ErrorDialog" id="654887953%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-error-dialog/index.html"><span>Error</span><wbr><span><span>Dialog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="654887953%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-error-dialog/index.html">ErrorDialog</a> : <a href="index.html">ProcessingState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1112753362%2FClasslikes%2F-1777851091" anchor-label="Processing" id="-1112753362%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-processing/index.html"><span><span>Processing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1112753362%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-processing/index.html">Processing</a> : <a href="index.html">ProcessingState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="751357174%2FClasslikes%2F-1777851091" anchor-label="Sensing" id="751357174%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sensing/index.html"><span><span>Sensing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="751357174%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-sensing/index.html">Sensing</a> : <a href="index.html">ProcessingState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1349305566%2FClasslikes%2F-1777851091" anchor-label="Success" id="1349305566%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-success/index.html"><span><span>Success</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1349305566%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-success/index.html">Success</a> : <a href="index.html">ProcessingState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1451968704%2FClasslikes%2F-1777851091" anchor-label="SuccessAnimation" id="-1451968704%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-success-animation/index.html"><span>Success</span><wbr><span><span>Animation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1451968704%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-success-animation/index.html">SuccessAnimation</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>isFirstSide<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span> : <a href="index.html">ProcessingState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-838713960%2FProperties%2F-1777851091" anchor-label="duration" id="-838713960%2FProperties%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="duration.html"><span><span>duration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-838713960%2FProperties%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="duration.html">duration</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a></div><div class="brief "><p class="paragraph">The regular duration for which this state should last.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2140134696%2FProperties%2F-1777851091" anchor-label="minDuration" id="2140134696%2FProperties%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="min-duration.html"><span>min</span><wbr><span><span>Duration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2140134696%2FProperties%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="min-duration.html">minDuration</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a></div><div class="brief "><p class="paragraph">The minimum duration that this state should last, should the following     state be of higher priority.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1412066545%2FProperties%2F-1777851091" anchor-label="reticleState" id="-1412066545%2FProperties%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="reticle-state.html"><span>reticle</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1412066545%2FProperties%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="reticle-state.html">reticleState</a><span class="token operator">: </span><a href="../-reticle-state/index.html">ReticleState</a></div><div class="brief "><p class="paragraph">The <a href="../-reticle-state/index.html">ReticleState</a> associated with this processing state.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

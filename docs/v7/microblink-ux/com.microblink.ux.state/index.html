@@ -1,0 +1,302 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>com.microblink.ux.state</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../index.html">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":microblink-ux:dokkaHtmlPartial/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":microblink-ux:dokkaHtmlPartial/release" data-filter=":microblink-ux:dokkaHtmlPartial/release">
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="microblink-ux::com.microblink.ux.state////PointingToDeclaration//-1777851091">
+  <div class="breadcrumbs"><a href="../index.html">microblink-ux</a><span class="delimiter">/</span><span class="current">com.microblink.ux.state</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-713379867%2FClasslikes%2F-1777851091" anchor-label="BaseUiState" id="-713379867%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-base-ui-state/index.html"><span>Base</span><wbr><span>Ui</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-713379867%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-base-ui-state/index.html">BaseUiState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1015469141%2FClasslikes%2F-1777851091" anchor-label="CancelRequestState" id="1015469141%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cancel-request-state/index.html"><span>Cancel</span><wbr><span>Request</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1015469141%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-cancel-request-state/index.html">CancelRequestState</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-cancel-request-state/index.html">CancelRequestState</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Represents the reason of the cancel request. Currently not used.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1496524724%2FClasslikes%2F-1777851091" anchor-label="CardAnimationState" id="1496524724%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-card-animation-state/index.html"><span>Card</span><wbr><span>Animation</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1496524724%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-card-animation-state/index.html">CardAnimationState</a></div><div class="brief "><p class="paragraph">Current state of the flip-card animation shown after the first side has been successfully scanned.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="296065127%2FClasslikes%2F-1777851091" anchor-label="CommonStatusMessage" id="296065127%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-common-status-message/index.html"><span>Common</span><wbr><span>Status</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="296065127%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-common-status-message/index.html">CommonStatusMessage</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-common-status-message/index.html">CommonStatusMessage</a><span class="token operator">&gt; </span>, <a href="-status-message/index.html">StatusMessage</a></div><div class="brief "><p class="paragraph">Represents all the instruction messages that may be shown during the scanning session.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2079730584%2FClasslikes%2F-1777851091" anchor-label="ErrorState" id="-2079730584%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-error-state/index.html"><span>Error</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2079730584%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-error-state/index.html">ErrorState</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-error-state/index.html">ErrorState</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Represents the state of the error.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1361616996%2FClasslikes%2F-1777851091" anchor-label="HapticFeedbackState" id="-1361616996%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-haptic-feedback-state/index.html"><span>Haptic</span><wbr><span>Feedback</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1361616996%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-haptic-feedback-state/index.html">HapticFeedbackState</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-haptic-feedback-state/index.html">HapticFeedbackState</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Current state of the haptic (vibration) feedback that activates during the scanning session.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="887504263%2FClasslikes%2F-1777851091" anchor-label="MbTorchState" id="887504263%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mb-torch-state/index.html"><span>Mb</span><wbr><span>Torch</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="887504263%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-mb-torch-state/index.html">MbTorchState</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-mb-torch-state/index.html">MbTorchState</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Current state of the torch (flashlight) as shown by the icon on the UI.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-349937357%2FClasslikes%2F-1777851091" anchor-label="ProcessingState" id="-349937357%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-processing-state/index.html"><span>Processing</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-349937357%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-processing-state/index.html">ProcessingState</a></div><div class="brief "><p class="paragraph">Represents the different states of the reticle and UI elements during the scanning process.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1952953964%2FClasslikes%2F-1777851091" anchor-label="ReticleState" id="-1952953964%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-reticle-state/index.html"><span>Reticle</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1952953964%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-reticle-state/index.html">ReticleState</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-reticle-state/index.html">ReticleState</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Represents the different states of the reticle elements during the scanning process.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="109685404%2FClasslikes%2F-1777851091" anchor-label="StatusMessage" id="109685404%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-status-message/index.html"><span>Status</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="109685404%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-status-message/index.html">StatusMessage</a></div><div class="brief "><p class="paragraph">Interface that represents the status messages that may be shown during the scanning session.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1569350922%2FClasslikes%2F-1777851091" anchor-label="StatusMessageCounter" id="1569350922%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-status-message-counter/index.html"><span>Status</span><wbr><span>Message</span><wbr><span><span>Counter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1569350922%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-status-message-counter/index.html">StatusMessageCounter</a></div><div class="brief "><p class="paragraph">A class responsible for counting the occurrences of different <code class="lang-kotlin">CommonStatusMessage</code> types.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1482241237%2FClasslikes%2F-1777851091" anchor-label="UiScanningSide" id="1482241237%2FClasslikes%2F-1777851091" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":microblink-ux:dokkaHtmlPartial/release" data-filterable-set=":microblink-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ui-scanning-side/index.html"><span>Ui</span><wbr><span>Scanning</span><wbr><span><span>Side</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1482241237%2FClasslikes%2F-1777851091"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":microblink-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-ui-scanning-side/index.html">UiScanningSide</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-ui-scanning-side/index.html">UiScanningSide</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Specifies the current scanning side.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
