@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">स्क्यानबाट बाहिरिनुहोस्</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">फ्ल्यासलाइट अफ छ</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">फ्ल्यासलाइट अन छ</string>
+  <string name="mb_blinkid_accessibility_next_page">अर्को पृष्ठ</string>
+  <string name="mb_blinkid_accessibility_previous_page">अघिल्लो पृष्ठ</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">मद्दत स्क्रिन देखाउनुहोस्</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">पूरा भयो! कागजात स्क्यान भयो</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">पूरा भयो! अगाडिपट्टिको भाग स्क्यान भयो</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">फ्ल्यासलाइट अफ गर्नुहोस्</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">फ्ल्यासलाइट अन गर्नुहोस्</string>
+</resources>

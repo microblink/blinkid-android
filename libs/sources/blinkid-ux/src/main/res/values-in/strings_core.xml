@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Izin kamera dibutuhkan.</string>
+  <string name="mb_blinkid_close">Tutup</string>
+  <string name="mb_blinkid_dialog_back_button">Kembali</string>
+  <string name="mb_blinkid_dialog_done_button">Selesai</string>
+  <string name="mb_blinkid_dialog_next_button">Berikutnya</string>
+  <string name="mb_blinkid_dialog_skip_button">Lewati</string>
+  <string name="mb_blinkid_enable_camera">Aktifkan kamera</string>
+  <string name="mb_blinkid_enable_permission_help">Anda kini akan diarahkan ke pengaturan perizinan di mana Anda perlu memberikan izin kamera bagi aplikasi.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Mohon berikan izin kamera di pengaturan perizinan aplikasi.</string>
+  <string name="mb_blinkid_license_locked">Pemindaian tidak tersedia</string>
+  <string name="mb_blinkid_loading">Memuat…</string>
+  <string name="mb_blinkid_move_closer">Mohon dekatkan</string>
+  <string name="mb_blinkid_move_farther">Mohon jauhkan</string>
+  <string name="mb_blinkid_need_help_tooltip">Perlu bantuan?</string>
+  <string name="mb_blinkid_ok">Oke</string>
+  <string name="mb_blinkid_retry">Coba Lagi</string>
+  <string name="mb_blinkid_warning">Peringatan</string>
+</resources>

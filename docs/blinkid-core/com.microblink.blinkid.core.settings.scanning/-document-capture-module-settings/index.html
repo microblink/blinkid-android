@@ -1,0 +1,449 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>DocumentCaptureModuleSettings</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":blinkid-core/productionRelease">productionRelease</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":blinkid-core/productionRelease" data-filter=":blinkid-core/productionRelease">
+                                <span class="checkbox--icon"></span>
+                                productionRelease
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="blinkid-core::com.microblink.blinkid.core.settings.scanning/DocumentCaptureModuleSettings///PointingToDeclaration//144797397">
+  <div class="breadcrumbs"><a href="../../index.html">blinkid-core</a><span class="delimiter">/</span><a href="../index.html">com.microblink.blinkid.core.settings.scanning</a><span class="delimiter">/</span><span class="current">DocumentCaptureModuleSettings</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Document</span><wbr><span>Capture</span><wbr><span>Module</span><wbr><span><span>Settings</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">DocumentCaptureModuleSettings</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>inputImageCropped<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unsupportedDocumentsAllowed<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>secondSideWithNoExtractableDataSkipped<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>passportDataPageScanOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>faceImageExtractionEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>faceImagePresenceMandatory<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>inputImageReturnEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>documentImageReturnEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/FloatRange.html"><span class="token annotation builtin">FloatRange</span></a><span class="token punctuation">(</span><span>from<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">0.0</span></span><span class="token punctuation">, </span></span><wbr><span>to<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1.0</span></span></span><wbr><span class="token punctuation">)</span>&nbsp;</span><span class="token keyword">val </span>inputImageMargin<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token constant">0.02f</span><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/IntRange.html"><span class="token annotation builtin">IntRange</span></a><span class="token punctuation">(</span><span>from<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">100</span></span><span class="token punctuation">, </span></span><wbr><span>to<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">400</span></span></span><wbr><span class="token punctuation">)</span>&nbsp;</span><span class="token keyword">val </span>dotsPerInch<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">250</span><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/FloatRange.html"><span class="token annotation builtin">FloatRange</span></a><span class="token punctuation">(</span><span>from<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">0.0</span></span><span class="token punctuation">, </span></span><wbr><span>to<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1.0</span></span></span><wbr><span class="token punctuation">)</span>&nbsp;</span><span class="token keyword">val </span>extensionFactor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">0.0f</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>blurSensitivityLevel<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.settings/-sensitivity-level/index.html">SensitivityLevel</a><span class="token operator"> = </span>SensitivityLevel.Mid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>imageWithBlurRejected<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>glareSensitivityLevel<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.settings/-sensitivity-level/index.html">SensitivityLevel</a><span class="token operator"> = </span>SensitivityLevel.Mid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>imageWithGlareRejected<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>tiltSensitivityLevel<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.settings/-sensitivity-level/index.html">SensitivityLevel</a><span class="token operator"> = </span>SensitivityLevel.Mid<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>imageWithPoorLightingRejected<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>imageWithHandOcclusionRejected<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/os/Parcelable.html">Parcelable</a></div><p class="paragraph">Configuration settings for document capture and processing.</p><p class="paragraph">This class contains all settings related to document scanning, image quality checks, and extraction requirements for the BlinkID SDK.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="809812372%2FConstructors%2F144797397" anchor-label="DocumentCaptureModuleSettings" id="809812372%2FConstructors%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-capture-module-settings.html"><span>Document</span><wbr><span>Capture</span><wbr><span>Module</span><wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="809812372%2FConstructors%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">inputImageCropped<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">unsupportedDocumentsAllowed<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">secondSideWithNoExtractableDataSkipped<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">passportDataPageScanOnly<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">faceImageExtractionEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">faceImagePresenceMandatory<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">inputImageReturnEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">documentImageReturnEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/FloatRange.html"><span class="token annotation builtin">FloatRange</span></a><span class="token punctuation">(</span><span>from<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">0.0</span></span><span class="token punctuation">, </span></span><wbr><span>to<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1.0</span></span></span><wbr><span class="token punctuation">)</span>&nbsp;</span>inputImageMargin<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token constant">0.02f</span><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/IntRange.html"><span class="token annotation builtin">IntRange</span></a><span class="token punctuation">(</span><span>from<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">100</span></span><span class="token punctuation">, </span></span><wbr><span>to<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">400</span></span></span><wbr><span class="token punctuation">)</span>&nbsp;</span>dotsPerInch<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">250</span><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/FloatRange.html"><span class="token annotation builtin">FloatRange</span></a><span class="token punctuation">(</span><span>from<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">0.0</span></span><span class="token punctuation">, </span></span><wbr><span>to<span class="token operator"> = </span><span class="breakable-word"><span class="token constant">1.0</span></span></span><wbr><span class="token punctuation">)</span>&nbsp;</span>extensionFactor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator"> = </span><span class="token constant">0.0f</span><span class="token punctuation">, </span></span><span class="parameter ">blurSensitivityLevel<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.settings/-sensitivity-level/index.html">SensitivityLevel</a><span class="token operator"> = </span>SensitivityLevel.Mid<span class="token punctuation">, </span></span><span class="parameter ">imageWithBlurRejected<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">glareSensitivityLevel<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.settings/-sensitivity-level/index.html">SensitivityLevel</a><span class="token operator"> = </span>SensitivityLevel.Mid<span class="token punctuation">, </span></span><span class="parameter ">imageWithGlareRejected<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">tiltSensitivityLevel<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.settings/-sensitivity-level/index.html">SensitivityLevel</a><span class="token operator"> = </span>SensitivityLevel.Mid<span class="token punctuation">, </span></span><span class="parameter ">imageWithPoorLightingRejected<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">imageWithHandOcclusionRejected<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-35958630%2FProperties%2F144797397" anchor-label="blurSensitivityLevel" id="-35958630%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blur-sensitivity-level.html"><span>blur</span><wbr><span>Sensitivity</span><wbr><span><span>Level</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-35958630%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="blur-sensitivity-level.html">blurSensitivityLevel</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.settings/-sensitivity-level/index.html">SensitivityLevel</a></div><div class="brief "><p class="paragraph">The sensitivity of blur detection in the document image. Defines the severity of blur detected in the document image, as defined in <code class="lang-kotlin">SensitivityLevel</code>. Values range from <code class="lang-kotlin">Off</code> (detection <code class="lang-kotlin">NotAvailable</code>) to higher sensitivity levels of blur detection. <code class="lang-kotlin">Low</code> – less sensitive to blur; if something is detected as blur, it is almost certainly actual blur,      but some amount of blur may not be detected at all. <code class="lang-kotlin">High</code> – highly sensitive to blur; it may detect as blur even something that only resembles blur. Defaults to <code class="lang-kotlin">SensitivityLevel.Mid</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="599353685%2FProperties%2F144797397" anchor-label="documentImageReturnEnabled" id="599353685%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document-image-return-enabled.html"><span>document</span><wbr><span>Image</span><wbr><span>Return</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="599353685%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="document-image-return-enabled.html">documentImageReturnEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether the document image should be returned. Defaults to <code class="lang-kotlin">false</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1882896681%2FProperties%2F144797397" anchor-label="dotsPerInch" id="-1882896681%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dots-per-inch.html"><span>dots</span><wbr><span>Per</span><wbr><span><span>Inch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1882896681%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="dots-per-inch.html">dotsPerInch</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">The DPI value for the cropped document, face and signature image. Allowed minimal value is 100 and maximum value is 400. Defaults to <code class="lang-kotlin">250</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1245770086%2FProperties%2F144797397" anchor-label="extensionFactor" id="1245770086%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="extension-factor.html"><span>extension</span><wbr><span><span>Factor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1245770086%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="extension-factor.html">extensionFactor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a></div><div class="brief "><p class="paragraph">The extension factor for the cropped document image. Applicable only to document images. Allowed minimal value is 0.0 and maximum value is 1.0. Defaults to <code class="lang-kotlin">0f</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1886456182%2FProperties%2F144797397" anchor-label="faceImageExtractionEnabled" id="-1886456182%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="face-image-extraction-enabled.html"><span>face</span><wbr><span>Image</span><wbr><span>Extraction</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1886456182%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="face-image-extraction-enabled.html">faceImageExtractionEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Enables the extraction of the document's face image. If face image is present on the document, an extraction becomes mandatory if supported. For supported documents, the requirement for its presence is determined by document rules. For unsupported documents, presence is optional. Defaults to <code class="lang-kotlin">false</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1815444154%2FProperties%2F144797397" anchor-label="faceImagePresenceMandatory" id="-1815444154%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="face-image-presence-mandatory.html"><span>face</span><wbr><span>Image</span><wbr><span>Presence</span><wbr><span><span>Mandatory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1815444154%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="face-image-presence-mandatory.html">faceImagePresenceMandatory</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">If set to true, face image presence will be mandatory for the scanned document. For <code class="lang-kotlin">Automatic</code> <a href="../../com.microblink.blinkid.core.session/-scanning-mode/index.html">ScanningMode</a>, document side with the face image must be scanned first. In case of a timeout and advancement to the next step in the scanning flow, if a face image is detected on the scanned side but cannot be extracted, the presence requirement is considered fulfilled. As a result, face image extraction will no longer be a requirement to complete the scan on next side. Defaults to <code class="lang-kotlin">false</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="640236480%2FProperties%2F144797397" anchor-label="glareSensitivityLevel" id="640236480%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="glare-sensitivity-level.html"><span>glare</span><wbr><span>Sensitivity</span><wbr><span><span>Level</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="640236480%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="glare-sensitivity-level.html">glareSensitivityLevel</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.settings/-sensitivity-level/index.html">SensitivityLevel</a></div><div class="brief "><p class="paragraph">The sensitivity of glare detection in the document image. Defines the severity of glare detected in the document image, as defined in <code class="lang-kotlin">SensitivityLevel</code>. Values range from <code class="lang-kotlin">Off</code> (detection <code class="lang-kotlin">NotAvailable</code>) to higher sensitivity levels of glare detection. Low – less sensitive to glare; if something is detected as glare, it is almost certainly actual glare,      but some amount of glare may not be detected at all. High – highly sensitive to glare; it may detect as glare even something that only resembles glare. Defaults to <code class="lang-kotlin">SensitivityLevel.Mid</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-126829522%2FProperties%2F144797397" anchor-label="imageWithBlurRejected" id="-126829522%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="image-with-blur-rejected.html"><span>image</span><wbr><span>With</span><wbr><span>Blur</span><wbr><span><span>Rejected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-126829522%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="image-with-blur-rejected.html">imageWithBlurRejected</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Indicates whether images with detected blur should be rejected. A value of <code class="lang-kotlin">true</code> means images with detected blur will be excluded from further processing. If blur is detected, <a href="../../com.microblink.blinkid.core.result/-processing-status/index.html">ProcessingStatus</a> will be <code class="lang-kotlin">ImagePreprocessingFailed</code>. A value of <code class="lang-kotlin">false</code> means images will be processed even if blur is detected, and the blur status will be reported in the <code class="lang-kotlin">ProcessResult</code>. Defaults to <code class="lang-kotlin">true</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1283348646%2FProperties%2F144797397" anchor-label="imageWithGlareRejected" id="-1283348646%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="image-with-glare-rejected.html"><span>image</span><wbr><span>With</span><wbr><span>Glare</span><wbr><span><span>Rejected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1283348646%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="image-with-glare-rejected.html">imageWithGlareRejected</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Indicates whether images with detected glare should be rejected. A value of <code class="lang-kotlin">true</code> means images with detected glare will be excluded from further processing. If glare is detected, <a href="../../com.microblink.blinkid.core.result/-processing-status/index.html">ProcessingStatus</a> will be <code class="lang-kotlin">ImagePreprocessingFailed</code>. A value of <code class="lang-kotlin">false</code> means images will be processed even if glare is detected, and the glare status will be reported in the <code class="lang-kotlin">ProcessResult</code>. Defaults to <code class="lang-kotlin">true</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1262559403%2FProperties%2F144797397" anchor-label="imageWithHandOcclusionRejected" id="1262559403%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="image-with-hand-occlusion-rejected.html"><span>image</span><wbr><span>With</span><wbr><span>Hand</span><wbr><span>Occlusion</span><wbr><span><span>Rejected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1262559403%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="image-with-hand-occlusion-rejected.html">imageWithHandOcclusionRejected</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Indicates whether images occluded by hand should be rejected. A value of <code class="lang-kotlin">true</code> means images occluded by hand will be excluded from further processing to prevent occluded images from being used      - If hand occlusion is detected <a href="../../com.microblink.blinkid.core.result/-processing-status/index.html">ProcessingStatus</a><code class="lang-kotlin">will be </code>ImagePreprocessingFailed<code class="lang-kotlin">and hand occlusion status will be reported        in the </code>ProcessResult<code class="lang-kotlin">This setting is applicable only if </code>inputImageCropped<code class="lang-kotlin">= false. Defaults to </code>true`.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1833906727%2FProperties%2F144797397" anchor-label="imageWithPoorLightingRejected" id="1833906727%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="image-with-poor-lighting-rejected.html"><span>image</span><wbr><span>With</span><wbr><span>Poor</span><wbr><span>Lighting</span><wbr><span><span>Rejected</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1833906727%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="image-with-poor-lighting-rejected.html">imageWithPoorLightingRejected</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether images with poor lighting conditions should be rejected. Poor lighting conditions are represented as either <code class="lang-kotlin">TooBright</code> or <code class="lang-kotlin">TooDark</code> document images,      as defined in the <code class="lang-kotlin">ImageAnalysisLightingStatus</code> enum. A value of <code class="lang-kotlin">true</code> means images with poor lighting conditions will be excluded from further processing to prevent images with      inadequate lighting from being used      - If poor light conditions are detected <a href="../../com.microblink.blinkid.core.result/-processing-status/index.html">ProcessingStatus</a> will be <code class="lang-kotlin">ImagePreprocessingFailed</code> and lighting status will be        reported in the <code class="lang-kotlin">ProcessResult</code>. Defaults to <code class="lang-kotlin">true</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1459918470%2FProperties%2F144797397" anchor-label="inputImageCropped" id="1459918470%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="input-image-cropped.html"><span>input</span><wbr><span>Image</span><wbr><span><span>Cropped</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1459918470%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="input-image-cropped.html">inputImageCropped</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether the input image is already cropped and perspective-corrected. Requires the input image to consist solely of the cropped document image with perspective correction applied. This only applies to images from <code class="lang-kotlin">Photo</code> input image source - for images from <code class="lang-kotlin">Video</code> input image source, setting will be ignored. Defaults to <code class="lang-kotlin">false</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1108471399%2FProperties%2F144797397" anchor-label="inputImageMargin" id="1108471399%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="input-image-margin.html"><span>input</span><wbr><span>Image</span><wbr><span><span>Margin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1108471399%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="input-image-margin.html">inputImageMargin</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Defines the minimum required margin (in percentage) between the edge of the input image and the document. This setting is implemented to comply with regulations in certain countries that mandate documents to be stored with adequate margins in the image. Default value is 0.02f (also recommended value). The setting is applicable only when using images from <code class="lang-kotlin">Video</code> source The setting is not applicable if <code class="lang-kotlin">inputImageCropped = true</code> (it will be ignored). Allowed minimal value is 0.0 and maximum value is 1.0.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1403652436%2FProperties%2F144797397" anchor-label="inputImageReturnEnabled" id="1403652436%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="input-image-return-enabled.html"><span>input</span><wbr><span>Image</span><wbr><span>Return</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1403652436%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="input-image-return-enabled.html">inputImageReturnEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether input images should be returned in the result. Save the input images at the moment of the data extraction or timeout. This significantly increases memory consumption. The scanning performance is not affected. Defaults to <code class="lang-kotlin">false</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-527943854%2FProperties%2F144797397" anchor-label="passportDataPageScanOnly" id="-527943854%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="passport-data-page-scan-only.html"><span>passport</span><wbr><span>Data</span><wbr><span>Page</span><wbr><span>Scan</span><wbr><span><span>Only</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-527943854%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="passport-data-page-scan-only.html">passportDataPageScanOnly</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether only the passport data page should be scanned. Scan only the data page ( page containing <code class="lang-kotlin">MRZ</code> ) of the passport. If set to false, it will be required to scan the second page of certain passports. Defaults to <code class="lang-kotlin">true</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="136436937%2FProperties%2F144797397" anchor-label="secondSideWithNoExtractableDataSkipped" id="136436937%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="second-side-with-no-extractable-data-skipped.html"><span>second</span><wbr><span>Side</span><wbr><span>With</span><wbr><span>No</span><wbr><span>Extractable</span><wbr><span>Data</span><wbr><span><span>Skipped</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="136436937%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="second-side-with-no-extractable-data-skipped.html">secondSideWithNoExtractableDataSkipped</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether the back side scan should be skipped if the document supports only image capture on that side. Some documents have a back side that is supported but contains no extractable data (no MRZ, Barcode, etc.). These sides will be "captured only". If set to true (default), the scanning process will stop after the front side for such documents. If set to false, the back side will be captured, even though no data extraction is performed. Defaults to <code class="lang-kotlin">true</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1813952764%2FProperties%2F144797397" anchor-label="tiltSensitivityLevel" id="-1813952764%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tilt-sensitivity-level.html"><span>tilt</span><wbr><span>Sensitivity</span><wbr><span><span>Level</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1813952764%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="tilt-sensitivity-level.html">tiltSensitivityLevel</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.settings/-sensitivity-level/index.html">SensitivityLevel</a></div><div class="brief "><p class="paragraph">The sensitivity of allowed detected tilt of the document in the image. Defines the severity of allowed detected tilt of the document in the image, as defined in <code class="lang-kotlin">SensitivityLevel</code>. Values range from <code class="lang-kotlin">Off</code> (detection NotAvailable) to higher sensitivity levels of allowed tilt. Low – less sensitive to tilt. High – highly sensitive to tilt. Defaults to <code class="lang-kotlin">SensitivityLevel.Mid</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1031808271%2FProperties%2F144797397" anchor-label="unsupportedDocumentsAllowed" id="1031808271%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="unsupported-documents-allowed.html"><span>unsupported</span><wbr><span>Documents</span><wbr><span><span>Allowed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1031808271%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="unsupported-documents-allowed.html">unsupportedDocumentsAllowed</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Enables the scanning and processing of unsupported document types. A document is considered unsupported if its classification result is <code class="lang-kotlin">OTHER</code>. Defaults to <code class="lang-kotlin">false</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1578325224%2FFunctions%2F144797397" anchor-label="describeContents" id="-1578325224%2FFunctions%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-viz-module-settings/index.html#-1578325224%2FFunctions%2F144797397"><span>describe</span><wbr><span><span>Contents</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1578325224%2FFunctions%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-viz-module-settings/index.html#-1578325224%2FFunctions%2F144797397"><span class="token function">describeContents</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1754457655%2FFunctions%2F144797397" anchor-label="writeToParcel" id="-1754457655%2FFunctions%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-viz-module-settings/index.html#-1754457655%2FFunctions%2F144797397"><span>write</span><wbr><span>To</span><wbr><span><span>Parcel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1754457655%2FFunctions%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-viz-module-settings/index.html#-1754457655%2FFunctions%2F144797397"><span class="token function">writeToParcel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Parcel.html">Parcel</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

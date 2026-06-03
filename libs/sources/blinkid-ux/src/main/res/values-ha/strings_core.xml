@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Akwai buƙatar ba wa kamera izini</string>
+  <string name="mb_blinkid_close">Rufe</string>
+  <string name="mb_blinkid_dialog_back_button">Baya</string>
+  <string name="mb_blinkid_dialog_done_button">Kammala</string>
+  <string name="mb_blinkid_dialog_next_button">Gaba</string>
+  <string name="mb_blinkid_dialog_skip_button">Tsallake</string>
+  <string name="mb_blinkid_enable_camera">A kunna kemara</string>
+  <string name="mb_blinkid_enable_permission_help">Yanzu za a kai ku ɓangaren saitunan izini, wanda a nan ne ake buƙatar ku ba wa manhajar izinin amfani da kamera.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">A kunna izinin kamera a cikin saitunan izini na manhajar.</string>
+  <string name="mb_blinkid_license_locked">Ba za a iya ɗaukar hoto ba</string>
+  <string name="mb_blinkid_loading">Lodawa…</string>
+  <string name="mb_blinkid_move_closer">Matsa kusa</string>
+  <string name="mb_blinkid_move_farther">Matsa baya</string>
+  <string name="mb_blinkid_need_help_tooltip">Ana buƙatar taimako?</string>
+  <string name="mb_blinkid_ok">YA YI</string>
+  <string name="mb_blinkid_retry">Sake gwadawa</string>
+  <string name="mb_blinkid_warning">Gargaɗi</string>
+</resources>

@@ -33,9 +33,19 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.microblink.blinkid.core.BlinkIdSdk
 import com.microblink.blinkid.core.session.BlinkIdScanningResult
 import com.microblink.blinkid.core.session.BlinkIdSessionSettings
+import com.microblink.blinkid.ux.camera.CameraInputDetails
+import com.microblink.blinkid.ux.camera.CameraSettings
+import com.microblink.blinkid.ux.camera.compose.CameraInputDetailsCallback
+import com.microblink.blinkid.ux.camera.compose.CameraPermissionCallbacks
+import com.microblink.blinkid.ux.camera.compose.CameraPreviewCallbacks
+import com.microblink.blinkid.ux.camera.compose.CameraScreen
+import com.microblink.blinkid.ux.scanning.FrameProcessResultHandle
 import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
+import com.microblink.blinkid.ux.state.MbTorchState
+import com.microblink.blinkid.ux.state.ProcessingState
 import com.microblink.blinkid.ux.theme.BlinkIdSdkTheme
 import com.microblink.blinkid.ux.theme.BlinkIdTheme
+import com.microblink.blinkid.ux.utils.DeviceOrientationListener
 import com.microblink.blinkid.ux.utils.fillErrorDialogs
 import com.microblink.blinkid.ux.utils.fillHelpScreens
 import com.microblink.blinkid.ux.utils.onAppMovedToBackground
@@ -45,17 +55,7 @@ import com.microblink.blinkid.ux.utils.onCameraPermissionUserResponse
 import com.microblink.blinkid.ux.utils.onCameraPreviewStarted
 import com.microblink.blinkid.ux.utils.onCameraPreviewStopped
 import com.microblink.blinkid.ux.utils.onCloseButtonClicked
-import com.microblink.ux.ScanningUx
-import com.microblink.ux.UiSettings
-import com.microblink.ux.camera.CameraInputDetails
-import com.microblink.ux.camera.CameraSettings
-import com.microblink.ux.camera.compose.CameraInputDetailsCallback
-import com.microblink.ux.camera.compose.CameraPermissionCallbacks
-import com.microblink.ux.camera.compose.CameraPreviewCallbacks
-import com.microblink.ux.camera.compose.CameraScreen
-import com.microblink.ux.state.MbTorchState
-import com.microblink.ux.state.ProcessingState
-import com.microblink.ux.utils.DeviceOrientationListener
+import com.microblink.blinkid.ux.utils.toBlinkIdExtractionMode
 import kotlinx.coroutines.launch
 
 private const val TAG = "BlinkIdCameraScanningScreen"
@@ -94,6 +94,7 @@ fun BlinkIdCameraScanningScreen(
     sessionSettings: BlinkIdSessionSettings = BlinkIdSessionSettings(),
     onScanningSuccess: (BlinkIdScanningResult) -> Unit,
     onScanningCanceled: () -> Unit,
+    onFrameProcessResult: ((FrameProcessResultHandle) -> Unit)? = null
 ) {
     val viewModel: BlinkIdUxViewModel = viewModel(
         factory = BlinkIdUxViewModel.Factory,
@@ -109,6 +110,10 @@ fun BlinkIdCameraScanningScreen(
             set(
                 BlinkIdUxViewModel.BLINKID_UX_SETTINGS,
                 uxSettings
+            )
+            set(
+                BlinkIdUxViewModel.BLINKID_FRAME_PROCESS_RESULT_HANDLE,
+                onFrameProcessResult
             )
         }
     )
@@ -136,6 +141,8 @@ fun BlinkIdCameraScanningScreen(
             processLifecycle.removeObserver(observer)
         }
     }
+
+    val extractionMode = sessionSettings.toBlinkIdExtractionMode()
 
     BlinkIdSdkTheme(uiSettings) {
         val snackbarWarningMessage =
@@ -172,7 +179,7 @@ fun BlinkIdCameraScanningScreen(
                         onScanningCanceled()
                     },
                     uiSettings,
-                    fillHelpScreens(),
+                    fillHelpScreens(extractionMode),
                     fillErrorDialogs(viewModel::onRetryTimeout, onScanningCanceled),
                     uxSettings.allowHapticFeedback,
                     showProductionOverlay = !blinkIdSdk.getLicenseToken().licenseRights.allowRemoveProductionOverlay,

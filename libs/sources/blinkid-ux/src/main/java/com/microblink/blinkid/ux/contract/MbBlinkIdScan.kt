@@ -4,26 +4,22 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.os.Parcelable
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.core.os.BundleCompat
 import com.microblink.blinkid.core.BlinkIdSdkSettings
 import com.microblink.blinkid.core.session.BlinkIdScanningResult
 import com.microblink.blinkid.core.session.BlinkIdSessionSettings
+import com.microblink.blinkid.ux.DefaultShowHelpButton
+import com.microblink.blinkid.ux.DefaultShowOnboardingDialog
 import com.microblink.blinkid.ux.activity.BlinkIdScanActivity
+import com.microblink.blinkid.ux.camera.CameraSettings
 import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
-import com.microblink.ux.DefaultShowHelpButton
-import com.microblink.ux.DefaultShowOnboardingDialog
-import com.microblink.ux.camera.CameraSettings
-import com.microblink.ux.contract.CancelReason
-import com.microblink.ux.contract.ScanActivityColors
-import com.microblink.ux.contract.ScanActivityResultStatus
-import com.microblink.ux.contract.ScanActivitySettings
-import com.microblink.ux.theme.SdkStrings
-import com.microblink.ux.utils.ParcelableUiTypography
+import com.microblink.blinkid.ux.theme.SdkStrings
+import com.microblink.blinkid.ux.utils.ParcelableUiTypography
 import kotlinx.parcelize.Parcelize
 
-class MbBlinkIdScan : ActivityResultContract<BlinkIdScanActivitySettings, BlinkIdScanActivityResult>() {
+class MbBlinkIdScan :
+    ActivityResultContract<BlinkIdScanActivitySettings, BlinkIdScanActivityResult>() {
     override fun createIntent(context: Context, input: BlinkIdScanActivitySettings): Intent {
         return Intent(context, BlinkIdScanActivity::class.java).also {
             input.saveToIntent(it)
@@ -92,7 +88,7 @@ class MbBlinkIdScan : ActivityResultContract<BlinkIdScanActivitySettings, BlinkI
  *           interface. Defaults to [SdkStrings.Default].
  * @property scanActivityTypography Custom typography for the `BlinkIdScanActivity` user
  *           interface. Due to a limitation of [Typography] class, [ParcelableUiTypography] mimics
- *           [com.microblink.ux.theme.UiTypography] by allowing the customization of all the elements to a lesser extent.
+ *           [com.microblink.blinkid.ux.theme.UiTypography] by allowing the customization of all the elements to a lesser extent.
  *           The most important [TextStyle] and [Font] customizations are still available through this class.
  *           Defaults to [ParcelableUiTypography.Default].
  * @property showOnboardingDialog Determines whether an onboarding dialog should be displayed to
@@ -117,7 +113,9 @@ data class BlinkIdScanActivitySettings @JvmOverloads constructor(
     override val cameraSettings: CameraSettings = CameraSettings(),
     override val scanActivityUiColors: ScanActivityColors? = null,
     override val scanActivityUiStrings: SdkStrings = SdkStrings.Default,
-    override val scanActivityTypography: ParcelableUiTypography = ParcelableUiTypography.Default(null),
+    override val scanActivityTypography: ParcelableUiTypography = ParcelableUiTypography.Default(
+        null
+    ),
     override val showOnboardingDialog: Boolean = DefaultShowOnboardingDialog,
     override val showHelpButton: Boolean = DefaultShowHelpButton,
     override val enableEdgeToEdge: Boolean = true,

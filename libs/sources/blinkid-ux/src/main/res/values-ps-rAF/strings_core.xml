@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">د کیمرې اجازه اړینه ده.</string>
+  <string name="mb_blinkid_close">تړل</string>
+  <string name="mb_blinkid_dialog_back_button">شاته</string>
+  <string name="mb_blinkid_dialog_done_button">وشو</string>
+  <string name="mb_blinkid_dialog_next_button">بل</string>
+  <string name="mb_blinkid_dialog_skip_button">پریږدئ</string>
+  <string name="mb_blinkid_enable_camera">کیمره فعاله کړئ</string>
+  <string name="mb_blinkid_enable_permission_help">اوس به تاسو د اجازې ترتیباتو ته وړل کیږئ چیرې چې تاسو اړتیا لرئ اپلیکیشن ته د کیمرې اجازه ورکړئ.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">مهرباني وکړئ د اپلیکیشن د اجازې ترتیباتو کې د کیمرې اجازه ورکړئ.</string>
+  <string name="mb_blinkid_license_locked">سکین کول شتون نلري</string>
+  <string name="mb_blinkid_loading">بارول…</string>
+  <string name="mb_blinkid_move_closer">نږدې شه</string>
+  <string name="mb_blinkid_move_farther">نور لاړ شه</string>
+  <string name="mb_blinkid_need_help_tooltip">تاسو مرستې ته اړتیا لرئ؟</string>
+  <string name="mb_blinkid_ok">سمه ده</string>
+  <string name="mb_blinkid_retry">بیا هڅه وکړئ</string>
+  <string name="mb_blinkid_warning">خبرداری</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Sunt necesare permisiile pentru camera foto.</string>
+  <string name="mb_blinkid_close">Închide</string>
+  <string name="mb_blinkid_dialog_back_button">Înapoi</string>
+  <string name="mb_blinkid_dialog_done_button">Terminat</string>
+  <string name="mb_blinkid_dialog_next_button">Următorul</string>
+  <string name="mb_blinkid_dialog_skip_button">Săltați pasul</string>
+  <string name="mb_blinkid_enable_camera">Activare cameră foto</string>
+  <string name="mb_blinkid_enable_permission_help">Vor fi apelate setările de permisiuni, unde va trebui să activați accesul la camera foto pentru aplicație.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Activați accesul la camera foto în setările de permisiuni ale aplicației.</string>
+  <string name="mb_blinkid_license_locked">Scanarea nu e disponibilă</string>
+  <string name="mb_blinkid_loading">Încărcare…</string>
+  <string name="mb_blinkid_move_closer">Apropiați</string>
+  <string name="mb_blinkid_move_farther">Îndepărtați</string>
+  <string name="mb_blinkid_need_help_tooltip">Aveți nevoie de ajutor?</string>
+  <string name="mb_blinkid_ok">Bine</string>
+  <string name="mb_blinkid_retry">Reîncercare</string>
+  <string name="mb_blinkid_warning">Avertizare</string>
+</resources>

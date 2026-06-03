@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">カメラの許可が必要です。</string>
+  <string name="mb_blinkid_close">閉じる</string>
+  <string name="mb_blinkid_dialog_back_button">戻る</string>
+  <string name="mb_blinkid_dialog_done_button">完了</string>
+  <string name="mb_blinkid_dialog_next_button">次へ</string>
+  <string name="mb_blinkid_dialog_skip_button">スキップ</string>
+  <string name="mb_blinkid_enable_camera">カメラを有効にする</string>
+  <string name="mb_blinkid_enable_permission_help">許可設定画面に移動し,アプリにカメラへのアクセス許可を与えてください。</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">アプリの許可設定でカメラへのアクセス許可を与えてください。</string>
+  <string name="mb_blinkid_license_locked">スキャンできません</string>
+  <string name="mb_blinkid_loading">読み込み中…</string>
+  <string name="mb_blinkid_move_closer">近くへ移動</string>
+  <string name="mb_blinkid_move_farther">遠くへ移動</string>
+  <string name="mb_blinkid_need_help_tooltip">ヘルプが必要ですか？</string>
+  <string name="mb_blinkid_ok">分かりました</string>
+  <string name="mb_blinkid_retry">再試行</string>
+  <string name="mb_blinkid_warning">警告</string>
+</resources>

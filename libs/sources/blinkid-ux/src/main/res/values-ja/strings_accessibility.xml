@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">スキャンを終了</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">フラッシュライト:オフ</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">フラッシュライト:オン</string>
+  <string name="mb_blinkid_accessibility_next_page">次のページ</string>
+  <string name="mb_blinkid_accessibility_previous_page">前のページ</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">ヘルプ画面を表示</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">成功！ドキュメントをスキャンしました</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">成功！表面をスキャンしました</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">フラッシュライトをオフにする</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">フラッシュライトをオンにする</string>
+</resources>

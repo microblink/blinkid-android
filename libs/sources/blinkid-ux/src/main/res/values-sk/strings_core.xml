@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Vyžaduje sa povolenie fotoaparátu.</string>
+  <string name="mb_blinkid_close">Zavrieť</string>
+  <string name="mb_blinkid_dialog_back_button">Späť</string>
+  <string name="mb_blinkid_dialog_done_button">Hotovo</string>
+  <string name="mb_blinkid_dialog_next_button">Ďalej</string>
+  <string name="mb_blinkid_dialog_skip_button">Preskočiť</string>
+  <string name="mb_blinkid_enable_camera">Povoliť fotoaparát</string>
+  <string name="mb_blinkid_enable_permission_help">Teraz budete presmerovaný na nastavenia povolení, kde je nutné udeliť fotoaparátu prístup k aplikácii.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Prosím, udeľte fotoaparátu povolenie v prístupových nastaveniach aplikácie.</string>
+  <string name="mb_blinkid_license_locked">Skenovanie nie je dostupné</string>
+  <string name="mb_blinkid_loading">Načítava sa…</string>
+  <string name="mb_blinkid_move_closer">Posuňte sa bližšie</string>
+  <string name="mb_blinkid_move_farther">Posuňte sa ďalej</string>
+  <string name="mb_blinkid_need_help_tooltip">Potrebujete pomoc?</string>
+  <string name="mb_blinkid_ok">OK</string>
+  <string name="mb_blinkid_retry">Skúsiť znova</string>
+  <string name="mb_blinkid_warning">Varovanie</string>
+</resources>

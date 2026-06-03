@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Kameran käyttöoikeus tarvitaan.</string>
+  <string name="mb_blinkid_close">Sulje</string>
+  <string name="mb_blinkid_dialog_back_button">Takaisin</string>
+  <string name="mb_blinkid_dialog_done_button">Valmis</string>
+  <string name="mb_blinkid_dialog_next_button">Seuraava</string>
+  <string name="mb_blinkid_dialog_skip_button">Ohita</string>
+  <string name="mb_blinkid_enable_camera">Ota kamera käyttöön</string>
+  <string name="mb_blinkid_enable_permission_help">Sinut ohjataan nyt käyttöoikeusasetuksiin. Siellä sinun on annettava sovellukselle kameran käyttöoikeus.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Anna kameran käyttöoikeus sovelluksen käyttöoikeusasetuksissa.</string>
+  <string name="mb_blinkid_license_locked">Skannaus ei ole käytettävissä</string>
+  <string name="mb_blinkid_loading">Ladataan…</string>
+  <string name="mb_blinkid_move_closer">Siirry lähemmäs</string>
+  <string name="mb_blinkid_move_farther">Siirry kauemmas</string>
+  <string name="mb_blinkid_need_help_tooltip">Tarvitsetko apua?</string>
+  <string name="mb_blinkid_ok">OK</string>
+  <string name="mb_blinkid_retry">Yritä uudelleen</string>
+  <string name="mb_blinkid_warning">Varoitus</string>
+</resources>

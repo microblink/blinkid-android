@@ -5,22 +5,22 @@
 
 package com.microblink.blinkid.ux.scanning
 
+import com.microblink.blinkid.core.image.InputImage
+import com.microblink.blinkid.core.result.ImageAnalysisDetectionStatus
+import com.microblink.blinkid.core.result.ImageAnalysisLightingStatus
 import com.microblink.blinkid.core.result.ImageExtractionType
 import com.microblink.blinkid.core.result.ProcessingStatus
+import com.microblink.blinkid.core.result.ScanningSide
 import com.microblink.blinkid.core.result.ScanningStatus
 import com.microblink.blinkid.core.result.classinfo.Country
 import com.microblink.blinkid.core.result.classinfo.Type
 import com.microblink.blinkid.core.session.BlinkIdProcessResult
+import com.microblink.blinkid.core.session.DetectionStatus
 import com.microblink.blinkid.core.settings.ScanningSettings
+import com.microblink.blinkid.ux.ScanningUxEvent
 import com.microblink.blinkid.ux.state.PassportPage
 import com.microblink.blinkid.ux.state.PassportType
-import com.microblink.core.image.InputImage
-import com.microblink.core.result.ImageAnalysisDetectionStatus
-import com.microblink.core.result.ImageAnalysisLightingStatus
-import com.microblink.core.result.ScanningSide
-import com.microblink.core.session.DetectionStatus
-import com.microblink.ux.ScanningUxEvent
-import com.microblink.ux.state.UiScanningSide
+import com.microblink.blinkid.ux.state.UiScanningSide
 import kotlin.time.Duration.Companion.nanoseconds
 import kotlin.time.Duration.Companion.seconds
 
@@ -36,14 +36,19 @@ import kotlin.time.Duration.Companion.seconds
  */
 class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
 
-    private val backToBarcodeTimeout = 3.seconds
+    private val barcodeTimeout = 3.seconds
     private var barcodeDispatched = false
+    private var barcodeFailedTimestamp: Long? = null
+
+    // Flag to avoid multiple consecutive emission of UnparsableBarcode that triggers resolveCurrentStep()
+    private var unparsableBarcodeResolved = false
 
     private var passportType: PassportType? = null
 
     private var currentSide = UiScanningSide.First
 
-    private var firstBackRequestedTimestamp: Long? = null
+    private val unsupportedDocumentTimeout = 1.5.seconds
+    private var firstUnsupportedDocumentTimestamp: Long? = null
 
     /**
      * Translates the given [BlinkIdProcessResult] and [InputImage]
@@ -56,6 +61,7 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
      * @param processResult The [BlinkIdProcessResult] from the scanning session.
      * @param inputImage The [InputImage] used for the process. Can be `null`.
      * @param scanningSettings The [ScanningSettings] used to configure scanning behavior.
+     * @param scanningStatus The current native scanning status for the session.
      * @return A list of [ScanningUxEvent] objects representing the user
      *         experience events that should be dispatched.
      */
@@ -63,12 +69,13 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
         processResult: BlinkIdProcessResult,
         inputImage: InputImage?,
         scanningSettings: ScanningSettings,
+        scanningStatus: ScanningStatus
     ): List<ScanningUxEvent> {
         val events = mutableListOf<ScanningUxEvent>()
 
         val imageAnalysisResult = processResult.inputImageAnalysisResult
 
-        if (processResult.resultCompleteness.isComplete()) {
+        if (scanningStatus == ScanningStatus.DocumentScanned) {
             events.add(ScanningUxEvent.ScanningDone)
             return events
         }
@@ -85,7 +92,11 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
         }
 
         if (currentSide == UiScanningSide.First) {
-            if (processResult.resultCompleteness.scanningStatus == ScanningStatus.SideScanned) {
+            // resolveCurrentStep() can advance native state to SideScanned before
+            // a new frame reports AwaitingOtherSide.
+            if (scanningStatus == ScanningStatus.SideScanned ||
+                processResult.inputImageAnalysisResult.processingStatus == ProcessingStatus.AwaitingOtherSide
+            ) {
                 currentSide = UiScanningSide.Second
                 if (passportType != null) {
                     events.add(
@@ -101,15 +112,28 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
         } else if (currentSide == UiScanningSide.Second) {
             if (processResult.inputImageAnalysisResult.scanningSide != ScanningSide.Second) {
                 currentSide = UiScanningSide.First
-            } else if (firstBackRequestedTimestamp == null) {
-                firstBackRequestedTimestamp = System.nanoTime()
-            } else {
-                if (shouldRequestBarcode(processResult)) {
-                    barcodeDispatched = true
-                    events.add(ScanningUxEvent.RequestSide(UiScanningSide.Barcode))
+            }
+        }
+
+        if (events.isNotEmpty()) return events
+
+        if (imageAnalysisResult.processingStatus == ProcessingStatus.BarcodeRecognitionFailed && !barcodeDispatched) {
+            barcodeDispatched = true
+            events.add(ScanningUxEvent.RequestSide(UiScanningSide.Barcode))
+            if (processResult.resultCompleteness.barcode?.parsingSupported == false && canResolveBarcode(
+                    scanningSettings
+                )
+            ) {
+                if (barcodeFailedTimestamp == null) {
+                    barcodeFailedTimestamp = System.nanoTime()
                 }
             }
         }
+        if (shouldResolveUnparsableBarcode() && !unparsableBarcodeResolved) {
+            unparsableBarcodeResolved = true
+            events.add(ScanningUxEvent.UnparsableBarcode)
+        }
+
         if (events.isNotEmpty()) return events
 
         if (imageAnalysisResult.documentLocation != null) {
@@ -130,7 +154,18 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
         // below just one event can be generated, by following priorities
         var hasEvents = false
 
+        val previousUnsupportedTimestamp = firstUnsupportedDocumentTimestamp
+        firstUnsupportedDocumentTimestamp = null
+
         when (imageAnalysisResult.processingStatus) {
+            ProcessingStatus.UnsupportedDocument -> {
+                firstUnsupportedDocumentTimestamp =
+                    previousUnsupportedTimestamp ?: System.nanoTime()
+                if (shouldShowUnsupportedDocument()) {
+                    events.add(ScanningUxEvent.UnsupportedDocument)
+                }
+                hasEvents = true
+            }
 
             ProcessingStatus.AwaitingOtherSide -> {
                 when (passportType) {
@@ -173,6 +208,11 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
                 hasEvents = true
             }
 
+            ProcessingStatus.BarcodeDetectionFailed -> {
+                events.add(ScanningUxEvent.BarcodeNotDetected)
+                hasEvents = true
+            }
+
             ProcessingStatus.ImageReturnFailed -> {
                 if (processResult.inputImageAnalysisResult.imageExtractionFailures.contains(
                         ImageExtractionType.Face
@@ -205,6 +245,7 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
             DetectionStatus.CameraTooFar -> events.add(ScanningUxEvent.DocumentTooFar)
             DetectionStatus.CameraTooClose,
             DetectionStatus.DocumentTooCloseToCameraEdge -> events.add(ScanningUxEvent.DocumentTooClose)
+
             DetectionStatus.DocumentPartiallyVisible -> events.add(ScanningUxEvent.DocumentNotFullyVisible)
             DetectionStatus.CameraAngleTooSteep -> events.add(ScanningUxEvent.DocumentTooTilted)
             else -> {
@@ -219,23 +260,23 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
 
         hasEvents = true
 
-        if (scanningSettings.skipImagesWithGlare &&
+        if (scanningSettings.documentCaptureModule?.imageWithGlareRejected == true &&
             imageAnalysisResult.glareDetectionStatus == ImageAnalysisDetectionStatus.Detected
         ) {
             events.add(ScanningUxEvent.GlareDetected)
-        } else if (scanningSettings.skipImagesWithBlur &&
+        } else if (scanningSettings.documentCaptureModule?.imageWithBlurRejected == true &&
             imageAnalysisResult.blurDetectionStatus == ImageAnalysisDetectionStatus.Detected
         ) {
             events.add(ScanningUxEvent.BlurDetected)
-        } else if (scanningSettings.skipImagesOccludedByHand &&
+        } else if (scanningSettings.documentCaptureModule?.imageWithHandOcclusionRejected == true &&
             imageAnalysisResult.documentHandOcclusionStatus == ImageAnalysisDetectionStatus.Detected
         ) {
             events.add(ScanningUxEvent.DocumentNotFullyVisible)
-        } else if (scanningSettings.skipImagesWithInadequateLightingConditions &&
+        } else if (scanningSettings.documentCaptureModule?.imageWithPoorLightingRejected == true &&
             imageAnalysisResult.documentLightingStatus == ImageAnalysisLightingStatus.TooBright
         ) {
             events.add(ScanningUxEvent.DocumentTooBright)
-        } else if (scanningSettings.skipImagesWithInadequateLightingConditions &&
+        } else if (scanningSettings.documentCaptureModule?.imageWithPoorLightingRejected == true &&
             imageAnalysisResult.documentLightingStatus == ImageAnalysisLightingStatus.TooDark
         ) {
             events.add(ScanningUxEvent.DocumentTooDark)
@@ -255,12 +296,32 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
     }
 
     fun resetSession() {
-        firstBackRequestedTimestamp = null
         barcodeDispatched = false
+        barcodeFailedTimestamp = null
+        unparsableBarcodeResolved = false
         passportType = null
+        firstUnsupportedDocumentTimestamp = null
+        // TODO: Verify whether currentSide should reset to UiScanningSide.First on session restart.
     }
 
-    private fun shouldRequestBarcode(processResult: BlinkIdProcessResult): Boolean {
-        return (System.nanoTime() - firstBackRequestedTimestamp!!).nanoseconds > backToBarcodeTimeout && processResult.inputImageAnalysisResult.processingStatus == ProcessingStatus.BarcodeRecognitionFailed && !barcodeDispatched
+    private fun shouldShowUnsupportedDocument(): Boolean {
+        return (System.nanoTime() - firstUnsupportedDocumentTimestamp!!).nanoseconds > unsupportedDocumentTimeout
+    }
+
+    private fun shouldResolveUnparsableBarcode(): Boolean {
+        return barcodeFailedTimestamp != null &&
+                (System.nanoTime() - barcodeFailedTimestamp!!).nanoseconds > barcodeTimeout
+    }
+
+    private fun canResolveBarcode(settings: ScanningSettings): Boolean {
+        return if (settings.barcodeModule?.presenceMandatory == true) {
+            false
+        } else if (settings.documentCaptureModule == null &&
+            settings.vizModule == null &&
+            settings.mrzModule == null &&
+            settings.barcodeModule != null
+        ) {
+            false
+        } else true
     }
 }

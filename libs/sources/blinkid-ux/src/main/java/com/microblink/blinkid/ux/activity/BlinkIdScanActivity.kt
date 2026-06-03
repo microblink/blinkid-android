@@ -9,16 +9,16 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewModelScope
+import com.microblink.blinkid.core.ping.util.PingletTracker
+import com.microblink.blinkid.core.utils.MbLog
 import com.microblink.blinkid.ux.BlinkIdCameraScanningScreen
+import com.microblink.blinkid.ux.components.LoadingScreen
 import com.microblink.blinkid.ux.contract.BlinkIdScanActivitySettings
 import com.microblink.blinkid.ux.contract.BlinkIdScanningResultHolder
+import com.microblink.blinkid.ux.contract.CancelReason
 import com.microblink.blinkid.ux.contract.MbBlinkIdScan
+import com.microblink.blinkid.ux.createUiSettings
 import com.microblink.blinkid.ux.theme.BlinkIdSdkTheme
-import com.microblink.core.ping.util.PingletTracker
-import com.microblink.core.utils.MbLog
-import com.microblink.ux.components.LoadingScreen
-import com.microblink.ux.contract.CancelReason
-import com.microblink.ux.createUiSettings
 import kotlinx.coroutines.launch
 
 private const val TAG = "BlinkIdScanActivity"

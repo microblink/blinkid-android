@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Potrebno je dovoljenje za kamero.</string>
+  <string name="mb_blinkid_close">Zapri</string>
+  <string name="mb_blinkid_dialog_back_button">Nazaj</string>
+  <string name="mb_blinkid_dialog_done_button">Končano</string>
+  <string name="mb_blinkid_dialog_next_button">Naprej</string>
+  <string name="mb_blinkid_dialog_skip_button">Preskoči</string>
+  <string name="mb_blinkid_enable_camera">Omogoči kamero</string>
+  <string name="mb_blinkid_enable_permission_help">Zdaj boste preusmerjeni v nastavitve dovoljenj, kjer morate aplikaciji dati dovoljenje za kamero.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">V nastavitvah dovoljenj za aplikacijo dajte dovoljenje za kamero.</string>
+  <string name="mb_blinkid_license_locked">Optično branje ni na voljo</string>
+  <string name="mb_blinkid_loading">Nalaganje…</string>
+  <string name="mb_blinkid_move_closer">Približajte</string>
+  <string name="mb_blinkid_move_farther">Oddaljite</string>
+  <string name="mb_blinkid_need_help_tooltip">Potrebujete pomoč?</string>
+  <string name="mb_blinkid_ok">V redu</string>
+  <string name="mb_blinkid_retry">Poskusi znova</string>
+  <string name="mb_blinkid_warning">Opozorilo</string>
+</resources>

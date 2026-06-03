@@ -1,42 +1,39 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>com.microblink.blinkid.ux.utils</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
-<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
-<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script></head>
 <body>
-    <div class="root">
-    <nav class="navigation theme-dark" id="navigation-wrapper">
-<a class="library-name--link" href="../../index.html">
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
                     BlinkID
             </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
         </button>
@@ -44,53 +41,55 @@
         <div class="library-version" id="library-version">
         </div>
         <div class="navigation-controls">
-        <div class="filter-section filter-section_loading" id="filter-section">
-                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":blinkid-ux:dokkaHtmlPartial/release">androidJvm</button>
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":blinkid-ux/productionRelease">productionRelease</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
-                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
-                    <div class="dropdown--header"><span>Platform filter</span>
-                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
                             <i class="ui-kit-icon ui-kit-icon_cross"></i>
                         </button>
                     </div>
                         <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
                             <label class="checkbox">
-                                <input type="checkbox" class="checkbox--input" id=":blinkid-ux:dokkaHtmlPartial/release" data-filter=":blinkid-ux:dokkaHtmlPartial/release">
+                                <input type="checkbox" class="checkbox--input" id=":blinkid-ux/productionRelease" data-filter=":blinkid-ux/productionRelease">
                                 <span class="checkbox--icon"></span>
-                                androidJvm
+                                productionRelease
                             </label>
                         </li>
                 </ul>
                 <div class="dropdown--overlay"></div>
             </div>
-        </div>
+        </ul>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
             </button>
             <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
                 API
             </div>
         </div>
-    </nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
-                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
-                        <div class="dropdown--header">
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
                             <span>
                                     BlinkID
                             </span>
-                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
-                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
-                            </button>
-                        </div>
-                        <div class="sidebar--inner" id="sideMenu"></div>
-                    </ul>
-                    <div class="dropdown--overlay"></div>
-                </div>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
-<div class="main-content" data-page-type="package" id="content" pageids="blinkid-ux::com.microblink.blinkid.ux.utils////PointingToDeclaration//1900084154">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="blinkid-ux::com.microblink.blinkid.ux.utils////PointingToDeclaration//-1502902895">
   <div class="breadcrumbs"><a href="../index.html">blinkid-ux</a><span class="delimiter">/</span><span class="current">com.microblink.blinkid.ux.utils</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
@@ -99,18 +98,123 @@
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="TYPE">
-        <h2 class="">Types</h2>
-        <div class="table"><a data-name="-1385961514%2FClasslikes%2F1900084154" anchor-label="UxPingletTracker" id="-1385961514%2FClasslikes%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="560588185%2FClasslikes%2F-1502902895" anchor-label="BlinkIdExtractionMode" id="560588185%2FClasslikes%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="-ux-pinglet-tracker/index.html"><span>Ux</span><wbr><span>Pinglet</span><wbr><span><span>Tracker</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1385961514%2FClasslikes%2F1900084154"></span>
+                  <div><a href="-blink-id-extraction-mode/index.html"><span>Blink</span><wbr><span>Id</span><wbr><span>Extraction</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="560588185%2FClasslikes%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-ux-pinglet-tracker/index.html">UxPingletTracker</a> : <a href="../../blinkid-core/com.microblink.core.ping.util/-pinglet-tracker/index.html">PingletTracker</a></div><div class="brief "><p class="paragraph">UX-specific Pinglet tracker for monitoring user experience events and camera-related activities. This object extends <a href="../../blinkid-core/com.microblink.core.ping.util/-pinglet-tracker/index.html">PingletTracker</a> to provide specialized tracking capabilities for user interface events, camera hardware information, scanning conditions, and camera permissions within the UX layer.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-blink-id-extraction-mode/index.html">BlinkIdExtractionMode</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-blink-id-extraction-mode/index.html">BlinkIdExtractionMode</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Represents the active extraction mode configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1953386606%2FClasslikes%2F-1502902895" anchor-label="ErrorReason" id="1953386606%2FClasslikes%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-error-reason/index.html"><span>Error</span><wbr><span><span>Reason</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1953386606%2FClasslikes%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-error-reason/index.html">ErrorReason</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-error-reason/index.html">ErrorReason</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Specifies the error reason.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="888747458%2FClasslikes%2F-1502902895" anchor-label="HelpScreenResources" id="888747458%2FClasslikes%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-help-screen-resources/index.html"><span>Help</span><wbr><span>Screen</span><wbr><span><span>Resources</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="888747458%2FClasslikes%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-help-screen-resources/index.html">HelpScreenResources</a></div><div class="brief "><p class="paragraph">Holds the drawable resources for a specific help screen variant.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-918415658%2FClasslikes%2F-1502902895" anchor-label="ParcelableFont" id="-918415658%2FClasslikes%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-parcelable-font/index.html"><span>Parcelable</span><wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-918415658%2FClasslikes%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-parcelable-font/index.html">ParcelableFont</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/FontRes.html"><span class="token annotation builtin">FontRes</span></a>&nbsp;</span><span class="token keyword">val </span>resId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>weight<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/font/FontWeight.html">FontWeight</a><span class="token operator"> = </span>FontWeight.Normal<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>style<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/font/FontStyle.html">FontStyle</a><span class="token operator"> = </span>FontStyle.Normal</span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/os/Parcelable.html">Parcelable</a></div><div class="brief "><p class="paragraph">Parcelable version of <a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/font/Font.html">Font</a> that can be used in <a href="-parcelable-ui-typography/index.html">ParcelableUiTypography</a>. Customizations are limited to the most important <a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/font/Font.html">Font</a> parameters.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1072128871%2FClasslikes%2F-1502902895" anchor-label="ParcelableTextStyle" id="-1072128871%2FClasslikes%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-parcelable-text-style/index.html"><span>Parcelable</span><wbr><span>Text</span><wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1072128871%2FClasslikes%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>fontFamily<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-parcelable-font/index.html">ParcelableFont</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fontWeight<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/font/FontWeight.html">FontWeight</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fontSize<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/unit/TextUnit.html">TextUnit</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>lineHeight<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/unit/TextUnit.html">TextUnit</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/os/Parcelable.html">Parcelable</a></div><div class="brief "><p class="paragraph">Parcelable version of <a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a> that can be used in <a href="-parcelable-ui-typography/index.html">ParcelableUiTypography</a>. Customizations are limited to the most important <a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a> parameters. Font family is represented as a list of <a href="-parcelable-font/index.html">ParcelableFont</a> objects.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1882331454%2FClasslikes%2F-1502902895" anchor-label="ParcelableUiTypography" id="-1882331454%2FClasslikes%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-parcelable-ui-typography/index.html"><span>Parcelable</span><wbr><span>Ui</span><wbr><span><span>Typography</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1882331454%2FClasslikes%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-parcelable-ui-typography/index.html">ParcelableUiTypography</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>onboardingTitle<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>onboardingText<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>onboardingButton<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>helpDialogTitle<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>helpDialogText<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>helpDialogButton<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>errorDialogTitle<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>errorDialogText<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>errorDialogButton<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scanningInstructions<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>helpTooltip<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>loadingScreen<span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a></span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/os/Parcelable.html">Parcelable</a></div><div class="brief "><p class="paragraph">Defines the typography used in the Verify activity UI.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1546188458%2FClasslikes%2F-1502902895" anchor-label="ScreenOrientation" id="-1546188458%2FClasslikes%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-screen-orientation/index.html"><span>Screen</span><wbr><span><span>Orientation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1546188458%2FClasslikes%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-screen-orientation/index.html">ScreenOrientation</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-screen-orientation/index.html">ScreenOrientation</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Represents the possible orientations of a screen.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1385961514%2FClasslikes%2F-1502902895" anchor-label="UxPingletTracker" id="-1385961514%2FClasslikes%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ux-pinglet-tracker/index.html"><span>Ux</span><wbr><span>Pinglet</span><wbr><span><span>Tracker</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1385961514%2FClasslikes%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">object </span><a href="-ux-pinglet-tracker/index.html">UxPingletTracker</a> : <a href="../../blinkid-core/com.microblink.blinkid.core.ping.util/-pinglet-tracker/index.html">PingletTracker</a></div><div class="brief "><p class="paragraph">UX-specific Pinglet tracker for monitoring user experience events and camera-related activities. This object extends <a href="../../blinkid-core/com.microblink.blinkid.core.ping.util/-pinglet-tracker/index.html">PingletTracker</a> to provide specialized tracking capabilities for user interface events, camera hardware information, scanning conditions, and camera permissions within the UX layer.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -118,168 +222,303 @@
         </div>
       </div>
       <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
-        <div class="table"><a data-name="-1095284996%2FFunctions%2F1900084154" anchor-label="fillErrorDialogs" id="-1095284996%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="519701002%2FFunctions%2F-1502902895" anchor-label="DeviceOrientationListener" id="519701002%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-device-orientation-listener.html"><span>Device</span><wbr><span>Orientation</span><wbr><span><span>Listener</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="519701002%2FFunctions%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="-device-orientation-listener.html"><span class="token function">DeviceOrientationListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">applicationContext<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">onOrientationChange<span class="token operator">: </span><span class="token punctuation">(</span><a href="-screen-orientation/index.html">ScreenOrientation</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1095284996%2FFunctions%2F-1502902895" anchor-label="fillErrorDialogs" id="-1095284996%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="fill-error-dialogs.html"><span>fill</span><wbr><span>Error</span><wbr><span><span>Dialogs</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1095284996%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1095284996%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="fill-error-dialogs.html"><span class="token function">fillErrorDialogs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">onRetry<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">onDoneError<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="../../microblink-ux/com.microblink.ux.state/-error-state/index.html">ErrorState</a><span class="token punctuation">, </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a>&nbsp;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="fill-error-dialogs.html"><span class="token function">fillErrorDialogs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">onRetry<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter ">onDoneError<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="../com.microblink.blinkid.ux.state/-error-state/index.html">ErrorState</a><span class="token punctuation">, </span><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a>&nbsp;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1227522912%2FFunctions%2F1900084154" anchor-label="fillHelpScreens" id="1227522912%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="-171710711%2FFunctions%2F-1502902895" anchor-label="fillHelpScreens" id="-171710711%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="fill-help-screens.html"><span>fill</span><wbr><span>Help</span><wbr><span><span>Screens</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1227522912%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-171710711%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="fill-help-screens.html"><span class="token function">fillHelpScreens</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../microblink-ux/com.microblink.ux.components/-help-screens/index.html">HelpScreens</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html"><span class="token annotation builtin">Composable</span></a></div></div><span class="token keyword">fun </span><a href="fill-help-screens.html"><span class="token function">fillHelpScreens</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">extractionMode<span class="token operator">: </span><a href="-blink-id-extraction-mode/index.html">BlinkIdExtractionMode</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../com.microblink.blinkid.ux.components/-help-screens/index.html">HelpScreens</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="91807098%2FFunctions%2F1900084154" anchor-label="getCorrectedDocumentRotation" id="91807098%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="-2050782269%2FFunctions%2F-1502902895" anchor-label="getCorrectedDocumentRotation" id="-2050782269%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-corrected-document-rotation.html"><span>get</span><wbr><span>Corrected</span><wbr><span>Document</span><wbr><span><span>Rotation</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="91807098%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2050782269%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-corrected-document-rotation.html"><span class="token function">getCorrectedDocumentRotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">documentRotation<span class="token operator">: </span><a href="../../blinkid-core/com.microblink.blinkid.core.result/-document-rotation/index.html">DocumentRotation</a><span class="token punctuation">, </span></span><span class="parameter ">screenOrientation<span class="token operator">: </span><a href="../../microblink-ux/com.microblink.ux.utils/-screen-orientation/index.html">ScreenOrientation</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../blinkid-core/com.microblink.blinkid.core.result/-document-rotation/index.html">DocumentRotation</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-corrected-document-rotation.html"><span class="token function">getCorrectedDocumentRotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">documentRotation<span class="token operator">: </span><a href="../../blinkid-core/com.microblink.blinkid.core.result/-document-rotation/index.html">DocumentRotation</a><span class="token punctuation">, </span></span><span class="parameter ">screenOrientation<span class="token operator">: </span><a href="-screen-orientation/index.html">ScreenOrientation</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../blinkid-core/com.microblink.blinkid.core.result/-document-rotation/index.html">DocumentRotation</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="512008355%2FFunctions%2F1900084154" anchor-label="getPassportPageFromRotation" id="512008355%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="512008355%2FFunctions%2F-1502902895" anchor-label="getPassportPageFromRotation" id="512008355%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="get-passport-page-from-rotation.html"><span>get</span><wbr><span>Passport</span><wbr><span>Page</span><wbr><span>From</span><wbr><span><span>Rotation</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="512008355%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="512008355%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-passport-page-from-rotation.html"><span class="token function">getPassportPageFromRotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">documentRotation<span class="token operator">: </span><a href="../../blinkid-core/com.microblink.blinkid.core.result/-document-rotation/index.html">DocumentRotation</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../com.microblink.blinkid.ux.state/-passport-page/index.html">PassportPage</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-passport-page-from-rotation.html"><span class="token function">getPassportPageFromRotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">documentRotation<span class="token operator">: </span><a href="../../blinkid-core/com.microblink.blinkid.core.result/-document-rotation/index.html">DocumentRotation</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../com.microblink.blinkid.ux.state/-passport-page/index.html">PassportPage</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="2038367003%2FFunctions%2F1900084154" anchor-label="onAppMovedToBackground" id="2038367003%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="2038367003%2FFunctions%2F-1502902895" anchor-label="onAppMovedToBackground" id="2038367003%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="on-app-moved-to-background.html"><span>on</span><wbr><span>App</span><wbr><span>Moved</span><wbr><span>To</span><wbr><span><span>Background</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2038367003%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2038367003%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-app-moved-to-background.html"><span class="token function">onAppMovedToBackground</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-app-moved-to-background.html"><span class="token function">onAppMovedToBackground</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1908569420%2FFunctions%2F1900084154" anchor-label="onCameraPermissionCheck" id="1908569420%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="1908569420%2FFunctions%2F-1502902895" anchor-label="onCameraPermissionCheck" id="1908569420%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="on-camera-permission-check.html"><span>on</span><wbr><span>Camera</span><wbr><span>Permission</span><wbr><span><span>Check</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1908569420%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1908569420%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-permission-check.html"><span class="token function">onCameraPermissionCheck</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-permission-check.html"><span class="token function">onCameraPermissionCheck</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1723553829%2FFunctions%2F1900084154" anchor-label="onCameraPermissionRequest" id="1723553829%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="1723553829%2FFunctions%2F-1502902895" anchor-label="onCameraPermissionRequest" id="1723553829%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="on-camera-permission-request.html"><span>on</span><wbr><span>Camera</span><wbr><span>Permission</span><wbr><span><span>Request</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1723553829%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1723553829%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-permission-request.html"><span class="token function">onCameraPermissionRequest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-permission-request.html"><span class="token function">onCameraPermissionRequest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1592872110%2FFunctions%2F1900084154" anchor-label="onCameraPermissionUserResponse" id="1592872110%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="1592872110%2FFunctions%2F-1502902895" anchor-label="onCameraPermissionUserResponse" id="1592872110%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="on-camera-permission-user-response.html"><span>on</span><wbr><span>Camera</span><wbr><span>Permission</span><wbr><span>User</span><wbr><span><span>Response</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1592872110%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1592872110%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-permission-user-response.html"><span class="token function">onCameraPermissionUserResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">cameraPermissionGranted<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-permission-user-response.html"><span class="token function">onCameraPermissionUserResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">cameraPermissionGranted<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1758133848%2FFunctions%2F1900084154" anchor-label="onCameraPreviewStarted" id="1758133848%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="1758133848%2FFunctions%2F-1502902895" anchor-label="onCameraPreviewStarted" id="1758133848%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="on-camera-preview-started.html"><span>on</span><wbr><span>Camera</span><wbr><span>Preview</span><wbr><span><span>Started</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1758133848%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1758133848%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-preview-started.html"><span class="token function">onCameraPreviewStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-preview-started.html"><span class="token function">onCameraPreviewStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="354535820%2FFunctions%2F1900084154" anchor-label="onCameraPreviewStopped" id="354535820%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="354535820%2FFunctions%2F-1502902895" anchor-label="onCameraPreviewStopped" id="354535820%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="on-camera-preview-stopped.html"><span>on</span><wbr><span>Camera</span><wbr><span>Preview</span><wbr><span><span>Stopped</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="354535820%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="354535820%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-preview-stopped.html"><span class="token function">onCameraPreviewStopped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-camera-preview-stopped.html"><span class="token function">onCameraPreviewStopped</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="76151129%2FFunctions%2F1900084154" anchor-label="onCloseButtonClicked" id="76151129%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
-          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+<a data-name="76151129%2FFunctions%2F-1502902895" anchor-label="onCloseButtonClicked" id="76151129%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="on-close-button-clicked.html"><span>on</span><wbr><span>Close</span><wbr><span>Button</span><wbr><span><span>Clicked</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="76151129%2FFunctions%2F1900084154"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="76151129%2FFunctions%2F-1502902895"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-close-button-clicked.html"><span class="token function">onCloseButtonClicked</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-close-button-clicked.html"><span class="token function">onCloseButtonClicked</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-166837818%2FFunctions%2F-1502902895" anchor-label="toBlinkIdExtractionMode" id="-166837818%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-blink-id-extraction-mode.html"><span>to</span><wbr><span>Blink</span><wbr><span>Id</span><wbr><span>Extraction</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-166837818%2FFunctions%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../blinkid-core/com.microblink.blinkid.core.session/-blink-id-session-settings/index.html">BlinkIdSessionSettings</a><span class="token punctuation">.</span><a href="to-blink-id-extraction-mode.html"><span class="token function">toBlinkIdExtractionMode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-blink-id-extraction-mode/index.html">BlinkIdExtractionMode</a></div><div class="brief "><p class="paragraph">Maps the current <a href="../../blinkid-core/com.microblink.blinkid.core.session/-blink-id-session-settings/index.html">BlinkIdSessionSettings</a> to the corresponding <a href="-blink-id-extraction-mode/index.html">BlinkIdExtractionMode</a> based on which extraction modules are enabled.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="835526605%2FFunctions%2F-1502902895" anchor-label="toErrorState" id="835526605%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-error-state.html"><span>to</span><wbr><span>Error</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="835526605%2FFunctions%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-error-reason/index.html">ErrorReason</a><span class="token punctuation">.</span><a href="to-error-state.html"><span class="token function">toErrorState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../com.microblink.blinkid.ux.state/-error-state/index.html">ErrorState</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="356709447%2FFunctions%2F-1502902895" anchor-label="toFont" id="356709447%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-font.html"><span>to</span><wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="356709447%2FFunctions%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-parcelable-font/index.html">ParcelableFont</a><span class="token punctuation">.</span><a href="to-font.html"><span class="token function">toFont</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/font/Font.html">Font</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1057136607%2FFunctions%2F-1502902895" anchor-label="toFontFamily" id="1057136607%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-font-family.html"><span>to</span><wbr><span>Font</span><wbr><span><span>Family</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1057136607%2FFunctions%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-parcelable-font/index.html">ParcelableFont</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-font-family.html"><span class="token function">toFontFamily</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/font/FontFamily.html">FontFamily</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1760109202%2FFunctions%2F-1502902895" anchor-label="toParcelableFont" id="-1760109202%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-parcelable-font.html"><span>to</span><wbr><span>Parcelable</span><wbr><span><span>Font</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1760109202%2FFunctions%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/font/Font.html">Font</a><span class="token punctuation">.</span><a href="to-parcelable-font.html"><span class="token function">toParcelableFont</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-parcelable-font/index.html">ParcelableFont</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1735007737%2FFunctions%2F-1502902895" anchor-label="toParcelableTextStyle" id="1735007737%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-parcelable-text-style.html"><span>to</span><wbr><span>Parcelable</span><wbr><span>Text</span><wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1735007737%2FFunctions%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a><span class="token punctuation">.</span><a href="to-parcelable-text-style.html"><span class="token function">toParcelableTextStyle</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1182163579%2FFunctions%2F-1502902895" anchor-label="toTextStyle" id="1182163579%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-text-style.html"><span>to</span><wbr><span>Text</span><wbr><span><span>Style</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1182163579%2FFunctions%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-parcelable-text-style/index.html">ParcelableTextStyle</a><span class="token punctuation">.</span><a href="to-text-style.html"><span class="token function">toTextStyle</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/ui/text/TextStyle.html">TextStyle</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1203578055%2FFunctions%2F-1502902895" anchor-label="toUiTypography" id="1203578055%2FFunctions%2F-1502902895" data-filterable-set=":blinkid-ux/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":blinkid-ux/productionRelease" data-filterable-set=":blinkid-ux/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-ui-typography.html"><span>to</span><wbr><span>Ui</span><wbr><span><span>Typography</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1203578055%2FFunctions%2F-1502902895"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux/productionRelease"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-parcelable-ui-typography/index.html">ParcelableUiTypography</a><span class="token punctuation">.</span><a href="to-ui-typography.html"><span class="token function">toUiTypography</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../com.microblink.blinkid.ux.theme/-ui-typography/index.html">UiTypography</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -290,17 +529,21 @@
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2026 Copyright</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

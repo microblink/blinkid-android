@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">Sair da digitalização</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">Lanterna desligada</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">Lanterna ligada</string>
+  <string name="mb_blinkid_accessibility_next_page">Próxima página</string>
+  <string name="mb_blinkid_accessibility_previous_page">Página anterior</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">Mostrar telas de ajuda</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">Sucesso! Documento digitalizado</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">Sucesso! Frente digitalizada</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">Desligar lanterna</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">Ligar lanterna</string>
+</resources>

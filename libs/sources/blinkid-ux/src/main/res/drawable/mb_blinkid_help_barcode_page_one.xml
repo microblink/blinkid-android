@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/mb_blinkid_help_barcode_large"
+        android:height="150dp"
+        android:width="208dp"
+        android:gravity="center"/>
+
+    <item
+        android:drawable="@drawable/mb_blinkid_red_frame"
+        android:gravity="center"/>
+
+    <item
+        android:drawable="@drawable/mb_blinkid_red_cross_circle"
+        android:top="4dp"
+        android:gravity="center"/>
+
+</layer-list>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">Ukončit skenování</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">Vypnutá svítilna</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">Zapnutá svítilna</string>
+  <string name="mb_blinkid_accessibility_next_page">Další stránka</string>
+  <string name="mb_blinkid_accessibility_previous_page">Předchozí stránka</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">Zobrazit obrazovky nápovědy</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">Úspěch! Dokument byl naskenován</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">Úspěch! Čelní strana byla naskenována</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">Vypnout svítilnu</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">Zapnout svítilnu</string>
+</resources>
