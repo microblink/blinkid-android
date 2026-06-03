@@ -36,7 +36,7 @@
   - Zimbabwe ID: Improved data extraction to support and return both alphabetic and numeric characters within the document number field.
 
 - Modern language and modern patterns
-- Kotlin version used by the SDK has been updated to `2.2.10`, using the latest features and performance improvements.
+- Kotlin version used by the SDK has been updated to `2.2.21`, using the latest features and performance improvements.
 - AGP has been updated to `9.1.0` to ensure compatibility with the latest Android development practices and tools.
 - Other SDK dependencies such as OkHttp, Kotlin Coroutines, and Jetpack Compose have been updated to their latest stable versions to provide improved performance, security, and new features.
 
