@@ -1,5 +1,5 @@
 #!/bin/bash
-LIB_NAMES=(blinkid-core blinkid-ux microblink-ux)
+LIB_NAMES=(blinkid-core blinkid-ux)
 LIB_VERSIONS=()
 
 for i in "${!LIB_NAMES[@]}"; do
