@@ -7,7 +7,7 @@ import com.microblink.blinkid.core.result.classinfo.DocumentClassInfo
  * Document filter that is used to determine which documents will be processed.
  * If the document is rejected by this filter, its data cannot be returned as scanning result.
  */
-interface ClassFilter: Parcelable {
+interface ClassFilter : Parcelable {
     /**
      * Determines whether document should be processed or it is filtered out.
      *

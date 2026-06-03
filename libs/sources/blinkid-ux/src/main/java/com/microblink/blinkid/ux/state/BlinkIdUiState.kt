@@ -8,23 +8,12 @@ package com.microblink.blinkid.ux.state
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.Dp
 import com.microblink.blinkid.core.session.BlinkIdScanningResult
+import com.microblink.blinkid.ux.DefaultShowHelpButton
+import com.microblink.blinkid.ux.DefaultShowOnboardingDialog
 import com.microblink.blinkid.ux.components.EmptyAnimation
 import com.microblink.blinkid.ux.components.PassportPageAnimation
 import com.microblink.blinkid.ux.theme.BlinkIdTheme
-import com.microblink.ux.DefaultShowHelpButton
-import com.microblink.ux.DefaultShowOnboardingDialog
-import com.microblink.ux.state.BaseUiState
-import com.microblink.ux.state.CancelRequestState
-import com.microblink.ux.state.CardAnimationState
-import com.microblink.ux.state.CommonStatusMessage
-import com.microblink.ux.state.ErrorState
-import com.microblink.ux.state.HapticFeedbackState
-import com.microblink.ux.state.MbTorchState
-import com.microblink.ux.state.ProcessingState
-import com.microblink.ux.state.ReticleState
-import com.microblink.ux.state.StatusMessage
-import com.microblink.ux.state.UiScanningSide
-import com.microblink.ux.utils.ScreenOrientation
+import com.microblink.blinkid.ux.utils.ScreenOrientation
 import kotlin.time.Duration
 
 data class BlinkIdUiState(
@@ -55,6 +44,8 @@ data class BlinkIdUiState(
  * specific instruction or feedback message.
  */
 enum class BlinkIdStatusMessage : StatusMessage {
+    ScanBarcodeOnlyModule,
+    ScanBarcodeIdModule,
     ScanBarcode,
     RotateDocument,
     RotateDocumentShort,
@@ -75,12 +66,15 @@ enum class BlinkIdStatusMessage : StatusMessage {
     PassportScanTopPage,
     PassportScanRightPage,
     PassportScanLeftPage,
-    PassportScanBarcodePage;
+    PassportScanBarcodePage,
+    BarcodeWrongSide;
 
     @Composable
     override fun statusMessageToStringRes(): Int? {
         val strings = BlinkIdTheme.sdkStrings.blinkIdScanningStrings
         return when (this) {
+            ScanBarcodeOnlyModule -> strings.instructionsBarcodeOnlyModule
+            ScanBarcodeIdModule -> strings.instructionsBarcodeIdModule
             ScanBarcode -> strings.instructionsBarcode
             RotateDocument -> null
             RotateDocumentShort -> null
@@ -102,6 +96,7 @@ enum class BlinkIdStatusMessage : StatusMessage {
             PassportScanRightPage -> strings.instructionsPassportScanRightPage
             PassportScanLeftPage -> strings.instructionsPassportScanLeftPage
             PassportScanBarcodePage -> strings.instructionsPassportScanBarcodePage
+            BarcodeWrongSide -> strings.instructionsBarcodeWrongSide
         }
     }
 }

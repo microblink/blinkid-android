@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">需要相机权限。</string>
+  <string name="mb_blinkid_close">关闭</string>
+  <string name="mb_blinkid_dialog_back_button">返回</string>
+  <string name="mb_blinkid_dialog_done_button">完成</string>
+  <string name="mb_blinkid_dialog_next_button">下一步</string>
+  <string name="mb_blinkid_dialog_skip_button">跳过</string>
+  <string name="mb_blinkid_enable_camera">启用相机</string>
+  <string name="mb_blinkid_enable_permission_help">您将被引导至权限设置页面,需要您在页面中向本应用授予相机权限。</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">请在应用权限设置中授予相机权限。</string>
+  <string name="mb_blinkid_license_locked">扫描不可用</string>
+  <string name="mb_blinkid_loading">加载中…</string>
+  <string name="mb_blinkid_move_closer">靠近一些</string>
+  <string name="mb_blinkid_move_farther">离远一些</string>
+  <string name="mb_blinkid_need_help_tooltip">需要帮助？</string>
+  <string name="mb_blinkid_ok">好的</string>
+  <string name="mb_blinkid_retry">重试</string>
+  <string name="mb_blinkid_warning">警告</string>
+</resources>

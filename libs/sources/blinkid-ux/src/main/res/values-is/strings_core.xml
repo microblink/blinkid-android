@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Heimildar myndavélar er krafist.</string>
+  <string name="mb_blinkid_close">Loka</string>
+  <string name="mb_blinkid_dialog_back_button">Til baka</string>
+  <string name="mb_blinkid_dialog_done_button">Lokið</string>
+  <string name="mb_blinkid_dialog_next_button">Áfram</string>
+  <string name="mb_blinkid_dialog_skip_button">Sleppa</string>
+  <string name="mb_blinkid_enable_camera">Virkja myndavél</string>
+  <string name="mb_blinkid_enable_permission_help">Farið verður í heimildastillingar þar sem gefa þarf appinu leyfi fyrir myndavélinni.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Veitið myndavélinni heimild í heimildastillingum appsins.</string>
+  <string name="mb_blinkid_license_locked">Skönnun ekki í boði</string>
+  <string name="mb_blinkid_loading">Hleður…</string>
+  <string name="mb_blinkid_move_closer">Færið nær</string>
+  <string name="mb_blinkid_move_farther">Færið fjær</string>
+  <string name="mb_blinkid_need_help_tooltip">Þarftu aðstoð?</string>
+  <string name="mb_blinkid_ok">Í lagi</string>
+  <string name="mb_blinkid_retry">Reynið aftur</string>
+  <string name="mb_blinkid_warning">Viðvörun</string>
+</resources>

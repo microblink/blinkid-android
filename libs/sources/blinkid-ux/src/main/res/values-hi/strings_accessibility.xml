@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">स्कैनिंग से बाहर निकलें</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">टॉर्च बंद है</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">टॉर्च चालू है</string>
+  <string name="mb_blinkid_accessibility_next_page">अगला पेज</string>
+  <string name="mb_blinkid_accessibility_previous_page">पिछला पेज</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">सहायता स्क्रीन दिखाएँ</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">सफ़लता! डॉक्यूमेंट स्कैन किया गया</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">सफ़लता! सामने का हिस्सा स्कैन किया गया</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">टॉर्च बंद करें</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">टॉर्च चालू करें</string>
+</resources>

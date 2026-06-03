@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">ចាកចេញពីការស្កេន</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">ពិលបិទ</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">ពិលបើក</string>
+  <string name="mb_blinkid_accessibility_next_page">ទំព័របន្ទាប់</string>
+  <string name="mb_blinkid_accessibility_previous_page">ទំព័រមុន។</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">បង្ហាញអេក្រង់ជំនួយ</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">ជោគជ័យ! ឯកសារត្រូវបានស្កេន</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">ជោគជ័យ! ផ្នែកខាងមុខត្រូវបានស្កេន</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">បិទពិល</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">បើកពិល</string>
+</resources>

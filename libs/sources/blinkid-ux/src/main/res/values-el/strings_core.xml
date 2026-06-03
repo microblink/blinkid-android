@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Απαιτείται άδεια για την κάμερα.</string>
+  <string name="mb_blinkid_close">Κλείσιμο</string>
+  <string name="mb_blinkid_dialog_back_button">Πίσω</string>
+  <string name="mb_blinkid_dialog_done_button">Τέλος</string>
+  <string name="mb_blinkid_dialog_next_button">Επόμενο</string>
+  <string name="mb_blinkid_dialog_skip_button">Παράλειψη</string>
+  <string name="mb_blinkid_enable_camera">Ενεργοποίηση κάμερας</string>
+  <string name="mb_blinkid_enable_permission_help">Θα μεταφερθείτε τώρα στις ρυθμίσεις αδειών όπου θα πρέπει να δώσετε άδεια στην κάμερα στην εφαρμογή.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Δώστε άδεια στην κάμερα στις ρυθμίσεις αδειών της εφαρμογής.</string>
+  <string name="mb_blinkid_license_locked">Η σάρωση δεν είναι διαθέσιμη</string>
+  <string name="mb_blinkid_loading">Φόρτωση…</string>
+  <string name="mb_blinkid_move_closer">Πλησιάστε</string>
+  <string name="mb_blinkid_move_farther">Απομακρυνθείτε</string>
+  <string name="mb_blinkid_need_help_tooltip">Χρειάζεστε βοήθεια;</string>
+  <string name="mb_blinkid_ok">Εντάξει</string>
+  <string name="mb_blinkid_retry">Επανάληψη</string>
+  <string name="mb_blinkid_warning">Προειδοποίηση</string>
+</resources>

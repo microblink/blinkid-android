@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Kamera ruxsati zarur.</string>
+  <string name="mb_blinkid_close">Yopish</string>
+  <string name="mb_blinkid_dialog_back_button">Ortga</string>
+  <string name="mb_blinkid_dialog_done_button">Tayyor</string>
+  <string name="mb_blinkid_dialog_next_button">Keyingisi</string>
+  <string name="mb_blinkid_dialog_skip_button">Tashlab ketish</string>
+  <string name="mb_blinkid_enable_camera">Kamerani yoqish</string>
+  <string name="mb_blinkid_enable_permission_help">Ilovaga kamera ruxsati beriladigan ruxsat sozlamalariga yoʻnaltirilasiz.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Ilovaning ruxsat sozlamalarida kamera ruxsatini bering.</string>
+  <string name="mb_blinkid_license_locked">Skanerlash ishlamayapti</string>
+  <string name="mb_blinkid_loading">Yuklanmoqda…</string>
+  <string name="mb_blinkid_move_closer">Yaqinlashtiring</string>
+  <string name="mb_blinkid_move_farther">Uzoqlashtiring</string>
+  <string name="mb_blinkid_need_help_tooltip">Yordam kerakmi?</string>
+  <string name="mb_blinkid_ok">OK</string>
+  <string name="mb_blinkid_retry">Qayta urining</string>
+  <string name="mb_blinkid_warning">Ogohlantirish</string>
+</resources>

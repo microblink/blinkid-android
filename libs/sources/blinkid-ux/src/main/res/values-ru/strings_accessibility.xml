@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">Выйти из сканирования</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">Фонарик выключен</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">Фонарик включен</string>
+  <string name="mb_blinkid_accessibility_next_page">Следующая страница</string>
+  <string name="mb_blinkid_accessibility_previous_page">Предыдущая страница</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">Показать экраны помощи</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">Успех! Документ отсканирован</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">Успех! Передняя сторона отсканирована</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">Выключить фонарик</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">Включить фонарик</string>
+</resources>

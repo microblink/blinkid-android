@@ -1,16 +1,15 @@
 package com.microblink.blinkid.ux.utils
 
-import com.microblink.core.ping.pinglets.CameraHardwareInfo
-import com.microblink.core.ping.pinglets.CameraInputInfo
-import com.microblink.core.ping.pinglets.CameraPermission
-import com.microblink.core.ping.pinglets.ScanningConditions
-import com.microblink.core.ping.pinglets.UxEvent
-import com.microblink.core.ping.util.PingletTracker
-import com.microblink.ux.camera.CameraDevicesDetails
-import com.microblink.ux.camera.CameraInputDetails
-import com.microblink.ux.camera.CameraLensFacing
-import com.microblink.ux.camera.FocusType
-import com.microblink.ux.utils.ScreenOrientation
+import com.microblink.blinkid.core.ping.pinglets.CameraHardwareInfo
+import com.microblink.blinkid.core.ping.pinglets.CameraInputInfo
+import com.microblink.blinkid.core.ping.pinglets.CameraPermission
+import com.microblink.blinkid.core.ping.pinglets.ScanningConditions
+import com.microblink.blinkid.core.ping.pinglets.UxEvent
+import com.microblink.blinkid.core.ping.util.PingletTracker
+import com.microblink.blinkid.ux.camera.CameraDevicesDetails
+import com.microblink.blinkid.ux.camera.CameraInputDetails
+import com.microblink.blinkid.ux.camera.CameraLensFacing
+import com.microblink.blinkid.ux.camera.FocusType
 
 /**
  * Copyright (c) Microblink. All rights reserved. This code is provided for
@@ -21,7 +20,7 @@ import com.microblink.ux.utils.ScreenOrientation
  * This object extends [PingletTracker] to provide specialized tracking capabilities for user interface
  * events, camera hardware information, scanning conditions, and camera permissions within the UX layer.
  */
-object UxPingletTracker: PingletTracker() {
+object UxPingletTracker : PingletTracker() {
 
     /**
      * Camera-related information tracking utilities.
@@ -36,7 +35,7 @@ object UxPingletTracker: PingletTracker() {
             addPingletToQueueIfManagerExists(
                 pinglet = CameraInputInfo(
                     deviceId = cameraInputDetails.cameraId,
-                    cameraFacing = when(cameraInputDetails.cameraFacing) {
+                    cameraFacing = when (cameraInputDetails.cameraFacing) {
                         CameraLensFacing.LensFacingFront -> CameraInputInfo.CameraFacing.FRONT
                         CameraLensFacing.LensFacingBack -> CameraInputInfo.CameraFacing.BACK
                     },
@@ -49,11 +48,16 @@ object UxPingletTracker: PingletTracker() {
                 sessionNumber = sessionNumber
             )
         }
+
         /**
          * Tracks hardware capabilities of all available cameras on the device.
          * @param cameraDevicesDetails Complete camera hardware information for the device
+         * @param sessionNumber The session identifier for associating this event with a spec
          */
-        fun trackCameraHardwareInfo(cameraDevicesDetails: CameraDevicesDetails) {
+        fun trackCameraHardwareInfo(
+            cameraDevicesDetails: CameraDevicesDetails,
+            sessionNumber: Int
+        ) {
             addPingletToQueueIfManagerExists(
                 pinglet = CameraHardwareInfo(
                     availableCameras = cameraDevicesDetails.devicesDetails.map { cameraDetails ->
@@ -76,11 +80,9 @@ object UxPingletTracker: PingletTracker() {
                         )
                     },
                 ),
-                sessionNumber = SESSION_NUMBER
+                sessionNumber = sessionNumber
             )
         }
-
-        private const val SESSION_NUMBER = 0
     }
 
     /**
@@ -99,14 +101,14 @@ object UxPingletTracker: PingletTracker() {
             trackUxPingletIfHaveSessionNumber(
                 uxEventPinglet = UxEvent(
                     eventType = when (type) {
-                        SimpleUxEventType.CameraStarted -> com.microblink.core.ping.pinglets.UxEvent.EventType.CAMERASTARTED
-                        SimpleUxEventType.CameraClosed -> com.microblink.core.ping.pinglets.UxEvent.EventType.CAMERACLOSED
-                        SimpleUxEventType.OnboardingInfoDisplayed -> com.microblink.core.ping.pinglets.UxEvent.EventType.ONBOARDINGINFODISPLAYED
-                        SimpleUxEventType.CloseButtonClicked -> com.microblink.core.ping.pinglets.UxEvent.EventType.CLOSEBUTTONCLICKED
-                        SimpleUxEventType.HelpTooltipDisplayed -> com.microblink.core.ping.pinglets.UxEvent.EventType.HELPTOOLTIPDISPLAYED
-                        SimpleUxEventType.HelpOpened -> com.microblink.core.ping.pinglets.UxEvent.EventType.HELPOPENED
-                        SimpleUxEventType.StepTimeout -> com.microblink.core.ping.pinglets.UxEvent.EventType.STEPTIMEOUT
-                        SimpleUxEventType.AppMovedToBackground -> com.microblink.core.ping.pinglets.UxEvent.EventType.APPMOVEDTOBACKGROUND
+                        SimpleUxEventType.CameraStarted -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.CAMERASTARTED
+                        SimpleUxEventType.CameraClosed -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.CAMERACLOSED
+                        SimpleUxEventType.OnboardingInfoDisplayed -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.ONBOARDINGINFODISPLAYED
+                        SimpleUxEventType.CloseButtonClicked -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.CLOSEBUTTONCLICKED
+                        SimpleUxEventType.HelpTooltipDisplayed -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.HELPTOOLTIPDISPLAYED
+                        SimpleUxEventType.HelpOpened -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.HELPOPENED
+                        SimpleUxEventType.StepTimeout -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.STEPTIMEOUT
+                        SimpleUxEventType.AppMovedToBackground -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.APPMOVEDTOBACKGROUND
                     }
                 ),
                 sessionNumber = sessionNumber
@@ -119,10 +121,13 @@ object UxPingletTracker: PingletTracker() {
          * @param errorMessageType The specific type of error message that was displayed
          * @param sessionNumber The session identifier for associating this event with a specific scanning session
          */
-        fun trackErrorMessageEvent(errorMessageType: com.microblink.core.ping.pinglets.UxEvent.ErrorMessageType, sessionNumber: Int) {
+        fun trackErrorMessageEvent(
+            errorMessageType: com.microblink.blinkid.core.ping.pinglets.UxEvent.ErrorMessageType,
+            sessionNumber: Int
+        ) {
             trackUxPingletIfHaveSessionNumber(
                 uxEventPinglet = UxEvent(
-                    eventType = com.microblink.core.ping.pinglets.UxEvent.EventType.ERRORMESSAGE,
+                    eventType = com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.ERRORMESSAGE,
                     errorMessageType = errorMessageType
                 ),
                 sessionNumber = sessionNumber
@@ -135,10 +140,13 @@ object UxPingletTracker: PingletTracker() {
          * @param alertType The specific type of alert that was displayed
          * @param sessionNumber The session identifier for associating this event with a specific scanning session
          */
-        fun trackAlertDisplayedEvent(alertType: com.microblink.core.ping.pinglets.UxEvent.AlertType, sessionNumber: Int) {
+        fun trackAlertDisplayedEvent(
+            alertType: com.microblink.blinkid.core.ping.pinglets.UxEvent.AlertType,
+            sessionNumber: Int
+        ) {
             trackUxPingletIfHaveSessionNumber(
                 uxEventPinglet = UxEvent(
-                    eventType = com.microblink.core.ping.pinglets.UxEvent.EventType.ALERTDISPLAYED,
+                    eventType = com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.ALERTDISPLAYED,
                     alertType = alertType
                 ),
                 sessionNumber = sessionNumber
@@ -151,10 +159,13 @@ object UxPingletTracker: PingletTracker() {
          * @param helpCloseType The manner in which the help screen was closed
          * @param sessionNumber The session identifier for associating this event with a specific scanning session
          */
-        fun trackHelpCloseEvent(helpCloseType: com.microblink.core.ping.pinglets.UxEvent.HelpCloseType, sessionNumber: Int) {
+        fun trackHelpCloseEvent(
+            helpCloseType: com.microblink.blinkid.core.ping.pinglets.UxEvent.HelpCloseType,
+            sessionNumber: Int
+        ) {
             trackUxPingletIfHaveSessionNumber(
                 uxEventPinglet = UxEvent(
-                    eventType = com.microblink.core.ping.pinglets.UxEvent.EventType.HELPCLOSED,
+                    eventType = com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.HELPCLOSED,
                     helpCloseType = helpCloseType
                 ),
                 sessionNumber = sessionNumber
@@ -184,7 +195,10 @@ object UxPingletTracker: PingletTracker() {
          * @param uxEventPinglet The UX event pinglet to track
          * @param sessionNumber The session number to validate and use for tracking
          */
-        private fun trackUxPingletIfHaveSessionNumber(uxEventPinglet: com.microblink.core.ping.pinglets.UxEvent, sessionNumber: Int) {
+        private fun trackUxPingletIfHaveSessionNumber(
+            uxEventPinglet: com.microblink.blinkid.core.ping.pinglets.UxEvent,
+            sessionNumber: Int
+        ) {
             if (sessionNumber > 0) {
                 addPingletToQueueIfManagerExists(uxEventPinglet, sessionNumber)
             }
@@ -206,11 +220,13 @@ object UxPingletTracker: PingletTracker() {
          * @param sessionNumber The session identifier for associating this event with a specific scanning session
          */
         fun trackTorchStateUpdate(torchOn: Boolean, sessionNumber: Int) {
-            val scanningConditionsPinglet = ScanningConditions(
-                updateType = com.microblink.core.ping.pinglets.ScanningConditions.UpdateType.FLASHLIGHTSTATE,
-                flashlightOn = torchOn,
-            )
-            addPingletToQueueIfManagerExists(scanningConditionsPinglet, sessionNumber)
+            if (sessionNumber > 0) {
+                val scanningConditionsPinglet = ScanningConditions(
+                    updateType = com.microblink.blinkid.core.ping.pinglets.ScanningConditions.UpdateType.FLASHLIGHTSTATE,
+                    flashlightOn = torchOn,
+                )
+                addPingletToQueueIfManagerExists(scanningConditionsPinglet, sessionNumber)
+            }
         }
 
         /**
@@ -223,20 +239,25 @@ object UxPingletTracker: PingletTracker() {
             screenOrientation: ScreenOrientation,
             sessionNumber: Int
         ) {
-            val scanningConditionsPinglet = ScanningConditions(
-                updateType = com.microblink.core.ping.pinglets.ScanningConditions.UpdateType.DEVICEORIENTATION,
-                deviceOrientation = when(screenOrientation) {
-                    ScreenOrientation.LandscapeLeft ->
-                        com.microblink.core.ping.pinglets.ScanningConditions.DeviceOrientation.LANDSCAPELEFT
-                    ScreenOrientation.LandscapeRight ->
-                        com.microblink.core.ping.pinglets.ScanningConditions.DeviceOrientation.LANDSCAPERIGHT
-                    ScreenOrientation.ReversePortrait ->
-                        com.microblink.core.ping.pinglets.ScanningConditions.DeviceOrientation.PORTRAITUPSIDE
-                    else ->
-                        com.microblink.core.ping.pinglets.ScanningConditions.DeviceOrientation.PORTRAIT
-                }
-            )
-            addPingletToQueueIfManagerExists(scanningConditionsPinglet, sessionNumber)
+            if (sessionNumber > 0) {
+                val scanningConditionsPinglet = ScanningConditions(
+                    updateType = com.microblink.blinkid.core.ping.pinglets.ScanningConditions.UpdateType.DEVICEORIENTATION,
+                    deviceOrientation = when (screenOrientation) {
+                        ScreenOrientation.LandscapeLeft ->
+                            com.microblink.blinkid.core.ping.pinglets.ScanningConditions.DeviceOrientation.LANDSCAPELEFT
+
+                        ScreenOrientation.LandscapeRight ->
+                            com.microblink.blinkid.core.ping.pinglets.ScanningConditions.DeviceOrientation.LANDSCAPERIGHT
+
+                        ScreenOrientation.ReversePortrait ->
+                            com.microblink.blinkid.core.ping.pinglets.ScanningConditions.DeviceOrientation.PORTRAITUPSIDE
+
+                        else ->
+                            com.microblink.blinkid.core.ping.pinglets.ScanningConditions.DeviceOrientation.PORTRAIT
+                    }
+                )
+                addPingletToQueueIfManagerExists(scanningConditionsPinglet, sessionNumber)
+            }
         }
     }
 
@@ -259,7 +280,7 @@ object UxPingletTracker: PingletTracker() {
         fun trackCameraPermissionCheck(sessionNumber: Int) {
             addPingletToQueueIfManagerExists(
                 pinglet = CameraPermission(
-                    eventType = com.microblink.core.ping.pinglets.CameraPermission.EventType.CAMERAPERMISSIONCHECK
+                    eventType = com.microblink.blinkid.core.ping.pinglets.CameraPermission.EventType.CAMERAPERMISSIONCHECK
                 ),
                 sessionNumber = sessionNumber
             )
@@ -273,12 +294,14 @@ object UxPingletTracker: PingletTracker() {
          * @param sessionNumber The session identifier for associating this event with a specific scanning session
          */
         fun trackCameraPermissionRequest(sessionNumber: Int) {
+            //if (sessionNumber > 0) {
             addPingletToQueueIfManagerExists(
                 pinglet = CameraPermission(
-                    eventType = com.microblink.core.ping.pinglets.CameraPermission.EventType.CAMERAPERMISSIONREQUEST
+                    eventType = com.microblink.blinkid.core.ping.pinglets.CameraPermission.EventType.CAMERAPERMISSIONREQUEST
                 ),
                 sessionNumber = sessionNumber
             )
+            //}
         }
 
         /**
@@ -289,10 +312,13 @@ object UxPingletTracker: PingletTracker() {
          * @param cameraPermissionGranted `true` if the user granted camera permission, `false` if denied
          * @param sessionNumber The session identifier for associating this event with a specific scanning session
          */
-        fun trackCameraPermissionUserResponse(cameraPermissionGranted: Boolean, sessionNumber: Int) {
+        fun trackCameraPermissionUserResponse(
+            cameraPermissionGranted: Boolean,
+            sessionNumber: Int
+        ) {
             addPingletToQueueIfManagerExists(
                 pinglet = CameraPermission(
-                    eventType = com.microblink.core.ping.pinglets.CameraPermission.EventType.CAMERAPERMISSIONUSERRESPONSE,
+                    eventType = com.microblink.blinkid.core.ping.pinglets.CameraPermission.EventType.CAMERAPERMISSIONUSERRESPONSE,
                     cameraPermissionGranted = cameraPermissionGranted
                 ),
                 sessionNumber = sessionNumber

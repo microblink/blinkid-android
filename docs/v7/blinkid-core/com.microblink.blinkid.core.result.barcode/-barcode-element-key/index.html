@@ -1,0 +1,1511 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BarcodeElementKey</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":blinkid-core:dokkaHtmlPartial/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":blinkid-core:dokkaHtmlPartial/release" data-filter=":blinkid-core:dokkaHtmlPartial/release">
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="blinkid-core::com.microblink.blinkid.core.result.barcode/BarcodeElementKey///PointingToDeclaration//-747182850">
+  <div class="breadcrumbs"><a href="../../index.html">blinkid-core</a><span class="delimiter">/</span><a href="../index.html">com.microblink.blinkid.core.result.barcode</a><span class="delimiter">/</span><span class="current">BarcodeElementKey</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Barcode</span><wbr><span>Element</span><wbr><span><span>Key</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">BarcodeElementKey</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="index.html">BarcodeElementKey</a><span class="token operator">&gt; </span></div><p class="paragraph">Represents the fields present in the barcode. Currently this is only used for AAMVACompliant documents.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="">Entries</h2>
+        <div class="table"><a data-name="653506245%2FClasslikes%2F-747182850" anchor-label="DocumentType" id="653506245%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-type/index.html">DocumentType</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="653506245%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-type/index.html">DocumentType</a></div></div><div class="brief "><p class="paragraph">Mandatory on all driver's licenses. All barcodes which are using 3-track magnetic stripe encoding used in the interest of smoothing a transition from legacy documents shall be designated as "Magnetic". All barcodes which are using compact encoding compliant with ISO/IEC 18013-2 shall be designated as "Compact". All barcodes (majority) compliant with Mandatory PDF417 Bar Code of the American Association of Motor Vehicle Administrators (AAMVA) Card Design Standard from AAMVA DL/ID-2000 standard to DL/ID-2013 shall be designated as "AAMVA".</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-213009508%2FClasslikes%2F-747182850" anchor-label="StandardVersionNumber" id="-213009508%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-standard-version-number/index.html">StandardVersionNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-213009508%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-standard-version-number/index.html">StandardVersionNumber</a></div></div><div class="brief "><p class="paragraph">Mandatory on all driver's licenses.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-25766051%2FClasslikes%2F-747182850" anchor-label="CustomerFamilyName" id="-25766051%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-customer-family-name/index.html">CustomerFamilyName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-25766051%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-customer-family-name/index.html">CustomerFamilyName</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1835160693%2FClasslikes%2F-747182850" anchor-label="CustomerFirstName" id="1835160693%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-customer-first-name/index.html">CustomerFirstName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1835160693%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-customer-first-name/index.html">CustomerFirstName</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-823032248%2FClasslikes%2F-747182850" anchor-label="CustomerFullName" id="-823032248%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-customer-full-name/index.html">CustomerFullName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-823032248%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-customer-full-name/index.html">CustomerFullName</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="537689394%2FClasslikes%2F-747182850" anchor-label="DateOfBirth" id="537689394%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-date-of-birth/index.html">DateOfBirth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="537689394%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-date-of-birth/index.html">DateOfBirth</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-642403586%2FClasslikes%2F-747182850" anchor-label="Sex" id="-642403586%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sex/index.html">Sex</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-642403586%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-sex/index.html">Sex</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA, Magnetic barcodes. Optional on Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1225092290%2FClasslikes%2F-747182850" anchor-label="EyeColor" id="1225092290%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-eye-color/index.html">EyeColor</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1225092290%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-eye-color/index.html">EyeColor</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 barcodes. Optional on AAMVA 01, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="943938287%2FClasslikes%2F-747182850" anchor-label="AddressStreet" id="943938287%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-address-street/index.html">AddressStreet</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="943938287%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-address-street/index.html">AddressStreet</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA and Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="428221527%2FClasslikes%2F-747182850" anchor-label="AddressCity" id="428221527%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-address-city/index.html">AddressCity</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="428221527%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-address-city/index.html">AddressCity</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA and Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="636084410%2FClasslikes%2F-747182850" anchor-label="AddressJurisdictionCode" id="636084410%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-address-jurisdiction-code/index.html">AddressJurisdictionCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="636084410%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-address-jurisdiction-code/index.html">AddressJurisdictionCode</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA and Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="460898692%2FClasslikes%2F-747182850" anchor-label="AddressPostalCode" id="460898692%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-address-postal-code/index.html">AddressPostalCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="460898692%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-address-postal-code/index.html">AddressPostalCode</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA and Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-725968707%2FClasslikes%2F-747182850" anchor-label="FullAddress" id="-725968707%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-full-address/index.html">FullAddress</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-725968707%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-full-address/index.html">FullAddress</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA and Magnetic barcodes. Optional on Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1669911945%2FClasslikes%2F-747182850" anchor-label="Height" id="-1669911945%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-height/index.html">Height</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1669911945%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-height/index.html">Height</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes. Optional on AAMVA 01 and Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="348537916%2FClasslikes%2F-747182850" anchor-label="HeightIn" id="348537916%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-height-in/index.html">HeightIn</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="348537916%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-height-in/index.html">HeightIn</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes. Optional on AAMVA 01 and Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="172622017%2FClasslikes%2F-747182850" anchor-label="HeightCm" id="172622017%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-height-cm/index.html">HeightCm</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="172622017%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-height-cm/index.html">HeightCm</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 Compact barcodes. Optional on AAMVA 01 and Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1671331150%2FClasslikes%2F-747182850" anchor-label="CustomerMiddleName" id="1671331150%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-customer-middle-name/index.html">CustomerMiddleName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1671331150%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-customer-middle-name/index.html">CustomerMiddleName</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 04, 05, 06, 07, 08 barcodes. Optional on AAMVA 01, 02, 03, Magnetic and Compcat barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1061094137%2FClasslikes%2F-747182850" anchor-label="HairColor" id="1061094137%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-hair-color/index.html">HairColor</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1061094137%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-hair-color/index.html">HairColor</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1198385588%2FClasslikes%2F-747182850" anchor-label="NameSuffix" id="-1198385588%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-name-suffix/index.html">NameSuffix</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1198385588%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-name-suffix/index.html">NameSuffix</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02 barcodes. Optional on AAMVA 01, 03, 04, 05, 06, 07, 08, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="385557929%2FClasslikes%2F-747182850" anchor-label="AKAFullName" id="385557929%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-k-a-full-name/index.html">AKAFullName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="385557929%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-a-k-a-full-name/index.html">AKAFullName</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1788224126%2FClasslikes%2F-747182850" anchor-label="AKAFamilyName" id="1788224126%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-k-a-family-name/index.html">AKAFamilyName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1788224126%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-a-k-a-family-name/index.html">AKAFamilyName</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-461441343%2FClasslikes%2F-747182850" anchor-label="AKAGivenName" id="-461441343%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-k-a-given-name/index.html">AKAGivenName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-461441343%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-a-k-a-given-name/index.html">AKAGivenName</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1974249259%2FClasslikes%2F-747182850" anchor-label="AKASuffixName" id="1974249259%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-k-a-suffix-name/index.html">AKASuffixName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1974249259%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-a-k-a-suffix-name/index.html">AKASuffixName</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1422239747%2FClasslikes%2F-747182850" anchor-label="WeightRange" id="-1422239747%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-weight-range/index.html">WeightRange</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1422239747%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-weight-range/index.html">WeightRange</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02 barcodes. Optional on AAMVA 01, 03, 04, 05, 06, 07, 08, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1461172657%2FClasslikes%2F-747182850" anchor-label="WeightPounds" id="-1461172657%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-weight-pounds/index.html">WeightPounds</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1461172657%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-weight-pounds/index.html">WeightPounds</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02 barcodes. Optional on AAMVA 01, 03, 04, 05, 06, 07, 08, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="165546619%2FClasslikes%2F-747182850" anchor-label="WeightKilograms" id="165546619%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-weight-kilograms/index.html">WeightKilograms</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="165546619%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-weight-kilograms/index.html">WeightKilograms</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02 barcodes. Optional on AAMVA 01, 03, 04, 05, 06, 07, 08, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1469635758%2FClasslikes%2F-747182850" anchor-label="CustomerIdNumber" id="-1469635758%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-customer-id-number/index.html">CustomerIdNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1469635758%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-customer-id-number/index.html">CustomerIdNumber</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1545987784%2FClasslikes%2F-747182850" anchor-label="FamilyNameTruncation" id="1545987784%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-family-name-truncation/index.html">FamilyNameTruncation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1545987784%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-family-name-truncation/index.html">FamilyNameTruncation</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 04, 05, 06, 07, 08 barcodes. Optional on Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-534595940%2FClasslikes%2F-747182850" anchor-label="FirstNameTruncation" id="-534595940%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-first-name-truncation/index.html">FirstNameTruncation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-534595940%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-first-name-truncation/index.html">FirstNameTruncation</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 04, 05, 06, 07, 08 barcodes. Optional on Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1326420857%2FClasslikes%2F-747182850" anchor-label="MiddleNameTruncation" id="1326420857%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-middle-name-truncation/index.html">MiddleNameTruncation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1326420857%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-middle-name-truncation/index.html">MiddleNameTruncation</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 04, 05, 06, 07, 08 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1750507279%2FClasslikes%2F-747182850" anchor-label="PlaceOfBirth" id="-1750507279%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-place-of-birth/index.html">PlaceOfBirth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1750507279%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-place-of-birth/index.html">PlaceOfBirth</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="583128139%2FClasslikes%2F-747182850" anchor-label="AddressStreet2" id="583128139%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-address-street2/index.html">AddressStreet2</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="583128139%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-address-street2/index.html">AddressStreet2</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="569886790%2FClasslikes%2F-747182850" anchor-label="RaceEthnicity" id="569886790%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-race-ethnicity/index.html">RaceEthnicity</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="569886790%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-race-ethnicity/index.html">RaceEthnicity</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="995597773%2FClasslikes%2F-747182850" anchor-label="NamePrefix" id="995597773%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-name-prefix/index.html">NamePrefix</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="995597773%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-name-prefix/index.html">NamePrefix</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 01 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="888560828%2FClasslikes%2F-747182850" anchor-label="CountryIdentification" id="888560828%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-country-identification/index.html">CountryIdentification</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="888560828%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-country-identification/index.html">CountryIdentification</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1680696155%2FClasslikes%2F-747182850" anchor-label="ResidenceStreetAddress" id="1680696155%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-residence-street-address/index.html">ResidenceStreetAddress</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1680696155%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-residence-street-address/index.html">ResidenceStreetAddress</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1947785567%2FClasslikes%2F-747182850" anchor-label="ResidenceStreetAddress2" id="1947785567%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-residence-street-address2/index.html">ResidenceStreetAddress2</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1947785567%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-residence-street-address2/index.html">ResidenceStreetAddress2</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-180095511%2FClasslikes%2F-747182850" anchor-label="ResidenceCity" id="-180095511%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-residence-city/index.html">ResidenceCity</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-180095511%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-residence-city/index.html">ResidenceCity</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1294985036%2FClasslikes%2F-747182850" anchor-label="ResidenceJurisdictionCode" id="1294985036%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-residence-jurisdiction-code/index.html">ResidenceJurisdictionCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1294985036%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-residence-jurisdiction-code/index.html">ResidenceJurisdictionCode</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1759273578%2FClasslikes%2F-747182850" anchor-label="ResidencePostalCode" id="-1759273578%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-residence-postal-code/index.html">ResidencePostalCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1759273578%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-residence-postal-code/index.html">ResidencePostalCode</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 01 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-558213681%2FClasslikes%2F-747182850" anchor-label="ResidenceFullAddress" id="-558213681%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-residence-full-address/index.html">ResidenceFullAddress</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-558213681%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-residence-full-address/index.html">ResidenceFullAddress</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 01 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1873594839%2FClasslikes%2F-747182850" anchor-label="Under18" id="1873594839%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-under18/index.html">Under18</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1873594839%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-under18/index.html">Under18</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 05, 06, 07, 08 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-491141608%2FClasslikes%2F-747182850" anchor-label="Under19" id="-491141608%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-under19/index.html">Under19</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-491141608%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-under19/index.html">Under19</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 05, 06, 07, 08 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="954494959%2FClasslikes%2F-747182850" anchor-label="Under21" id="954494959%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-under21/index.html">Under21</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="954494959%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-under21/index.html">Under21</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 05, 06, 07, 08 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-516556922%2FClasslikes%2F-747182850" anchor-label="SocialSecurityNumber" id="-516556922%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-social-security-number/index.html">SocialSecurityNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-516556922%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-social-security-number/index.html">SocialSecurityNumber</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1551355419%2FClasslikes%2F-747182850" anchor-label="AKASocialSecurityNumber" id="-1551355419%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-k-a-social-security-number/index.html">AKASocialSecurityNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1551355419%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-a-k-a-social-security-number/index.html">AKASocialSecurityNumber</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-809645969%2FClasslikes%2F-747182850" anchor-label="AKAMiddleName" id="-809645969%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-k-a-middle-name/index.html">AKAMiddleName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-809645969%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-a-k-a-middle-name/index.html">AKAMiddleName</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 01 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2089777620%2FClasslikes%2F-747182850" anchor-label="AKAPrefixName" id="-2089777620%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-k-a-prefix-name/index.html">AKAPrefixName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2089777620%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-a-k-a-prefix-name/index.html">AKAPrefixName</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 01 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1141547611%2FClasslikes%2F-747182850" anchor-label="OrganDonor" id="-1141547611%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-organ-donor/index.html">OrganDonor</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1141547611%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-organ-donor/index.html">OrganDonor</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 01, 06, 07, 08 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="695260567%2FClasslikes%2F-747182850" anchor-label="Veteran" id="695260567%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-veteran/index.html">Veteran</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="695260567%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-veteran/index.html">Veteran</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 07, 08 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-746566669%2FClasslikes%2F-747182850" anchor-label="AKADateOfBirth" id="-746566669%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-k-a-date-of-birth/index.html">AKADateOfBirth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-746566669%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-a-k-a-date-of-birth/index.html">AKADateOfBirth</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 01. (MMDDCCYY format)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2024755520%2FClasslikes%2F-747182850" anchor-label="IssuerIdentificationNumber" id="2024755520%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-issuer-identification-number/index.html">IssuerIdentificationNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2024755520%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-issuer-identification-number/index.html">IssuerIdentificationNumber</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1276486280%2FClasslikes%2F-747182850" anchor-label="DocumentExpirationDate" id="1276486280%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-expiration-date/index.html">DocumentExpirationDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1276486280%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-expiration-date/index.html">DocumentExpirationDate</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA, Magnetic and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-228937128%2FClasslikes%2F-747182850" anchor-label="JurisdictionVersionNumber" id="-228937128%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jurisdiction-version-number/index.html">JurisdictionVersionNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-228937128%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-jurisdiction-version-number/index.html">JurisdictionVersionNumber</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA and Compact barcodes. Optional on Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="613656477%2FClasslikes%2F-747182850" anchor-label="JurisdictionVehicleClass" id="613656477%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jurisdiction-vehicle-class/index.html">JurisdictionVehicleClass</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="613656477%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-jurisdiction-vehicle-class/index.html">JurisdictionVehicleClass</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA and Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-933182805%2FClasslikes%2F-747182850" anchor-label="JurisdictionRestrictionCodes" id="-933182805%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jurisdiction-restriction-codes/index.html">JurisdictionRestrictionCodes</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-933182805%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-jurisdiction-restriction-codes/index.html">JurisdictionRestrictionCodes</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA barcodes. Optional on Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="909705993%2FClasslikes%2F-747182850" anchor-label="JurisdictionEndorsementCodes" id="909705993%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jurisdiction-endorsement-codes/index.html">JurisdictionEndorsementCodes</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="909705993%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-jurisdiction-endorsement-codes/index.html">JurisdictionEndorsementCodes</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA barcodes. Optional on Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1406011804%2FClasslikes%2F-747182850" anchor-label="DocumentIssueDate" id="-1406011804%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-issue-date/index.html">DocumentIssueDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1406011804%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-issue-date/index.html">DocumentIssueDate</a></div></div><div class="brief "><p class="paragraph">Mandatory on all AAMVA and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1456696345%2FClasslikes%2F-747182850" anchor-label="FederalCommercialVehicleCodes" id="1456696345%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-federal-commercial-vehicle-codes/index.html">FederalCommercialVehicleCodes</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1456696345%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-federal-commercial-vehicle-codes/index.html">FederalCommercialVehicleCodes</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA versions 02 and 03.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1328076593%2FClasslikes%2F-747182850" anchor-label="IssuingJurisdiction" id="-1328076593%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-issuing-jurisdiction/index.html">IssuingJurisdiction</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1328076593%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-issuing-jurisdiction/index.html">IssuingJurisdiction</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA barcodes. Mandatory on Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="524627149%2FClasslikes%2F-747182850" anchor-label="StandardVehicleClassification" id="524627149%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-standard-vehicle-classification/index.html">StandardVehicleClassification</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="524627149%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-standard-vehicle-classification/index.html">StandardVehicleClassification</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA barcodes. Mandatory on Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1473183930%2FClasslikes%2F-747182850" anchor-label="IssuingJurisdictionName" id="1473183930%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-issuing-jurisdiction-name/index.html">IssuingJurisdictionName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1473183930%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-issuing-jurisdiction-name/index.html">IssuingJurisdictionName</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA and Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="714229078%2FClasslikes%2F-747182850" anchor-label="StandardEndorsementCode" id="714229078%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-standard-endorsement-code/index.html">StandardEndorsementCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="714229078%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-standard-endorsement-code/index.html">StandardEndorsementCode</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="377686388%2FClasslikes%2F-747182850" anchor-label="StandardRestrictionCode" id="377686388%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-standard-restriction-code/index.html">StandardRestrictionCode</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="377686388%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-standard-restriction-code/index.html">StandardRestrictionCode</a></div></div><div class="brief "><p class="paragraph">Optional on all AAMVA barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2010222757%2FClasslikes%2F-747182850" anchor-label="JurisdictionVehicleClassificationDescription" id="-2010222757%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jurisdiction-vehicle-classification-description/index.html">JurisdictionVehicleClassificationDescription</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2010222757%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-jurisdiction-vehicle-classification-description/index.html">JurisdictionVehicleClassificationDescription</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="129447571%2FClasslikes%2F-747182850" anchor-label="JurisdictionEndorsmentCodeDescription" id="129447571%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jurisdiction-endorsment-code-description/index.html">JurisdictionEndorsmentCodeDescription</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="129447571%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-jurisdiction-endorsment-code-description/index.html">JurisdictionEndorsmentCodeDescription</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-828893356%2FClasslikes%2F-747182850" anchor-label="JurisdictionRestrictionCodeDescription" id="-828893356%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-jurisdiction-restriction-code-description/index.html">JurisdictionRestrictionCodeDescription</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-828893356%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-jurisdiction-restriction-code-description/index.html">JurisdictionRestrictionCodeDescription</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1625238810%2FClasslikes%2F-747182850" anchor-label="InventoryControlNumber" id="1625238810%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-inventory-control-number/index.html">InventoryControlNumber</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1625238810%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-inventory-control-number/index.html">InventoryControlNumber</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="823033897%2FClasslikes%2F-747182850" anchor-label="CardRevisionDate" id="823033897%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-card-revision-date/index.html">CardRevisionDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="823033897%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-card-revision-date/index.html">CardRevisionDate</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1608479129%2FClasslikes%2F-747182850" anchor-label="DocumentDiscriminator" id="1608479129%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-discriminator/index.html">DocumentDiscriminator</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1608479129%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-discriminator/index.html">DocumentDiscriminator</a></div></div><div class="brief "><p class="paragraph">Mandatory on AAMVA 02, 03, 04, 05, 06, 07, 08 and Magnetic barcodes. Optional and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1038769633%2FClasslikes%2F-747182850" anchor-label="LimitedDurationDocument" id="1038769633%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-limited-duration-document/index.html">LimitedDurationDocument</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1038769633%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-limited-duration-document/index.html">LimitedDurationDocument</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1511033633%2FClasslikes%2F-747182850" anchor-label="AuditInformation" id="1511033633%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-audit-information/index.html">AuditInformation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1511033633%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-audit-information/index.html">AuditInformation</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 02, 03, 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1432684229%2FClasslikes%2F-747182850" anchor-label="ComplianceType" id="1432684229%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-compliance-type/index.html">ComplianceType</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1432684229%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-compliance-type/index.html">ComplianceType</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2069180659%2FClasslikes%2F-747182850" anchor-label="IssueTimestamp" id="-2069180659%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-issue-timestamp/index.html">IssueTimestamp</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2069180659%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-issue-timestamp/index.html">IssueTimestamp</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-349395832%2FClasslikes%2F-747182850" anchor-label="PermitExpirationDate" id="-349395832%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-permit-expiration-date/index.html">PermitExpirationDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-349395832%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-permit-expiration-date/index.html">PermitExpirationDate</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01 barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-802996044%2FClasslikes%2F-747182850" anchor-label="PermitIdentifier" id="-802996044%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-permit-identifier/index.html">PermitIdentifier</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-802996044%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-permit-identifier/index.html">PermitIdentifier</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01 barcodes..</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-683559836%2FClasslikes%2F-747182850" anchor-label="PermitIssueDate" id="-683559836%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-permit-issue-date/index.html">PermitIssueDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-683559836%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-permit-issue-date/index.html">PermitIssueDate</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01 barcodes..</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1010422648%2FClasslikes%2F-747182850" anchor-label="NumberOfDuplicates" id="1010422648%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-number-of-duplicates/index.html">NumberOfDuplicates</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1010422648%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-number-of-duplicates/index.html">NumberOfDuplicates</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1012550292%2FClasslikes%2F-747182850" anchor-label="HAZMATExpirationDate" id="-1012550292%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-h-a-z-m-a-t-expiration-date/index.html">HAZMATExpirationDate</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1012550292%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-h-a-z-m-a-t-expiration-date/index.html">HAZMATExpirationDate</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA 04, 05, 06, 07, 08 and Compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-371138930%2FClasslikes%2F-747182850" anchor-label="MedicalIndicator" id="-371138930%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-medical-indicator/index.html">MedicalIndicator</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-371138930%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-medical-indicator/index.html">MedicalIndicator</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="967232405%2FClasslikes%2F-747182850" anchor-label="NonResident" id="967232405%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-non-resident/index.html">NonResident</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="967232405%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-non-resident/index.html">NonResident</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="781232986%2FClasslikes%2F-747182850" anchor-label="UniqueCustomerId" id="781232986%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unique-customer-id/index.html">UniqueCustomerId</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="781232986%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-unique-customer-id/index.html">UniqueCustomerId</a></div></div><div class="brief "><p class="paragraph">Optional on AAMVA version 01.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1023591850%2FClasslikes%2F-747182850" anchor-label="DataDiscriminator" id="1023591850%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-data-discriminator/index.html">DataDiscriminator</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1023591850%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-data-discriminator/index.html">DataDiscriminator</a></div></div><div class="brief "><p class="paragraph">Optional on compact barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-106972402%2FClasslikes%2F-747182850" anchor-label="DocumentExpirationMonth" id="-106972402%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-expiration-month/index.html">DocumentExpirationMonth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-106972402%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-expiration-month/index.html">DocumentExpirationMonth</a></div></div><div class="brief "><p class="paragraph">Optional on Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="797715558%2FClasslikes%2F-747182850" anchor-label="DocumentNonexpiring" id="797715558%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-nonexpiring/index.html">DocumentNonexpiring</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="797715558%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-document-nonexpiring/index.html">DocumentNonexpiring</a></div></div><div class="brief "><p class="paragraph">Optional on Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1876583056%2FClasslikes%2F-747182850" anchor-label="SecurityVersion" id="1876583056%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-security-version/index.html">SecurityVersion</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1876583056%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-security-version/index.html">SecurityVersion</a></div></div><div class="brief "><p class="paragraph">Optional on Magnetic barcodes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1675790498%2FClasslikes%2F-747182850" anchor-label="SubFieldDesignator" id="-1675790498%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sub-field-designator/index.html">SubFieldDesignator</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1675790498%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><a href="-sub-field-designator/index.html">SubFieldDesignator</a></div></div><div class="brief "><p class="paragraph">SubField Designator extracted from barcode, to support proper document classification based on the standard. subfield designator is a 2-character code that specifies the type of document, typically DL or ID. It is located immediately after the IIN and the variable metadata structure in the PDF417 barcode data structure. for example: ANSI 636010090002DL00410267ZF03080067DLDAQS1234567812300000000000000 ^^ |           | |           +-- SubField Designator (DL, ID, EN, etc.) +----- IIN (636010)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1776939786%2FProperties%2F-747182850" anchor-label="entries" id="1776939786%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="entries.html"><span><span>entries</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1776939786%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="entries.html">entries</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.enums/-enum-entries/index.html">EnumEntries</a><span class="token operator">&lt;</span><a href="index.html">BarcodeElementKey</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns a representation of an immutable list of all enum entries, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-372974862%2FProperties%2F-747182850" anchor-label="name" id="-372974862%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.microblink.core.settings/-detection-level/-high/index.html#-372974862%2FProperties%2F-747182850"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../com.microblink.core.settings/-detection-level/-high/index.html#-372974862%2FProperties%2F-747182850">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739389684%2FProperties%2F-747182850" anchor-label="ordinal" id="-739389684%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.microblink.core.settings/-detection-level/-high/index.html#-739389684%2FProperties%2F-747182850"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../com.microblink.core.settings/-detection-level/-high/index.html#-739389684%2FProperties%2F-747182850">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="261008082%2FFunctions%2F-747182850" anchor-label="valueOf" id="261008082%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="261008082%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">BarcodeElementKey</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-849875106%2FFunctions%2F-747182850" anchor-label="values" id="-849875106%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-849875106%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">BarcodeElementKey</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

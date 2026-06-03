@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item
+    android:drawable="@drawable/mb_blinkid_help_template_card"
+    android:gravity="center"/>
+
+<item
+    android:drawable="@drawable/mb_blinkid_help_template_id_detail"
+    android:gravity="center"/>
+
+</layer-list>

@@ -18,8 +18,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.microblink.blinkid.core.session.BlinkIdProcessResult
 import com.microblink.blinkid.core.session.BlinkIdSessionSettings
-import com.microblink.blinkid.core.settings.CroppedImageSettings
+import com.microblink.blinkid.core.session.InputImageSource
 import com.microblink.blinkid.core.settings.ScanningSettings
+import com.microblink.blinkid.core.settings.scanning.DocumentCaptureModuleSettings
+import com.microblink.blinkid.core.settings.scanning.VizModuleSettings
 import com.microblink.blinkid.sample.navigation.Destination
 import com.microblink.blinkid.sample.result.BlinkIdResultHolder
 import com.microblink.blinkid.sample.result.BlinkIdSampleResultScreen
@@ -27,8 +29,7 @@ import com.microblink.blinkid.sample.ui.MainScreenDirectApi
 import com.microblink.blinkid.sample.ui.theme.BlinkIDTheme
 import com.microblink.blinkid.sample.utils.MainViewModel
 import com.microblink.blinkid.sample.utils.getBitmapFromAsset
-import com.microblink.core.image.InputImage
-import com.microblink.core.session.InputImageSource
+import com.microblink.blinkid.core.image.InputImage
 import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
@@ -79,17 +80,19 @@ class MainActivity : ComponentActivity() {
                                         scanningSettings = ScanningSettings(
                                             // ensure that the scanned images are placed
                                             // in the BlinkIdScanningResult object
-                                            returnInputImages = true,
-                                            croppedImageSettings = CroppedImageSettings(
-                                                returnFaceImage = true,
-                                                returnDocumentImage = true,
-                                                returnSignatureImage = true
+                                            documentCaptureModule = DocumentCaptureModuleSettings(
+                                                faceImageExtractionEnabled = true,
+                                                inputImageReturnEnabled = true,
+                                                documentImageReturnEnabled = true,
+                                                inputImageMargin = null
+                                            ),
+                                            vizModule = VizModuleSettings(
+                                                signatureImageExtractionEnabled = true,
+                                                resultAggregationEnabled = null
                                             )
-                                            // set to true if you wish to scan cropped documents
-                                            // scanCroppedDocumentImage = true
                                         )
                                     )
-                                )
+                                ).getOrNull()
                                 var result: Result<BlinkIdProcessResult>? = null
 
                                 // define front image
@@ -97,7 +100,7 @@ class MainActivity : ComponentActivity() {
                                     getBitmapFromAsset(context, "test-images/front.jpg")
                                 imageFront?.let {
                                     result =
-                                        session.process(InputImage.createFromBitmap(imageFront))
+                                        session?.process(InputImage.createFromBitmap(imageFront))
                                 }
 
                                 // optional - define back image
@@ -105,12 +108,13 @@ class MainActivity : ComponentActivity() {
                                     getBitmapFromAsset(context, "test-images/back.jpg")
                                 imageBack?.let {
                                     result =
-                                        session.process(InputImage.createFromBitmap(imageBack))
+                                        session?.process(InputImage.createFromBitmap(imageBack))
                                 }
 
                                 if (result != null) {
-                                    if (result.isSuccess) {
-                                        viewModel.onDirectApiResultAvailable(session.getResult())
+                                    val sessionResult = session?.getResult()?.getOrNull()
+                                    if (result.isSuccess && sessionResult != null) {
+                                        viewModel.onDirectApiResultAvailable(sessionResult)
                                         navController.navigate(
                                             route = Destination.BlinkIdResult
                                         )

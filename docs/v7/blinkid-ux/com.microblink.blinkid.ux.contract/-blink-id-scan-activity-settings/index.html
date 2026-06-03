@@ -1,0 +1,341 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BlinkIdScanActivitySettings</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":blinkid-ux:dokkaHtmlPartial/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":blinkid-ux:dokkaHtmlPartial/release" data-filter=":blinkid-ux:dokkaHtmlPartial/release">
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="blinkid-ux::com.microblink.blinkid.ux.contract/BlinkIdScanActivitySettings///PointingToDeclaration//1900084154">
+  <div class="breadcrumbs"><a href="../../index.html">blinkid-ux</a><span class="delimiter">/</span><a href="../index.html">com.microblink.blinkid.ux.contract</a><span class="delimiter">/</span><span class="current">BlinkIdScanActivitySettings</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Blink</span><wbr><span>Id</span><wbr><span>Scan</span><wbr><span>Activity</span><wbr><span><span>Settings</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">BlinkIdScanActivitySettings</a>&nbsp;<span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>sdkSettings<span class="token operator">: </span><a href="../../../blinkid-core/com.microblink.blinkid.core/-blink-id-sdk-settings/index.html">BlinkIdSdkSettings</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scanningSessionSettings<span class="token operator">: </span><a href="../../../blinkid-core/com.microblink.blinkid.core.session/-blink-id-session-settings/index.html">BlinkIdSessionSettings</a><span class="token operator"> = </span>BlinkIdSessionSettings()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>uxSettings<span class="token operator">: </span><a href="../../com.microblink.blinkid.ux.settings/-blink-id-ux-settings/index.html">BlinkIdUxSettings</a><span class="token operator"> = </span>BlinkIdUxSettings()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cameraSettings<span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.camera/-camera-settings/index.html">CameraSettings</a><span class="token operator"> = </span>CameraSettings()<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scanActivityUiColors<span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.contract/-scan-activity-colors/index.html">ScanActivityColors</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scanActivityUiStrings<span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.theme/-sdk-strings/index.html">SdkStrings</a><span class="token operator"> = </span>SdkStrings.Default<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>scanActivityTypography<span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.utils/-parcelable-ui-typography/index.html">ParcelableUiTypography</a><span class="token operator"> = </span>ParcelableUiTypography.Default(null)<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>showOnboardingDialog<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>DefaultShowOnboardingDialog<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>showHelpButton<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>DefaultShowHelpButton<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>enableEdgeToEdge<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>deleteCachedAssetsAfterUse<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../../../microblink-ux/com.microblink.ux.contract/-scan-activity-settings/index.html">ScanActivitySettings</a></div><p class="paragraph">Configuration settings for the <a href="../../com.microblink.blinkid.ux.activity/-blink-id-scan-activity/index.html">BlinkIdScanActivity</a>.</p><p class="paragraph">This data class encapsulates the various settings that control the behavior and appearance of the <a href="../../com.microblink.blinkid.ux.activity/-blink-id-scan-activity/index.html">BlinkIdScanActivity</a>, including the SDK settings, scanning session configurations, UI customization options, and other miscellaneous preferences.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1467358429%2FConstructors%2F1900084154" anchor-label="BlinkIdScanActivitySettings" id="-1467358429%2FConstructors%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-blink-id-scan-activity-settings.html"><span>Blink</span><wbr><span>Id</span><wbr><span>Scan</span><wbr><span>Activity</span><wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1467358429%2FConstructors%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sdkSettings<span class="token operator">: </span><a href="../../../blinkid-core/com.microblink.blinkid.core/-blink-id-sdk-settings/index.html">BlinkIdSdkSettings</a><span class="token punctuation">, </span></span><span class="parameter ">scanningSessionSettings<span class="token operator">: </span><a href="../../../blinkid-core/com.microblink.blinkid.core.session/-blink-id-session-settings/index.html">BlinkIdSessionSettings</a><span class="token operator"> = </span>BlinkIdSessionSettings()<span class="token punctuation">, </span></span><span class="parameter ">uxSettings<span class="token operator">: </span><a href="../../com.microblink.blinkid.ux.settings/-blink-id-ux-settings/index.html">BlinkIdUxSettings</a><span class="token operator"> = </span>BlinkIdUxSettings()<span class="token punctuation">, </span></span><span class="parameter ">cameraSettings<span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.camera/-camera-settings/index.html">CameraSettings</a><span class="token operator"> = </span>CameraSettings()<span class="token punctuation">, </span></span><span class="parameter ">scanActivityUiColors<span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.contract/-scan-activity-colors/index.html">ScanActivityColors</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">scanActivityUiStrings<span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.theme/-sdk-strings/index.html">SdkStrings</a><span class="token operator"> = </span>SdkStrings.Default<span class="token punctuation">, </span></span><span class="parameter ">scanActivityTypography<span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.utils/-parcelable-ui-typography/index.html">ParcelableUiTypography</a><span class="token operator"> = </span>ParcelableUiTypography.Default(null)<span class="token punctuation">, </span></span><span class="parameter ">showOnboardingDialog<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>DefaultShowOnboardingDialog<span class="token punctuation">, </span></span><span class="parameter ">showHelpButton<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>DefaultShowHelpButton<span class="token punctuation">, </span></span><span class="parameter ">enableEdgeToEdge<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">deleteCachedAssetsAfterUse<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1000909178%2FProperties%2F1900084154" anchor-label="cameraSettings" id="1000909178%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="camera-settings.html"><span>camera</span><wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1000909178%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="camera-settings.html">cameraSettings</a><span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.camera/-camera-settings/index.html">CameraSettings</a></div><div class="brief "><p class="paragraph">The <a href="../../../microblink-ux/com.microblink.ux.camera/-camera-settings/index.html">CameraSettings</a> used for document scanning. Defaults to <a href="../../../microblink-ux/com.microblink.ux.camera/-camera-settings/index.html">CameraSettings</a> with default values.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1583975687%2FProperties%2F1900084154" anchor-label="deleteCachedAssetsAfterUse" id="1583975687%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete-cached-assets-after-use.html"><span>delete</span><wbr><span>Cached</span><wbr><span>Assets</span><wbr><span>After</span><wbr><span><span>Use</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1583975687%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="delete-cached-assets-after-use.html">deleteCachedAssetsAfterUse</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div><div class="brief "><p class="paragraph">Indicates whether cached SDK assets should be deleted after     they are used. If the scanning session is used only once (e.g. for user onboarding), the setting     should be set to <code class="lang-kotlin">true</code>. Otherwise, the setting should be set to <code class="lang-kotlin">true</code> to avoid assets being re-downloaded.     This only applies if <code class="lang-kotlin">DOWNLOAD_RESOURCES</code> variant of the SDK is used. Defaults to <code class="lang-kotlin">false</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1684032566%2FProperties%2F1900084154" anchor-label="enableEdgeToEdge" id="-1684032566%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="enable-edge-to-edge.html"><span>enable</span><wbr><span>Edge</span><wbr><span>To</span><wbr><span><span>Edge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1684032566%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="enable-edge-to-edge.html">enableEdgeToEdge</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></div><div class="brief "><p class="paragraph">Enables edge-to-edge display for the activity. This is the default behavior for     all Android 15 devices (and above) and cannot be changed by this setting. In order to have this behavior     on older OS versions, this setting should be set to <code class="lang-kotlin">true</code>. Padding and window insets are     handled automatically. Defaults to <code class="lang-kotlin">true</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1151786169%2FProperties%2F1900084154" anchor-label="scanActivityTypography" id="-1151786169%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scan-activity-typography.html"><span>scan</span><wbr><span>Activity</span><wbr><span><span>Typography</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1151786169%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="scan-activity-typography.html">scanActivityTypography</a><span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.utils/-parcelable-ui-typography/index.html">ParcelableUiTypography</a></div><div class="brief "><p class="paragraph">Custom typography for the <code class="lang-kotlin">BlinkIdScanActivity</code> user     interface. Due to a limitation of <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/-typography/index.html">Typography</a> class, <a href="../../../microblink-ux/com.microblink.ux.utils/-parcelable-ui-typography/index.html">ParcelableUiTypography</a> mimics     <a href="../../../microblink-ux/com.microblink.ux.theme/-ui-typography/index.html">com.microblink.ux.theme.UiTypography</a> by allowing the customization of all the elements to a lesser extent.     The most important TextStyle and Font customizations are still available through this class.     Defaults to <a href="../../../microblink-ux/com.microblink.ux.utils/-parcelable-ui-typography/-companion/-default.html">ParcelableUiTypography.Default</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1300148018%2FProperties%2F1900084154" anchor-label="scanActivityUiColors" id="1300148018%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scan-activity-ui-colors.html"><span>scan</span><wbr><span>Activity</span><wbr><span>Ui</span><wbr><span><span>Colors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1300148018%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="scan-activity-ui-colors.html">scanActivityUiColors</a><span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.contract/-scan-activity-colors/index.html">ScanActivityColors</a><span class="token operator">?</span><span class="token operator"> = </span>null</div><div class="brief "><p class="paragraph">Custom colors for the <code class="lang-kotlin">BlinkIdScanActivity</code> user interface.     If set to <code class="lang-kotlin">null</code>, the default colors will be used. Defaults to <code class="lang-kotlin">null</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1147013430%2FProperties%2F1900084154" anchor-label="scanActivityUiStrings" id="1147013430%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scan-activity-ui-strings.html"><span>scan</span><wbr><span>Activity</span><wbr><span>Ui</span><wbr><span><span>Strings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1147013430%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="scan-activity-ui-strings.html">scanActivityUiStrings</a><span class="token operator">: </span><a href="../../../microblink-ux/com.microblink.ux.theme/-sdk-strings/index.html">SdkStrings</a></div><div class="brief "><p class="paragraph">Custom strings for the <code class="lang-kotlin">BlinkIdScanActivity</code> user     interface. Defaults to <a href="../../../microblink-ux/com.microblink.ux.theme/-sdk-strings/-companion/-default.html">SdkStrings.Default</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1868967760%2FProperties%2F1900084154" anchor-label="scanningSessionSettings" id="1868967760%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="scanning-session-settings.html"><span>scanning</span><wbr><span>Session</span><wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1868967760%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="scanning-session-settings.html">scanningSessionSettings</a><span class="token operator">: </span><a href="../../../blinkid-core/com.microblink.blinkid.core.session/-blink-id-session-settings/index.html">BlinkIdSessionSettings</a></div><div class="brief "><p class="paragraph">Configuration options for the document scanning session. This     allows you to customize aspects of the scanning process, such as certain visual check strictness     and timeout duration. Defaults to <code class="lang-kotlin">BlinkIdSessionSettings()</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1131537115%2FProperties%2F1900084154" anchor-label="sdkSettings" id="1131537115%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sdk-settings.html"><span>sdk</span><wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1131537115%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="sdk-settings.html">sdkSettings</a><span class="token operator">: </span><a href="../../../blinkid-core/com.microblink.blinkid.core/-blink-id-sdk-settings/index.html">BlinkIdSdkSettings</a></div><div class="brief "><p class="paragraph">The core SDK settings required for initializing and     running the BlinkID SDK. This is a mandatory parameter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="430189618%2FProperties%2F1900084154" anchor-label="showHelpButton" id="430189618%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="show-help-button.html"><span>show</span><wbr><span>Help</span><wbr><span><span>Button</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="430189618%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="show-help-button.html">showHelpButton</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Determines whether a help button should be displayed in the activity.     The button allows the user to open help screens during scanning. Defaults to <a href="../../../microblink-ux/com.microblink.ux/index.html">DefaultShowHelpButton</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1499551038%2FProperties%2F1900084154" anchor-label="showOnboardingDialog" id="-1499551038%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="show-onboarding-dialog.html"><span>show</span><wbr><span>Onboarding</span><wbr><span><span>Dialog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1499551038%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="show-onboarding-dialog.html">showOnboardingDialog</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Determines whether an onboarding dialog should be displayed to     the user when the activity is first launched. Defaults to <a href="../../../microblink-ux/com.microblink.ux/index.html">DefaultShowOnboardingDialog</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1133404100%2FProperties%2F1900084154" anchor-label="uxSettings" id="-1133404100%2FProperties%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ux-settings.html"><span>ux</span><wbr><span><span>Settings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1133404100%2FProperties%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="ux-settings.html">uxSettings</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.ux.settings/-blink-id-ux-settings/index.html">BlinkIdUxSettings</a></div><div class="brief "><p class="paragraph">The <a href="../../com.microblink.blinkid.ux.settings/-blink-id-ux-settings/index.html">BlinkIdUxSettings</a> used to customize the UX.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="78012989%2FFunctions%2F1900084154" anchor-label="describeContents" id="78012989%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="describe-contents.html"><span>describe</span><wbr><span><span>Contents</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="78012989%2FFunctions%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="describe-contents.html"><span class="token function">describeContents</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1754457655%2FFunctions%2F1900084154" anchor-label="writeToParcel" id="-1754457655%2FFunctions%2F1900084154" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-ux:dokkaHtmlPartial/release" data-filterable-set=":blinkid-ux:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.microblink.blinkid.ux.theme/-blink-id-scanning-strings/index.html#-1754457655%2FFunctions%2F1900084154"><span>write</span><wbr><span>To</span><wbr><span><span>Parcel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1754457655%2FFunctions%2F1900084154"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-ux:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.microblink.blinkid.ux.theme/-blink-id-scanning-strings/index.html#-1754457655%2FFunctions%2F1900084154"><span class="token function">writeToParcel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Parcel.html">Parcel</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

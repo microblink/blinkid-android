@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">Iziet no skenēšanas</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">Lukturītis izslēgts</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">Lukturītis ieslēgts</string>
+  <string name="mb_blinkid_accessibility_next_page">Nākamā lapa</string>
+  <string name="mb_blinkid_accessibility_previous_page">Iepriekšējā lapa</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">Rādīt palīdzības ekrānus</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">Dokuments noskenēts veiksmīgi!</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">Priekšpuse noskenēta veiksmīgi!</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">Izslēgt lukturīti</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">Ieslēgt lukturīti</string>
+</resources>

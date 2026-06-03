@@ -1,0 +1,1230 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BlinkIdScanningResult</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":blinkid-core:dokkaHtmlPartial/release">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":blinkid-core:dokkaHtmlPartial/release" data-filter=":blinkid-core:dokkaHtmlPartial/release">
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="blinkid-core::com.microblink.blinkid.core.session/BlinkIdScanningResult///PointingToDeclaration//-747182850">
+  <div class="breadcrumbs"><a href="../../index.html">blinkid-core</a><span class="delimiter">/</span><a href="../index.html">com.microblink.blinkid.core.session</a><span class="delimiter">/</span><span class="current">BlinkIdScanningResult</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Blink</span><wbr><span>Id</span><wbr><span>Scanning</span><wbr><span><span>Result</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">BlinkIdScanningResult</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>mode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-recognition-mode/index.html">RecognitionMode</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>documentClassInfo<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.classinfo/-document-class-info/index.html">DocumentClassInfo</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dataMatchResult<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-data-match-result/index.html">DataMatchResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>firstName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>lastName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fullName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>additionalNameInformation<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>localizedName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fathersName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>mothersName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maidenName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>address<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>additionalAddressInformation<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>additionalOptionalAddressInformation<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>placeOfBirth<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>nationality<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>race<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>religion<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>profession<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maritalStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>husbandName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>legalStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>parentsInfo<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-parent-info/index.html">ParentInfo</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>residentialStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>employer<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sex<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sponsor<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>bloodType<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>documentNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>personalIdNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>documentAdditionalNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>documentOptionalAdditionalNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>additionalPersonalIdNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>issuingAuthority<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>documentSubtype<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>remarks<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>residencePermitType<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>manufacturingYear<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>vehicleType<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>vehicleOwner<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>eligibilityCategory<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>specificDocumentValidity<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>visaType<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dateOfBirth<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dateOfIssue<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dateOfExpiry<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dateOfExpiryPermanent<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dateOfEntry<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>effectiveDate<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>countryCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>certificateNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>nationalInsuranceNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>driverLicenseDetailedInfo<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-driver-license-detailed-info/index.html">DriverLicenseDetailedInfo</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>localityCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>municipalityCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>municipalityOfRegistration<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pollingStationCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>registrationCenterCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sectionCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>socialSecurityStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>workRestriction<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stateCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stateName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>cardAccessNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dependentsInfo<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-dependent-info/index.html">DependentInfo</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subResults<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-single-side-scanning-result/index.html">SingleSideScanningResult</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><p class="paragraph">Represents the results of scanning a document.</p><p class="paragraph">This structure contains the results of scanning a document, including the extracted data and images from the document.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-380080737%2FConstructors%2F-747182850" anchor-label="BlinkIdScanningResult" id="-380080737%2FConstructors%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-blink-id-scanning-result.html"><span>Blink</span><wbr><span>Id</span><wbr><span>Scanning</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-380080737%2FConstructors%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">mode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-recognition-mode/index.html">RecognitionMode</a><span class="token punctuation">, </span></span><span class="parameter ">documentClassInfo<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.classinfo/-document-class-info/index.html">DocumentClassInfo</a><span class="token punctuation">, </span></span><span class="parameter ">dataMatchResult<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-data-match-result/index.html">DataMatchResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">firstName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">lastName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">fullName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">additionalNameInformation<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">localizedName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">fathersName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">mothersName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">maidenName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">address<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">additionalAddressInformation<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">additionalOptionalAddressInformation<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">placeOfBirth<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">nationality<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">race<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">religion<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">profession<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">maritalStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">husbandName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">legalStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">parentsInfo<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-parent-info/index.html">ParentInfo</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">residentialStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">employer<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">sex<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">sponsor<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">bloodType<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">documentNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">personalIdNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">documentAdditionalNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">documentOptionalAdditionalNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">additionalPersonalIdNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">issuingAuthority<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">documentSubtype<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">remarks<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">residencePermitType<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">manufacturingYear<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">vehicleType<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">vehicleOwner<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">eligibilityCategory<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">specificDocumentValidity<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">visaType<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dateOfBirth<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dateOfIssue<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dateOfExpiry<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dateOfExpiryPermanent<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dateOfEntry<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">effectiveDate<span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">countryCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">certificateNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">nationalInsuranceNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">driverLicenseDetailedInfo<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-driver-license-detailed-info/index.html">DriverLicenseDetailedInfo</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">localityCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">municipalityCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">municipalityOfRegistration<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">pollingStationCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">registrationCenterCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">sectionCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">socialSecurityStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">workRestriction<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">stateCode<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">stateName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">cardAccessNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dependentsInfo<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-dependent-info/index.html">DependentInfo</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">subResults<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-single-side-scanning-result/index.html">SingleSideScanningResult</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="345871318%2FClasslikes%2F-747182850" anchor-label="Companion" id="345871318%2FClasslikes%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="345871318%2FClasslikes%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-758122644%2FProperties%2F-747182850" anchor-label="additionalAddressInformation" id="-758122644%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="additional-address-information.html"><span>additional</span><wbr><span>Address</span><wbr><span><span>Information</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-758122644%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="additional-address-information.html">additionalAddressInformation</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The additional address information of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-903413419%2FProperties%2F-747182850" anchor-label="additionalNameInformation" id="-903413419%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="additional-name-information.html"><span>additional</span><wbr><span>Name</span><wbr><span><span>Information</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-903413419%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="additional-name-information.html">additionalNameInformation</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The additional name information of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1515208940%2FProperties%2F-747182850" anchor-label="additionalOptionalAddressInformation" id="1515208940%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="additional-optional-address-information.html"><span>additional</span><wbr><span>Optional</span><wbr><span>Address</span><wbr><span><span>Information</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1515208940%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="additional-optional-address-information.html">additionalOptionalAddressInformation</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The one more additional address information of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1514543968%2FProperties%2F-747182850" anchor-label="additionalPersonalIdNumber" id="-1514543968%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="additional-personal-id-number.html"><span>additional</span><wbr><span>Personal</span><wbr><span>Id</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1514543968%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="additional-personal-id-number.html">additionalPersonalIdNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The additional personal identification number.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-941732453%2FProperties%2F-747182850" anchor-label="address" id="-941732453%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="address.html"><span><span>address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-941732453%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="address.html">address</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The address of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1714205509%2FProperties%2F-747182850" anchor-label="bloodType" id="-1714205509%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blood-type.html"><span>blood</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1714205509%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="blood-type.html">bloodType</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The blood type of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1207492018%2FProperties%2F-747182850" anchor-label="cardAccessNumber" id="-1207492018%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="card-access-number.html"><span>card</span><wbr><span>Access</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1207492018%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="card-access-number.html">cardAccessNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The card access number.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="290933967%2FProperties%2F-747182850" anchor-label="certificateNumber" id="290933967%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="certificate-number.html"><span>certificate</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="290933967%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="certificate-number.html">certificateNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The certificate number of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1561347276%2FProperties%2F-747182850" anchor-label="countryCode" id="1561347276%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="country-code.html"><span>country</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1561347276%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="country-code.html">countryCode</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The country code of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1201568727%2FProperties%2F-747182850" anchor-label="dataMatchResult" id="1201568727%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="data-match-result.html"><span>data</span><wbr><span>Match</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1201568727%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="data-match-result.html">dataMatchResult</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-data-match-result/index.html">DataMatchResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Info on whether the data extracted from multiple sides matches</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1202727349%2FProperties%2F-747182850" anchor-label="dateOfBirth" id="1202727349%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="date-of-birth.html"><span>date</span><wbr><span>Of</span><wbr><span><span>Birth</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1202727349%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="date-of-birth.html">dateOfBirth</a><span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The date of birth of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1498147486%2FProperties%2F-747182850" anchor-label="dateOfEntry" id="-1498147486%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="date-of-entry.html"><span>date</span><wbr><span>Of</span><wbr><span><span>Entry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1498147486%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="date-of-entry.html">dateOfEntry</a><span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The date of entry of the document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-248505613%2FProperties%2F-747182850" anchor-label="dateOfExpiry" id="-248505613%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="date-of-expiry.html"><span>date</span><wbr><span>Of</span><wbr><span><span>Expiry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-248505613%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="date-of-expiry.html">dateOfExpiry</a><span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The date of expiry of the document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="146739321%2FProperties%2F-747182850" anchor-label="dateOfExpiryPermanent" id="146739321%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="date-of-expiry-permanent.html"><span>date</span><wbr><span>Of</span><wbr><span>Expiry</span><wbr><span><span>Permanent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="146739321%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="date-of-expiry-permanent.html">dateOfExpiryPermanent</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Determines if date of expiry is permanent.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="236840667%2FProperties%2F-747182850" anchor-label="dateOfIssue" id="236840667%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="date-of-issue.html"><span>date</span><wbr><span>Of</span><wbr><span><span>Issue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="236840667%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="date-of-issue.html">dateOfIssue</a><span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The date of issue of the document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="500276809%2FProperties%2F-747182850" anchor-label="dependentsInfo" id="500276809%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="dependents-info.html"><span>dependents</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="500276809%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="dependents-info.html">dependentsInfo</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-dependent-info/index.html">DependentInfo</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The dependents info.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1354939520%2FProperties%2F-747182850" anchor-label="documentAdditionalNumber" id="-1354939520%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document-additional-number.html"><span>document</span><wbr><span>Additional</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1354939520%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="document-additional-number.html">documentAdditionalNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The additional number of the document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1240107908%2FProperties%2F-747182850" anchor-label="documentClassInfo" id="1240107908%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document-class-info.html"><span>document</span><wbr><span>Class</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1240107908%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="document-class-info.html">documentClassInfo</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.classinfo/-document-class-info/index.html">DocumentClassInfo</a></div><div class="brief "><p class="paragraph">The document class information</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-605162393%2FProperties%2F-747182850" anchor-label="documentNumber" id="-605162393%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document-number.html"><span>document</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-605162393%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="document-number.html">documentNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The document number.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1532633344%2FProperties%2F-747182850" anchor-label="documentOptionalAdditionalNumber" id="1532633344%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document-optional-additional-number.html"><span>document</span><wbr><span>Optional</span><wbr><span>Additional</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1532633344%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="document-optional-additional-number.html">documentOptionalAdditionalNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The one more additional number of the document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-870345200%2FProperties%2F-747182850" anchor-label="documentSubtype" id="-870345200%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document-subtype.html"><span>document</span><wbr><span><span>Subtype</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-870345200%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="document-subtype.html">documentSubtype</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The transcription of the document subtype.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1317391528%2FProperties%2F-747182850" anchor-label="driverLicenseDetailedInfo" id="-1317391528%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="driver-license-detailed-info.html"><span>driver</span><wbr><span>License</span><wbr><span>Detailed</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1317391528%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="driver-license-detailed-info.html">driverLicenseDetailedInfo</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-driver-license-detailed-info/index.html">DriverLicenseDetailedInfo</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The driver license detailed info.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1765889338%2FProperties%2F-747182850" anchor-label="effectiveDate" id="1765889338%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="effective-date.html"><span>effective</span><wbr><span><span>Date</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1765889338%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="effective-date.html">effectiveDate</a><span class="token operator">: </span><a href="../../com.microblink.core.result/-date-result/index.html">DateResult</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The effective date of the document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-139287868%2FProperties%2F-747182850" anchor-label="eligibilityCategory" id="-139287868%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="eligibility-category.html"><span>eligibility</span><wbr><span><span>Category</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-139287868%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="eligibility-category.html">eligibilityCategory</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The eligibility category.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1727132752%2FProperties%2F-747182850" anchor-label="employer" id="1727132752%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="employer.html"><span><span>employer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1727132752%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="employer.html">employer</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The employer of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1983937907%2FProperties%2F-747182850" anchor-label="fathersName" id="-1983937907%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fathers-name.html"><span>fathers</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1983937907%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="fathers-name.html">fathersName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The fathers name of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-732002924%2FProperties%2F-747182850" anchor-label="firstName" id="-732002924%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="first-name.html"><span>first</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-732002924%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="first-name.html">firstName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The first name of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1639795151%2FProperties%2F-747182850" anchor-label="fullName" id="-1639795151%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="full-name.html"><span>full</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1639795151%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="full-name.html">fullName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The full name of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-864251031%2FProperties%2F-747182850" anchor-label="husbandName" id="-864251031%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="husband-name.html"><span>husband</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-864251031%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="husband-name.html">husbandName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The husband name of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-475248450%2FProperties%2F-747182850" anchor-label="issuingAuthority" id="-475248450%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="issuing-authority.html"><span>issuing</span><wbr><span><span>Authority</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-475248450%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="issuing-authority.html">issuingAuthority</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The issuing authority of the document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2058422390%2FProperties%2F-747182850" anchor-label="lastName" id="-2058422390%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-name.html"><span>last</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2058422390%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="last-name.html">lastName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The last name of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1506113636%2FProperties%2F-747182850" anchor-label="legalStatus" id="1506113636%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="legal-status.html"><span>legal</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1506113636%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="legal-status.html">legalStatus</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The legal status of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-321121349%2FProperties%2F-747182850" anchor-label="localityCode" id="-321121349%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="locality-code.html"><span>locality</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-321121349%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="locality-code.html">localityCode</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The locality code.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1008464809%2FProperties%2F-747182850" anchor-label="localizedName" id="1008464809%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="localized-name.html"><span>localized</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1008464809%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="localized-name.html">localizedName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The localized name of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-969901240%2FProperties%2F-747182850" anchor-label="maidenName" id="-969901240%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="maiden-name.html"><span>maiden</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-969901240%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="maiden-name.html">maidenName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The maiden name of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1545851476%2FProperties%2F-747182850" anchor-label="manufacturingYear" id="1545851476%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="manufacturing-year.html"><span>manufacturing</span><wbr><span><span>Year</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1545851476%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="manufacturing-year.html">manufacturingYear</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The manufacturing year.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2141275721%2FProperties%2F-747182850" anchor-label="maritalStatus" id="2141275721%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="marital-status.html"><span>marital</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2141275721%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="marital-status.html">maritalStatus</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The marital status of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1667900056%2FProperties%2F-747182850" anchor-label="mode" id="-1667900056%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mode.html"><span><span>mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1667900056%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="mode.html">mode</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-recognition-mode/index.html">RecognitionMode</a></div><div class="brief "><p class="paragraph">Scanning mode used to scan current document</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1465158068%2FProperties%2F-747182850" anchor-label="mothersName" id="1465158068%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mothers-name.html"><span>mothers</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1465158068%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="mothers-name.html">mothersName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The mothers name of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-568309694%2FProperties%2F-747182850" anchor-label="municipalityCode" id="-568309694%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="municipality-code.html"><span>municipality</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-568309694%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="municipality-code.html">municipalityCode</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The municipality code.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="89921759%2FProperties%2F-747182850" anchor-label="municipalityOfRegistration" id="89921759%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="municipality-of-registration.html"><span>municipality</span><wbr><span>Of</span><wbr><span><span>Registration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="89921759%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="municipality-of-registration.html">municipalityOfRegistration</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The municipality of registration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-291632770%2FProperties%2F-747182850" anchor-label="nationalInsuranceNumber" id="-291632770%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="national-insurance-number.html"><span>national</span><wbr><span>Insurance</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-291632770%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="national-insurance-number.html">nationalInsuranceNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The national insurance number of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1346157613%2FProperties%2F-747182850" anchor-label="nationality" id="-1346157613%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="nationality.html"><span><span>nationality</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1346157613%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="nationality.html">nationality</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The nationality of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="21527704%2FProperties%2F-747182850" anchor-label="parentsInfo" id="21527704%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="parents-info.html"><span>parents</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="21527704%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="parents-info.html">parentsInfo</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-parent-info/index.html">ParentInfo</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The parents info.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1320421753%2FProperties%2F-747182850" anchor-label="personalIdNumber" id="-1320421753%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="personal-id-number.html"><span>personal</span><wbr><span>Id</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1320421753%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="personal-id-number.html">personalIdNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The personal identification number.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1969793878%2FProperties%2F-747182850" anchor-label="placeOfBirth" id="-1969793878%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="place-of-birth.html"><span>place</span><wbr><span>Of</span><wbr><span><span>Birth</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1969793878%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="place-of-birth.html">placeOfBirth</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The place of birth of the document owner</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2085690003%2FProperties%2F-747182850" anchor-label="pollingStationCode" id="-2085690003%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="polling-station-code.html"><span>polling</span><wbr><span>Station</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2085690003%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="polling-station-code.html">pollingStationCode</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The polling station code.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="318722479%2FProperties%2F-747182850" anchor-label="profession" id="318722479%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="profession.html"><span><span>profession</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="318722479%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="profession.html">profession</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The profession of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="107338746%2FProperties%2F-747182850" anchor-label="race" id="107338746%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="race.html"><span><span>race</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="107338746%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="race.html">race</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The race of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="144870672%2FProperties%2F-747182850" anchor-label="registrationCenterCode" id="144870672%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="registration-center-code.html"><span>registration</span><wbr><span>Center</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="144870672%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="registration-center-code.html">registrationCenterCode</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The registration center code.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="301014682%2FProperties%2F-747182850" anchor-label="religion" id="301014682%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="religion.html"><span><span>religion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="301014682%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="religion.html">religion</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The religion of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1613493892%2FProperties%2F-747182850" anchor-label="remarks" id="-1613493892%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remarks.html"><span><span>remarks</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1613493892%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="remarks.html">remarks</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The remarks on the residence permit.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="736800468%2FProperties%2F-747182850" anchor-label="residencePermitType" id="736800468%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="residence-permit-type.html"><span>residence</span><wbr><span>Permit</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="736800468%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="residence-permit-type.html">residencePermitType</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The residence permit type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1665202887%2FProperties%2F-747182850" anchor-label="residentialStatus" id="-1665202887%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="residential-status.html"><span>residential</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1665202887%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="residential-status.html">residentialStatus</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The residential status of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="589722589%2FProperties%2F-747182850" anchor-label="sectionCode" id="589722589%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="section-code.html"><span>section</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="589722589%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="section-code.html">sectionCode</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The section code.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1854777961%2FProperties%2F-747182850" anchor-label="sex" id="1854777961%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sex.html"><span><span>sex</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1854777961%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="sex.html">sex</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The sex of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1729452652%2FProperties%2F-747182850" anchor-label="socialSecurityStatus" id="1729452652%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="social-security-status.html"><span>social</span><wbr><span>Security</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1729452652%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="social-security-status.html">socialSecurityStatus</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The social security status of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1361485620%2FProperties%2F-747182850" anchor-label="specificDocumentValidity" id="-1361485620%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="specific-document-validity.html"><span>specific</span><wbr><span>Document</span><wbr><span><span>Validity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1361485620%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="specific-document-validity.html">specificDocumentValidity</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The specific document validity.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-56046283%2FProperties%2F-747182850" anchor-label="sponsor" id="-56046283%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sponsor.html"><span><span>sponsor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-56046283%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="sponsor.html">sponsor</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The sponsor of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1208153551%2FProperties%2F-747182850" anchor-label="stateCode" id="-1208153551%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="state-code.html"><span>state</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1208153551%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="state-code.html">stateCode</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The state code.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1456933715%2FProperties%2F-747182850" anchor-label="stateName" id="1456933715%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="state-name.html"><span>state</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1456933715%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="state-name.html">stateName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The state name.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1142302293%2FProperties%2F-747182850" anchor-label="subResults" id="1142302293%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sub-results.html"><span>sub</span><wbr><span><span>Results</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1142302293%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="sub-results.html">subResults</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../com.microblink.blinkid.core.result/-single-side-scanning-result/index.html">SingleSideScanningResult</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">The results of scanning each side of the document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1393365340%2FProperties%2F-747182850" anchor-label="vehicleOwner" id="-1393365340%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="vehicle-owner.html"><span>vehicle</span><wbr><span><span>Owner</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1393365340%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="vehicle-owner.html">vehicleOwner</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The vehicle owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1449837495%2FProperties%2F-747182850" anchor-label="vehicleType" id="-1449837495%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="vehicle-type.html"><span>vehicle</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1449837495%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="vehicle-type.html">vehicleType</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The vehicle type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-606547984%2FProperties%2F-747182850" anchor-label="visaType" id="-606547984%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="visa-type.html"><span>visa</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-606547984%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="visa-type.html">visaType</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The visa type of the document.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1869786484%2FProperties%2F-747182850" anchor-label="workRestriction" id="1869786484%2FProperties%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="work-restriction.html"><span>work</span><wbr><span><span>Restriction</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1869786484%2FProperties%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="work-restriction.html">workRestriction</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result/-string-result/index.html">StringResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The work restriction of the document owner.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1760217438%2FFunctions%2F-747182850" anchor-label="barcodeInputImage" id="1760217438%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="barcode-input-image.html"><span>barcode</span><wbr><span>Input</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1760217438%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="barcode-input-image.html"><span class="token function">barcodeInputImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.microblink.core.result/-input-image-result/index.html">InputImageResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns the input image containing parsable barcode.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2012206368%2FFunctions%2F-747182850" anchor-label="documentImage" id="2012206368%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document-image.html"><span>document</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2012206368%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="document-image.html"><span class="token function">documentImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scanningSide<span class="token operator">: </span><a href="../../com.microblink.core.result/-scanning-side/index.html">ScanningSide</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.microblink.core.result/-cropped-image-result/index.html">CroppedImageResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns the cropped document image for the given scanning side.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1373071185%2FFunctions%2F-747182850" anchor-label="faceImage" id="1373071185%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="face-image.html"><span>face</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1373071185%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="face-image.html"><span class="token function">faceImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.microblink.core.result/-detailed-cropped-image-result/index.html">DetailedCroppedImageResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns the cropped face image with additional info.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="761196213%2FFunctions%2F-747182850" anchor-label="inputImage" id="761196213%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="input-image.html"><span>input</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="761196213%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="input-image.html"><span class="token function">inputImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scanningSide<span class="token operator">: </span><a href="../../com.microblink.core.result/-scanning-side/index.html">ScanningSide</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.microblink.core.result/-input-image-result/index.html">InputImageResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns the input image for the given scanning side.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-869331448%2FFunctions%2F-747182850" anchor-label="signatureImage" id="-869331448%2FFunctions%2F-747182850" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release"></a>
+          <div class="table-row" data-filterable-current=":blinkid-core:dokkaHtmlPartial/release" data-filterable-set=":blinkid-core:dokkaHtmlPartial/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="signature-image.html"><span>signature</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-869331448%2FFunctions%2F-747182850"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="signature-image.html"><span class="token function">signatureImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../com.microblink.core.result/-detailed-cropped-image-result/index.html">DetailedCroppedImageResult</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Returns the cropped signature image with additional info.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2026 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

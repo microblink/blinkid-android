@@ -27,8 +27,15 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.activity)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.material)
+    implementation(libs.androidx.foundation.android)
+    implementation(libs.androidx.ui.android)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.activity)
     implementation(libs.blinkid.ux)
 }

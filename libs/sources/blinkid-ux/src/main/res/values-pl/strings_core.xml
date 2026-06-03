@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Wymagane uprawnienie do korzystania z aparatu.</string>
+  <string name="mb_blinkid_close">Zamknij</string>
+  <string name="mb_blinkid_dialog_back_button">Wstecz</string>
+  <string name="mb_blinkid_dialog_done_button">Gotowe</string>
+  <string name="mb_blinkid_dialog_next_button">Dalej</string>
+  <string name="mb_blinkid_dialog_skip_button">Pomiń</string>
+  <string name="mb_blinkid_enable_camera">Włącz aparat</string>
+  <string name="mb_blinkid_enable_permission_help">Zostaniesz teraz przeniesiony do ustawień uprawnień, gdzie należy udzielić aplikacji dostępu do aparatu.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Udziel dostępu do aparatu w ustawieniach uprawnień aplikacji.</string>
+  <string name="mb_blinkid_license_locked">Skanowanie niedostępne</string>
+  <string name="mb_blinkid_loading">Ładowanie…</string>
+  <string name="mb_blinkid_move_closer">Przesuń bliżej</string>
+  <string name="mb_blinkid_move_farther">Przesuń dalej</string>
+  <string name="mb_blinkid_need_help_tooltip">Potrzebujesz pomocy?</string>
+  <string name="mb_blinkid_ok">OK</string>
+  <string name="mb_blinkid_retry">Spróbuj ponownie</string>
+  <string name="mb_blinkid_warning">Ostrzeżenie</string>
+</resources>

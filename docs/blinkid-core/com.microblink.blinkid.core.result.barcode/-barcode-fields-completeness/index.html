@@ -1,0 +1,573 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BarcodeFieldsCompleteness</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":blinkid-core/productionRelease">productionRelease</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":blinkid-core/productionRelease" data-filter=":blinkid-core/productionRelease">
+                                <span class="checkbox--icon"></span>
+                                productionRelease
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="blinkid-core::com.microblink.blinkid.core.result.barcode/BarcodeFieldsCompleteness///PointingToDeclaration//144797397">
+  <div class="breadcrumbs"><a href="../../index.html">blinkid-core</a><span class="delimiter">/</span><a href="../index.html">com.microblink.blinkid.core.result.barcode</a><span class="delimiter">/</span><span class="current">BarcodeFieldsCompleteness</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Barcode</span><wbr><span>Fields</span><wbr><span><span>Completeness</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">BarcodeFieldsCompleteness</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>firstName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>middleName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>lastName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fullName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>additionalNameInformation<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>address<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>placeOfBirth<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>nationality<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>race<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>religion<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>profession<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maritalStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>residentialStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>employer<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sex<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dateOfBirth<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-date-completeness/index.html">DateCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dateOfIssue<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-date-completeness/index.html">DateCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dateOfExpiry<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-date-completeness/index.html">DateCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>documentNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>personalIdNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>documentAdditionalNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>issuingAuthority<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>addressDetailedInfo<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-address-detailed-info-completeness/index.html">AddressDetailedInfoCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>driverLicenseDetailedInfo<span class="token operator">: </span><a href="../-barcode-driver-license-detailed-info-completeness/index.html">BarcodeDriverLicenseDetailedInfoCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>extendedElements<span class="token operator">: </span><a href="../-barcode-elements-completeness/index.html">BarcodeElementsCompleteness</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="https://developer.android.com/reference/kotlin/android/os/Parcelable.html">Parcelable</a></div><p class="paragraph">A completeness structure for a Barcode fields.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="2064602502%2FConstructors%2F144797397" anchor-label="BarcodeFieldsCompleteness" id="2064602502%2FConstructors%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-barcode-fields-completeness.html"><span>Barcode</span><wbr><span>Fields</span><wbr><span><span>Completeness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2064602502%2FConstructors%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">firstName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">middleName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">lastName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">fullName<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">additionalNameInformation<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">address<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">placeOfBirth<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">nationality<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">race<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">religion<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">profession<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">maritalStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">residentialStatus<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">employer<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">sex<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dateOfBirth<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-date-completeness/index.html">DateCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dateOfIssue<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-date-completeness/index.html">DateCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">dateOfExpiry<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-date-completeness/index.html">DateCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">documentNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">personalIdNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">documentAdditionalNumber<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">issuingAuthority<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">addressDetailedInfo<span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-address-detailed-info-completeness/index.html">AddressDetailedInfoCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">driverLicenseDetailedInfo<span class="token operator">: </span><a href="../-barcode-driver-license-detailed-info-completeness/index.html">BarcodeDriverLicenseDetailedInfoCompleteness</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">extendedElements<span class="token operator">: </span><a href="../-barcode-elements-completeness/index.html">BarcodeElementsCompleteness</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1011660229%2FClasslikes%2F144797397" anchor-label="Companion" id="-1011660229%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1011660229%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1175801274%2FProperties%2F144797397" anchor-label="additionalNameInformation" id="1175801274%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="additional-name-information.html"><span>additional</span><wbr><span>Name</span><wbr><span><span>Information</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1175801274%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="additional-name-information.html">additionalNameInformation</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="692607296%2FProperties%2F144797397" anchor-label="address" id="692607296%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="address.html"><span><span>address</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="692607296%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="address.html">address</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2064322334%2FProperties%2F144797397" anchor-label="addressDetailedInfo" id="-2064322334%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="address-detailed-info.html"><span>address</span><wbr><span>Detailed</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2064322334%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="address-detailed-info.html">addressDetailedInfo</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-address-detailed-info-completeness/index.html">AddressDetailedInfoCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2009998630%2FProperties%2F144797397" anchor-label="dateOfBirth" id="-2009998630%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="date-of-birth.html"><span>date</span><wbr><span>Of</span><wbr><span><span>Birth</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2009998630%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="date-of-birth.html">dateOfBirth</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-date-completeness/index.html">DateCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1058763154%2FProperties%2F144797397" anchor-label="dateOfExpiry" id="-1058763154%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="date-of-expiry.html"><span>date</span><wbr><span>Of</span><wbr><span><span>Expiry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1058763154%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="date-of-expiry.html">dateOfExpiry</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-date-completeness/index.html">DateCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1319081984%2FProperties%2F144797397" anchor-label="dateOfIssue" id="1319081984%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="date-of-issue.html"><span>date</span><wbr><span>Of</span><wbr><span><span>Issue</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1319081984%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="date-of-issue.html">dateOfIssue</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-date-completeness/index.html">DateCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="97605243%2FProperties%2F144797397" anchor-label="documentAdditionalNumber" id="97605243%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document-additional-number.html"><span>document</span><wbr><span>Additional</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="97605243%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="document-additional-number.html">documentAdditionalNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1873578718%2FProperties%2F144797397" anchor-label="documentNumber" id="-1873578718%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="document-number.html"><span>document</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1873578718%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="document-number.html">documentNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="761823165%2FProperties%2F144797397" anchor-label="driverLicenseDetailedInfo" id="761823165%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="driver-license-detailed-info.html"><span>driver</span><wbr><span>License</span><wbr><span>Detailed</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="761823165%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="driver-license-detailed-info.html">driverLicenseDetailedInfo</a><span class="token operator">: </span><a href="../-barcode-driver-license-detailed-info-completeness/index.html">BarcodeDriverLicenseDetailedInfoCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="852057419%2FProperties%2F144797397" anchor-label="employer" id="852057419%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="employer.html"><span><span>employer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="852057419%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="employer.html">employer</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="620471126%2FProperties%2F144797397" anchor-label="extendedElements" id="620471126%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="extended-elements.html"><span>extended</span><wbr><span><span>Elements</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="620471126%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="extended-elements.html">extendedElements</a><span class="token operator">: </span><a href="../-barcode-elements-completeness/index.html">BarcodeElementsCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2089534471%2FProperties%2F144797397" anchor-label="firstName" id="-2089534471%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="first-name.html"><span>first</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2089534471%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="first-name.html">firstName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1780096812%2FProperties%2F144797397" anchor-label="fullName" id="1780096812%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="full-name.html"><span>full</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1780096812%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="full-name.html">fullName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="347375289%2FProperties%2F144797397" anchor-label="issuingAuthority" id="347375289%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="issuing-authority.html"><span>issuing</span><wbr><span><span>Authority</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="347375289%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="issuing-authority.html">issuingAuthority</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1361469573%2FProperties%2F144797397" anchor-label="lastName" id="1361469573%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="last-name.html"><span>last</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1361469573%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="last-name.html">lastName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1501871570%2FProperties%2F144797397" anchor-label="maritalStatus" id="-1501871570%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="marital-status.html"><span>marital</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1501871570%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="marital-status.html">maritalStatus</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-102467674%2FProperties%2F144797397" anchor-label="middleName" id="-102467674%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="middle-name.html"><span>middle</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-102467674%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="middle-name.html">middleName</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-263916296%2FProperties%2F144797397" anchor-label="nationality" id="-263916296%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="nationality.html"><span><span>nationality</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-263916296%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="nationality.html">nationality</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-497798014%2FProperties%2F144797397" anchor-label="personalIdNumber" id="-497798014%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="personal-id-number.html"><span>personal</span><wbr><span>Id</span><wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-497798014%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="personal-id-number.html">personalIdNumber</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1514915877%2FProperties%2F144797397" anchor-label="placeOfBirth" id="1514915877%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="place-of-birth.html"><span>place</span><wbr><span>Of</span><wbr><span><span>Birth</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1514915877%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="place-of-birth.html">placeOfBirth</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1184917482%2FProperties%2F144797397" anchor-label="profession" id="1184917482%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="profession.html"><span><span>profession</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1184917482%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="profession.html">profession</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-180946315%2FProperties%2F144797397" anchor-label="race" id="-180946315%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="race.html"><span><span>race</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-180946315%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="race.html">race</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-574060651%2FProperties%2F144797397" anchor-label="religion" id="-574060651%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="religion.html"><span><span>religion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-574060651%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="religion.html">religion</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1933670754%2FProperties%2F144797397" anchor-label="residentialStatus" id="-1933670754%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="residential-status.html"><span>residential</span><wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1933670754%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="residential-status.html">residentialStatus</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="875647118%2FProperties%2F144797397" anchor-label="sex" id="875647118%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sex.html"><span><span>sex</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="875647118%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="sex.html">sex</a><span class="token operator">: </span><a href="../../com.microblink.blinkid.core.result.completeness/-string-completeness/index.html">StringCompleteness</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1578325224%2FFunctions%2F144797397" anchor-label="describeContents" id="-1578325224%2FFunctions%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.microblink.blinkid.core.settings.scanning/-viz-module-settings/index.html#-1578325224%2FFunctions%2F144797397"><span>describe</span><wbr><span><span>Contents</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1578325224%2FFunctions%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.microblink.blinkid.core.settings.scanning/-viz-module-settings/index.html#-1578325224%2FFunctions%2F144797397"><span class="token function">describeContents</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1754457655%2FFunctions%2F144797397" anchor-label="writeToParcel" id="-1754457655%2FFunctions%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../com.microblink.blinkid.core.settings.scanning/-viz-module-settings/index.html#-1754457655%2FFunctions%2F144797397"><span>write</span><wbr><span>To</span><wbr><span><span>Parcel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1754457655%2FFunctions%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../../com.microblink.blinkid.core.settings.scanning/-viz-module-settings/index.html#-1754457655%2FFunctions%2F144797397"><span class="token function">writeToParcel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">p0<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/os/Parcel.html">Parcel</a><span class="token punctuation">, </span></span><span class="parameter ">p1<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

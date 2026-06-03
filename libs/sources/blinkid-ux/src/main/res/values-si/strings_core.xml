@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">කැමරා අවසරය අවශ්‍ය වේ.</string>
+  <string name="mb_blinkid_close">වසන්න</string>
+  <string name="mb_blinkid_dialog_back_button">ආපසු</string>
+  <string name="mb_blinkid_dialog_done_button">කළා</string>
+  <string name="mb_blinkid_dialog_next_button">ඊලඟ</string>
+  <string name="mb_blinkid_dialog_skip_button">මඟ හරින්න</string>
+  <string name="mb_blinkid_enable_camera">කැමරාව සබල කරන්න</string>
+  <string name="mb_blinkid_enable_permission_help">දැන් ඔබව අවසර සැකසුම් වෙත ගෙන යනු ඇති අතර, එහි දී ඔබ යෙදුමට කැමරා අවසරය ලබා දිය යුතු ය.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">කරුණාකර යෙදුමේ අවසර සැකසුම් තුළ කැමරාවට අවසරය ලබා දෙන්න.</string>
+  <string name="mb_blinkid_license_locked">ස්කෑන් කිරීම කළ නොහැක</string>
+  <string name="mb_blinkid_loading">පූරණය වෙමින්…</string>
+  <string name="mb_blinkid_move_closer">මදක් ළං කරන්න</string>
+  <string name="mb_blinkid_move_farther">මදක් ඈත් කරන්න</string>
+  <string name="mb_blinkid_need_help_tooltip">උදව් අවශ්‍ය ද?</string>
+  <string name="mb_blinkid_ok">හරි</string>
+  <string name="mb_blinkid_retry">නැවත උත්සාහ කරන්න</string>
+  <string name="mb_blinkid_warning">අවවාදයයි</string>
+</resources>

@@ -26,9 +26,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import com.microblink.blinkid.ux.R
 import com.microblink.blinkid.ux.state.PassportPage
 import com.microblink.blinkid.ux.utils.passportMovePageAnimationDurationMs
-import com.microblink.ux.R
 import kotlinx.coroutines.launch
 
 @Composable
@@ -40,8 +40,8 @@ fun PassportPageAnimation(
     var isTransparent by remember {
         mutableStateOf(true)
     }
-    val passportDrawableFront = R.drawable.mb_passport_bottom
-    val passportDrawableBack = R.drawable.mb_passport_top
+    val passportDrawableFront = R.drawable.mb_blinkid_passport_bottom
+    val passportDrawableBack = R.drawable.mb_blinkid_passport_top
     val targetOffset by remember {
         mutableStateOf(DpOffset(0.dp, -((screenDimensionMin / 8))))
     }
@@ -116,7 +116,7 @@ fun PassportPageAnimation(
                         .align(Alignment.Center)
                 )
                 Image(
-                    painter = painterResource(R.drawable.mb_passport_page_highlight),
+                    painter = painterResource(R.drawable.mb_blinkid_passport_page_highlight),
                     contentDescription = null,
                     modifier = Modifier
                         .offset {

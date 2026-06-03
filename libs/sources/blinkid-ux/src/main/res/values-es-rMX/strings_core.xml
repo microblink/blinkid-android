@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">El permiso para acceder a la cámara es obligatorio.</string>
+  <string name="mb_blinkid_close">Cerrar</string>
+  <string name="mb_blinkid_dialog_back_button">Anterior</string>
+  <string name="mb_blinkid_dialog_done_button">Finalizar</string>
+  <string name="mb_blinkid_dialog_next_button">Siguiente</string>
+  <string name="mb_blinkid_dialog_skip_button">Omitir</string>
+  <string name="mb_blinkid_enable_camera">Habilitar cámara</string>
+  <string name="mb_blinkid_enable_permission_help">Ahora se te redirigirá a la configuración de los permisos para que autorices el acceso de la aplicación a la cámara.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Autoriza el acceso a la cámara en la configuración de los permisos de la aplicación.</string>
+  <string name="mb_blinkid_license_locked">Escaneo no disponible</string>
+  <string name="mb_blinkid_loading">Cargando…</string>
+  <string name="mb_blinkid_move_closer">Acercar más</string>
+  <string name="mb_blinkid_move_farther">Alejar más</string>
+  <string name="mb_blinkid_need_help_tooltip">¿Necesitas ayuda?</string>
+  <string name="mb_blinkid_ok">Bien</string>
+  <string name="mb_blinkid_retry">Reintentar</string>
+  <string name="mb_blinkid_warning">Atención</string>
+</resources>

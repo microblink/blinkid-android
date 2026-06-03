@@ -5,14 +5,14 @@
 
 package com.microblink.blinkid.ux.scanning
 
+import com.microblink.blinkid.core.geometry.Quadrilateral
+import com.microblink.blinkid.core.image.InputImage
 import com.microblink.blinkid.core.result.DocumentRotation
 import com.microblink.blinkid.core.result.InputImageAnalysisResult
 import com.microblink.blinkid.core.session.BlinkIdScanningResult
+import com.microblink.blinkid.ux.ScanningUxEvent
 import com.microblink.blinkid.ux.state.PassportPage
-import com.microblink.core.geometry.Quadrilateral
-import com.microblink.core.image.InputImage
-import com.microblink.ux.ScanningUxEvent
-import com.microblink.ux.utils.ErrorReason
+import com.microblink.blinkid.ux.utils.ErrorReason
 
 interface BlinkIdScanningDoneHandler {
     fun onScanningFinished(result: BlinkIdScanningResult)
@@ -53,7 +53,7 @@ data class DocumentImageAnalysisResult(
 data class RequestPassportPage(
     val isBarcodePageRequested: Boolean,
     val documentRotation: DocumentRotation
-): ScanningUxEvent
+) : ScanningUxEvent
 
 /**
  * Event that holds information about the incorrect passport page that is
@@ -67,4 +67,4 @@ data class RequestPassportPage(
 data class ScanningWrongPassportPage(
     val activePassportPage: PassportPage?,
     val documentRotation: DocumentRotation
-): ScanningUxEvent
+) : ScanningUxEvent

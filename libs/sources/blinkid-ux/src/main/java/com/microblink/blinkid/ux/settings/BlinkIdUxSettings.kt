@@ -4,21 +4,31 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds
+import com.microblink.blinkid.core.result.classinfo.Country
+import com.microblink.blinkid.core.result.classinfo.Region
+import com.microblink.blinkid.core.result.classinfo.Type
+import com.microblink.blinkid.core.settings.RedactionSettingsResolver
+import kotlinx.parcelize.RawValue
 
 /**
  * Configuration settings for the scanning UX.
  *
- * @param stepTimeoutDuration Duration of the scanning session before a timeout is triggered.
- * Resets every time the scanning is paused (dialogs, side change). Defaults to 15 seconds.
+ * @param stepTimeoutDuration Duration of the scanning session step before a timeout is triggered.
+ * Resets on side changes, pauses when onboarding and help screen dialogs appear. If set to [Duration.ZERO], the scanning will not time out.
+ * @param inactivityTimeoutDuration Duration of the current UI state in a scanning session before a timeout is triggered.
+ * Resets every time the UI state changes (reticle type or message). If set to [Duration.ZERO], the scanning will not time out.
  * @param allowHapticFeedback Whether haptic feedback is allowed during the scanning process. Defaults to true.
  * @param classFilter Defines which specific document classes are allowed during scanning.
  * Each document class is defined by the trio of [Country], [Region], and [Type]. Defaults to null, meaning all classes are allowed.
+ * @param redactionSettingsResolver Defines how to resolve `RedactionSettings` for a given document class.
  */
 @Parcelize
-data class BlinkIdUxSettings constructor(
-    val stepTimeoutDuration: Duration = 15000.milliseconds,
+data class BlinkIdUxSettings(
+    val stepTimeoutDuration: Duration = 60000.milliseconds,
+    val inactivityTimeoutDuration: Duration = 10000.milliseconds,
     val allowHapticFeedback: Boolean = true,
-    val classFilter: ClassFilter? = null
+    val classFilter: ClassFilter? = null,
+    val redactionSettingsResolver: @RawValue RedactionSettingsResolver? = null
 ) : Parcelable {
     /**
      * Constructor for easier Java implementation.
@@ -26,11 +36,26 @@ data class BlinkIdUxSettings constructor(
      * This secondary constructor allows Java developers to create a [BlinkIdUxSettings]
      * instance by providing the `stepTimeoutDuration` as an `Int` in milliseconds.
      *
-     * @param stepTimeoutDurationMs Duration of the scanning session before a timeout is triggered
-     * in milliseconds. Resets every time the scanning is paused (dialogs, side change). If set to 0, the scanning will not timeout.
+     * @param stepTimeoutDurationMs Duration of the scanning session step before a timeout is triggered in milliseconds.
+     * Resets on side changes, pauses when onboarding and help screen dialogs appear. If set to 0, the scanning will not time out.
+     * @param inactivityTimeoutDuration Duration of the current UI state in a scanning session before a timeout is triggered in milliseconds.
+     * Resets every time the UI state changes (reticle type or message). If set to 0, the scanning will not time out.
      * @param allowHapticFeedback Whether haptic feedback is allowed during the scanning process. Defaults to true.
      * @param classFilter Defines which specific document classes are allowed during scanning.
      * Each document class is defined by the trio of [Country], [Region], and [Type]. Defaults to null, meaning all classes are allowed.
+     * @param redactionSettingsResolver Defines how to resolve `RedactionSettings` for a given document class.
      */
-    @JvmOverloads constructor(stepTimeoutDurationMs: Int, allowHapticFeedback: Boolean = true, classFilter: ClassFilter? = null) : this(stepTimeoutDuration = stepTimeoutDurationMs.milliseconds, allowHapticFeedback, classFilter)
+    @JvmOverloads constructor(
+        stepTimeoutDurationMs: Int,
+        inactivityTimeoutDuration: Int,
+        allowHapticFeedback: Boolean = true,
+        classFilter: ClassFilter? = null,
+        redactionSettingsResolver: RedactionSettingsResolver? = null
+    ) : this(
+        stepTimeoutDuration = stepTimeoutDurationMs.milliseconds,
+        inactivityTimeoutDuration = inactivityTimeoutDuration.milliseconds,
+        allowHapticFeedback = allowHapticFeedback,
+        classFilter = classFilter,
+        redactionSettingsResolver = redactionSettingsResolver
+    )
 }
