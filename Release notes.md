@@ -38,7 +38,12 @@
 - Modern language and modern patterns
 - Kotlin version used by the SDK has been updated to `2.2.21`, using the latest features and performance improvements.
 - AGP has been updated to `9.1.0` to ensure compatibility with the latest Android development practices and tools.
-- Other SDK dependencies such as OkHttp, Kotlin Coroutines, and Jetpack Compose have been updated to their latest stable versions to provide improved performance, security, and new features.
+- SDK dependencies have been updated to provide improved performance, security, and new features
+  - Material3 to `1.4.0`
+  - Activity Compose to `1.13.0`
+  - Lifecycle Compose to `2.10.0`
+  - CameraX to `1.6.1`
+  - Compose tooling to `1.11.2`.
 
 ### Bug fixes
 - Date Conversion Accuracy: Resolved an issue where Islamic-to-Gregorian date conversions could occasionally differ by +/- 1 day. These conversions are now precise and consistent.
