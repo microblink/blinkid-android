@@ -1,6 +1,7 @@
 package com.microblink.blinkid.sample;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
@@ -10,11 +11,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.microblink.blinkid.core.BlinkIdSdkSettings;
+import com.microblink.blinkid.core.result.AlphabetType;
 import com.microblink.blinkid.core.session.BlinkIdSessionSettings;
 import com.microblink.blinkid.ux.contract.BlinkIdScanActivitySettings;
 import com.microblink.blinkid.ux.contract.MbBlinkIdScan;
 import com.microblink.blinkid.ux.settings.BlinkIdUxSettings;
-import com.microblink.ux.camera.CameraSettings;
+import com.microblink.blinkid.ux.camera.CameraSettings;
 
 public class JavaActivity extends AppCompatActivity {
 
@@ -33,13 +35,21 @@ public class JavaActivity extends AppCompatActivity {
         BlinkIdSdkSettings sdkSettings = new BlinkIdSdkSettings(licenseKey);
         CameraSettings cameraSettings = new CameraSettings();
         BlinkIdSessionSettings sessionSettings = new BlinkIdSessionSettings();
-        BlinkIdUxSettings uxSettings = new BlinkIdUxSettings(15000);
-        BlinkIdScanActivitySettings activitySettings = new BlinkIdScanActivitySettings(sdkSettings = sdkSettings, sessionSettings = sessionSettings, uxSettings = uxSettings, cameraSettings = cameraSettings);
+        BlinkIdUxSettings uxSettings = new BlinkIdUxSettings(15000, 10000);
+        BlinkIdScanActivitySettings activitySettings = new BlinkIdScanActivitySettings(sdkSettings, sessionSettings, uxSettings, cameraSettings);
 
         ActivityResultLauncher<BlinkIdScanActivitySettings> resultLauncher = registerForActivityResult(
                 new MbBlinkIdScan(),
                 result -> {
                     // handle result here
+                    String text;
+                    if (result.getResult() != null) {
+                        text = result.getResult().getLastName().value(AlphabetType.Latin);
+                    } else {
+                        text = "Scan unsuccessful!";
+                    }
+
+                    Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
                 }
         );
 

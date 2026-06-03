@@ -23,7 +23,6 @@ dependencyResolutionManagement {
 rootProject.name = "BlinkIDSample"
 include(":sample-app")
 include(":lib-common")
-include(":microblink-ux")
 include(":blinkid-ux")
 include(":direct-api-sample-app")
 include(":java-sample-app")

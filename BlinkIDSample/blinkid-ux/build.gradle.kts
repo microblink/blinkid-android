@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.parcelize)
 }
@@ -37,25 +36,22 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
-        freeCompilerArgs += listOf(
-            // fix for: R8 fails with missing class java.lang.StringConcatFactory and unable to
-            // override because not accessible - https://issuetracker.google.com/issues/250197571
-            "-Xstring-concat=inline"
-        )
-    }
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.15"
-    }
 
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        // fix for: R8 fails with missing class java.lang.StringConcatFactory and unable to
+        // override because not accessible - https://issuetracker.google.com/issues/250197571
+        freeCompilerArgs.add("-Xstring-concat=inline")
+    }
 }
 
 dependencies {
     implementation(libs.androidx.appcompat)
     api(libs.blinkid.core)
-    api(project(":microblink-ux"))
 }

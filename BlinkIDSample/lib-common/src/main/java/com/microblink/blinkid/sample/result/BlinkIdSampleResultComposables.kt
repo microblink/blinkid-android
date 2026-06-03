@@ -64,7 +64,7 @@ import com.microblink.blinkid.sample.ui.theme.Cobalt50
 import com.microblink.blinkid.sample.ui.theme.Cobalt800
 import com.microblink.blinkid.sample.ui.theme.DeepBlue
 import com.microblink.blinkid.sample.ui.theme.ErrorRed
-import com.microblink.core.result.DateResult
+import com.microblink.blinkid.core.result.DateResult
 
 @Composable
 fun BlinkIdSampleResultScreen(
@@ -150,12 +150,6 @@ fun BlinkIdSampleResultScreen(
                 SampleResultTab(
                     "Full result",
                     listOf(
-                        SampleResult(
-                            title = "Recognition mode",
-                            children = null,
-                            description = null,
-                            value = result.mode.name
-                        ),
                         SampleResult(
                             title = "Document class info",
                             children = listOf(
@@ -859,15 +853,6 @@ fun ImagesResultTab(pageNum: Int, result: SingleSideScanningResult): SampleResul
                 image = it.bitmap
             )
         )
-    }
-    result.barcodeInputImage?.let {
-        imageTabs.add(
-            SampleResultImage(
-                "Barcode input image",
-                image = it.bitmap
-            )
-        )
-
     }
     result.documentImage?.let {
         imageTabs.add(
