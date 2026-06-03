@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">Nepieciešama kameras atļauja.</string>
+  <string name="mb_blinkid_close">Aizvērt</string>
+  <string name="mb_blinkid_dialog_back_button">Atpakaļ</string>
+  <string name="mb_blinkid_dialog_done_button">Gatavs</string>
+  <string name="mb_blinkid_dialog_next_button">Nākamais</string>
+  <string name="mb_blinkid_dialog_skip_button">Izlaist</string>
+  <string name="mb_blinkid_enable_camera">Iespējot kameru</string>
+  <string name="mb_blinkid_enable_permission_help">Tagad jūs novirzīs uz atļauju iestatījumiem, kur lietotnei ir jāpiešķir kameras atļauja.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">Lūdzu, piešķiriet kameras atļauju lietotnes atļauju iestatījumos.</string>
+  <string name="mb_blinkid_license_locked">Skenēšana nav pieejama</string>
+  <string name="mb_blinkid_loading">Notiek ielāde…</string>
+  <string name="mb_blinkid_move_closer">Pārvietot tuvāk</string>
+  <string name="mb_blinkid_move_farther">Pārvietot tālāk</string>
+  <string name="mb_blinkid_need_help_tooltip">Vai vajadzīga palīdzība?</string>
+  <string name="mb_blinkid_ok">Labi</string>
+  <string name="mb_blinkid_retry">Mēģināt no jauna</string>
+  <string name="mb_blinkid_warning">Brīdinājums</string>
+</resources>

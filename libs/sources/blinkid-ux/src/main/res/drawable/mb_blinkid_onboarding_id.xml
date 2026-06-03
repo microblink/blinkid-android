@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+      android:drawable="@drawable/mb_blinkid_help_template"
+      android:gravity="center"/>
+
+  <item
+      android:drawable="@drawable/mb_blinkid_help_id_detail"
+      android:gravity="center"/>
+
+  <item
+      android:drawable="@drawable/mb_blinkid_green_frame"
+      android:gravity="center"/>
+
+  <item
+      android:drawable="@drawable/mb_blinkid_green_check_circle"
+      android:top="112dp"
+      android:gravity="center"/>
+
+</layer-list>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_camera_permission_required">카메라 권한이 필요합니다.</string>
+  <string name="mb_blinkid_close">닫기</string>
+  <string name="mb_blinkid_dialog_back_button">뒤로</string>
+  <string name="mb_blinkid_dialog_done_button">완료</string>
+  <string name="mb_blinkid_dialog_next_button">다음</string>
+  <string name="mb_blinkid_dialog_skip_button">건너뛰기</string>
+  <string name="mb_blinkid_enable_camera">카메라 허용</string>
+  <string name="mb_blinkid_enable_permission_help">앱에 카메라 권한을 허용할 수 있도록 권한 설정으로 이동합니다.</string>
+  <string name="mb_blinkid_enable_permission_help_instant_app">앱 권한 설정에서 카메라 권한을 허용해 주세요.</string>
+  <string name="mb_blinkid_license_locked">스캔할 수 없습니다</string>
+  <string name="mb_blinkid_loading">불러오는 중…</string>
+  <string name="mb_blinkid_move_closer">더 가까이 이동</string>
+  <string name="mb_blinkid_move_farther">더 멀리 이동</string>
+  <string name="mb_blinkid_need_help_tooltip">도움이 필요하신가요?</string>
+  <string name="mb_blinkid_ok">확인</string>
+  <string name="mb_blinkid_retry">다시 시도</string>
+  <string name="mb_blinkid_warning">경고</string>
+</resources>

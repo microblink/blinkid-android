@@ -1,11 +1,10 @@
 package com.microblink.blinkid.ux.utils
 
 import com.microblink.blinkid.core.BlinkIdSdk
+import com.microblink.blinkid.core.ping.config.PingSendTriggerPoint
 import com.microblink.blinkid.core.result.DocumentRotation
 import com.microblink.blinkid.core.utils.ping.sendPingletsIfAllowed
 import com.microblink.blinkid.ux.state.PassportPage
-import com.microblink.core.ping.config.PingSendTriggerPoint
-import com.microblink.ux.utils.ScreenOrientation
 
 internal const val passportMovePageAnimationDurationMs = 2000
 internal const val pingletOrientationDelayMs = 1000L
@@ -74,19 +73,25 @@ fun getPassportPageFromRotation(
 }
 
 fun onCameraPermissionCheck(sessionNumber: Int) {
-    UxPingletTracker.CameraPermission.trackCameraPermissionCheck(sessionNumber)
-    BlinkIdSdk.sendPingletsIfAllowed(PingSendTriggerPoint.CameraPermissionCheck)
+    if (sessionNumber > 0) {
+        UxPingletTracker.CameraPermission.trackCameraPermissionCheck(sessionNumber)
+        BlinkIdSdk.sendPingletsIfAllowed(PingSendTriggerPoint.CameraPermissionCheck)
+    }
 }
 
 fun onCameraPermissionRequest(sessionNumber: Int) {
-    UxPingletTracker.CameraPermission.trackCameraPermissionRequest(sessionNumber)
+    if (sessionNumber > 0) {
+        UxPingletTracker.CameraPermission.trackCameraPermissionRequest(sessionNumber)
+    }
 }
 
 fun onCameraPermissionUserResponse(sessionNumber: Int, cameraPermissionGranted: Boolean) {
-    UxPingletTracker.CameraPermission.trackCameraPermissionUserResponse(
-        cameraPermissionGranted,
-        sessionNumber
-    )
+    if (sessionNumber > 0) {
+        UxPingletTracker.CameraPermission.trackCameraPermissionUserResponse(
+            cameraPermissionGranted,
+            sessionNumber
+        )
+    }
 }
 
 fun onCameraPreviewStarted(sessionNumber: Int) {

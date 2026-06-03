@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">Afslut scanning</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">Lommelygten er slukket</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">Lommelygten er tændt</string>
+  <string name="mb_blinkid_accessibility_next_page">Næste side</string>
+  <string name="mb_blinkid_accessibility_previous_page">Forrige side</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">Vis hjælpeskærme</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">Det lykkedes! Dokumentet er scannet.</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">Det lykkedes! Forsiden er scannet.</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">Sluk lommelygten</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">Tænd lommelygten</string>
+</resources>

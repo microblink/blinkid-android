@@ -14,53 +14,52 @@ import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.microblink.blinkid.core.BlinkIdSdk
+import com.microblink.blinkid.core.ping.config.PingSendTriggerPoint
+import com.microblink.blinkid.core.ping.pinglets.UxEvent
 import com.microblink.blinkid.core.session.BlinkIdScanningResult
 import com.microblink.blinkid.core.session.BlinkIdSessionSettings
+import com.microblink.blinkid.core.utils.MbLog
 import com.microblink.blinkid.core.utils.ping.sendPingletsIfAllowed
+import com.microblink.blinkid.ux.camera.CameraHardwareInfoHelper
+import com.microblink.blinkid.ux.camera.CameraInputDetails
+import com.microblink.blinkid.ux.camera.CameraViewModel
+import com.microblink.blinkid.ux.components.needHelpTooltipDefaultTimeToAppearMs
+import com.microblink.blinkid.ux.components.uiCountingWindowDurationMs
 import com.microblink.blinkid.ux.scanning.BlinkIdAnalyzer
 import com.microblink.blinkid.ux.scanning.BlinkIdDocumentLocatedLocation
 import com.microblink.blinkid.ux.scanning.BlinkIdScanningDoneHandler
 import com.microblink.blinkid.ux.scanning.DocumentImageAnalysisResult
+import com.microblink.blinkid.ux.scanning.FrameProcessResultHandle
 import com.microblink.blinkid.ux.scanning.RequestPassportPage
 import com.microblink.blinkid.ux.scanning.ScanningWrongPassportPage
 import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
 import com.microblink.blinkid.ux.state.BlinkIdStatusMessage
 import com.microblink.blinkid.ux.state.BlinkIdUiState
+import com.microblink.blinkid.ux.state.CardAnimationState
+import com.microblink.blinkid.ux.state.CardAnimationState.ShowFlipLandscape
+import com.microblink.blinkid.ux.state.CommonStatusMessage
+import com.microblink.blinkid.ux.state.ErrorState
+import com.microblink.blinkid.ux.state.HapticFeedbackState
+import com.microblink.blinkid.ux.state.MbTorchState
 import com.microblink.blinkid.ux.state.PassportPage
+import com.microblink.blinkid.ux.state.ProcessingState
+import com.microblink.blinkid.ux.state.ReticleState
 import com.microblink.blinkid.ux.state.ShowPassportMoveToBarcode
 import com.microblink.blinkid.ux.state.ShowPassportMoveToLeft
 import com.microblink.blinkid.ux.state.ShowPassportMoveToRight
 import com.microblink.blinkid.ux.state.ShowPassportMoveToTop
+import com.microblink.blinkid.ux.state.StatusMessage
+import com.microblink.blinkid.ux.state.StatusMessageCounter
+import com.microblink.blinkid.ux.state.UiScanningSide
+import com.microblink.blinkid.ux.utils.BlinkIdExtractionMode
+import com.microblink.blinkid.ux.utils.ErrorReason
+import com.microblink.blinkid.ux.utils.ScreenOrientation
 import com.microblink.blinkid.ux.utils.UxPingletTracker
 import com.microblink.blinkid.ux.utils.getCorrectedDocumentRotation
 import com.microblink.blinkid.ux.utils.getPassportPageFromRotation
 import com.microblink.blinkid.ux.utils.pingletOrientationDelayMs
-import com.microblink.core.ping.config.PingSendTriggerPoint
-import com.microblink.core.ping.pinglets.UxEvent
-import com.microblink.core.utils.MbLog
-import com.microblink.ux.R
-import com.microblink.ux.ScanningUxEvent
-import com.microblink.ux.ScanningUxEventHandler
-import com.microblink.ux.UiSettings
-import com.microblink.ux.camera.CameraHardwareInfoHelper
-import com.microblink.ux.camera.CameraInputDetails
-import com.microblink.ux.camera.CameraViewModel
-import com.microblink.ux.components.needHelpTooltipDefaultTimeToAppearMs
-import com.microblink.ux.components.uiCountingWindowDurationMs
-import com.microblink.ux.state.CardAnimationState
-import com.microblink.ux.state.CardAnimationState.ShowFlipLandscape
-import com.microblink.ux.state.CommonStatusMessage
-import com.microblink.ux.state.ErrorState
-import com.microblink.ux.state.HapticFeedbackState
-import com.microblink.ux.state.MbTorchState
-import com.microblink.ux.state.ProcessingState
-import com.microblink.ux.state.ReticleState
-import com.microblink.ux.state.StatusMessage
-import com.microblink.ux.state.StatusMessageCounter
-import com.microblink.ux.state.UiScanningSide
-import com.microblink.ux.utils.ErrorReason
-import com.microblink.ux.utils.ScreenOrientation
-import com.microblink.ux.utils.toErrorState
+import com.microblink.blinkid.ux.utils.toBlinkIdExtractionMode
+import com.microblink.blinkid.ux.utils.toErrorState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -79,15 +78,31 @@ import kotlin.time.toDuration
 internal class BlinkIdUxViewModel(
     blinkIdSdkInstance: BlinkIdSdk,
     sessionSettings: BlinkIdSessionSettings,
-    uxSettings: BlinkIdUxSettings
+    uxSettings: BlinkIdUxSettings,
+    onFrameProcessResult: ((FrameProcessResultHandle) -> Unit)? = null
 ) : CameraViewModel() {
     private var imageAnalyzer: BlinkIdAnalyzer? = null
 
     private var firstImageTimestamp: Long? = null
+    private var newStateTimestamp: Long? = null
+
+    private var stateTimeoutDurationBeforePause: Long? = null
+
     private val stepTimeoutDuration: Duration? =
         if (uxSettings.stepTimeoutDuration == Duration.ZERO) null else uxSettings.stepTimeoutDuration
+    private val inactivityTimeoutDuration: Duration? =
+        if (uxSettings.inactivityTimeoutDuration == Duration.ZERO) null else uxSettings.inactivityTimeoutDuration
 
-    private val _uiState = MutableStateFlow(BlinkIdUiState())
+    private var isStateTimeoutActive: Boolean = true
+
+    private val initialStatusMessage: StatusMessage =
+        when (sessionSettings.toBlinkIdExtractionMode()) {
+            BlinkIdExtractionMode.FullDocument -> CommonStatusMessage.ScanFirstSide
+            BlinkIdExtractionMode.BarcodeOnly -> BlinkIdStatusMessage.ScanBarcodeOnlyModule
+            BlinkIdExtractionMode.DocumentWithBarcode -> BlinkIdStatusMessage.ScanBarcodeIdModule
+        }
+
+    private val _uiState = MutableStateFlow(BlinkIdUiState(statusMessage = initialStatusMessage))
     val uiState: StateFlow<BlinkIdUiState> = _uiState.asStateFlow()
 
     var uiStateStartTime: Duration = Duration.ZERO
@@ -97,23 +112,17 @@ internal class BlinkIdUxViewModel(
     private val statusCounter: StatusMessageCounter = StatusMessageCounter()
     private val appearanceCounter: StatusMessageCounter = StatusMessageCounter()
 
-    private var isCountingActive: Boolean = true
-
     private var currentScreenOrientation: ScreenOrientation? = null
 
     private var lastTrackedErrorType: UxEvent.ErrorMessageType? = null
 
     private var cameraHardwareInfoReported = false
 
-    val helpTooltipTimeToDisplayInMs =
-        if (stepTimeoutDuration == null) {
-            needHelpTooltipDefaultTimeToAppearMs
-        } else {
-            uxSettings.stepTimeoutDuration.inWholeMilliseconds / 2
-        }
-
     private val helpTooltipTimer =
-        object : CountDownTimer(helpTooltipTimeToDisplayInMs, helpTooltipTimeToDisplayInMs) {
+        object : CountDownTimer(
+            needHelpTooltipDefaultTimeToAppearMs,
+            needHelpTooltipDefaultTimeToAppearMs
+        ) {
             override fun onTick(millisUntilFinished: Long) {
             }
 
@@ -136,32 +145,28 @@ internal class BlinkIdUxViewModel(
                 override fun onScanningFinished(result: BlinkIdScanningResult) {
                     MbLog.d(TAG) { "Scanning finished successfully." }
                     _uiState.update {
-                        it.copy(blinkIdScanningResult = result)
+                        it.copy(
+                            blinkIdScanningResult = result,
+                            statusMessage = CommonStatusMessage.Empty,
+                            processingState = ProcessingState.SuccessAnimation(false)
+                        )
                     }
                 }
 
                 override fun onError(error: ErrorReason) {
-                    MbLog.d(TAG) { "Scanning finished with an error: ${error.toString()}" }
-                    lifecyclePauseAnalysis()
-                    appearanceCounter.reset()
-                    UxPingletTracker.UxEvent.trackAlertDisplayedEvent(
+                    MbLog.d(TAG) { "Scanning finished with an error: $error" }
+                    showErrorDialog(
                         alertType = when (error) {
                             ErrorReason.ErrorInvalidLicense -> UxEvent.AlertType.INVALIDLICENSEKEY
                             ErrorReason.ErrorTimeoutExpired -> UxEvent.AlertType.STEPTIMEOUT
                             ErrorReason.ErrorNetworkError -> UxEvent.AlertType.NETWORKERROR
                             ErrorReason.ErrorDocumentClassFiltered -> UxEvent.AlertType.DOCUMENTCLASSNOTALLOWED
-
+                            // TODO: add new AlertTypes
+                            ErrorReason.ErrorSettingsValidationFailed -> UxEvent.AlertType.NETWORKERROR
+                            ErrorReason.ErrorGetResultFailed -> UxEvent.AlertType.NETWORKERROR
                         },
-                        sessionNumber = getSessionNumber()
+                        errorState = error.toErrorState()
                     )
-                    _uiState.update {
-                        it.copy(
-                            errorState = error.toErrorState(),
-                            processingState = ProcessingState.ErrorDialog,
-                            hapticFeedbackState = HapticFeedbackState.VibrationOneTimeLong,
-                            activePassportPage = null
-                        )
-                    }
                 }
 
                 override fun onScanningCanceled() {}
@@ -173,16 +178,31 @@ internal class BlinkIdUxViewModel(
                     var newActivePassportPage: PassportPage? = null
                     var newCurrentSide: UiScanningSide? = null
                     stepTimeoutDuration?.let {
-                        if (firstImageTimestamp == null && isCountingActive) {
+                        if (firstImageTimestamp == null) {
                             firstImageTimestamp = System.nanoTime()
                         }
-                        if (isCountingActive) {
-                            firstImageTimestamp?.let { timestamp ->
+                        firstImageTimestamp?.let { timestamp ->
+                            val currentDuration =
+                                (System.nanoTime() - timestamp).toDuration(DurationUnit.NANOSECONDS)
+                            if (currentDuration > stepTimeoutDuration) {
+                                imageAnalyzer?.timeoutAnalysis()
+                                firstImageTimestamp = null
+                                newStateTimestamp = null
+                            }
+                        }
+                    }
+                    inactivityTimeoutDuration?.let {
+                        if (isStateTimeoutActive) {
+                            if (newStateTimestamp == null) {
+                                newStateTimestamp = System.nanoTime()
+                            }
+                            newStateTimestamp?.let { timestamp ->
                                 val currentDuration =
                                     (System.nanoTime() - timestamp).toDuration(DurationUnit.NANOSECONDS)
-                                if (currentDuration > stepTimeoutDuration) {
+                                if (currentDuration > inactivityTimeoutDuration) {
                                     imageAnalyzer?.timeoutAnalysis()
                                     firstImageTimestamp = null
+                                    newStateTimestamp = null
                                 }
                             }
                         }
@@ -191,6 +211,7 @@ internal class BlinkIdUxViewModel(
                         MbLog.d(TAG) { "Received UX event: $event" }
                         when (event) {
                             is ScanningUxEvent.ScanningDone -> {
+                                firstImageTimestamp = null
                                 lifecyclePauseAnalysis()
                                 newStatusMessage = CommonStatusMessage.Empty
                                 newProcessingState = ProcessingState.SuccessAnimation(false)
@@ -210,7 +231,7 @@ internal class BlinkIdUxViewModel(
                                         }
                                     } else {
                                         when (uiState.value.currentSide) {
-                                            UiScanningSide.First -> CommonStatusMessage.ScanFirstSide
+                                            UiScanningSide.First -> initialStatusMessage
                                             UiScanningSide.Second -> CommonStatusMessage.ScanSecondSide
                                             UiScanningSide.Barcode -> BlinkIdStatusMessage.ScanBarcode
                                         }
@@ -301,6 +322,7 @@ internal class BlinkIdUxViewModel(
                             }
 
                             is RequestPassportPage -> {
+                                firstImageTimestamp = null
                                 lifecyclePauseAnalysis()
                                 newActivePassportPage = if (event.isBarcodePageRequested) {
                                     PassportPage.Barcode
@@ -330,6 +352,7 @@ internal class BlinkIdUxViewModel(
                                                 newProcessingState =
                                                     ProcessingState.SuccessAnimation(true)
                                                 newStatusMessage = CommonStatusMessage.Empty
+                                                firstImageTimestamp = null
                                                 lifecyclePauseAnalysis()
                                             }
 
@@ -338,7 +361,8 @@ internal class BlinkIdUxViewModel(
                                                 newStatusMessage =
                                                     BlinkIdStatusMessage.ScanBarcode
                                                 newCurrentSide = UiScanningSide.Barcode
-                                                isCountingActive = false
+                                                firstImageTimestamp = null
+                                                isStateTimeoutActive = false
                                                 imageAnalyzer?.pauseAnalysis()
                                                 imageAnalyzer?.resumeAnalysis()
                                             }
@@ -356,7 +380,8 @@ internal class BlinkIdUxViewModel(
                                                 newStatusMessage =
                                                     BlinkIdStatusMessage.ScanBarcode
                                                 newCurrentSide = UiScanningSide.Barcode
-                                                isCountingActive = false
+                                                firstImageTimestamp = null
+                                                isStateTimeoutActive = false
                                                 imageAnalyzer?.pauseAnalysis()
                                                 imageAnalyzer?.resumeAnalysis()
                                             }
@@ -372,14 +397,29 @@ internal class BlinkIdUxViewModel(
 
                             }
 
+                            is ScanningUxEvent.BarcodeNotDetected -> {
+                                newProcessingState = ProcessingState.Error
+                                newStatusMessage = BlinkIdStatusMessage.BarcodeWrongSide
+                            }
+
                             is DocumentImageAnalysisResult -> {
                                 // Not used in this UI implementation.
                                 // Can be used for additional frame debugging.
                             }
 
+                            is ScanningUxEvent.UnsupportedDocument -> {
+                                showErrorDialog(
+                                    alertType = UxEvent.AlertType.DOCUMENTNOTSUPPORTED,
+                                    errorState = ErrorState.ErrorUnsupportedDocument
+                                )
+                            }
+
                         }
                     }
 
+                    if (newProcessingState != _uiState.value.processingState || newStatusMessage != _uiState.value.statusMessage) {
+                        newStateTimestamp = null
+                    }
                     updateUiState(
                         newProcessingState,
                         newStatusMessage,
@@ -387,7 +427,8 @@ internal class BlinkIdUxViewModel(
                         newCurrentSide
                     )
                 }
-            }
+            },
+            onFrameProcessResult = onFrameProcessResult
         )
 
         viewModelScope.launch {
@@ -409,11 +450,11 @@ internal class BlinkIdUxViewModel(
     ) {
         newProcessingState?.let {
             if (newProcessingState is ProcessingState.SuccessAnimation || newStatusMessage == BlinkIdStatusMessage.ScanBarcode) {
-                isCountingActive = false
+                isStateTimeoutActive = false
                 runBlocking {
                     waitForMinimumStateDuration(newProcessingState)
                 }
-            } else if (isCountingActive || shouldStartCounting(uiState.value.processingState)) {
+            } else if (isStateTimeoutActive || shouldStartCounting(uiState.value.processingState)) {
                 newStatusMessage?.let {
                     statusCounter.increment(it)
                 }
@@ -466,6 +507,7 @@ internal class BlinkIdUxViewModel(
                                             CommonStatusMessage.EliminateBlur -> UxEvent.ErrorMessageType.ELIMINATEBLUR
                                             else -> null
                                         }
+
                                         is BlinkIdStatusMessage -> when (selectedStatusMessage) {
                                             BlinkIdStatusMessage.KeepFacePhotoVisible -> UxEvent.ErrorMessageType.KEEPVISIBLE
                                             BlinkIdStatusMessage.IncreaseLightingIntensity -> UxEvent.ErrorMessageType.INCREASELIGHTING
@@ -473,6 +515,7 @@ internal class BlinkIdUxViewModel(
                                             BlinkIdStatusMessage.EliminateGlare -> UxEvent.ErrorMessageType.ELIMINATEGLARE
                                             else -> null
                                         }
+
                                         else -> null
                                     }
                                 errorType?.let {
@@ -513,7 +556,7 @@ internal class BlinkIdUxViewModel(
         _uiState.update {
             it.copy(
                 helpButtonDisplayed = uiSettings.showHelpButton,
-                onboardingDialogDisplayed = uiSettings.showOnboardingDialog
+                onboardingDialogDisplayed = if (uiState.value.errorState == ErrorState.NoError) uiSettings.showOnboardingDialog else false
             )
         }
         if (_uiState.value.onboardingDialogDisplayed) {
@@ -529,7 +572,7 @@ internal class BlinkIdUxViewModel(
         statusCounter.reset()
         return if (mostFrequent.isNotEmpty()) {
             when (mostFrequent[0]) {
-                BlinkIdStatusMessage.RotateDocument, CommonStatusMessage.ScanFirstSide, CommonStatusMessage.ScanSecondSide, BlinkIdStatusMessage.ScanBarcode, BlinkIdStatusMessage.PassportScanTopPage, BlinkIdStatusMessage.PassportScanLeftPage, BlinkIdStatusMessage.PassportScanRightPage, BlinkIdStatusMessage.PassportScanBarcodePage -> {
+                BlinkIdStatusMessage.RotateDocument, CommonStatusMessage.ScanFirstSide, BlinkIdStatusMessage.ScanBarcodeOnlyModule, BlinkIdStatusMessage.ScanBarcodeIdModule, CommonStatusMessage.ScanSecondSide, BlinkIdStatusMessage.ScanBarcode, BlinkIdStatusMessage.PassportScanTopPage, BlinkIdStatusMessage.PassportScanLeftPage, BlinkIdStatusMessage.PassportScanRightPage, BlinkIdStatusMessage.PassportScanBarcodePage -> {
                     Pair(ProcessingState.Sensing, mostFrequent[0])
                 }
 
@@ -562,23 +605,43 @@ internal class BlinkIdUxViewModel(
     }
 
     override fun analyzeImage(image: ImageProxy) {
-        image.use {
-            imageAnalyzer?.analyze(it)
+        imageAnalyzer?.analyze(image)
+    }
+
+    private fun showErrorDialog(alertType: UxEvent.AlertType, errorState: ErrorState) {
+        firstImageTimestamp = null
+        lifecyclePauseAnalysis()
+        appearanceCounter.reset()
+        UxPingletTracker.UxEvent.trackAlertDisplayedEvent(
+            alertType = alertType,
+            sessionNumber = getSessionNumber()
+        )
+        _uiState.update {
+            it.copy(
+                errorState = errorState,
+                processingState = ProcessingState.ErrorDialog,
+                hapticFeedbackState = HapticFeedbackState.VibrationOneTimeLong,
+                activePassportPage = null
+            )
         }
     }
 
     fun lifecyclePauseAnalysis() {
         imageAnalyzer?.pauseAnalysis()
-        firstImageTimestamp = null
+        newStateTimestamp = null
         helpTooltipTimer.cancel()
         statusCounter.reset()
-        isCountingActive = false
+        isStateTimeoutActive = false
+        firstImageTimestamp?.let { stateTimeoutDurationBeforePause = System.nanoTime() - it }
     }
 
     fun lifecycleResumeAnalysis() {
         if (!_uiState.value.onboardingDialogDisplayed && !_uiState.value.helpDisplayed && _uiState.value.errorState == ErrorState.NoError) {
             imageAnalyzer?.resumeAnalysis()
             helpTooltipTimer.start()
+            firstImageTimestamp?.let { _ ->
+                firstImageTimestamp = System.nanoTime() - (stateTimeoutDurationBeforePause ?: 0L)
+            }
         }
     }
 
@@ -616,7 +679,7 @@ internal class BlinkIdUxViewModel(
 
     fun shouldStartCounting(currentState: ProcessingState): Boolean {
         if ((System.nanoTime().nanoseconds - uiStateStartTime + countingWindowDuration) >= currentState.duration) {
-            isCountingActive =
+            isStateTimeoutActive =
                 true
             return true
         } else {
@@ -640,7 +703,7 @@ internal class BlinkIdUxViewModel(
                         }
                     } else
                         when (it.currentSide) {
-                            UiScanningSide.First -> CommonStatusMessage.ScanFirstSide
+                            UiScanningSide.First -> initialStatusMessage
                             UiScanningSide.Second -> CommonStatusMessage.ScanSecondSide
                             UiScanningSide.Barcode -> BlinkIdStatusMessage.ScanBarcode
                         }
@@ -737,7 +800,7 @@ internal class BlinkIdUxViewModel(
             it.copy(
                 errorState = ErrorState.NoError,
                 processingState = ProcessingState.Sensing,
-                statusMessage = CommonStatusMessage.ScanFirstSide,
+                statusMessage = initialStatusMessage,
                 currentSide = UiScanningSide.First,
                 activePassportPage = null
             )
@@ -787,8 +850,8 @@ internal class BlinkIdUxViewModel(
                         statusMessage = CommonStatusMessage.Flip,
                         currentSide = UiScanningSide.Second,
                         cardAnimationState = ShowFlipLandscape(
-                            firstSideDrawable = R.drawable.mb_card_front,
-                            secondSideDrawable = R.drawable.mb_card_back
+                            firstSideDrawable = R.drawable.mb_blinkid_card_front,
+                            secondSideDrawable = R.drawable.mb_blinkid_card_back
                         )
                     )
                 }
@@ -804,20 +867,26 @@ internal class BlinkIdUxViewModel(
     }
 
     fun onCameraInputInfoAvailable(context: Context, cameraInputDetails: CameraInputDetails) {
-        UxPingletTracker.CameraInfo.trackCameraInputInfo(
-            cameraInputDetails,
-            getSessionNumber()
-        )
-        if (!cameraHardwareInfoReported) {
-            cameraHardwareInfoReported = true
-            viewModelScope.launch {
-                withContext(Dispatchers.IO) {
-                    val cameraDetailsList = CameraHardwareInfoHelper.getCameraHardwareInfo(context)
-                    UxPingletTracker.CameraInfo.trackCameraHardwareInfo(cameraDetailsList)
+        getSessionNumber().takeIf { it > 0 }
+            ?.let { sessionNumber ->
+                UxPingletTracker.CameraInfo.trackCameraInputInfo(
+                    cameraInputDetails,
+                    sessionNumber
+                )
+                if (!cameraHardwareInfoReported) {
+                    cameraHardwareInfoReported = true
+                    viewModelScope.launch {
+                        withContext(Dispatchers.IO) {
+                            val cameraDetailsList =
+                                CameraHardwareInfoHelper.getCameraHardwareInfo(context)
+                            UxPingletTracker.CameraInfo.trackCameraHardwareInfo(
+                                cameraDetailsList,
+                                sessionNumber
+                            )
+                        }
+                    }
                 }
             }
-        }
-
     }
 
     fun getSessionNumber(): Int = imageAnalyzer?.getSessionNumber() ?: 0
@@ -825,6 +894,7 @@ internal class BlinkIdUxViewModel(
     override fun onCleared() {
         super.onCleared()
         BlinkIdSdk.sendPingletsIfAllowed(PingSendTriggerPoint.CameraScreenClosed)
+        firstImageTimestamp = null
         lifecyclePauseAnalysis()
         imageAnalyzer?.cancel()
         imageAnalyzer?.close()
@@ -841,12 +911,15 @@ internal class BlinkIdUxViewModel(
             object : CreationExtras.Key<BlinkIdSessionSettings> {}
         val BLINKID_UX_SETTINGS =
             object : CreationExtras.Key<BlinkIdUxSettings> {}
+        val BLINKID_FRAME_PROCESS_RESULT_HANDLE =
+            object : CreationExtras.Key<((FrameProcessResultHandle) -> Unit)?> {}
         val Factory: ViewModelProvider.Factory = viewModelFactory {
             initializer {
                 BlinkIdUxViewModel(
                     this[BLINKID_SDK] as BlinkIdSdk,
                     this[BLINKID_SESSION_SETTINGS] as BlinkIdSessionSettings,
-                    this[BLINKID_UX_SETTINGS] as BlinkIdUxSettings
+                    this[BLINKID_UX_SETTINGS] as BlinkIdUxSettings,
+                    this[BLINKID_FRAME_PROCESS_RESULT_HANDLE]
                 )
             }
         }

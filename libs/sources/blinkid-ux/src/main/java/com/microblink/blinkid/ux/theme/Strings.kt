@@ -9,169 +9,123 @@ import android.os.Parcelable
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
-import com.microblink.blinkid.ux.theme.BlinkIdSdkStrings.Companion.Default
-import com.microblink.ux.R
-import com.microblink.ux.theme.AccessibilityStrings
-import com.microblink.ux.theme.HelpDialogsStrings
-import com.microblink.ux.theme.LocalBaseSdkStrings
-import com.microblink.ux.theme.ScanningStrings
-import com.microblink.ux.theme.SdkStrings
+import com.microblink.blinkid.ux.R
+import com.microblink.blinkid.ux.theme.SdkStrings.Companion.Default
 import kotlinx.parcelize.Parcelize
 
+
 /**
- * Data class contains all the strings used throughout the SDK.
+ * Contains the common strings used by the shared scanning UX layer.
+ *
+ * Each SDK can extend the scanning strings to add SDK-specific instruction messages.
+ * Help dialog and onboarding strings are not included here as they are SDK-specific
+ * and are provided directly via [com.microblink.blinkid.ux.components.HelpScreens] when
+ * constructing the scanning screen.
+ *
  * [Default] can be used to keep the original strings if only some of the elements are to be changed.
  *
  * This class shouldn't be modified, but rather a new instance should be
- * created and used in [com.microblink.ux.UiSettings.sdkStrings].
+ * created and used in [com.microblink.blinkid.ux.UiSettings.sdkStrings].
  *
- * @property blinkIdScanningStrings Strings that appear as instruction messages during the scanning session.
- *           These instructions are triggered by specific UX events and will appear on screen accordingly.
- *           Includes both BlinkID specific and common SDK strings.
- * @property blinkIdHelpDialogsStrings Strings used in onboarding and help dialogs. These strings shouldn't
- *           be customized as they provide adequate instructions tailored specifically to our scanning experience.
- *           However, if the scanning experience is changed in any way, onboarding and help screen instructions
- *           may also be adjusted.
- * @property blinkIdAccessibilityStrings Strings that are used by accessibility TalkBack service for specific
- *           buttons, labels, and actions.
+ * @property scanningStrings Strings that appear as instruction messages during the scanning session.
+ * These instructions are triggered by specific UX events and will appear on screen accordingly.
+ * @property accessibilityStrings Strings that are used by accessibility TalkBack service for specific
+ * buttons, labels, and actions.
  */
 @Immutable
 @Parcelize
-data class BlinkIdSdkStrings(
-    val blinkIdScanningStrings: BlinkIdScanningStrings,
-    val blinkIdHelpDialogsStrings: HelpDialogsStrings,
-    val blinkIdAccessibilityStrings: AccessibilityStrings
-) : Parcelable, SdkStrings(
-    ScanningStrings(
-        blinkIdScanningStrings.instructionsFirstSide,
-        blinkIdScanningStrings.instructionsSecondSide,
-        blinkIdScanningStrings.instructionsFlip,
-        blinkIdScanningStrings.instructionsNotFullyVisible,
-        blinkIdScanningStrings.instructionsTilted,
-        blinkIdScanningStrings.instructionsScanningWrongSide,
-        blinkIdScanningStrings.instructionsBlurDetected,
-        blinkIdScanningStrings.instructionsMoveFarther,
-        blinkIdScanningStrings.instructionsMoveCloser,
-        blinkIdScanningStrings.snackbarFlashlightWarning
-    ),
-    blinkIdHelpDialogsStrings,
-    blinkIdAccessibilityStrings
-) {
+open class SdkStrings(
+    val scanningStrings: ScanningStrings,
+    val accessibilityStrings: AccessibilityStrings
+) : Parcelable {
     companion object {
-        @JvmStatic
-        val Default: BlinkIdSdkStrings =
-            BlinkIdSdkStrings(
-                blinkIdScanningStrings = BlinkIdScanningStrings.Default,
-                blinkIdHelpDialogsStrings = HelpDialogsStrings.BlinkIdDefaults,
-                blinkIdAccessibilityStrings = AccessibilityStrings.Default
+        val Default: SdkStrings =
+            SdkStrings(
+                scanningStrings = ScanningStrings.Empty,
+                accessibilityStrings = AccessibilityStrings.Default
             )
     }
-
-    init {
-        LocalBaseSdkStrings = staticCompositionLocalOf {
-            BlinkIdSdkStrings.Default
-        }
-    }
 }
-
-val HelpDialogsStrings.Companion.BlinkIdDefaults: HelpDialogsStrings
-    get() = HelpDialogsStrings(
-        onboardingTitle = R.string.mb_onboarding_dialog_title,
-        onboardingMessage = R.string.mb_onboarding_dialog_message,
-        helpTitles = listOf(
-            R.string.mb_help_screen_title1,
-            R.string.mb_help_screen_title2,
-            R.string.mb_help_screen_title3
-        ),
-        helpMessages = listOf(
-            R.string.mb_help_screen_msg1,
-            R.string.mb_help_screen_msg2,
-            R.string.mb_help_screen_msg3,
-        )
-    )
 
 /**
- * Includes common SDK strings from [ScanningStrings] and BlinkID specific strings.
+ * @see com.microblink.blinkid.ux.theme.SdkStrings
  */
 @Immutable
 @Parcelize
-data class BlinkIdScanningStrings(
-    @StringRes override val instructionsFirstSide: Int,
-    @StringRes override val instructionsSecondSide: Int,
-    @StringRes val instructionsBarcode: Int,
-    @StringRes override val instructionsFlip: Int,
-    @StringRes override val instructionsNotFullyVisible: Int,
-    @StringRes override val instructionsTilted: Int,
-    @StringRes val instructionsFacePhotoNotFullyVisible: Int,
-    @StringRes override val instructionsScanningWrongSide: Int,
-    @StringRes override val instructionsBlurDetected: Int,
-    @StringRes val instructionsGlareDetected: Int,
-    @StringRes override val instructionsMoveFarther: Int,
-    @StringRes override val instructionsMoveCloser: Int,
-    @StringRes val instructionsIncreaseLight: Int,
-    @StringRes val instructionsDecreaseLight: Int,
-    @StringRes override val snackbarFlashlightWarning: Int,
-    @StringRes val instructionsPassportDataPage: Int,
-    @StringRes val instructionsPassportMoveToTopPage: Int,
-    @StringRes val instructionsPassportMoveToRightPage: Int,
-    @StringRes val instructionsPassportMoveToLeftPage: Int,
-    @StringRes val instructionsPassportMoveToBarcodePage: Int,
-    @StringRes val instructionsPassportWrongPageTop: Int,
-    @StringRes val instructionsPassportWrongPageRight: Int,
-    @StringRes val instructionsPassportWrongPageLeft: Int,
-    @StringRes val instructionsPassportWrongPageBarcode: Int,
-    @StringRes val instructionsPassportScanTopPage: Int,
-    @StringRes val instructionsPassportScanRightPage: Int,
-    @StringRes val instructionsPassportScanLeftPage: Int,
-    @StringRes val instructionsPassportScanBarcodePage: Int
-) : Parcelable, ScanningStrings(
-    instructionsFirstSide,
-    instructionsSecondSide,
-    instructionsFlip,
-    instructionsNotFullyVisible,
-    instructionsTilted,
-    instructionsScanningWrongSide,
-    instructionsBlurDetected,
-    instructionsMoveFarther,
-    instructionsMoveCloser,
-    snackbarFlashlightWarning
-) {
+open class ScanningStrings(
+    @param:StringRes @get:StringRes open val instructionsFirstSide: Int,
+    @param:StringRes @get:StringRes open val instructionsSecondSide: Int,
+    @param:StringRes @get:StringRes open val instructionsFlip: Int,
+    @param:StringRes @get:StringRes open val instructionsNotFullyVisible: Int,
+    @param:StringRes @get:StringRes open val instructionsTilted: Int,
+    @param:StringRes @get:StringRes open val instructionsScanningWrongSide: Int,
+    @param:StringRes @get:StringRes open val instructionsBlurDetected: Int,
+    @param:StringRes @get:StringRes open val instructionsMoveFarther: Int,
+    @param:StringRes @get:StringRes open val instructionsMoveCloser: Int,
+    @param:StringRes @get:StringRes open val snackbarFlashlightWarning: Int
+) : Parcelable {
     companion object {
-        @JvmStatic
-        val Default: BlinkIdScanningStrings =
-            BlinkIdScanningStrings(
-                instructionsFirstSide = R.string.mb_front_instructions,
-                instructionsSecondSide = R.string.mb_back_instructions,
-                instructionsBarcode = R.string.mb_back_instructions_barcode,
-                instructionsFlip = R.string.mb_camera_flip_document,
-                instructionsNotFullyVisible = R.string.mb_document_not_fully_visible,
-                instructionsTilted = R.string.mb_keep_document_parallel,
-                instructionsFacePhotoNotFullyVisible = R.string.mb_face_photo_not_fully_visible,
-                instructionsScanningWrongSide = R.string.mb_scanning_wrong_side,
-                instructionsBlurDetected = R.string.mb_blur_detected,
-                instructionsGlareDetected = R.string.mb_glare_detected,
-                instructionsMoveFarther = R.string.mb_move_farther,
-                instructionsMoveCloser = R.string.mb_move_closer,
-                instructionsIncreaseLight = R.string.mb_increase_lighting_intensity,
-                instructionsDecreaseLight = R.string.mb_decrease_lighting_intensity,
-                snackbarFlashlightWarning = R.string.mb_flashlight_warning_message,
-                instructionsPassportDataPage = R.string.mb_passport_scan_data_page_instructions,
-                instructionsPassportMoveToTopPage = R.string.mb_instructions_turn_page_top,
-                instructionsPassportMoveToRightPage = R.string.mb_instructions_turn_page_right,
-                instructionsPassportMoveToLeftPage = R.string.mb_instructions_turn_page_left,
-                instructionsPassportMoveToBarcodePage = R.string.mb_instructions_scan_barcode_last_page,
-                instructionsPassportWrongPageTop = R.string.mb_scanning_wrong_page_top,
-                instructionsPassportWrongPageRight = R.string.mb_scanning_wrong_page_right,
-                instructionsPassportWrongPageLeft = R.string.mb_scanning_wrong_page_left,
-                instructionsPassportWrongPageBarcode = R.string.mb_instructions_scan_barcode_last_page,
-                instructionsPassportScanTopPage = R.string.mb_top_page_instructions,
-                instructionsPassportScanRightPage = R.string.mb_right_page_instructions,
-                instructionsPassportScanLeftPage = R.string.mb_left_page_instructions,
-                instructionsPassportScanBarcodePage = R.string.mb_instructions_scan_barcode_last_page
-            )
+        @JvmStatic val Empty = ScanningStrings(
+            instructionsFirstSide = 0,
+            instructionsSecondSide = 0,
+            instructionsFlip = 0,
+            instructionsNotFullyVisible = 0,
+            instructionsTilted = 0,
+            instructionsScanningWrongSide = 0,
+            instructionsBlurDetected = 0,
+            instructionsMoveFarther = 0,
+            instructionsMoveCloser = 0,
+            snackbarFlashlightWarning = 0
+        )
     }
 }
 
-var LocalBaseBlinkIdSdkStrings = staticCompositionLocalOf {
-    BlinkIdSdkStrings.Default
+/**
+ * @see com.microblink.blinkid.ux.theme.SdkStrings
+ */
+@Immutable
+@Parcelize
+data class AccessibilityStrings(
+    @param:StringRes @get:StringRes val scanCompleted: Int,
+    @param:StringRes @get:StringRes val firstSideScanned: Int,
+    @param:StringRes @get:StringRes val previousPage: Int,
+    @param:StringRes @get:StringRes val nextPage: Int,
+    @param:StringRes @get:StringRes val showHelpScreens: Int,
+    @param:StringRes @get:StringRes val turnFlashlightOff: Int,
+    @param:StringRes @get:StringRes val turnFlashlightOn: Int,
+    @param:StringRes @get:StringRes val exitScanning: Int,
+    @param:StringRes @get:StringRes val flashlightOff: Int,
+    @param:StringRes @get:StringRes val flashlightOn: Int
+) : Parcelable {
+    companion object {
+        @JvmStatic val Default: AccessibilityStrings = AccessibilityStrings(
+            scanCompleted = R.string.mb_blinkid_accessibility_success_document_scanned,
+            firstSideScanned = R.string.mb_blinkid_accessibility_success_first_side_scanned,
+            previousPage = R.string.mb_blinkid_accessibility_previous_page,
+            nextPage = R.string.mb_blinkid_accessibility_next_page,
+            showHelpScreens = R.string.mb_blinkid_accessibility_show_help_screens,
+            turnFlashlightOff = R.string.mb_blinkid_accessibility_turn_flashlight_off,
+            turnFlashlightOn = R.string.mb_blinkid_accessibility_turn_flashlight_on,
+            exitScanning = R.string.mb_blinkid_accessibility_exit_scanning,
+            flashlightOff = R.string.mb_blinkid_accessibility_flashlight_off,
+            flashlightOn = R.string.mb_blinkid_accessibility_flashlight_on
+        )
+    }
 }
+
+/**
+ * SDK-specific onboarding and help dialog strings.
+ *
+ * The number of [helpTitles] and [helpMessages] entries must match the number
+ * of help dialog pages for the SDK flow using these strings.
+ */
+@Immutable
+@Parcelize
+data class HelpDialogsStrings(
+    @param:StringRes @get:StringRes val onboardingTitle: Int,
+    @param:StringRes @get:StringRes val onboardingMessage: Int,
+    @param:StringRes @get:StringRes val helpTitles: List<Int>,
+    @param:StringRes @get:StringRes val helpMessages: List<Int>
+) : Parcelable
+
+var LocalBaseSdkStrings = staticCompositionLocalOf { Default }

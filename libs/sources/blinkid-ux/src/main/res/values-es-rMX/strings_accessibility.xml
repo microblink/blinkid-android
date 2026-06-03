@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">Salir del escáner</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">Linterna apagada</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">Linterna encendida</string>
+  <string name="mb_blinkid_accessibility_next_page">Siguiente página</string>
+  <string name="mb_blinkid_accessibility_previous_page">Página anterior</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">Mostrar pantallas de ayuda</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">¡Completado! Documento escaneado</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">¡Completado! Lado frontal escaneado</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">Apagar linterna</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">Encender linterna</string>
+</resources>

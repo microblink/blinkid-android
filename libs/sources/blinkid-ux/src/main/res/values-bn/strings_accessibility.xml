@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="mb_blinkid_accessibility_exit_scanning">স্ক্যানিং থেকে প্রস্থান করুন</string>
+  <string name="mb_blinkid_accessibility_flashlight_off">ফ্ল্যাশলাইট বন্ধ</string>
+  <string name="mb_blinkid_accessibility_flashlight_on">ফ্ল্যাশলাইট চালু</string>
+  <string name="mb_blinkid_accessibility_next_page">পরবর্তী পৃষ্ঠা</string>
+  <string name="mb_blinkid_accessibility_previous_page">পূর্ববর্তী পৃষ্ঠা</string>
+  <string name="mb_blinkid_accessibility_show_help_screens">সহায়তা পর্দা দেখান</string>
+  <string name="mb_blinkid_accessibility_success_document_scanned">সফল! ডকুমেন্ট স্ক্যান সম্পন্ন</string>
+  <string name="mb_blinkid_accessibility_success_first_side_scanned">সফল! সামনের দিকটি স্ক্যান হয়েছে</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_off">ফ্ল্যাশলাইট বন্ধ করুন</string>
+  <string name="mb_blinkid_accessibility_turn_flashlight_on">ফ্ল্যাশলাইট চালু করুন</string>
+</resources>
