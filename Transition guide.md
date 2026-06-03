@@ -1,10 +1,17 @@
-# Transition Guide: BlinkID v6 to BlinkID SDK v7
+# Transition Guide
+
+## BlinkID SDK v7 to BlinkID SDK v8000
+ 
+ Detailed transition guide can be found on our [documentation page](https://docs.microblink.com/blinkid/next/migration-v8000?platform=android).
+
+
+## BlinkID SDK v6 to BlinkID SDK v7
 
 This guide will help you migrate your application from BlinkID v6 to the new BlinkID v7 SDK. The new BlinkID v7 provides a modernized approach to document scanning and extraction with improved architecture and Jetpack Compose support.
 
-## Key differences
+### Key differences
 
-### 1. Architecture changes
+#### 1. Architecture changes
 
 - **New Core Components**: Instead of Recognizer-based architecture, BlinkID uses a streamlined Session-based approach
 - **Modern Kotlin Features**: Written fully in Kotlin, the code is simple and easy to work with
@@ -12,26 +19,26 @@ This guide will help you migrate your application from BlinkID v6 to the new Bli
 - **Simplified Flow**: More straightforward API with clearer separation of concerns
 - **Updated minimum OS requirement**: BlinkID SDK now requires Android API level 24 (Android 7.0 Nougat) or newer. This update allows us to leverage modern development practices, improve stability, and streamline future updates.
 
-### 2. Integration methods
+#### 2. Integration methods
 
-#### BlinkID v6 (Old):
+##### BlinkID v6 (Old):
 ```kotlin
 1. Maven (maven.microblink.com)
 2. Manual Integration (through .aar)
 ```
 
-#### BlinkID v7 (New):
+##### BlinkID v7 (New):
 ```kotlin
 1. Maven (Maven Central)
 2. Manual Integration (through .aar)
 3. Custom integration (source-available UX module allows forking and customizations)
 ```
 
-## Migration guide
+### Migration guide
 
-### 1. Update dependencies
+#### 1. Update dependencies
 
-#### Remove declaration of old maven repository:
+##### Remove declaration of old maven repository:
 
 ```kts
 // remove
@@ -39,7 +46,7 @@ maven { url 'https://maven.microblink.com' }
 // from repositories declaration in your gradle files
 ```
 
-#### Remove old dependencies:
+##### Remove old dependencies:
 ```kts
 // remove
 implementation(com.microblink:blinkid) 
@@ -52,7 +59,7 @@ microblink-blinkid = { module = "com.microblink:blinkid", version.ref = "microbl
 // or through .aar file
 ```
 
-#### Add new dependencies:
+##### Add new dependencies:
 ```kotlin
 // for the base BlinkID SDK version, add
 implementation(com.microblink:blinkid-core)
@@ -69,23 +76,23 @@ blinkid-ux = { group = "com.microblink", name = "blinkid-ux", versions.ref = "bl
 // or through .aar file
 ```
 
-### 2. Update Import Statements
+#### 2. Update Import Statements
 
-#### Old:
+##### Old:
 ```kotlin
 import com.microblink.blinkid.*
 ```
 
-#### New:
+##### New:
 ```kotlin
 import com.microblink.blinkid.core*
 // if using the UX components
 import com.microblink.blinkid.ux*  
 ```
 
-### 3. Initialization Changes
+#### 3. Initialization Changes
 
-#### Old (BlinkID):
+##### Old (BlinkID):
 ```kotlin
 // old initialization
 MicroblinkSDK.setLicenseFile("license-key", context)
@@ -96,7 +103,7 @@ mRecognizer = new BlinkIdMultiSideRecognizer();
 mRecognizerBundle = new RecognizerBundle(mRecognizer);
 ```
 
-#### New (BlinkID):
+##### New (BlinkID):
 ```kotlin
 // New initialization
 val instance = BlinkIdSdk.initializeSdk(
@@ -125,9 +132,9 @@ when {
 }
 ```
 
-### 4. UI Implementation Changes
+#### 4. UI Implementation Changes
 
-#### Old (BlinkID):
+##### Old (BlinkID):
 
 Many different implementation methods exist for BlinkID, with the following being the simplest:
 ```kotlin
@@ -151,7 +158,7 @@ Many different implementation methods exist for BlinkID, with the following bein
 }
 ```
 
-#### New (BlinkID) using Jetpack Compose:
+##### New (BlinkID) using Jetpack Compose:
 
 `CameraScanningScreen` is a `@Composable` function that can be invoked when needed.
 It is recommended to use on its own separate screen through `Navigation` and `ViewModel` (see Sample app).
@@ -171,7 +178,7 @@ It is recommended to use on its own separate screen through `Navigation` and `Vi
 }
 ```
 
-#### New (BlinkID) using Android Views:
+##### New (BlinkID) using Android Views:
 
 Wrap the `Composable` in a `ComposeView` class:
 ```xml
@@ -191,7 +198,7 @@ findViewById<ComposeView>(R.id.my_composable).setContent {
 }
 ```
 
-### New (BlinkID) using Activity:
+#### New (BlinkID) using Activity:
 
 ```kotlin
 val blinkIdLauncher = rememberLauncherForActivityResult(
@@ -219,9 +226,9 @@ blinkIdLauncher.launch(
 ```
 For additional information on using Jetpack Compose with Views, visit [official docs](https://developer.android.com/develop/ui/compose/migrate/interoperability-apis/compose-in-views).
 
-### 5. Result Handling
+#### 5. Result Handling
 
-#### Old (BlinkID):
+##### Old (BlinkID):
 
 Through Activity result implementation (see 4. UI Implementation changes):
 ```kotlin
@@ -240,7 +247,7 @@ Or through checking recognizer state:
   val name = result.firstName?.value()
 ```
 
-#### New (BlinkID):
+##### New (BlinkID):
 
 Using the UX module to fetch the results:
 ```kotlin
@@ -277,14 +284,14 @@ val blinkIdLauncher = rememberLauncherForActivityResult(
 )
 ```
 
-### 6. Custom UI Implementation
+#### 6. Custom UI Implementation
 
-#### Old (BlinkID):
+##### Old (BlinkID):
 
 Old BlinkID offered several ways of custom UI integration through resource and UI customization.
 More info can be found here [on our GitHub page](https://github.com/microblink/blinkid-android/tree/v6.13.0?tab=readme-ov-file#-blinkid-sdk-integration-levels).
 
-#### New (BlinkID):
+##### New (BlinkID):
 
 New implementation offers customization in two ways:
 - Through `UiSettings` class
@@ -335,7 +342,7 @@ Any class in `blinkid-ux` and `microblink-ux` libraries which has this license h
 
 Any modifications to classes which do not have this exact header are not allowed.
 
-## Best Practices for Migration
+### Best Practices for Migration
 
 1. **Gradual Migration**:
     - Consider migrating feature by feature if possible
@@ -353,7 +360,7 @@ Any modifications to classes which do not have this exact header are not allowed
     - Update error handling to work with the new async/await pattern
     - Implement proper error handling for resource downloading if used
 
-## Support and Resources
+### Support and Resources
 
 - For API documentation: Visit the BlinkID SDK [Android API](https://microblink.github.io/blinkid-android/index.html) docs.
 - For support: Contact technical support through the support portal
