@@ -658,8 +658,8 @@ Here is the SDK size, calculated for supported ABIs:
 
 | ABI | Download size | Install size |
 | --- |:-------------:|:------------:|
-| armeabi-v7a |    3.53 MB    |   4.74 MB    |
-| arm64-v8a |    3.60 MB    |   5.47 MB    |
+| armeabi-v7a |    3.98 MB    |   5.23 MB    |
+| arm64-v8a |    4.05 MB    |   5.96 MB    |
 
 SDK size is calculated as application size increases when _BlinkID_ SDK is added, with all its dependencies included.
 
