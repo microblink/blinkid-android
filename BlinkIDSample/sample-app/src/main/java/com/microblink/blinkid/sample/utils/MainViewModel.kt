@@ -3,7 +3,9 @@ package com.microblink.blinkid.sample.utils
 import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.microblink.blinkid.core.BlinkIdSdk
@@ -13,11 +15,16 @@ import com.microblink.blinkid.core.session.BlinkIdSessionSettings
 import com.microblink.blinkid.core.session.InputImageSource
 import com.microblink.blinkid.core.session.ScanningMode
 import com.microblink.blinkid.core.settings.ScanningSettings
+import com.microblink.blinkid.core.settings.scanning.BarcodeModuleSettings
+import com.microblink.blinkid.core.settings.scanning.DocumentCaptureModuleSettings
+import com.microblink.blinkid.core.settings.scanning.VizModuleSettings
 import com.microblink.blinkid.sample.config.BlinkIdConfig.licenseKey
 import com.microblink.blinkid.sample.result.BlinkIdResultHolder
-import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
 import com.microblink.blinkid.ux.UiSettings
 import com.microblink.blinkid.ux.camera.CameraSettings
+import com.microblink.blinkid.ux.scanning.FrameProcessResultHandle
+import com.microblink.blinkid.ux.scanning.FrameProcessResultHandle.LastFrameResult
+import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -25,6 +32,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds
+import kotlin.time.Duration.Companion.seconds
 
 private const val TAG = "MainViewModel"
 
@@ -39,21 +47,85 @@ class MainViewModel : ViewModel() {
 
     val blinkIdUiSettings = UiSettings()
 
-    val blinkIdUxSettings = BlinkIdUxSettings()
+    val stepTimeoutDuration = 60000.milliseconds
+
+    val inactivityTimeoutDuration = 10000.milliseconds
+
+    val blinkIdUxSettings = BlinkIdUxSettings(
+        // Customize step timeout duration, which is used to set the duration of the scanning step
+        // during the scanning session before a timeout is triggered. This timer will reset whenever
+        // one side of the document is successfully scanned or when the barcode step is triggered.
+        stepTimeoutDuration = stepTimeoutDuration,
+        // Customize inactivity timeout duration, which is used to set the duration of inactivity
+        // during the scanning session (time without UI state changes) before a timeout is triggered.
+        inactivityTimeoutDuration = inactivityTimeoutDuration
+    )
 
     val cameraSettings = CameraSettings()
 
-    var stepTimeoutDuration: MutableState<Duration> = mutableStateOf(10000.milliseconds)
+    var localSdk: BlinkIdSdk? = null
         private set
 
-    var localSdk: BlinkIdSdk? = null
+    var bitmapSaved: LastFrameResult? by mutableStateOf(null)
         private set
 
     val scanningSessionSettings = BlinkIdSessionSettings(
         inputImageSource = InputImageSource.Video,
         scanningMode = ScanningMode.Automatic,
-        scanningSettings = ScanningSettings()
+        scanningSettings = ScanningSettings(
+            // All the individual modules are turned on by default.
+            // Use modular ScanningSettings to customize the behavior of the scanning session.
+            // Disable any individual module by setting it to null.
+            // Document capture module is used for capturing the image of the document.
+            documentCaptureModule = DocumentCaptureModuleSettings(
+                // Ensure that the extracted images are returned in the BlinkIdScanningResult object.
+                inputImageReturnEnabled = true,
+                faceImageExtractionEnabled = true
+            ),
+            // Barcode module is used for capturing and extracting the data from the barcode.
+            barcodeModule = BarcodeModuleSettings(
+                barcodeImageReturnEnabled = true
+            ),
+            // Viz module is used for extracting all the individual data fields from the document
+            // and capturing signature images.
+            vizModule = VizModuleSettings(
+                signatureImageExtractionEnabled = true,
+                // By setting the presenceMandatory to true, it is ensured
+                // that the scan will not complete before all elements of specific modules
+                // are successfully extracted from the document.
+                presenceMandatory = true
+            ),
+            // Mrz module is used for extracting the data from MRZ (Machine readable zone).
+            // By setting the mrzModule to null, the MRZ will be
+            // completely ignored during the scanning session.
+            mrzModule = null
+        )
     )
+
+    val frameProcessResultCallback: ((FrameProcessResultHandle) -> Unit) =
+        { handle: FrameProcessResultHandle ->
+            val frame = handle.getLastFrame()
+            viewModelScope.launch(Dispatchers.Main) {
+                // The last processed frame is saved to the variable and can be used
+                // for further debugging or analysis after the scanning is finished.
+                bitmapSaved = frame
+            }
+
+            // By uncommenting the following lines, current scanning step will be completed
+            // when the first name and document number are successfully extracted from the document.
+            // This would force the session to either progress to the second side of the document or
+            // to complete the scan, depending on the scanning settings.
+            /*
+            if (handle.processResult.inputImageAnalysisResult.extractedFields.contains(
+                    FieldType.FirstName
+                ) && handle.processResult.inputImageAnalysisResult.extractedFields.contains(
+                    FieldType.DocumentNumber
+                )
+            ) {
+                handle.advanceToNextStep()
+            }
+            */
+        }
 
     suspend fun initializeLocalSdk(context: Context) {
         _mainState.update {

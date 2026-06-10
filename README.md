@@ -8,8 +8,8 @@ The _BlinkID_ Android SDK is a comprehensive solution for implementing secure do
 
 The list of all supported documents and result fields can be found [here](https://docs.microblink.com/blinkid/supported-documents).
 
-
 # Table of contents
+* [API documentation](#api-documentation)
 * [Quick Start](#quick-start)
   * [Quick start with the sample apps](#quick-sample)
   * [SDK integration](#sdk-integration)
@@ -31,9 +31,16 @@ The list of all supported documents and result fields can be found [here](https:
 * [Troubleshooting](#troubleshoot)
 * [Additional info](#additional-info)
   * [BlinkID SDK size](#sdk-size)
-  * [API documentation](#api-documentation)
   * [Contact](#contact)
 
+
+
+# <a name="api-documentation"></a> API documentation
+You can find the _BlinkID_ SDK **KDoc** documentation [here](https://microblink.github.io/blinkid-android/index.html).
+
+Detailed documentation can be found on our [documentation page](https://docs.microblink.com/blinkid/next).
+
+Transition guide from v7 to v8000 can be found on our [migration page](https://docs.microblink.com/blinkid/next/migration-v8000?platform=android).
 
 # <a name="quick-start"></a> Quick Start
 
@@ -112,7 +119,8 @@ BlinkIdCameraScanningScreen(
   },
   onScanningCanceled = {
     // user canceled the scanning
-  }
+  },
+  onFrameProcessResult = null // used for additional debugging, analysis, and advanced workflows; not required for basic scanning and result retrieval
 )
 ```
 
@@ -134,7 +142,7 @@ _BlinkID_ SDK requires Android API level **24** or newer.
 
 To perform successful scans, the camera preview resolution must be at least **1080p**. Note that the camera preview resolution is not the same as the video recording resolution.
 
-_BlinkID_ SDK allows the selection of higher and lower resolutions of camera selected for the scanning process. Additionally, if the device has more than one camera, it is possible to select between `CameraLensFacing.LensFacingBack` and `CameraLensFacing.LensFacingFront`. Both settings are accessible through `CameraSettings` in all implementation methods.
+_BlinkID_ SDK allows the selection of higher and lower resolutions of camera selected for the scanning process. Additionally, if the device has more than one camera, it is possible to select between `CameraLensFacing.LensFacingBack` and `CameraLensFacing.LensFacingFront`. Both settings are accessible through `CameraSettings` in all implementation methods. Desired aspect ration can also be set through these settings.
 
 **NOTE**: Most of the front facing cameras on Android devices are lower quality and do not have autofocus. This highly impacts their ability to successfully complete the scan.
 
@@ -193,6 +201,7 @@ When to use the `BlinkIdCameraScanningScreen` composable:
 - Single-activity architecture: If your application is structured around a single activity, this composable is the recommended integration point
 - Immediate scanning readiness: The composable allows preloading of all required resources and license validation before initiating the scanning process, ensuring that scanning can begin instantly without additional initialization delays
 - Advanced scanning customizations: This method supports extensive customization of the scanning workflow and user experience (see [Advanced customizations](#advanced-customizations))
+- Custom scanning flow with [FrameProcessResultHandle](https://microblink.github.io/blinkid-android/blinkid-ux/com.microblink.blinkid.ux.scanning/-frame-process-result-handle/index.html): use this API for additional debugging, analysis, and advanced workflows; not required for basic scanning and result retrieval.
 
 When to use the `BlinkIdScanActivity` activity:
 - Java-only applications: If your app is implemented entirely in Java, using the activity is preferable; while composables can be wrapped in Views for Java integration, the _BlinkID_ SDK leverages concurrency features that are not natively supported in Java, potentially requiring additional effort to ensure correct operation (see *java-sample-app*)
@@ -229,8 +238,10 @@ BlinkIdCameraScanningScreen(
     /* UX settings options */
     uxSettings = BlinkIdUxSettings(
         stepTimeoutDuration = yourTimeoutDuration,
+        inactivityTimeoutDuration = yourInactivityTimeoutDuration,
         allowHapticFeedback = true, // or false
-        classFilter = null // all documents are accepted by default
+        classFilter = null, // all documents are accepted by default
+        redactionSettingsResolver = null // customize redaction settings for scanned documents
     ),
     /* UI settings options */
     uiSettings = UiSettings(
@@ -243,7 +254,8 @@ BlinkIdCameraScanningScreen(
     ),
     cameraSettings = CameraSettings(
         lensFacing = CameraLensFacing.LensFacingBack, // or CameraLensFacing.LensFacingFront
-        desiredResolution = Resolution.Resolution2160p // range between 720p and 4320p
+        desiredResolution = Resolution.Resolution2160p, // range between 720p and 4320p
+        desiredAspectRatio = DesiredAspectRatio.RATIO_16_9 // or DesiredAspectRatio.RATIO_4_3
     ),
     sessionSettings = BlinkIdSessionSettings(
         inputImageSource = InputImageSource.Video,
@@ -255,6 +267,11 @@ BlinkIdCameraScanningScreen(
     },
     onScanningCanceled = {
         // user canceled the scanning
+    },
+    onFrameProcessResult = object : ((FrameProcessResultHandle) -> Unit) {
+      override fun invoke(p1: FrameProcessResultHandle) {
+        // used for additional debugging, analysis, and advanced workflows; not required for basic scanning and result retrieval
+      }
     }
 )
 ```
@@ -273,7 +290,8 @@ Create your implementation of scanning ViewModel (which must be a subclass of ou
 class YourBlinkIdScanningUxViewModel(
     blinkIdSdkInstance: BlinkIdSdk,
     sessionSettings: ScanningSessionSettings,
-    uxSettings: BlinkIdUxSettings
+    uxSettings: BlinkIdUxSettings,
+    onFrameProcessResult: ((FrameProcessResultHandle) -> Unit)
 ) : CameraViewModel() {
 
     val imageAnalyzer = BlinkIdAnalyzer(
@@ -327,7 +345,8 @@ class YourBlinkIdScanningUxViewModel(
                     }
                 }
             }
-        }
+        },
+        onFrameProcessResult = onFrameProcessResult
     )
     
     override fun analyzeImage(image: ImageProxy) {
@@ -394,16 +413,16 @@ When implementing a language picker within the app it is recommended to use the 
 
 #### <a name="addLanguage"></a> Adding new language
 
-_BlinkID_ can easily be translated to other languages. The `res` folder in `blinkid-ux` (see `libs/sources/blinkid-ux/src/main/res`) contains `values/strings_core.xml` with English strings. In order to make e.g. a Croatian translation, create a folder `values-hr` in your project and put the copy of `strings_core.xml` inside it. Then, open that file and translate the strings from English into Croatian.
+_BlinkID_ can easily be translated to other languages. The `res` folder in `blinkid-ux` (see `libs/sources/blinkid-ux/src/main/res/values`) contains `strings_core.xml`, `strings_blinkid.xml` and `strings_accessibility.xml` with English strings. In order to make e.g. a Croatian translation, create a folder `values-hr` in your project and put the copy of `strings_core.xml` inside it. Then, open that file and translate the strings from English into Croatian.
 
 #### <a name="stringChanging"></a> Changing strings in the existing language
 
 To modify an existing string, the best approach would be to:
 
 1. Choose a language you want to modify. For example Croatian ('hr').
-2. Find `strings_core.xml` in folder `res/values-hr`
-3. Choose a string key which you want to change. For example: ```<string name="mb_blinkid_close">Close</string>```
-4. In your project create a file `strings_core.xml` in the folder `res/values-hr`, if it doesn't already exist
+2. Search for a string you want to replace in one of the three files (`strings_core.xml`, `strings_blinkid.xml` and `strings_accessibility.xml`) in folder `res/values-hr`.
+3. Choose a string key which you want to change. For example: ```<string name="mb_blinkid_close">Close</string>```.
+4. In your project create a file `strings.xml` in the folder `res/values-hr`, if it doesn't already exist.
 5. Create an entry in the file with the value for the string which you want. For example: ```<string name="mb_blinkid_close">Zatvori</string>```
 6. Repeat for all the strings you wish to change
 
@@ -669,9 +688,6 @@ Here is the SDK size, calculated for supported ABIs:
 | arm64-v8a |    4.05 MB    |   5.96 MB    |
 
 SDK size is calculated as application size increases when _BlinkID_ SDK is added, with all its dependencies included.
-
-## <a name="api-documentation"></a> API documentation
-You can find the _BlinkID_ SDK **KDoc** documentation [here](https://microblink.github.io/blinkid-android/index.html).
 
 ## <a name="contact"></a> Contact
 For any other questions, feel free to contact us at [help.microblink.com](http://help.microblink.com).

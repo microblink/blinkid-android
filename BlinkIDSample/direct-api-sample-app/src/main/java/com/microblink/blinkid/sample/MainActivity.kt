@@ -78,16 +78,19 @@ class MainActivity : ComponentActivity() {
                                     BlinkIdSessionSettings(
                                         inputImageSource = InputImageSource.Photo,
                                         scanningSettings = ScanningSettings(
-                                            // ensure that the scanned images are placed
-                                            // in the BlinkIdScanningResult object
+                                            // Ensure that the extracted images are returned in the BlinkIdScanningResult object.
                                             documentCaptureModule = DocumentCaptureModuleSettings(
                                                 faceImageExtractionEnabled = true,
                                                 inputImageReturnEnabled = true,
                                                 documentImageReturnEnabled = true,
+                                                // InputImageMargin must be set to either 0.0f or null when using Photo input image source.
+                                                // Leaving it at the default value (0.02f) will result in settings validation error.
                                                 inputImageMargin = null
                                             ),
                                             vizModule = VizModuleSettings(
                                                 signatureImageExtractionEnabled = true,
+                                                // ResultAggregationEnabled must be set to either false or null when using Photo input image source.
+                                                // Leaving it at the default value (true) will result in settings validation error.
                                                 resultAggregationEnabled = null
                                             )
                                         )

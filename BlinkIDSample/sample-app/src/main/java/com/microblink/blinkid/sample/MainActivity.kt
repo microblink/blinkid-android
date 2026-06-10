@@ -91,7 +91,8 @@ class MainActivity : ComponentActivity() {
                                 inclusive = false
                             )
                             viewModel.onScanningCanceled()
-                        }
+                        },
+                        onFrameProcessResult = viewModel.frameProcessResultCallback
                     )
                 }
             }
