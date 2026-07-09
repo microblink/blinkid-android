@@ -49,7 +49,7 @@
 - Date Conversion Accuracy: Resolved an issue where Islamic-to-Gregorian date conversions could occasionally differ by +/- 1 day. These conversions are now precise and consistent.
 
 ### API changes
-- For detailed API changes and migration guide, visit our [documentation page](https://docs.microblink.com/blinkid/next/migration-v8000?platform=android).
+- For detailed API changes and migration guide, visit our [documentation page](https://docs.microblink.com/blinkid/migration-v8000?platform=android).
 
 
 ## v7.8.1

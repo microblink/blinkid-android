@@ -2,7 +2,7 @@
 
 ## BlinkID SDK v7 to BlinkID SDK v8000
  
- Detailed transition guide can be found on our [documentation page](https://docs.microblink.com/blinkid/next/migration-v8000?platform=android).
+ Detailed transition guide can be found on our [documentation page](https://docs.microblink.com/blinkid/migration-v8000?platform=android).
 
 
 ## BlinkID SDK v6 to BlinkID SDK v7

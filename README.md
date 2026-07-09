@@ -40,7 +40,7 @@ You can find the _BlinkID_ SDK **KDoc** documentation [here](https://microblink.
 
 Detailed documentation can be found on our [documentation page](https://docs.microblink.com/blinkid/next).
 
-Transition guide from v7 to v8000 can be found on our [migration page](https://docs.microblink.com/blinkid/next/migration-v8000?platform=android).
+Transition guide from v7 to v8000 can be found on our [migration page](https://docs.microblink.com/blinkid/migration-v8000?platform=android).
 
 # <a name="quick-start"></a> Quick Start
 
