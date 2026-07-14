@@ -32,6 +32,9 @@ import kotlinx.parcelize.Parcelize
  * @property blinkIdBarcodeIdHelpDialogsStrings Strings used in onboarding and help dialogs for barcode + ID scanning mode.
  *           These strings shouldn't be customized as they provide adequate instructions tailored specifically to our scanning experience.
  *           However, if the scanning experience is changed in any way, onboarding and help screen instructions may also be adjusted.
+ * @property blinkIdMrzHelpDialogsStrings Strings used in onboarding and help dialogs for MRZ document scanning mode.
+ *           These strings shouldn't be customized as they provide adequate instructions tailored specifically to our scanning experience.
+ *           However, if the scanning experience is changed in any way, onboarding and help screen instructions may also be adjusted.
  * @property blinkIdAccessibilityStrings Strings that are used by accessibility TalkBack service for specific
  *           buttons, labels, and actions.
  */
@@ -42,6 +45,7 @@ data class BlinkIdSdkStrings(
     val blinkIdDocumentHelpDialogsStrings: HelpDialogsStrings,
     val blinkIdBarcodeHelpDialogsStrings: HelpDialogsStrings,
     val blinkIdBarcodeIdHelpDialogsStrings: HelpDialogsStrings,
+    val blinkIdMrzHelpDialogsStrings: HelpDialogsStrings,
     val blinkIdAccessibilityStrings: AccessibilityStrings
 ) : Parcelable, SdkStrings(
     ScanningStrings(
@@ -122,6 +126,27 @@ data class BlinkIdSdkStrings(
             )
         )
 
+        /**
+         * Default onboarding and help dialog strings for MRZ document scanning mode.
+         *
+         * Can be used as a base when customizing [blinkIdMrzHelpDialogsStrings].
+         */
+        @JvmStatic
+        val MrzHelpDialogsDefaults = HelpDialogsStrings(
+            onboardingTitle = R.string.mb_blinkid_onboarding_dialog_mrz_id_title,
+            onboardingMessage = R.string.mb_blinkid_onboarding_dialog_mrz_id_message,
+            helpTitles = listOf(
+                R.string.mb_blinkid_help_screen_mrz_title1,
+                R.string.mb_blinkid_help_screen_title2,
+                R.string.mb_blinkid_help_screen_title3
+            ),
+            helpMessages = listOf(
+                R.string.mb_blinkid_help_screen_mrz_msg1,
+                R.string.mb_blinkid_help_screen_msg2,
+                R.string.mb_blinkid_help_screen_msg3,
+            )
+        )
+
         @JvmStatic
         val Default: BlinkIdSdkStrings =
             BlinkIdSdkStrings(
@@ -129,6 +154,7 @@ data class BlinkIdSdkStrings(
                 blinkIdDocumentHelpDialogsStrings = DocumentHelpDialogsDefaults,
                 blinkIdBarcodeHelpDialogsStrings = BarcodeHelpDialogsDefaults,
                 blinkIdBarcodeIdHelpDialogsStrings = BarcodeIdHelpDialogsDefaults,
+                blinkIdMrzHelpDialogsStrings = MrzHelpDialogsDefaults,
                 blinkIdAccessibilityStrings = AccessibilityStrings.Default
             )
     }
@@ -150,6 +176,7 @@ data class BlinkIdScanningStrings(
     @param:StringRes @get:StringRes override val instructionsFlip: Int,
     @param:StringRes @get:StringRes val instructionsBarcodeOnlyModule: Int,
     @param:StringRes @get:StringRes val instructionsBarcodeIdModule: Int,
+    @param:StringRes @get:StringRes val instructionsMrzModule: Int,
     @param:StringRes @get:StringRes override val instructionsNotFullyVisible: Int,
     @param:StringRes @get:StringRes override val instructionsTilted: Int,
     @param:StringRes @get:StringRes val instructionsFacePhotoNotFullyVisible: Int,
@@ -197,6 +224,7 @@ data class BlinkIdScanningStrings(
                 instructionsFlip = R.string.mb_blinkid_camera_flip_document,
                 instructionsBarcodeOnlyModule = R.string.mb_blinkid_barcode_instructions,
                 instructionsBarcodeIdModule = R.string.mb_blinkid_barcode_id_instructions,
+                instructionsMrzModule = R.string.mb_blinkid_mrz_id_instructions,
                 instructionsNotFullyVisible = R.string.mb_blinkid_document_not_fully_visible,
                 instructionsTilted = R.string.mb_blinkid_keep_document_parallel,
                 instructionsFacePhotoNotFullyVisible = R.string.mb_blinkid_face_photo_not_fully_visible,

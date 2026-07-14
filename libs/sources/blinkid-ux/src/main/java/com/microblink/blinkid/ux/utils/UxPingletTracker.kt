@@ -108,6 +108,7 @@ object UxPingletTracker : PingletTracker() {
                         SimpleUxEventType.HelpTooltipDisplayed -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.HELPTOOLTIPDISPLAYED
                         SimpleUxEventType.HelpOpened -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.HELPOPENED
                         SimpleUxEventType.StepTimeout -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.STEPTIMEOUT
+                        SimpleUxEventType.InactivityTimeout -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.INACTIVITYTIMEOUT
                         SimpleUxEventType.AppMovedToBackground -> com.microblink.blinkid.core.ping.pinglets.UxEvent.EventType.APPMOVEDTOBACKGROUND
                     }
                 ),
@@ -183,6 +184,7 @@ object UxPingletTracker : PingletTracker() {
             HelpTooltipDisplayed,
             HelpOpened,
             StepTimeout,
+            InactivityTimeout,
             AppMovedToBackground
         }
 

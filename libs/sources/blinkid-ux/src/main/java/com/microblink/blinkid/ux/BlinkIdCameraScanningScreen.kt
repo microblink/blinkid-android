@@ -83,6 +83,14 @@ private const val TAG = "BlinkIdCameraScanningScreen"
  *                         [BlinkIdScanningResult] as a parameter.
  * @param onScanningCanceled A callback function invoked when the user cancels
  *                          the scanning process.
+ * @param onFrameProcessResult An optional callback invoked after each camera frame is
+ *                             processed, receiving a [FrameProcessResultHandle]. Use it to
+ *                             inspect extraction completeness for the current frame and to
+ *                             control the scanning flow (for example, by calling
+ *                             [FrameProcessResultHandle.advanceToNextStep] when custom
+ *                             conditions are met, or [FrameProcessResultHandle.triggerStepTimeout]
+ *                             to implement custom step timeout logic). Defaults to `null`, in which
+ *                             case the default scanning flow is used.
  *
  */
 @Composable
@@ -182,6 +190,7 @@ fun BlinkIdCameraScanningScreen(
                     fillHelpScreens(extractionMode),
                     fillErrorDialogs(viewModel::onRetryTimeout, onScanningCanceled),
                     uxSettings.allowHapticFeedback,
+                    allowScanSound = uxSettings.allowScanSound,
                     showProductionOverlay = !blinkIdSdk.getLicenseToken().licenseRights.allowRemoveProductionOverlay,
                     showDemoOverlay = !blinkIdSdk.getLicenseToken().licenseRights.allowRemoveDemoOverlay,
                     {
@@ -200,6 +209,7 @@ fun BlinkIdCameraScanningScreen(
                     viewModel::onFlipAnimationCompleted,
                     viewModel::onReticleSuccessAnimationCompleted,
                     viewModel::onHapticFeedbackCompleted,
+                    viewModel::onScanSoundCompleted,
                     viewModel::changeOnboardingDialogVisibility,
                     viewModel::onHelpScreensDisplayRequested,
                     viewModel::onHelpScreensCloseRequested,

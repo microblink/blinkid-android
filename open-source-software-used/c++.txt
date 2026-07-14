@@ -1,0 +1,146 @@
+SPDXVersion: SPDX-2.2
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: //BlinkID:BlinkID
+Creator: Person: jenkins
+Creator: Tool: https//github.com/bazelbuild/rules_license/tools:write_sbom
+Created: 2026-07-14-08:18:02Z
+
+##### Package: //BlinkID:BlinkID
+SPDXID: "@@concurrentqueue+//"
+  name: "concurrentqueue"
+  versionInfo: "1.0.4.mb.1"
+  licenseDeclared: "BSD-2-Clause,BSL-1.0"
+
+SPDXID: "@@core-identity+//3rdparty/config_ex/ConfigEx"
+  name: "ConfigEx"
+  versionInfo: "0.1.0-docver.alpha.11"
+  licenseDeclared: "MIT"
+  downloadLocation: https://github.com/microblink/config_ex
+
+SPDXID: "@@core-identity+//3rdparty/err/Err"
+  name: "Err"
+  versionInfo: "0.1.0-docver.alpha.11"
+  licenseDeclared: "BSL-1.0"
+  downloadLocation: https://github.com/microblink/err
+
+SPDXID: "@@core-identity+//3rdparty/functionoid/Functionoid"
+  name: "Functionoid"
+  versionInfo: "0.1.0-docver.alpha.11"
+  licenseDeclared: "BSL-1.0"
+  downloadLocation: https://github.com/microblink/functionoid
+
+SPDXID: "@@core-identity+//3rdparty/hash-library/Hash"
+  name: "Hash"
+  versionInfo: "0.1.0-docver.alpha.11"
+  licenseDeclared: "Zlib"
+  downloadLocation: https://github.com/stbrumme/hash-library
+
+SPDXID: "@@core-identity+//3rdparty/mmap/MMap"
+  name: "MMap"
+  versionInfo: "0.1.0-docver.alpha.11"
+  licenseDeclared: "BSL-1.0"
+  downloadLocation: https://github.com/microblink/mmap
+
+SPDXID: "@@core-identity+//3rdparty/pimpl/pimpl"
+  name: "pimpl"
+  versionInfo: "0.1.0-docver.alpha.11"
+  licenseDeclared: "BSD-2-Clause"
+  downloadLocation: https://github.com/microblink/pimpl
+
+SPDXID: "@@core-identity+//3rdparty/sweater/sweater"
+  name: "sweater"
+  versionInfo: "0.1.0-docver.alpha.11"
+  licenseDeclared: "MIT"
+  downloadLocation: https://github.com/microblink/sweater
+
+SPDXID: "@@core-identity++_repo_rules+adv-obfuscator//"
+  name: "adv-obfuscator"
+  licenseDeclared: "BSD-3-Clause-Clear"
+  downloadLocation: https://github.com/microblink/ADVObfuscator/archive/refs/tags/mb.20170904.2.tar.gz
+
+SPDXID: "@@core-identity++_repo_rules+kiwaku//"
+  name: "kiwaku"
+  licenseDeclared: "BSL-1.0"
+  downloadLocation: https://github.com/microblink/kiwaku/archive/refs/tags/mb.20230809.4.tar.gz
+
+SPDXID: "@@core-identity++_repo_rules+micro-ecc//"
+  name: "micro-ecc"
+  licenseDeclared: "BSD-2-Clause"
+  downloadLocation: https://github.com/microblink/micro-ecc/archive/refs/tags/v1.0-mb.1.tar.gz
+
+SPDXID: "@@core-identity++_repo_rules+qoixx//"
+  name: "qoixx"
+  licenseDeclared: "MIT"
+  downloadLocation: https://github.com/wx257osn2/qoixx/archive/refs/tags/v0.1.7.tar.gz
+
+SPDXID: "@@core-identity++_repo_rules+utfcpp//"
+  name: "utfcpp"
+  licenseDeclared: "BSL-1.0"
+  downloadLocation: https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.0.9.tar.gz
+
+SPDXID: "@@core-identity++_repo_rules+zxing//"
+  name: "zxing"
+  licenseDeclared: "Apache-2.0"
+  downloadLocation: https://github.com/microblink/zxing/archive/2fb1595417c4dd5604f36e10bad74cb934819ccf.zip
+
+SPDXID: "@@core-identity++_repo_rules+zxing-cpp//"
+  name: "zxing-cpp"
+  licenseDeclared: "Apache-2.0"
+  downloadLocation: https://github.com/microblink/zxing-cpp/archive/refs/tags/3.0.2.mb.1.zip
+
+SPDXID: "@@cpuinfo+//"
+  name: "cpuinfo"
+  versionInfo: "0.0.0-20260312-7607ca5.mb.1"
+  licenseDeclared: "BSD-2-Clause"
+
+SPDXID: "@@eigen+//"
+  name: "eigen"
+  versionInfo: "5.0.1.bcr.1"
+  licenseDeclared: "MPL-2.0"
+
+SPDXID: "@@libbacktrace+//"
+  name: "libbacktrace"
+  versionInfo: "1.0.0-20250926-7939218.mb.1"
+  licenseDeclared: "BSD-3-Clause"
+
+SPDXID: "@@libdeflate+//"
+  name: "libdeflate"
+  versionInfo: "1.25"
+  licenseDeclared: "MIT"
+
+SPDXID: "@@libjpeg_turbo+//"
+  name: "libjpeg_turbo"
+  versionInfo: "3.1.3.bcr.5"
+  licenseDeclared: "BSD-3-Clause-Modification,IJG,Zlib"
+
+SPDXID: "@@libpng+//"
+  name: "libpng"
+  versionInfo: "1.6.54"
+  licenseDeclared: "libpng-2.0"
+
+SPDXID: "@@opencv+//"
+  name: "opencv"
+  versionInfo: "4.13.0.mb.2"
+  licenseDeclared: "Apache-2.0"
+
+SPDXID: "@@pthreadpool+//"
+  name: "pthreadpool"
+  versionInfo: "0.0.0-20250926-560c60d.mb.1"
+  licenseDeclared: "BSD-2-Clause"
+
+SPDXID: "@@rapidjson+//"
+  name: "rapidjson"
+  versionInfo: "1.1.0.mb.20250205"
+  licenseDeclared: "MIT"
+
+SPDXID: "@@xnnpack+//"
+  name: "xnnpack"
+  versionInfo: "20230525.5.0"
+  licenseDeclared: "BSD-3-Clause"
+  downloadLocation: https://github.com/microblink/XNNPACK
+
+SPDXID: "@@zlib+//"
+  name: "zlib"
+  versionInfo: "1.3.2.mb.1"
+  licenseDeclared: "Zlib"

@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableLongStateOf
@@ -46,6 +47,9 @@ import com.microblink.blinkid.ux.components.Reticle
 import com.microblink.blinkid.ux.components.TorchButton
 import com.microblink.blinkid.ux.components.longHapticFeedback
 import com.microblink.blinkid.ux.components.longHapticFeedbackDurationMs
+import com.microblink.blinkid.ux.components.playScanBeep
+import com.microblink.blinkid.ux.components.preloadScanBeep
+import com.microblink.blinkid.ux.components.releaseScanBeep
 import com.microblink.blinkid.ux.components.shortHapticFeedback
 import com.microblink.blinkid.ux.components.shortHapticFeedbackDurationMs
 import com.microblink.blinkid.ux.state.BaseUiState
@@ -53,6 +57,7 @@ import com.microblink.blinkid.ux.state.CardAnimationState
 import com.microblink.blinkid.ux.state.CommonStatusMessage
 import com.microblink.blinkid.ux.state.ErrorState
 import com.microblink.blinkid.ux.state.HapticFeedbackState
+import com.microblink.blinkid.ux.state.ScanSoundState
 import com.microblink.blinkid.ux.state.ProcessingState
 import com.microblink.blinkid.ux.state.ReticleState
 import com.microblink.blinkid.ux.state.StatusMessage
@@ -72,31 +77,23 @@ import com.microblink.blinkid.ux.state.StatusMessage
  * @param onExitScanning A callback function invoked when the user wants to
  *                       exit the scanning process.
  * @param uiSettings The [UiSettings] used to configure the UI.
+ * @param helpScreens The [HelpScreens] containing onboarding and help dialog content.
+ * @param errorStateDialogs A map of [ErrorState] to composable error dialogs.
+ * @param allowHapticFeedback Whether haptic feedback is allowed during the scanning process.
+ * @param allowScanSound Whether scan success sounds are allowed during the scanning process.
  * @param showProductionOverlay A [Boolean] defining whether a `Microblink` logo overlay will be shown during scanning.
- *                              The setting value is defined by license and shouldn't be modified
+ *                              The setting value is defined by license and shouldn't be modified.
  * @param showDemoOverlay A [Boolean] defining whether a `Powered by Microblink` text overlay will be shown during scanning.
- *  *                     The setting value is defined by license and shouldn't be modified
- * @param onTorchStateChange A callback function invoked when the user wants to
- *                           change the torch state.
- * @param onFlipDocumentAnimationCompleted A callback function invoked when the
- *                                         flip document animation is completed.
- * @param onReticleSuccessAnimationCompleted A callback function invoked when
- *                                           the reticle success animation is
- *                                           completed.
+ *                        The setting value is defined by license and shouldn't be modified.
+ * @param onTorchStateChange A callback function invoked when the user wants to change the torch state.
+ * @param onFlipDocumentAnimationCompleted A callback function invoked when the flip document animation is completed.
+ * @param onReticleSuccessAnimationCompleted A callback function invoked when the reticle success animation is completed.
  * @param onHapticFeedbackCompleted A callback function invoked when the haptic feedback is completed.
- * @param onChangeOnboardingDialogVisibility A callback function invoked when
- *                                           the visibility of the onboarding
- *                                           dialog should change.
- * @param onChangeHelpScreensVisibility A callback function invoked when the
- *                                      visibility of the help screens should
- *                                      change.
- * @param onChangeHelpTooltipVisibility A callback function invoked when the
- *                                       visibility of the help tooltip should
- *                                       change.
- * @param onRetry A callback function invoked when retry button is pressed (e.g on timeout or
- * document class filtered dialog)
- * @param onDoneError A callback function invoked when the unrecoverable error occurs and cancel
- * button is pressed on error dialog.
+ * @param onScanSoundCompleted A callback function invoked when the scan sound playback is completed.
+ * @param onChangeOnboardingDialogVisibility A callback function invoked when the visibility of the onboarding dialog should change.
+ * @param onHelpScreensDisplayRequested A callback function invoked when help screens should be displayed.
+ * @param onHelpScreensCloseRequested A callback function invoked when help screens should be closed.
+ * @param onChangeHelpTooltipVisibility A callback function invoked when the visibility of the help tooltip should change.
  *
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -109,12 +106,14 @@ fun ScanningUx(
     helpScreens: HelpScreens,
     errorStateDialogs: Map<ErrorState, @Composable () -> Unit>,
     allowHapticFeedback: Boolean,
+    allowScanSound: Boolean = true,
     showProductionOverlay: Boolean,
     showDemoOverlay: Boolean,
     onTorchStateChange: () -> Unit,
     onFlipDocumentAnimationCompleted: () -> Unit,
     onReticleSuccessAnimationCompleted: () -> Unit,
     onHapticFeedbackCompleted: () -> Unit,
+    onScanSoundCompleted: () -> Unit = {},
     onChangeOnboardingDialogVisibility: (Boolean) -> Unit,
     onHelpScreensDisplayRequested: () -> Unit,
     onHelpScreensCloseRequested: (allPagesDisplayed: Boolean) -> Unit,
@@ -130,11 +129,14 @@ fun ScanningUx(
             instructionMessage = uiState.statusMessage,
             cardAnimationState = uiState.cardAnimationState,
             hapticFeedbackState = uiState.hapticFeedbackState,
+            scanSoundState = uiState.scanSoundState,
             allowHapticFeedback = allowHapticFeedback,
+            allowScanSound = allowScanSound,
             showDemoOverlay = showDemoOverlay,
             onFlipDocumentAnimationCompleted = onFlipDocumentAnimationCompleted,
             onReticleSuccessAnimationCompleted = onReticleSuccessAnimationCompleted,
-            onHapticFeedbackCompleted = onHapticFeedbackCompleted
+            onHapticFeedbackCompleted = onHapticFeedbackCompleted,
+            onScanSoundCompleted = onScanSoundCompleted
         )
         Box(
             modifier
@@ -195,11 +197,14 @@ internal fun ScanningScreenCentralElements(
     instructionMessage: StatusMessage,
     cardAnimationState: CardAnimationState,
     hapticFeedbackState: HapticFeedbackState,
+    scanSoundState: ScanSoundState,
     allowHapticFeedback: Boolean,
+    allowScanSound: Boolean,
     showDemoOverlay: Boolean,
     onFlipDocumentAnimationCompleted: () -> Unit,
     onReticleSuccessAnimationCompleted: () -> Unit,
-    onHapticFeedbackCompleted: () -> Unit
+    onHapticFeedbackCompleted: () -> Unit,
+    onScanSoundCompleted: () -> Unit
 ) {
 
     var _reticleState by remember { mutableStateOf(ReticleState.Sensing) }
@@ -210,6 +215,15 @@ internal fun ScanningScreenCentralElements(
     var lastHapticFeedbackTime by remember { mutableLongStateOf(0L) }
 
     val context = LocalContext.current
+
+    DisposableEffect(allowScanSound) {
+        if (allowScanSound) {
+            preloadScanBeep(context.applicationContext)
+        }
+        onDispose {
+            releaseScanBeep()
+        }
+    }
 
     LaunchedEffect(hapticFeedbackState) {
         if (allowHapticFeedback) {
@@ -241,6 +255,13 @@ internal fun ScanningScreenCentralElements(
                 }
             }
             onHapticFeedbackCompleted()
+        }
+    }
+
+    LaunchedEffect(scanSoundState) {
+        if (allowScanSound && scanSoundState == ScanSoundState.PlayScanBeep) {
+            playScanBeep(context.applicationContext)
+            onScanSoundCompleted()
         }
     }
 

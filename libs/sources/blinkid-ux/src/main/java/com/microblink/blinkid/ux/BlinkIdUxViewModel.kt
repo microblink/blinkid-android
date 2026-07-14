@@ -23,6 +23,7 @@ import com.microblink.blinkid.core.utils.ping.sendPingletsIfAllowed
 import com.microblink.blinkid.ux.camera.CameraHardwareInfoHelper
 import com.microblink.blinkid.ux.camera.CameraInputDetails
 import com.microblink.blinkid.ux.camera.CameraViewModel
+import com.microblink.blinkid.ux.camera.TimeoutCause
 import com.microblink.blinkid.ux.components.needHelpTooltipDefaultTimeToAppearMs
 import com.microblink.blinkid.ux.components.uiCountingWindowDurationMs
 import com.microblink.blinkid.ux.scanning.BlinkIdAnalyzer
@@ -40,6 +41,7 @@ import com.microblink.blinkid.ux.state.CardAnimationState.ShowFlipLandscape
 import com.microblink.blinkid.ux.state.CommonStatusMessage
 import com.microblink.blinkid.ux.state.ErrorState
 import com.microblink.blinkid.ux.state.HapticFeedbackState
+import com.microblink.blinkid.ux.state.ScanSoundState
 import com.microblink.blinkid.ux.state.MbTorchState
 import com.microblink.blinkid.ux.state.PassportPage
 import com.microblink.blinkid.ux.state.ProcessingState
@@ -100,6 +102,7 @@ internal class BlinkIdUxViewModel(
             BlinkIdExtractionMode.FullDocument -> CommonStatusMessage.ScanFirstSide
             BlinkIdExtractionMode.BarcodeOnly -> BlinkIdStatusMessage.ScanBarcodeOnlyModule
             BlinkIdExtractionMode.DocumentWithBarcode -> BlinkIdStatusMessage.ScanBarcodeIdModule
+            BlinkIdExtractionMode.DocumentWithMrz -> BlinkIdStatusMessage.ScanMrzModule
         }
 
     private val _uiState = MutableStateFlow(BlinkIdUiState(statusMessage = initialStatusMessage))
@@ -158,10 +161,10 @@ internal class BlinkIdUxViewModel(
                     showErrorDialog(
                         alertType = when (error) {
                             ErrorReason.ErrorInvalidLicense -> UxEvent.AlertType.INVALIDLICENSEKEY
-                            ErrorReason.ErrorTimeoutExpired -> UxEvent.AlertType.STEPTIMEOUT
+                            ErrorReason.ErrorStepTimeoutExpired -> UxEvent.AlertType.STEPTIMEOUT
+                            ErrorReason.ErrorInactivityTimeoutExpired -> UxEvent.AlertType.INACTIVITYTIMEOUT
                             ErrorReason.ErrorNetworkError -> UxEvent.AlertType.NETWORKERROR
                             ErrorReason.ErrorDocumentClassFiltered -> UxEvent.AlertType.DOCUMENTCLASSNOTALLOWED
-                            // TODO: add new AlertTypes
                             ErrorReason.ErrorSettingsValidationFailed -> UxEvent.AlertType.NETWORKERROR
                             ErrorReason.ErrorGetResultFailed -> UxEvent.AlertType.NETWORKERROR
                         },
@@ -185,7 +188,7 @@ internal class BlinkIdUxViewModel(
                             val currentDuration =
                                 (System.nanoTime() - timestamp).toDuration(DurationUnit.NANOSECONDS)
                             if (currentDuration > stepTimeoutDuration) {
-                                imageAnalyzer?.timeoutAnalysis()
+                                imageAnalyzer?.timeoutAnalysis(TimeoutCause.Step)
                                 firstImageTimestamp = null
                                 newStateTimestamp = null
                             }
@@ -200,7 +203,7 @@ internal class BlinkIdUxViewModel(
                                 val currentDuration =
                                     (System.nanoTime() - timestamp).toDuration(DurationUnit.NANOSECONDS)
                                 if (currentDuration > inactivityTimeoutDuration) {
-                                    imageAnalyzer?.timeoutAnalysis()
+                                    imageAnalyzer?.timeoutAnalysis(TimeoutCause.Inactivity)
                                     firstImageTimestamp = null
                                     newStateTimestamp = null
                                 }
@@ -492,6 +495,10 @@ internal class BlinkIdUxViewModel(
 
                             else -> null
                         }
+                        val newScanSoundState = when (selectedProcessingState) {
+                            is ProcessingState.SuccessAnimation -> ScanSoundState.PlayScanBeep
+                            else -> null
+                        }
                         selectedStatusMessage?.let {
                             if (selectedProcessingState == ProcessingState.Error) {
                                 val errorType: UxEvent.ErrorMessageType? =
@@ -536,6 +543,8 @@ internal class BlinkIdUxViewModel(
                                     statusMessage = selectedStatusMessage,
                                     hapticFeedbackState = newHapticFeedbackState
                                         ?: it.hapticFeedbackState,
+                                    scanSoundState = newScanSoundState
+                                        ?: it.scanSoundState,
                                     activePassportPage = newActivePassportPage
                                         ?: it.activePassportPage,
                                     currentSide = newCurrentSide ?: it.currentSide
@@ -572,7 +581,7 @@ internal class BlinkIdUxViewModel(
         statusCounter.reset()
         return if (mostFrequent.isNotEmpty()) {
             when (mostFrequent[0]) {
-                BlinkIdStatusMessage.RotateDocument, CommonStatusMessage.ScanFirstSide, BlinkIdStatusMessage.ScanBarcodeOnlyModule, BlinkIdStatusMessage.ScanBarcodeIdModule, CommonStatusMessage.ScanSecondSide, BlinkIdStatusMessage.ScanBarcode, BlinkIdStatusMessage.PassportScanTopPage, BlinkIdStatusMessage.PassportScanLeftPage, BlinkIdStatusMessage.PassportScanRightPage, BlinkIdStatusMessage.PassportScanBarcodePage -> {
+                BlinkIdStatusMessage.RotateDocument, CommonStatusMessage.ScanFirstSide, BlinkIdStatusMessage.ScanBarcodeOnlyModule, BlinkIdStatusMessage.ScanBarcodeIdModule, BlinkIdStatusMessage.ScanMrzModule, CommonStatusMessage.ScanSecondSide, BlinkIdStatusMessage.ScanBarcode, BlinkIdStatusMessage.PassportScanTopPage, BlinkIdStatusMessage.PassportScanLeftPage, BlinkIdStatusMessage.PassportScanRightPage, BlinkIdStatusMessage.PassportScanBarcodePage -> {
                     Pair(ProcessingState.Sensing, mostFrequent[0])
                 }
 
@@ -814,6 +823,14 @@ internal class BlinkIdUxViewModel(
         _uiState.update {
             it.copy(
                 hapticFeedbackState = HapticFeedbackState.VibrationOff
+            )
+        }
+    }
+
+    fun onScanSoundCompleted() {
+        _uiState.update {
+            it.copy(
+                scanSoundState = ScanSoundState.SoundOff
             )
         }
     }

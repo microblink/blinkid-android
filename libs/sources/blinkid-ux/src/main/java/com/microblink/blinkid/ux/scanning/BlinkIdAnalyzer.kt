@@ -18,8 +18,10 @@ import com.microblink.blinkid.core.utils.MbLog
 import com.microblink.blinkid.ux.ScanningUxEvent
 import com.microblink.blinkid.ux.ScanningUxEventHandler
 import com.microblink.blinkid.ux.camera.ImageAnalyzer
+import com.microblink.blinkid.ux.camera.TimeoutCause
 import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
 import com.microblink.blinkid.ux.utils.ErrorReason
+import com.microblink.blinkid.ux.utils.UxPingletTracker
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.Default
@@ -181,9 +183,23 @@ class BlinkIdAnalyzer(
         analysisPaused = false
     }
 
-    override fun timeoutAnalysis() {
-        MbLog.e(TAG) { "processing timeout occurred" }
-        onErrorAnalysis(ErrorReason.ErrorTimeoutExpired)
+    override fun timeoutAnalysis(cause: TimeoutCause) {
+        MbLog.e(TAG) { "processing timeout occurred: $cause" }
+
+        val timeoutEvent = when (cause) {
+            TimeoutCause.Step -> UxPingletTracker.UxEvent.SimpleUxEventType.StepTimeout
+            TimeoutCause.Inactivity -> UxPingletTracker.UxEvent.SimpleUxEventType.InactivityTimeout
+        }
+        getSessionNumber()?.let { sessionNumber ->
+            UxPingletTracker.UxEvent.trackSimpleEvent(timeoutEvent, sessionNumber)
+        }
+
+        onErrorAnalysis(
+            when (cause) {
+                TimeoutCause.Step -> ErrorReason.ErrorStepTimeoutExpired
+                TimeoutCause.Inactivity -> ErrorReason.ErrorInactivityTimeoutExpired
+            }
+        )
     }
 
     override fun restartAnalysis() {
@@ -311,7 +327,9 @@ class BlinkIdAnalyzer(
                         MbLog.w(TAG) { "Failed to get last frame: $e" }
                     }.getOrNull()
                 },
-                triggerStepTimeout = { timeoutAnalysis() }
+                triggerStepTimeout = {
+                    timeoutAnalysis(TimeoutCause.Step)
+                }
             )
             try {
                 callback(handle)
