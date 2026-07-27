@@ -14,6 +14,6 @@ interface ImageAnalyzer : ImageAnalysis.Analyzer, AutoCloseable {
     fun cancel()
     fun pauseAnalysis()
     fun resumeAnalysis()
-    fun restartAnalysis()
-    fun timeoutAnalysis()
+    suspend fun restartAnalysis()
+    fun timeoutAnalysis(cause: TimeoutCause)
 }

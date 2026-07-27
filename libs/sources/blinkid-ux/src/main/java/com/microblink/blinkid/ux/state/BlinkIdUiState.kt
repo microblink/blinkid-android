@@ -31,6 +31,7 @@ data class BlinkIdUiState(
     override val onboardingDialogDisplayed: Boolean = DefaultShowOnboardingDialog,
     override val errorState: ErrorState = ErrorState.NoError,
     override val hapticFeedbackState: HapticFeedbackState = HapticFeedbackState.VibrationOff,
+    override val scanSoundState: ScanSoundState = ScanSoundState.SoundOff,
     val screenOrientation: ScreenOrientation = ScreenOrientation.Unknown,
     val activePassportPage: PassportPage? = null
 ) : BaseUiState
@@ -46,6 +47,7 @@ data class BlinkIdUiState(
 enum class BlinkIdStatusMessage : StatusMessage {
     ScanBarcodeOnlyModule,
     ScanBarcodeIdModule,
+    ScanMrzModule,
     ScanBarcode,
     RotateDocument,
     RotateDocumentShort,
@@ -75,6 +77,7 @@ enum class BlinkIdStatusMessage : StatusMessage {
         return when (this) {
             ScanBarcodeOnlyModule -> strings.instructionsBarcodeOnlyModule
             ScanBarcodeIdModule -> strings.instructionsBarcodeIdModule
+            ScanMrzModule -> strings.instructionsMrzModule
             ScanBarcode -> strings.instructionsBarcode
             RotateDocument -> null
             RotateDocumentShort -> null

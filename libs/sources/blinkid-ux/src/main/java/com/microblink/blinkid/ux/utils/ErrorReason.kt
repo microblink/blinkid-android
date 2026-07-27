@@ -8,7 +8,8 @@ import com.microblink.blinkid.ux.state.ErrorState
 enum class ErrorReason {
     ErrorInvalidLicense,
     ErrorNetworkError,
-    ErrorTimeoutExpired,
+    ErrorStepTimeoutExpired,
+    ErrorInactivityTimeoutExpired,
     ErrorDocumentClassFiltered,
     ErrorSettingsValidationFailed,
     ErrorGetResultFailed
@@ -18,7 +19,8 @@ fun ErrorReason.toErrorState(): ErrorState {
     return when(this) {
         ErrorReason.ErrorInvalidLicense -> ErrorState.ErrorInvalidLicense
         ErrorReason.ErrorNetworkError -> ErrorState.ErrorNetworkError
-        ErrorReason.ErrorTimeoutExpired -> ErrorState.ErrorTimeoutExpired
+        ErrorReason.ErrorStepTimeoutExpired,
+        ErrorReason.ErrorInactivityTimeoutExpired -> ErrorState.ErrorTimeoutExpired
         ErrorReason.ErrorDocumentClassFiltered -> ErrorState.ErrorDocumentClassFiltered
         ErrorReason.ErrorSettingsValidationFailed -> ErrorState.ErrorInvalidSettings
         ErrorReason.ErrorGetResultFailed -> ErrorState.ErrorGetResult

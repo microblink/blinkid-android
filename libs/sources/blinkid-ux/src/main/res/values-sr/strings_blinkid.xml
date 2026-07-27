@@ -17,6 +17,8 @@
   <string name="mb_blinkid_help_screen_barcode_msg2">Izbegavajte jako direktno svetlo jer može da stvori odsjaj na bar-kodu i oteža skeniranje. Ako bar-kod nije jasno vidljiv vama, postoji mogućnost da ga ni kamera neće moći očitati.</string>
   <string name="mb_blinkid_help_screen_barcode_msg3">Pokušajte da držite telefon i bar-kod mirno tokom skeniranja. Pomeranje bilo čega može da zamuti sliku i oteža očitavanje bar-koda.</string>
   <string name="mb_blinkid_help_screen_barcode_title1">Neka bar-kod bude vidljiv</string>
+  <string name="mb_blinkid_help_screen_mrz_msg1">Uverite se da ne prekrivate delove MRZ prstom. Obratite pažnju i na odsjaj preko MRZ zbog koga bi kod mogao biti nečitljiv.</string>
+  <string name="mb_blinkid_help_screen_mrz_title1">Neka MRZ bude vidljiv</string>
   <string name="mb_blinkid_help_screen_msg1">Uverite se da ne prekrivate delove dokumenta prstom, uključujući donje redove. Takođe, pazite na hologramske refleksije koje prelaze preko polja dokumenta.</string>
   <string name="mb_blinkid_help_screen_msg2">Izbegavajte direktnu oštru svetlost jer se odbija od dokumenta i može učiniti delove dokumenta nečitljivim. Ako ne možete da pročitate podatke na dokumentu, neće biti vidljivi ni kameri.</string>
   <string name="mb_blinkid_help_screen_msg3">Pokušajte da telefon i dokument budu mirni tokom skeniranja. Pomeranje bilo koje od njih može zamutiti sliku i učiniti podatke na dokumentu nečitljivim.</string>
@@ -30,16 +32,19 @@
   <string name="mb_blinkid_instructions_turn_page_top">Pređite na stranicu na vrhu</string>
   <string name="mb_blinkid_keep_document_parallel">Držite dokument paralelno sa telefonom</string>
   <string name="mb_blinkid_left_page_instructions">Skenirajte levu stranicu</string>
-  <string name="mb_blinkid_onboarding_dialog_barcode_id_message">Različiti tipovi identifikacionih dokumenata će možda imati različite formate i lokacije bar-kodova. Tražite bar-kod na prednjoj ili zadnjoj strani dokumenta.</string>
-  <string name="mb_blinkid_onboarding_dialog_barcode_id_title">Nađite bar-kod na identifikacionom dokumentu</string>
+  <string name="mb_blinkid_mrz_id_instructions">Skenirajte stranu dokumenta na kojoj se nalazi MRZ</string>
+  <string name="mb_blinkid_onboarding_dialog_barcode_id_message">Različiti tipovi dokumenata će možda imati različite formate i lokacije bar-kodova. Tražite bar-kod na prednjoj ili zadnjoj strani dokumenta.</string>
+  <string name="mb_blinkid_onboarding_dialog_barcode_id_title">Pronađite bar-kod na dokumentu</string>
   <string name="mb_blinkid_onboarding_dialog_barcode_message">Potražite bar-kod (niz crnih linija ili kvadratni kod). Vodite računa da objektiv kamere bude čist i da bar-kod bude dobro osvetljen.</string>
   <string name="mb_blinkid_onboarding_dialog_barcode_title">Nađite i skenirajte bar-kod</string>
   <string name="mb_blinkid_onboarding_dialog_message">Uverite se da je dokument dobro osvetljen. Sva polja dokumenta treba da budu vidljiva na ekranu kamere.</string>
+  <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Pronaći ćete niz znakova u donjem delu prednjeg ili zadnjeg dela dokumenta. Podeljen je u 2 ili 3 reda i podeljenim strelicama (&lt;&lt; ili &gt;&gt;).</string>
+  <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Pronađite MRZ na dokumentu</string>
   <string name="mb_blinkid_onboarding_dialog_title">Neka svi detalji budu vidljivi</string>
   <string name="mb_blinkid_passport_scan_data_page_instructions">Skenirajte stranicu sa podacima dokumenta</string>
-  <string name="mb_blinkid_recognition_timeout_dialog_message">Nije moguće pročitati dokument. Molimo Vas, pokušajte ponovo.</string>
+  <string name="mb_blinkid_recognition_timeout_dialog_message">Vodite računa da dokument bude dobro osvetljen, u potpunosti vidljiv i na na njemu nema odsjaja.</string>
   <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Pokušaj ponovo</string>
-  <string name="mb_blinkid_recognition_timeout_dialog_title">Skeniranje neuspešno</string>
+  <string name="mb_blinkid_recognition_timeout_dialog_title">Nije moguće očitavanje dokumenta</string>
   <string name="mb_blinkid_right_page_instructions">Skenirajte desnu stranicu</string>
   <string name="mb_blinkid_scanning_wrong_page_left">Pređite na levu stranicu</string>
   <string name="mb_blinkid_scanning_wrong_page_right">Pređite na desnu stranicu</string>
@@ -47,5 +52,5 @@
   <string name="mb_blinkid_scanning_wrong_side">Preokrenite dokument</string>
   <string name="mb_blinkid_top_page_instructions">Skenirajte gornju stranicu</string>
   <string name="mb_blinkid_unsupported_document_message">Skenirajte prednju stranu podržanog dokumenta.</string>
-  <string name="mb_blinkid_unsupported_document_title">Документ није препознат</string>
+  <string name="mb_blinkid_unsupported_document_title">Dokument nije prepoznat</string>
 </resources>

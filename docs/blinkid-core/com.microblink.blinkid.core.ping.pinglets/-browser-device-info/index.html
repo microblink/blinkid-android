@@ -1,0 +1,449 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BrowserDeviceInfo</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    BlinkID
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":blinkid-core/productionRelease">productionRelease</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":blinkid-core/productionRelease" data-filter=":blinkid-core/productionRelease">
+                                <span class="checkbox--icon"></span>
+                                productionRelease
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    BlinkID
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="blinkid-core::com.microblink.blinkid.core.ping.pinglets/BrowserDeviceInfo///PointingToDeclaration//144797397">
+  <div class="breadcrumbs"><a href="../../index.html">blinkid-core</a><span class="delimiter">/</span><a href="../index.html">com.microblink.blinkid.core.ping.pinglets</a><span class="delimiter">/</span><span class="current">BrowserDeviceInfo</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Browser</span><wbr><span>Device</span><wbr><span><span>Info</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">BrowserDeviceInfo</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>userAgentData<span class="token operator">: </span><a href="-user-agent-data/index.html">BrowserDeviceInfo.UserAgentData</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>userAgent<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>threads<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>memory<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>gpu<span class="token operator">: </span><a href="-gpu/index.html">BrowserDeviceInfo.Gpu</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>screen<span class="token operator">: </span><a href="-screen/index.html">BrowserDeviceInfo.Screen</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>browserStorageSupport<span class="token operator">: </span><a href="-browser-storage-support/index.html">BrowserDeviceInfo.BrowserStorageSupport</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>derivedDeviceInfo<span class="token operator">: </span><a href="-derived-device-info/index.html">BrowserDeviceInfo.DerivedDeviceInfo</a></span></span><span class="token punctuation">)</span> : <a href="../-pinglet/index.html">Pinglet</a></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-189159255%2FConstructors%2F144797397" anchor-label="BrowserDeviceInfo" id="-189159255%2FConstructors%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-browser-device-info.html"><span>Browser</span><wbr><span>Device</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-189159255%2FConstructors%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userAgentData<span class="token operator">: </span><a href="-user-agent-data/index.html">BrowserDeviceInfo.UserAgentData</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">userAgent<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">threads<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">memory<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">gpu<span class="token operator">: </span><a href="-gpu/index.html">BrowserDeviceInfo.Gpu</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">screen<span class="token operator">: </span><a href="-screen/index.html">BrowserDeviceInfo.Screen</a><span class="token punctuation">, </span></span><span class="parameter ">browserStorageSupport<span class="token operator">: </span><a href="-browser-storage-support/index.html">BrowserDeviceInfo.BrowserStorageSupport</a><span class="token punctuation">, </span></span><span class="parameter ">derivedDeviceInfo<span class="token operator">: </span><a href="-derived-device-info/index.html">BrowserDeviceInfo.DerivedDeviceInfo</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-984585448%2FClasslikes%2F144797397" anchor-label="BrandsItem" id="-984585448%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-brands-item/index.html"><span>Brands</span><wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-984585448%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-brands-item/index.html">BrandsItem</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>brand<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>version<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1200324925%2FClasslikes%2F144797397" anchor-label="Browser" id="-1200324925%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-browser/index.html"><span><span>Browser</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1200324925%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-browser/index.html">Browser</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>brand<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>version<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1491181361%2FClasslikes%2F144797397" anchor-label="BrowserStorageSupport" id="-1491181361%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-browser-storage-support/index.html"><span>Browser</span><wbr><span>Storage</span><wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1491181361%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-browser-storage-support/index.html">BrowserStorageSupport</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>cookieEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>localStorageEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2140924566%2FClasslikes%2F144797397" anchor-label="DerivedDeviceInfo" id="-2140924566%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-derived-device-info/index.html"><span>Derived</span><wbr><span>Device</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2140924566%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-derived-device-info/index.html">DerivedDeviceInfo</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>model<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>formFactors<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-derived-device-info-form-factors-item/index.html">BrowserDeviceInfo.DerivedDeviceInfoFormFactorsItem</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>platform<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>browser<span class="token operator">: </span><a href="-browser/index.html">BrowserDeviceInfo.Browser</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="550276741%2FClasslikes%2F144797397" anchor-label="DerivedDeviceInfoFormFactorsItem" id="550276741%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-derived-device-info-form-factors-item/index.html"><span>Derived</span><wbr><span>Device</span><wbr><span>Info</span><wbr><span>Form</span><wbr><span>Factors</span><wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="550276741%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-derived-device-info-form-factors-item/index.html">DerivedDeviceInfoFormFactorsItem</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-derived-device-info-form-factors-item/index.html">BrowserDeviceInfo.DerivedDeviceInfoFormFactorsItem</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="181349361%2FClasslikes%2F144797397" anchor-label="FullVersionListItem" id="181349361%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-full-version-list-item/index.html"><span>Full</span><wbr><span>Version</span><wbr><span>List</span><wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="181349361%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-full-version-list-item/index.html">FullVersionListItem</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>brand<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>version<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1094255295%2FClasslikes%2F144797397" anchor-label="Gpu" id="1094255295%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gpu/index.html"><span><span>Gpu</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1094255295%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-gpu/index.html">Gpu</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>renderer<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>shadingLanguageVersion<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>vendor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>version<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1733751115%2FClasslikes%2F144797397" anchor-label="Screen" id="1733751115%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-screen/index.html"><span><span>Screen</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1733751115%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-screen/index.html">Screen</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>screenWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>screenHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>devicePixelRatio<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>physicalScreenWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>physicalScreenHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>maxTouchPoints<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1566972199%2FClasslikes%2F144797397" anchor-label="UserAgentData" id="1566972199%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-user-agent-data/index.html"><span>User</span><wbr><span>Agent</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1566972199%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-user-agent-data/index.html">UserAgentData</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>brands<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-brands-item/index.html">BrowserDeviceInfo.BrandsItem</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>mobile<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>platform<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>architecture<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>bitness<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>formFactors<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-user-agent-data-form-factors-item/index.html">BrowserDeviceInfo.UserAgentDataFormFactorsItem</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>model<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>platformVersion<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fullVersionList<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-full-version-list-item/index.html">BrowserDeviceInfo.FullVersionListItem</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>wow64<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1646986968%2FClasslikes%2F144797397" anchor-label="UserAgentDataFormFactorsItem" id="-1646986968%2FClasslikes%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-user-agent-data-form-factors-item/index.html"><span>User</span><wbr><span>Agent</span><wbr><span>Data</span><wbr><span>Form</span><wbr><span>Factors</span><wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1646986968%2FClasslikes%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/"><span class="token annotation builtin">Serializable</span></span></div></div><span class="token keyword">enum </span><a href="-user-agent-data-form-factors-item/index.html">UserAgentDataFormFactorsItem</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="-user-agent-data-form-factors-item/index.html">BrowserDeviceInfo.UserAgentDataFormFactorsItem</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="2071431292%2FProperties%2F144797397" anchor-label="browserStorageSupport" id="2071431292%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="browser-storage-support.html"><span>browser</span><wbr><span>Storage</span><wbr><span><span>Support</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2071431292%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"browserStorageSupport"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="browser-storage-support.html">browserStorageSupport</a><span class="token operator">: </span><a href="-browser-storage-support/index.html">BrowserDeviceInfo.BrowserStorageSupport</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2110163561%2FProperties%2F144797397" anchor-label="derivedDeviceInfo" id="-2110163561%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="derived-device-info.html"><span>derived</span><wbr><span>Device</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2110163561%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"derivedDeviceInfo"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="derived-device-info.html">derivedDeviceInfo</a><span class="token operator">: </span><a href="-derived-device-info/index.html">BrowserDeviceInfo.DerivedDeviceInfo</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1265164116%2FProperties%2F144797397" anchor-label="gpu" id="-1265164116%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="gpu.html"><span><span>gpu</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1265164116%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"gpu"</span></span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/EncodeDefault///PointingToDeclaration/"><span class="token annotation builtin">EncodeDefault</span></span><span class="token punctuation">(</span><span>mode<span class="token operator"> = </span><span data-unresolved-link="kotlinx.serialization/EncodeDefault.Mode.NEVER///PointingToDeclaration/{&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;:{&quot;key&quot;:&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;}}">EncodeDefault.Mode.NEVER</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="gpu.html">gpu</a><span class="token operator">: </span><a href="-gpu/index.html">BrowserDeviceInfo.Gpu</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-679384095%2FProperties%2F144797397" anchor-label="memory" id="-679384095%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="memory.html"><span><span>memory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-679384095%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"memory"</span></span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/EncodeDefault///PointingToDeclaration/"><span class="token annotation builtin">EncodeDefault</span></span><span class="token punctuation">(</span><span>mode<span class="token operator"> = </span><span data-unresolved-link="kotlinx.serialization/EncodeDefault.Mode.NEVER///PointingToDeclaration/{&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;:{&quot;key&quot;:&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;}}">EncodeDefault.Mode.NEVER</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="memory.html">memory</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2044338954%2FProperties%2F144797397" anchor-label="schemaName" id="-2044338954%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="schema-name.html"><span>schema</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2044338954%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="schema-name.html">schemaName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Unique identifier for the Pinglet schema type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1829523967%2FProperties%2F144797397" anchor-label="schemaVersion" id="-1829523967%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="schema-version.html"><span>schema</span><wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1829523967%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="schema-version.html">schemaVersion</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Version identifier for the Pinglet schema.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1131575594%2FProperties%2F144797397" anchor-label="screen" id="-1131575594%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="screen.html"><span><span>screen</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1131575594%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"screen"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="screen.html">screen</a><span class="token operator">: </span><a href="-screen/index.html">BrowserDeviceInfo.Screen</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="583786191%2FProperties%2F144797397" anchor-label="threads" id="583786191%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="threads.html"><span><span>threads</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="583786191%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"threads"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="threads.html">threads</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="866637534%2FProperties%2F144797397" anchor-label="userAgent" id="866637534%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="user-agent.html"><span>user</span><wbr><span><span>Agent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="866637534%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"userAgent"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="user-agent.html">userAgent</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2136477228%2FProperties%2F144797397" anchor-label="userAgentData" id="-2136477228%2FProperties%2F144797397" data-filterable-set=":blinkid-core/productionRelease"></a>
+          <div class="table-row table-row_content" data-filterable-current=":blinkid-core/productionRelease" data-filterable-set=":blinkid-core/productionRelease">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="user-agent-data.html"><span>user</span><wbr><span>Agent</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2136477228%2FProperties%2F144797397"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":blinkid-core/productionRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/SerialName///PointingToDeclaration/"><span class="token annotation builtin">SerialName</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"userAgentData"</span></span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="kotlinx.serialization/EncodeDefault///PointingToDeclaration/"><span class="token annotation builtin">EncodeDefault</span></span><span class="token punctuation">(</span><span>mode<span class="token operator"> = </span><span data-unresolved-link="kotlinx.serialization/EncodeDefault.Mode.NEVER///PointingToDeclaration/{&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;:{&quot;key&quot;:&quot;org.jetbrains.dokka.links.EnumEntryDRIExtra&quot;}}">EncodeDefault.Mode.NEVER</span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">val </span><a href="user-agent-data.html">userAgentData</a><span class="token operator">: </span><a href="-user-agent-data/index.html">BrowserDeviceInfo.UserAgentData</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

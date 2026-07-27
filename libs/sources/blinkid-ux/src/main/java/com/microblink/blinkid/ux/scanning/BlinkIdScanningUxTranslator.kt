@@ -12,8 +12,8 @@ import com.microblink.blinkid.core.result.ImageExtractionType
 import com.microblink.blinkid.core.result.ProcessingStatus
 import com.microblink.blinkid.core.result.ScanningSide
 import com.microblink.blinkid.core.result.ScanningStatus
-import com.microblink.blinkid.core.result.classinfo.Country
-import com.microblink.blinkid.core.result.classinfo.Type
+import com.microblink.blinkid.core.result.classinfo.CountryId
+import com.microblink.blinkid.core.result.classinfo.DocumentTypeId
 import com.microblink.blinkid.core.session.BlinkIdProcessResult
 import com.microblink.blinkid.core.session.DetectionStatus
 import com.microblink.blinkid.core.settings.ScanningSettings
@@ -80,16 +80,18 @@ class BlinkIdScanningUxTranslator : BlinkIdUxTranslator {
             return events
         }
 
-        imageAnalysisResult.documentClassInfo.type?.takeIf { it == Type.Passport }?.let {
-            passportType = if (
-                imageAnalysisResult.documentClassInfo.country == Country.Usa ||
-                imageAnalysisResult.documentClassInfo.country == Country.India
-            ) {
-                PassportType.BackSideBarcode
-            } else {
-                PassportType.Regular
+        imageAnalysisResult.documentClassInfo?.documentType?.id
+            ?.takeIf { it == DocumentTypeId.Passport }
+            ?.let {
+                passportType = if (
+                    imageAnalysisResult.documentClassInfo?.country?.id == CountryId.Usa ||
+                    imageAnalysisResult.documentClassInfo?.country?.id == CountryId.India
+                ) {
+                    PassportType.BackSideBarcode
+                } else {
+                    PassportType.Regular
+                }
             }
-        }
 
         if (currentSide == UiScanningSide.First) {
             // resolveCurrentStep() can advance native state to SideScanned before

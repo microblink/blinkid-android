@@ -20,4 +20,5 @@ interface BaseUiState {
     val onboardingDialogDisplayed: Boolean
     val errorState: ErrorState
     val hapticFeedbackState: HapticFeedbackState
+    val scanSoundState: ScanSoundState
 }

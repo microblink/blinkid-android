@@ -145,6 +145,14 @@ enum class HapticFeedbackState {
 }
 
 /**
+ * Current state of the scan success sound that activates during the scanning session.
+ */
+enum class ScanSoundState {
+    SoundOff,
+    PlayScanBeep
+}
+
+/**
  * Interface that represents the status messages that may be shown
  * during the scanning session.
  */
