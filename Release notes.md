@@ -109,8 +109,8 @@
 - `inputImageCropAnalysis` and `vizExtractionType` added to `InputImageAnalysisResult`.
 
 ### New OTA (over-the-air) feature
-- We've introduced OTA support to ensure your application can scan the latest documents without requiring a full SDK update; to support this, BlinkIdSdkSettings has been refactored to separate base resources from OTA resources
-- Resource-related variables in 'BlinkIdSdkSettings' have been moved into two new configuration classes: 'ResourcesConfig' and 'OtaResourcesConfig'
+- We've introduced OTA support to ensure your application can scan the latest documents without requiring a full SDK update; to support this, `BlinkIdSdkSettings` has been refactored to separate base resources from OTA resources
+- Resource-related variables in `BlinkIdSdkSettings` have been moved into two new configuration classes: `ResourcesConfig` and `OtaResourcesConfig`
   OLD:
 ```
 public data class BlinkIdSdkSettings(
@@ -140,7 +140,7 @@ public data class ResourcesConfig(
     val requestTimeout: RequestTimeout = RequestTimeout.DEFAULT
 )
 ```
-- Understanding OtaResourcesConfig: this behaves similarly to `ResourcesConfig`, but introduces a `strict` parameter and update checks.
+- Understanding `OtaResourcesConfig`: this behaves similarly to `ResourcesConfig`, but introduces a `strict` parameter and update checks.
 ```
 public data class OtaResourcesConfig(
     val checkForUpdates: Boolean = true,
@@ -158,8 +158,8 @@ public data class OtaResourcesConfig(
 - **Two distinct hosts:** base resources default to `https://models.cdn.microblink.com/resources`; OTA resources default to `https://blinkid-ota.microblink.com`. Don't cross-wire the service URLs.
 - **Distinct cache folders:** `blinkid` (base) vs `ota` (OTA). Keep them separate to avoid collisions.
 - OTA resources can be prebundled just like base resources to avoid additional downloads while using SDK:
-  1. Use script from [OTA resources downloader repository](https://github.com/microblink/ota-resources-downloader) to download OTA resources - recognizer version for this release is **24.0.3**
-  2. Bundle downloaded OTA resources to the *assets* directory of your Android app build (e.g. assets/microblink/blinkid/ota)
+  1. Use script from [OTA resources downloader repository](https://github.com/microblink/ota-resources-downloader) to download OTA resources - recognizer version for this release is **24.0.4**
+  2. Bundle downloaded OTA resources to the *assets* directory of your Android app build (e.g. `assets/microblink/blinkid/ota`)
   3. Set `checkForUpdates` to `false` and `localFolder` to match the location of your bundled OTA resources
 
 ### Other platform features
