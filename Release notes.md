@@ -1,5 +1,171 @@
 # Release notes
 
+## v8001.0.0
+
+### What's new
+- Accelerated support for newly issued documents
+  - We’ve dramatically optimized our document support and extraction pipeline to drastically accelerate our time-to-production for newly issued identity documents worldwide, as well as unobtrusively support improvements related to document rules and knowledge.
+  - Zero-day readiness: Depending on design availability and when a new document begins circulating, BlinkID can now deliver 0-day support—and at a maximum, within 4 weeks of the document's release.
+  - Future-proof compliance: This allows your workflows to seamlessly adapt to global document updates faster than ever before.
+- Enhanced frame selection & image quality
+  - We’ve upgraded our image capture engine to ensure only the highest-quality frames are processed, boosting extraction accuracy while reducing friction during scanning
+    - Smart quality selection: BlinkID now automatically analyzes multiple frames in real time and picks the crispest, most stable image before extracting data.
+    - Higher first-pass success: By filtering out blurry or unstable frames early, the SDK significantly reduces scan failures and false reads.
+    - Flexible speed vs. quality tuning: You can easily tune the scanner’s balance between ultra-fast results and maximum image precision to fit your specific onboarding flow.
+    - Intelligent app feedback: Clear state updates inform your application whenever more stable images are needed, making it easy to provide smooth, real-time guidance to end users.
+- Enhanced photo mode intelligence
+  - We’ve added a new configuration setting specifically designed for workflows utilizing Photo Mode:
+    - Smart image handling: If you are unsure whether the images being fed into the SDK are already cropped or uncropped, this new toggle optimizes how the SDK handles the input. It ensures maximum extraction accuracy regardless of the initial image state.
+    - Explicit image signals: The SDK now returns an explicit signal informing the caller whether the input image was cropped. This allows the host application to intelligently determine the required next steps in complex extraction and verification processes.
+- Expanded & improved barcode capabilities
+  - We’ve broadened our barcode recognition capabilities and boosted overall scanning performance
+    - Aztec barcode support: You can now enable scanning for Aztec barcodes, expanding the types of documents and codes BlinkID can read.
+    - Enhanced 2D & 1D reading: Substantially improved speed and accuracy when scanning QR codes, DataMatrix codes, and select 1D barcode formats, ensuring faster capture even on complex or damaged codes.
+- Parsing & extraction improvements
+  - Persian digit recognition: We have significantly improved our parser’s accuracy when reading and processing Persian numbers, ensuring more reliable data extraction for regional documents.
+- As part of the mandatory data redaction we have expanded the list with Netherlands DL QR code being redacted
+
+### Bug fixes
+- Document swap data caching: Fixed an issue in continuous-video mode where data from a previously scanned document could persist after a new document was introduced. The SDK now immediately detects document swaps—either when a document is removed from the frame or when a new document is introduced—and automatically clears cached images (such as cropped faces, signatures, and barcodes) to prevent data cross-contamination.
+
+### New documents support
+- Bailiwick Of Jersey - Driver's License
+- Bailiwick Of Jersey - Paper Passport
+- Bailiwick Of Jersey - Polycarbonate Passport
+- Botswana - Driver's License
+- Brunei - Polycarbonate Passport
+- Democratic Republic Of The Congo - Polycarbonate Passport
+- Dominican Republic - Polycarbonate Passport
+- Eswatini - Driver's License
+- Gambia - Driver's License
+- Georgia - Residence Permit
+- Iceland - Identity Card
+- Iceland - Residence Permit
+- Japan - Specified Residence Card
+- Liechtenstein - Residence Permit
+- Liechtenstein - Resident ID
+- Mali - Polycarbonate Passport
+- Mauritania - Resident ID
+- Monaco - Identity Card
+- Monaco - Residence Permit
+- Nepal - Identity Card
+- Palestine - Identity Card
+- San Marino - Identity Card
+- Sudan - Driver's License
+- UK, Northern Ireland - Voter ID
+- USA, Arkansas - Medical Marijuana ID
+- USA, Massachusetts - Medical Marijuana ID
+- USA, Michigan - Medical Marijuana ID
+- USA, New Jersey - Medical Marijuana ID
+- Zambia - Residence Permit
+
+### New document versions for supported documents
+- Bolivia - Driver's License
+- Burkina Faso - Identity Card
+- Central African Republic - Paper Passport
+- Estonia - Identity Card
+- Dominican Republic - Identity Card
+- Guyana - Identity Card
+- Israel - Identity Card
+- Luxembourg - Polycarbonate Passport
+- Mexico, Baja California - Driver's License
+- Mexico, Hidalgo - Driver's License
+- Oman - Identity Card
+- Oman - Resident ID
+- Uruguay - Identity Card
+- USA, Mississippi - Identity Card
+- USA, Nebraska - Driver's License
+- USA, Nebraska - Identity Card
+- USA, North Carolina - Identity Card
+- USA, Oklahoma - Driver's License
+- USA, Oklahoma - Identity Card
+- USA, Texas - Weapon Permit
+
+### New extracted fields from documents
+- Brazil national identity card and regional (22 regions) identity cards now extract parent names (`parentInfo`).
+- Croatia identity card: added support for cyrillic values in `sex`, `address`, `issuingAuthority`, `lastName` and `firstName`, and latin `sex`.
+- Virgin Islands of the United States identity card and driver's license: added `documentSubtype` and `specificDocumentValidity`.
+- Tunisia identity card: added arab values for `lastName`, `firstName`, `placeOfBirth`; added `dateOfBirth`.
+- Argentina identity card and alien identity card: instead of `documentAdditionalNumber`, `cardAccessNumber` should now be used.
+
+
+### API changes
+
+#### Breaking changes
+- In `DocumentCaptureModuleSettings`, `cropType` replaces the boolean `inputImageCropped`.
+- `DocumentClassInfo` changed:
+  - `type` is now `documentType`.
+  - `country`, `region`, and `documentType` are now nested objects, each of which contains an `id` and `rawValue` property. The `rawValue` property returns information delivered by the OTA mechanism.
+  - The classification enums were renamed: `Country` → `CountryId`, `Region` → `RegionId`, `Type` → `DocumentTypeId`.
+  - `countryName`, `isoNumericCountryCode`, `isoAlpha2CountryCode`, and `isoAlpha3CountryCode` are now optional, and `documentClassInfo` is now nullable on `BlinkIdScanningResult` and `InputImageAnalysisResult`.
+
+#### Additive changes
+- `inputImageSelectionStrategy` added to `DocumentCaptureModuleSettings`.
+- `aztecScanningEnabled` added to `BarcodeModuleSettings`.
+- `AwaitingMoreStableInputImages` added to `ProcessingStatus`.
+- `ethnicity` added to `BlinkIdScanningResult` and `VizResult`.
+- `fullName` added to `ParentInfo`.
+- `ParentFullName` and `Ethnicity` added to `FieldType`.
+- `inputImageCropAnalysis` and `vizExtractionType` added to `InputImageAnalysisResult`.
+
+### New OTA (over-the-air) feature
+- We've introduced OTA support to ensure your application can scan the latest documents without requiring a full SDK update; to support this, `BlinkIdSdkSettings` has been refactored to separate base resources from OTA resources
+- Resource-related variables in `BlinkIdSdkSettings` have been moved into two new configuration classes: `ResourcesConfig` and `OtaResourcesConfig`
+  OLD:
+```
+public data class BlinkIdSdkSettings(
+    val licenseKey: String,
+    val licensee: String? = null,
+    val downloadResources: Boolean = true,
+    val resourceDownloadUrl: String = defaultResourceDownloadUrl,
+    val resourceLocalFolder: String = defaultResourcesLocalFolder,
+    val resourceRequestTimeout: RequestTimeout = RequestTimeout.DEFAULT,
+    val microblinkProxyUrl: String? = null
+)
+```
+NEW - resource related variables have been moved to `ResourcesConfig`:
+```
+public data class BlinkIdSdkSettings(
+    val licenseKey: String,
+    val licensee: String? = null,
+    val resourcesConfig: ResourcesConfig = ResourcesConfig(),
+    val otaResourcesConfig: OtaResourcesConfig = OtaResourcesConfig(),
+    val microblinkProxyUrl: String? = null
+)
+
+public data class ResourcesConfig(
+    val download: Boolean = true,
+    val serviceUrl: String = defaultResourceDownloadUrl,
+    val localFolder: String = defaultResourcesLocalFolder,
+    val requestTimeout: RequestTimeout = RequestTimeout.DEFAULT
+)
+```
+- Understanding `OtaResourcesConfig`: this behaves similarly to `ResourcesConfig`, but introduces a `strict` parameter and update checks.
+```
+public data class OtaResourcesConfig(
+    val checkForUpdates: Boolean = true,
+    val strict: Boolean = false,
+    val serviceUrl: String = defaultOtaDownloadUrl,
+    val localFolder: String = defaultOtaResourcesLocalFolder,
+    val requestTimeout: RequestTimeout = RequestTimeout.DEFAULT
+)
+```
+- `strict` - when set to true, the SDK is forced to fetch the latest OTA resources before proceeding, ensuring support for the newest documents
+- Other settings mirror the behavior of standard base resources
+  Important to note:
+- **First-run downloads are unavoidable for OTA** when resources are missing locally - `checkForUpdates: false` only suppresses *update* checks, not the initial fetch.
+- **`strict = true` changes init to a throwing failure path.** Make sure your initialization error handling accounts for OTA download failures if you enable it.
+- **Two distinct hosts:** base resources default to `https://models.cdn.microblink.com/resources`; OTA resources default to `https://blinkid-ota.microblink.com`. Don't cross-wire the service URLs.
+- **Distinct cache folders:** `blinkid` (base) vs `ota` (OTA). Keep them separate to avoid collisions.
+- OTA resources can be prebundled just like base resources to avoid additional downloads while using SDK:
+  1. Use script from [OTA resources downloader repository](https://github.com/microblink/ota-resources-downloader) to download OTA resources - recognizer version for this release is **24.0.4**
+  2. Bundle downloaded OTA resources to the *assets* directory of your Android app build (e.g. `assets/microblink/blinkid/ota`)
+  3. Set `checkForUpdates` to `false` and `localFolder` to match the location of your bundled OTA resources
+
+### Other platform features
+- Beep sound which is activated on a successful side-scan and document scan has been added
+- Increased default `ResourceTimeout` from 10 to 30 seconds when downloading resources
+
 ## 8000.0.0
 
 ### What's new

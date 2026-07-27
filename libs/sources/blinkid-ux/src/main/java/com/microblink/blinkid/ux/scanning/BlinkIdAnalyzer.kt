@@ -18,14 +18,17 @@ import com.microblink.blinkid.core.utils.MbLog
 import com.microblink.blinkid.ux.ScanningUxEvent
 import com.microblink.blinkid.ux.ScanningUxEventHandler
 import com.microblink.blinkid.ux.camera.ImageAnalyzer
+import com.microblink.blinkid.ux.camera.TimeoutCause
 import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
 import com.microblink.blinkid.ux.utils.ErrorReason
+import com.microblink.blinkid.ux.utils.UxPingletTracker
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.Default
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 import java.util.concurrent.atomic.AtomicBoolean
 
 private const val TAG = "BlinkIdAnalyzer"
@@ -111,14 +114,12 @@ class BlinkIdAnalyzer(
                                 MbLog.w(TAG) { "processing has been canceled" }
                             } else {
                                 sessionProcessResult.getOrNull()?.let { processResult ->
-                                    uxSettings.classFilter?.let {
-                                        if (!processResult.inputImageAnalysisResult.documentClassInfo.isEmpty()
-                                            && !it.classAllowed(
-                                                processResult.inputImageAnalysisResult.documentClassInfo
-                                            )
-                                        ) {
-                                            onErrorAnalysis(ErrorReason.ErrorDocumentClassFiltered)
-                                            return@runBlocking
+                                    uxSettings.classFilter?.let { classFilter ->
+                                        processResult.inputImageAnalysisResult.documentClassInfo?.let { documentClassInfo ->
+                                            if (!classFilter.classAllowed(documentClassInfo)) {
+                                                onErrorAnalysis(ErrorReason.ErrorDocumentClassFiltered)
+                                                return@runBlocking
+                                            }
                                         }
                                     }
 
@@ -132,6 +133,12 @@ class BlinkIdAnalyzer(
                                     if (events.any { it is ScanningUxEvent.UnparsableBarcode }) {
                                         // UnparsableBarcode is an internal analyzer signal. It should advance the
                                         // native session step, not be forwarded to UI as a user-facing event.
+                                        getSessionNumber()?.let { sessionNumber ->
+                                            UxPingletTracker.UxEvent.trackSimpleEvent(
+                                                UxPingletTracker.UxEvent.SimpleUxEventType.UnsupportedBarcodeTimeout,
+                                                sessionNumber
+                                            )
+                                        }
                                         resolveCurrentStepAndHandleStatus(
                                             session = session,
                                             processResult = processResult,
@@ -181,19 +188,37 @@ class BlinkIdAnalyzer(
         analysisPaused = false
     }
 
-    override fun timeoutAnalysis() {
-        MbLog.e(TAG) { "processing timeout occurred" }
-        onErrorAnalysis(ErrorReason.ErrorTimeoutExpired)
+    override fun timeoutAnalysis(cause: TimeoutCause) {
+        MbLog.e(TAG) { "processing timeout occurred: $cause" }
+
+        val timeoutEvent = when (cause) {
+            TimeoutCause.Step -> UxPingletTracker.UxEvent.SimpleUxEventType.StepTimeout
+            TimeoutCause.Inactivity -> UxPingletTracker.UxEvent.SimpleUxEventType.InactivityTimeout
+        }
+        getSessionNumber()?.let { sessionNumber ->
+            UxPingletTracker.UxEvent.trackSimpleEvent(timeoutEvent, sessionNumber)
+        }
+
+        onErrorAnalysis(
+            when (cause) {
+                TimeoutCause.Step -> ErrorReason.ErrorStepTimeoutExpired
+                TimeoutCause.Inactivity -> ErrorReason.ErrorInactivityTimeoutExpired
+            }
+        )
     }
 
-    override fun restartAnalysis() {
-        CoroutineScope(Default).launch {
-            session?.getOrNull()?.restartSession()
+    override suspend fun restartAnalysis() {
+        analysisPaused = true
+        try {
+            scanningUxTranslator.resetSession()
+            scanningDone.set(false)
+            resolvingCurrentStep.set(false)
+            withContext(Default) {
+                session?.getOrNull()?.restartSession()
+            }
+        } finally {
+            analysisPaused = false
         }
-        scanningUxTranslator.resetSession()
-        scanningDone.set(false)
-        resolvingCurrentStep.set(false)
-        analysisPaused = false
     }
 
     override fun cancel() {
@@ -269,9 +294,9 @@ class BlinkIdAnalyzer(
         pauseAnalysis()
 
         val sessionResult = session.getResult(
-            uxSettings.redactionSettingsResolver?.resolveRedactionSettings(
-                processResult.inputImageAnalysisResult.documentClassInfo
-            )
+            processResult.inputImageAnalysisResult.documentClassInfo?.let { documentClassInfo ->
+                uxSettings.redactionSettingsResolver?.resolveRedactionSettings(documentClassInfo)
+            }
         ).getOrThrow()
 
         scanningDoneHandler.onScanningFinished(sessionResult)
@@ -311,7 +336,9 @@ class BlinkIdAnalyzer(
                         MbLog.w(TAG) { "Failed to get last frame: $e" }
                     }.getOrNull()
                 },
-                triggerStepTimeout = { timeoutAnalysis() }
+                triggerStepTimeout = {
+                    timeoutAnalysis(TimeoutCause.Step)
+                }
             )
             try {
                 callback(handle)

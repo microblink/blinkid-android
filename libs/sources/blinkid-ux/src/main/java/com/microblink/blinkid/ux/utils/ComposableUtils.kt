@@ -47,6 +47,15 @@ sealed class HelpScreenResources(
             R.drawable.mb_blinkid_help_barcode_id_page_three,
         ),
     )
+
+    data object MrzDocument : HelpScreenResources(
+        onboardingImage = R.drawable.mb_blinkid_onboarding_mrz,
+        helpPageImages = listOf(
+            R.drawable.mb_blinkid_help_mrz_page_one,
+            R.drawable.mb_blinkid_help_mrz_page_two,
+            R.drawable.mb_blinkid_help_mrz_page_three,
+        ),
+    )
 }
 
 @Composable
@@ -68,6 +77,12 @@ fun fillHelpScreens(extractionMode: BlinkIdExtractionMode): HelpScreens {
             Pair(
                 HelpScreenResources.BarcodeId,
                 BlinkIdTheme.sdkStrings.blinkIdBarcodeIdHelpDialogsStrings
+            )
+
+        BlinkIdExtractionMode.DocumentWithMrz ->
+            Pair(
+                HelpScreenResources.MrzDocument,
+                BlinkIdTheme.sdkStrings.blinkIdMrzHelpDialogsStrings
             )
     }
 

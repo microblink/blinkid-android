@@ -155,15 +155,15 @@ fun BlinkIdSampleResultScreen(
                             children = listOf(
                                 SampleResult(
                                     title = "Country",
-                                    value = result.documentClassInfo.country?.name
+                                    value = result.documentClassInfo?.country?.rawValue
                                 ),
                                 SampleResult(
                                     title = "Region",
-                                    value = result.documentClassInfo.region?.name
+                                    value = result.documentClassInfo?.region?.rawValue
                                 ),
                                 SampleResult(
                                     title = "Type",
-                                    value = result.documentClassInfo.type?.name
+                                    value = result.documentClassInfo?.documentType?.rawValue
                                 ),
                             )
                         ),
