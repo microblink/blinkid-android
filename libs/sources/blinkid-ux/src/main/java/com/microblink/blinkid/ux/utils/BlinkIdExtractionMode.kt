@@ -11,7 +11,9 @@ enum class BlinkIdExtractionMode {
 
     BarcodeOnly,
 
-    DocumentWithBarcode
+    DocumentWithBarcode,
+
+    DocumentWithMrz
 }
 
 /**
@@ -23,6 +25,7 @@ fun BlinkIdSessionSettings.toBlinkIdExtractionMode(): BlinkIdExtractionMode {
     val barcodeEnabled = scanningSettings.barcodeModule != null
     val barcodePresenceMandatory = scanningSettings.barcodeModule?.presenceMandatory == true
     val mrzEnabled = scanningSettings.mrzModule != null
+    val mrzPresenceMandatory = scanningSettings.mrzModule?.presenceMandatory == true
     val vizEnabled = scanningSettings.vizModule != null
     val isSingleSideScan = scanningMode == ScanningMode.Single
 
@@ -30,6 +33,9 @@ fun BlinkIdSessionSettings.toBlinkIdExtractionMode(): BlinkIdExtractionMode {
     return when {
         documentCaptureEnabled && barcodeEnabled && barcodePresenceMandatory && isSingleSideScan && !mrzEnabled && !vizEnabled ->
             BlinkIdExtractionMode.DocumentWithBarcode
+
+        documentCaptureEnabled && mrzEnabled && mrzPresenceMandatory && isSingleSideScan && !vizEnabled && !barcodeEnabled ->
+            BlinkIdExtractionMode.DocumentWithMrz
 
         !documentCaptureEnabled && barcodeEnabled && !mrzEnabled && !vizEnabled ->
             BlinkIdExtractionMode.BarcodeOnly
