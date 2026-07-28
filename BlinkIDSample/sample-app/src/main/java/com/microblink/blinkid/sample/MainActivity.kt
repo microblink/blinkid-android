@@ -17,10 +17,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.microblink.blinkid.sample.navigation.Destination
+import com.microblink.blinkid.sample.result.BlinkIdResultHolder
 import com.microblink.blinkid.sample.result.BlinkIdSampleResultScreen
 import com.microblink.blinkid.sample.ui.MainScreen
+import com.microblink.blinkid.sample.ui.SettingsScreen
 import com.microblink.blinkid.sample.ui.theme.BlinkIDTheme
-import com.microblink.blinkid.sample.result.BlinkIdResultHolder
 import com.microblink.blinkid.sample.utils.MainViewModel
 import com.microblink.blinkid.ux.BlinkIdCameraScanningScreen
 import kotlinx.coroutines.launch
@@ -61,12 +62,24 @@ class MainActivity : ComponentActivity() {
                 }
 
                 MainScreen(
-                    viewModel,
+                    viewModel = viewModel,
                     launchDocumentScanning = {
                         viewModel.viewModelScope.launch {
-                            viewModel.initializeLocalSdk(context)
-                            navController.navigate(Destination.DocumentScanning)
+                            if (viewModel.initializeLocalSdk(context)) {
+                                navController.navigate(Destination.DocumentScanning)
+                            }
                         }
+                    },
+                    openSettings = {
+                        navController.navigate(Destination.Settings)
+                    }
+                )
+            }
+            composable<Destination.Settings> {
+                SettingsScreen(
+                    viewModel = viewModel,
+                    onNavigateUp = {
+                        navController.popBackStack()
                     }
                 )
             }

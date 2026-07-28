@@ -42,6 +42,8 @@ kotlin {
 dependencies {
     implementation(project(":lib-common"))
     implementation(libs.blinkid.ux)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.material.icons.core)
     // use following set of dependencies if you want to use blinkid-ux library module
     // instead of maven dependency, and remove implementation(libs.blinkid.ux) dependency
 //     implementation(project(":blinkid-ux"))

@@ -3,4 +3,19 @@
 
     <string name="btn_launch" translatable="false">Launch</string>
     <string name="btn_cancel" translatable="false">Cancel</string>
+
+    <string name="settings" translatable="false">Settings</string>
+    <string name="settings_resources_ota" translatable="false">Resources and OTA</string>
+    <string name="settings_download_resources" translatable="false">Download resources</string>
+    <string name="settings_download_resources_desc" translatable="false">Download base recognition resources over the network instead of using bundled assets</string>
+    <string name="settings_update_ota" translatable="false">Update OTA resources</string>
+    <string name="settings_update_ota_desc" translatable="false">Check for and download newer over-the-air document resources</string>
+    <string name="settings_fail_if_ota_fails" translatable="false">Fail if OTA fails</string>
+    <string name="settings_fail_if_ota_fails_desc" translatable="false">Abort SDK initialization when an OTA update check or download fails</string>
+    <string name="settings_ota_service_url" translatable="false">OTA service URL</string>
+    <string name="settings_ota_service_url_desc" translatable="false">Base URL used to check for and download OTA resources</string>
+    <string name="settings_done" translatable="false">Done</string>
+    <string name="settings_cancel" translatable="false">Cancel</string>
+    <string name="cd_settings" translatable="false">Open settings</string>
+    <string name="cd_navigate_up" translatable="false">Navigate up</string>
 </resources>

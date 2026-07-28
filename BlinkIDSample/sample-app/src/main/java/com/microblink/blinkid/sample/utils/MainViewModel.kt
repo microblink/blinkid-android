@@ -2,7 +2,6 @@ package com.microblink.blinkid.sample.utils
 
 import android.content.Context
 import android.util.Log
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -14,6 +13,8 @@ import com.microblink.blinkid.core.session.BlinkIdScanningResult
 import com.microblink.blinkid.core.session.BlinkIdSessionSettings
 import com.microblink.blinkid.core.session.InputImageSource
 import com.microblink.blinkid.core.session.ScanningMode
+import com.microblink.blinkid.core.settings.OtaResourcesConfig
+import com.microblink.blinkid.core.settings.ResourcesConfig
 import com.microblink.blinkid.core.settings.ScanningSettings
 import com.microblink.blinkid.core.settings.scanning.BarcodeModuleSettings
 import com.microblink.blinkid.core.settings.scanning.DocumentCaptureModuleSettings
@@ -30,9 +31,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds
-import kotlin.time.Duration.Companion.seconds
 
 private const val TAG = "MainViewModel"
 
@@ -62,6 +61,36 @@ class MainViewModel : ViewModel() {
     )
 
     val cameraSettings = CameraSettings()
+
+    // Resources / OTA settings applied on the next SDK initialization.
+    // Defaults match ResourcesConfig() / OtaResourcesConfig().
+    var downloadResources by mutableStateOf(true)
+        private set
+
+    var updateOtaResources by mutableStateOf(true)
+        private set
+
+    var failIfOtaFails by mutableStateOf(false)
+        private set
+
+    var otaServiceUrl by mutableStateOf(OtaResourcesConfig.defaultOtaDownloadUrl)
+        private set
+
+    fun updateDownloadResources(enabled: Boolean) {
+        downloadResources = enabled
+    }
+
+    fun updateOtaResourcesEnabled(enabled: Boolean) {
+        updateOtaResources = enabled
+    }
+
+    fun updateFailIfOtaFails(enabled: Boolean) {
+        failIfOtaFails = enabled
+    }
+
+    fun updateOtaServiceUrl(url: String) {
+        otaServiceUrl = url.trim()
+    }
 
     var localSdk: BlinkIdSdk? = null
         private set
@@ -127,32 +156,48 @@ class MainViewModel : ViewModel() {
             */
         }
 
-    suspend fun initializeLocalSdk(context: Context) {
+    /**
+     * Initializes the SDK with the current resources / OTA settings.
+     *
+     * @return `true` when initialization succeeds and [localSdk] is ready to use.
+     */
+    suspend fun initializeLocalSdk(context: Context): Boolean {
         _mainState.update {
             it.copy(displayLoading = true)
         }
         val maybeInstance = BlinkIdSdk.initializeSdk(
             context = context,
             BlinkIdSdkSettings(
-                licenseKey = licenseKey
+                licenseKey = licenseKey,
+                resourcesConfig = ResourcesConfig(
+                    download = downloadResources
+                ),
+                otaResourcesConfig = OtaResourcesConfig(
+                    checkForUpdates = updateOtaResources,
+                    strict = failIfOtaFails,
+                    serviceUrl = otaServiceUrl
+                )
             )
         )
-        when {
+        val success = when {
             maybeInstance.isSuccess -> {
                 localSdk = maybeInstance.getOrNull()
+                true
             }
 
-            maybeInstance.isFailure -> {
+            else -> {
                 val exception = maybeInstance.exceptionOrNull()
                 Log.e(TAG, "Initialization failed", exception)
                 _mainState.update {
                     it.copy(error = "Initialization failed: ${exception?.message}")
                 }
+                false
             }
         }
         _mainState.update {
             it.copy(displayLoading = false)
         }
+        return success
     }
 
     fun onScanningResultAvailable(result: BlinkIdScanningResult) {
