@@ -6,9 +6,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,17 +24,33 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.microblink.blinkid.sample.R
+import com.microblink.blinkid.sample.ui.components.BlinkIdTopAppBar
 import com.microblink.blinkid.sample.ui.theme.Cobalt
 import com.microblink.blinkid.sample.utils.MainViewModel
 
 @Composable
 fun MainScreen(
     viewModel: MainViewModel,
-    launchDocumentScanning: () -> Unit
+    launchDocumentScanning: () -> Unit,
+    openSettings: () -> Unit
 ) {
     val mainState by viewModel.mainState.collectAsStateWithLifecycle()
 
-    Scaffold { padding ->
+    Scaffold(
+        topBar = {
+            BlinkIdTopAppBar(
+                title = stringResource(R.string.app_name),
+                actions = {
+                    IconButton(onClick = openSettings) {
+                        Icon(
+                            imageVector = Icons.Filled.Settings,
+                            contentDescription = stringResource(R.string.cd_settings)
+                        )
+                    }
+                }
+            )
+        }
+    ) { padding ->
         Box(
             modifier = Modifier
                 .padding(padding)
@@ -38,9 +58,8 @@ fun MainScreen(
         ) {
             Button(
                 modifier = Modifier.align(Alignment.Center),
-                onClick = {
-                    launchDocumentScanning()
-                }) {
+                onClick = launchDocumentScanning
+            ) {
                 Text(text = stringResource(R.string.btn_launch))
             }
         }
