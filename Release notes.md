@@ -111,7 +111,8 @@
 ### New OTA (over-the-air) feature
 - We've introduced OTA support to ensure your application can scan the latest documents without requiring a full SDK update; to support this, `BlinkIdSdkSettings` has been refactored to separate base resources from OTA resources
 - Resource-related variables in `BlinkIdSdkSettings` have been moved into two new configuration classes: `ResourcesConfig` and `OtaResourcesConfig`
-  OLD:
+
+OLD:
 ```kotlin
 public data class BlinkIdSdkSettings(
     val licenseKey: String,
@@ -123,6 +124,7 @@ public data class BlinkIdSdkSettings(
     val microblinkProxyUrl: String? = null
 )
 ```
+
 NEW - resource related variables have been moved to `ResourcesConfig`:
 ```kotlin
 public data class BlinkIdSdkSettings(
@@ -140,7 +142,8 @@ public data class ResourcesConfig(
     val requestTimeout: RequestTimeout = RequestTimeout.DEFAULT
 )
 ```
-- Understanding `OtaResourcesConfig`: this behaves similarly to `ResourcesConfig`, but introduces a `strict` parameter and update checks.
+
+Understanding `OtaResourcesConfig`: this behaves similarly to `ResourcesConfig`, but introduces a `strict` parameter and update checks.
 ```kotlin
 public data class OtaResourcesConfig(
     val checkForUpdates: Boolean = true,
