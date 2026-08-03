@@ -177,12 +177,12 @@ android {
 
 The SDK supports downloaded and bundled resources, plus over-the-air (OTA) resource updates. Resource behavior is configured on `BlinkIdSdkSettings` through:
 
-- `resourcesConfig` — a `ResourcesConfig` for base machine-learning resources
-- `otaResourcesConfig` — an `OtaResourcesConfig` for over-the-air resource updates
+- `resourcesConfig` - a `ResourcesConfig` for base machine-learning resources
+- `otaResourcesConfig` - an `OtaResourcesConfig` for over-the-air resource updates
 
 ## <a name="configuring-resources"></a> Configuring resources
 
-Base resource downloads and local storage are configured with [`ResourcesConfig`](https://microblink.github.io/blinkid-android/blinkid-core/com.microblink.blinkid.core.settings/-resources-config/index.html). See the KDoc for the full property reference.
+Base resource downloads and local storage are configured with `ResourcesConfig`. See the [KDoc](https://microblink.github.io/blinkid-android/blinkid-core/com.microblink.blinkid.core.settings/-resources-config/index.html) for the full property reference.
 
 ```kotlin
 val settings = BlinkIdSdkSettings(
@@ -199,7 +199,7 @@ val settings = BlinkIdSdkSettings(
 
 ## <a name="pre-bundling-resources"></a> Pre-bundling the SDK resources into your app
 
-If you want to reduce the SDK startup time and network traffic, you have the option to pre-bundle the SDK resources as assets into your application. All required resources are located in [libs/resources/assets/microblink/blinkid](https://github.com/microblink/blinkid-android/tree/master/libs/resources/assets/microblink/blinkid) folder. You can bundle it to your application by including the mentioned folder to application's assets. Copy the mentioned `libs/resources/assets/microblink` directory to `src/main/assets` folder of your application module (or appropriate folder for desired app flavor).
+If you want to reduce the SDK startup time and network traffic, you have the option to pre-bundle the SDK resources as assets into your application. All required resources are located in [`libs/resources/assets/microblink/blinkid`](https://github.com/microblink/blinkid-android/tree/master/libs/resources/assets/microblink/blinkid) folder. You can bundle it to your application by including the mentioned folder to application's assets. Copy the mentioned `libs/resources/assets/microblink` directory to `src/main/assets` folder of your application module (or appropriate folder for desired app flavor).
 
 ```kotlin
 BlinkIdSdkSettings(
@@ -207,7 +207,6 @@ BlinkIdSdkSettings(
     licensee = "licensee", // optional
     resourcesConfig = ResourcesConfig(
         download = false,
-        // default assets path: "microblink/blinkid"
         localFolder = "microblink/blinkid",
         requestTimeout = RequestTimeout.DEFAULT
     ),
@@ -217,9 +216,9 @@ BlinkIdSdkSettings(
 
 ## <a name="ota-resources"></a> Over-the-Air (OTA) resources
 
-In addition to the base resources, the SDK can keep its machine-learning resources up to date **over the air (OTA)**. OTA resources are managed separately from the base resources when update checks are enabled: they are downloaded from a dedicated host and cached in their own folder, controlled through [`OtaResourcesConfig`](https://microblink.github.io/blinkid-android/blinkid-core/com.microblink.blinkid.core.settings/-ota-resources-config/index.html) on `BlinkIdSdkSettings.otaResourcesConfig`. See the KDoc for the full property reference.
+In addition to the base resources, the SDK can keep additional resources up to date **over the air (OTA)**. OTA resources are managed separately from the base resources when update checks are enabled: they are downloaded from a dedicated host and cached in their own folder, controlled through `OtaResourcesConfig` on `BlinkIdSdkSettings.otaResourcesConfig`. See the [KDoc](https://microblink.github.io/blinkid-android/blinkid-core/com.microblink.blinkid.core.settings/-ota-resources-config/index.html) for the full property reference.
 
-OTA is **enabled by default** — the default `OtaResourcesConfig` checks for updates on initialization and falls back gracefully if an update can't be downloaded (`strict = false`).
+OTA is **enabled by default** - the default `OtaResourcesConfig` checks for updates on initialization and falls back gracefully if an update can't be downloaded (`strict = false`).
 
 Default configuration (equivalent to omitting `otaResourcesConfig`):
 
@@ -252,29 +251,29 @@ val settings = BlinkIdSdkSettings(
 ```
 
 > **Notes**
-> - **`OtaResourcesConfig.localFolder` is used only when `checkForUpdates` is `true`.** In that case it is a cache folder under the application files directory.
-> - **When `checkForUpdates` is `false`, the OTA resources path is the same as the base resources path** (`ResourcesConfig.localFolder` — either the downloaded cache folder or the assets path when `download` is `false`). `OtaResourcesConfig.localFolder` is not used.
+> - **`OtaResourcesConfig.localFolder` is used when `checkForUpdates` is `true`.**
+> - **When `checkForUpdates` is `false`, the OTA resources path is the same as the base resources path** (`ResourcesConfig.localFolder` - either the downloaded cache folder or the assets path when `download` is `false`). `OtaResourcesConfig.localFolder` is not used.
 > - **Do not combine pre-bundled OTA with `checkForUpdates = true`.** Pre-bundling and live OTA update checks are mutually exclusive: use update checks for network-managed OTA, or turn updates off and rely on the base resources location.
 > - **`strict = true` turns a failed OTA download into an initialization failure.** Handle that in your `BlinkIdSdk.initializeSdk` result path.
 > - **Base and OTA resources use different hosts and cache folders when updates are enabled.** Base resources default to `https://models.cdn.microblink.com/resources` in `microblink/blinkid`; OTA resources default to `https://blinkid-ota.microblink.com` in `microblink/blinkid/ota`. Keep them separate to avoid collisions.
 
 ## <a name="clearing-cached-resources"></a> Clearing cached resources
 
-To shut the SDK down and remove cached base **and** OTA resources from disk (for example on logout or “delete my data”), call:
+To shut the SDK down and remove cached base and OTA resources from disk, call:
 
 ```kotlin
-// blocking — do not call on the main/UI thread
+// blocking - do not call on the main/UI thread
 sdkInstance.closeAndDeleteCachedAssets()
 ```
 
 If you only want to release the SDK but keep cached resources for faster re-init later:
 
 ```kotlin
-// blocking — do not call on the main/UI thread
+// blocking - do not call on the main/UI thread
 sdkInstance.close()
 ```
 
-After `closeAndDeleteCachedAssets()`, the next initialization behaves like a first run and re-downloads required resources (subject to your `download` / `checkForUpdates` settings).
+After `closeAndDeleteCachedAssets()`, the next initialization behaves like a first run and re-downloads required resources (depending on `download` / `checkForUpdates` settings).
 
 # <a name="activity-vs-compose"></a> Choosing between Composable and default scanning activity
 
