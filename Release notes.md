@@ -150,17 +150,14 @@ public data class OtaResourcesConfig(
     val requestTimeout: RequestTimeout = RequestTimeout.DEFAULT
 )
 ```
-- `strict` - when set to true, the SDK is forced to fetch the latest OTA resources before proceeding, ensuring support for the newest documents
-- Other settings mirror the behavior of standard base resources
-  Important to note:
-- **First-run downloads are unavoidable for OTA** when resources are missing locally - `checkForUpdates: false` only suppresses *update* checks, not the initial fetch.
-- **`strict = true` changes init to a throwing failure path.** Make sure your initialization error handling accounts for OTA download failures if you enable it.
-- **Two distinct hosts:** base resources default to `https://models.cdn.microblink.com/resources`; OTA resources default to `https://blinkid-ota.microblink.com`. Don't cross-wire the service URLs.
-- **Distinct cache folders:** `blinkid` (base) vs `ota` (OTA). Keep them separate to avoid collisions.
-- OTA resources can be prebundled just like base resources to avoid additional downloads while using SDK:
-  1. Use script from [OTA resources downloader repository](https://github.com/microblink/ota-resources-downloader) to download OTA resources - recognizer version for this release is **24.0.4**
-  2. Bundle downloaded OTA resources to the *assets* directory of your Android app build (e.g. `assets/microblink/blinkid/ota`)
-  3. Set `checkForUpdates` to `false` and `localFolder` to match the location of your bundled OTA resources
+- `strict` - when set to `true` (and `checkForUpdates` is `true`), SDK initialization fails if the OTA update cannot be downloaded; when `false`, initialization continues and the SDK falls back to cached/bundled resources
+- Important to note:
+  - **`OtaResourcesConfig.localFolder` is used only when `checkForUpdates` is `true`.** Updated OTA resources are then downloaded and cached under that folder (default: `microblink/blinkid/ota`).
+  - **When `checkForUpdates` is `false`, no OTA update check is performed.** The OTA resources path is the same as the base resources path (`ResourcesConfig.localFolder` — cache or assets, depending on `ResourcesConfig.download`). `OtaResourcesConfig.localFolder` is not used.
+  - **Pre-bundling and live OTA update checks are mutually exclusive.** Use `checkForUpdates = true` for network-managed OTA, or `checkForUpdates = false` and rely on the base resources location.
+  - **`strict = true` changes init to a throwing failure path.** Make sure your initialization error handling accounts for OTA download failures if you enable it.
+  - **Two distinct hosts when updates are enabled:** base resources default to `https://models.cdn.microblink.com/resources`; OTA resources default to `https://blinkid-ota.microblink.com`. Don't cross-wire the service URLs.
+  - **Distinct cache folders when updates are enabled:** `microblink/blinkid` (base) vs `microblink/blinkid/ota` (OTA). Keep them separate to avoid collisions.
 
 ### Other platform features
 - Beep sound which is activated on a successful side-scan and document scan has been added
