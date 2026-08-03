@@ -152,7 +152,7 @@ public data class OtaResourcesConfig(
 ```
 - `strict` - when set to `true` (and `checkForUpdates` is `true`), SDK initialization fails if the OTA update cannot be downloaded; when `false`, initialization continues and the SDK falls back to cached/bundled resources
 - Important to note:
-  - **`OtaResourcesConfig.localFolder` is used only when `checkForUpdates` is `true`.** Updated OTA resources are then downloaded and cached under that folder (default: `microblink/blinkid/ota`).
+  - **`OtaResourcesConfig.localFolder` is used when `checkForUpdates` is `true`.** Updated OTA resources are then downloaded and cached under that folder (default: `microblink/blinkid/ota`).
   - **When `checkForUpdates` is `false`, no OTA update check is performed.** The OTA resources path is the same as the base resources path (`ResourcesConfig.localFolder` — cache or assets, depending on `ResourcesConfig.download`). `OtaResourcesConfig.localFolder` is not used.
   - **Pre-bundling and live OTA update checks are mutually exclusive.** Use `checkForUpdates = true` for network-managed OTA, or `checkForUpdates = false` and rely on the base resources location.
   - **`strict = true` changes init to a throwing failure path.** Make sure your initialization error handling accounts for OTA download failures if you enable it.
