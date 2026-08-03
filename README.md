@@ -204,13 +204,12 @@ If you want to reduce the SDK startup time and network traffic, you have the opt
 ```kotlin
 BlinkIdSdkSettings(
     licenseKey = "license-key",
-    licensee = "licensee", // optional
+    ...
     resourcesConfig = ResourcesConfig(
         download = false,
         localFolder = "microblink/blinkid",
         requestTimeout = RequestTimeout.DEFAULT
-    ),
-    microblinkProxyUrl = null // optional; must be allowed by license
+    )
 )
 ```
 
