@@ -182,14 +182,7 @@ The SDK supports downloaded and bundled resources, plus over-the-air (OTA) resou
 
 ## <a name="configuring-resources"></a> Configuring resources
 
-**`ResourcesConfig`**
-
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `download` | `Boolean` | `true` | Whether resources should be downloaded and cached on SDK initialization. If `false`, required resources must be packaged in the application's assets. |
-| `serviceUrl` | `String` | `https://models.cdn.microblink.com/resources` | URL where resources are hosted when `download` is enabled. |
-| `localFolder` | `String` | `microblink/blinkid` | When downloading, the folder name within the application cache where resources are cached. When downloading is disabled, the path in the application's assets where the resources can be found. |
-| `requestTimeout` | `RequestTimeout` | `RequestTimeout.DEFAULT` | Timeout settings for resource downloads. |
+Base resource downloads and local storage are configured with [`ResourcesConfig`](https://microblink.github.io/blinkid-android/blinkid-core/com.microblink.blinkid.core.settings/-resources-config/index.html). See the KDoc for the full property reference.
 
 ```kotlin
 val settings = BlinkIdSdkSettings(
@@ -224,19 +217,9 @@ BlinkIdSdkSettings(
 
 ## <a name="ota-resources"></a> Over-the-Air (OTA) resources
 
-In addition to the base resources, the SDK can keep its machine-learning resources up to date **over the air (OTA)**. OTA resources are managed separately from the base resources when update checks are enabled: they are downloaded from a dedicated host and cached in their own folder, controlled through `OtaResourcesConfig` on `BlinkIdSdkSettings.otaResourcesConfig`.
+In addition to the base resources, the SDK can keep its machine-learning resources up to date **over the air (OTA)**. OTA resources are managed separately from the base resources when update checks are enabled: they are downloaded from a dedicated host and cached in their own folder, controlled through [`OtaResourcesConfig`](https://microblink.github.io/blinkid-android/blinkid-core/com.microblink.blinkid.core.settings/-ota-resources-config/index.html) on `BlinkIdSdkSettings.otaResourcesConfig`. See the KDoc for the full property reference.
 
 OTA is **enabled by default** — the default `OtaResourcesConfig` checks for updates on initialization and falls back gracefully if an update can't be downloaded (`strict = false`).
-
-**`OtaResourcesConfig`**
-
-| Property | Type | Default | Description |
-|----------|------|---------|-------------|
-| `checkForUpdates` | `Boolean` | `true` | Whether the SDK checks for and downloads updated OTA resources on init. When `false`, no OTA update check is performed and cached/bundled resources are used as-is. |
-| `strict` | `Boolean` | `false` | Controls how the SDK handles a failed OTA update download during initialization. Only applied when `checkForUpdates` is `true`. When `true`, SDK initialization fails if the OTA update fails. When `false`, initialization continues and the SDK falls back to the cached/bundled resources. |
-| `serviceUrl` | `String` | `https://blinkid-ota.microblink.com` | URL of the OTA versions/download service used when `checkForUpdates` is `true`. |
-| `localFolder` | `String` | `microblink/blinkid/ota` | Folder name where updated OTA resources are downloaded and cached when `checkForUpdates` is `true`. |
-| `requestTimeout` | `RequestTimeout` | `RequestTimeout.DEFAULT` | Timeout settings for OTA resource downloads. |
 
 Default configuration (equivalent to omitting `otaResourcesConfig`):
 
