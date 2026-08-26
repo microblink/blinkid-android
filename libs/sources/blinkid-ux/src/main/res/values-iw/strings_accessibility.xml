@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">יציאה מסריקה</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">כיבוי פנס</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">הפעלת פנס</string>
-  <string name="mb_blinkid_accessibility_next_page">העמוד הבא</string>
-  <string name="mb_blinkid_accessibility_previous_page">העמוד הקודם</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">הצגת מסכי עזרה</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">הצלחה! המסמך נסרק</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">הצלחה! הצד הקדמי נסרק</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">כיבוי פנס</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">הדלקת פנס</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">יציאה מסריקה</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">כיבוי פנס</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">הפעלת פנס</string>
+    <string name="mb_blinkid_accessibility_next_page">העמוד הבא</string>
+    <string name="mb_blinkid_accessibility_previous_page">העמוד הקודם</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">הצגת מסכי עזרה</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">הצלחנו! חזית הכרטיס נסרקה</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">הצלחנו! הכרטיס נסרק</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">הצלחה! המסמך נסרק</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">הצלחה! הצד הקדמי נסרק</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">כיבוי פנס</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">הדלקת פנס</string>
 </resources>

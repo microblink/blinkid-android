@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">الخروج من المسح</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">إيقاف تشغيل المصباح اليدوي</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">تشغيل المصباح اليدوي</string>
-  <string name="mb_blinkid_accessibility_next_page">الصفحة التالية</string>
-  <string name="mb_blinkid_accessibility_previous_page">الصفحة السابقة</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">عرض شاشات المساعدة</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">نجحت العملية! تم مسح المستند ضوئياً</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">نجحت العملية! تم مسح الجانب الأمامي ضوئياً</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">إيقاف تشغيل الكشاف</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">تشغيل الكشاف</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">الخروج من المسح</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">إيقاف تشغيل المصباح اليدوي</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">تشغيل المصباح اليدوي</string>
+    <string name="mb_blinkid_accessibility_next_page">الصفحة التالية</string>
+    <string name="mb_blinkid_accessibility_previous_page">الصفحة السابقة</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">عرض شاشات المساعدة</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">تم بنجاح! تم مسح رقم البطاقة ضوئياً.</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">تم بنجاح! تم مسح البطاقة ضوئياً</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">نجحت العملية! تم مسح المستند ضوئياً</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">نجحت العملية! تم مسح الجانب الأمامي ضوئياً</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">إيقاف تشغيل الكشاف</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">تشغيل الكشاف</string>
 </resources>

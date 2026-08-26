@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Требуется разрешение на доступ к камере.</string>
-  <string name="mb_blinkid_close">Закрыть</string>
-  <string name="mb_blinkid_dialog_back_button">Назад</string>
-  <string name="mb_blinkid_dialog_done_button">Готово</string>
-  <string name="mb_blinkid_dialog_next_button">Далее</string>
-  <string name="mb_blinkid_dialog_skip_button">Пропустить</string>
-  <string name="mb_blinkid_enable_camera">Включить камеру</string>
-  <string name="mb_blinkid_enable_permission_help">Сейчас вы перейдете в раздел разрешений, где нужно будет дать приложению доступ к камере.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Предоставьте разрешение на доступ к камере в настройках.</string>
-  <string name="mb_blinkid_license_locked">Сканирование недоступно</string>
-  <string name="mb_blinkid_loading">Идет загрузка…</string>
-  <string name="mb_blinkid_move_closer">Сместитесь поближе</string>
-  <string name="mb_blinkid_move_farther">Сместитесь подальше</string>
-  <string name="mb_blinkid_need_help_tooltip">Нужна помощь?</string>
-  <string name="mb_blinkid_ok">OK</string>
-  <string name="mb_blinkid_retry">Попробовать еще</string>
-  <string name="mb_blinkid_warning">Внимание</string>
+    <string name="mb_blinkid_camera_permission_required">Требуется разрешение на доступ к камере.</string>
+    <string name="mb_blinkid_close">Закрыть</string>
+    <string name="mb_blinkid_dialog_back_button">Назад</string>
+    <string name="mb_blinkid_dialog_done_button">Готово</string>
+    <string name="mb_blinkid_dialog_next_button">Далее</string>
+    <string name="mb_blinkid_dialog_skip_button">Пропустить</string>
+    <string name="mb_blinkid_enable_camera">Включить камеру</string>
+    <string name="mb_blinkid_enable_permission_help">Сейчас вы перейдете в раздел разрешений, где нужно будет дать приложению доступ к камере.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Предоставьте разрешение на доступ к камере в настройках.</string>
+    <string name="mb_blinkid_license_locked">Сканирование недоступно</string>
+    <string name="mb_blinkid_loading">Идет загрузка…</string>
+    <string name="mb_blinkid_move_closer">Сместитесь поближе</string>
+    <string name="mb_blinkid_move_farther">Сместитесь подальше</string>
+    <string name="mb_blinkid_need_help_tooltip">Нужна помощь?</string>
+    <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_retry">Попробовать еще</string>
+    <string name="mb_blinkid_warning">Внимание</string>
 </resources>

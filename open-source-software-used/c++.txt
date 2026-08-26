@@ -4,7 +4,7 @@ SPDXID: SPDXRef-DOCUMENT
 DocumentName: //BlinkID:BlinkID
 Creator: Person: jenkins
 Creator: Tool: https//github.com/bazelbuild/rules_license/tools:write_sbom
-Created: 2026-07-27-14:13:59Z
+Created: 2026-08-26-13:04:29Z
 
 ##### Package: //BlinkID:BlinkID
 SPDXID: "@@concurrentqueue+//"
@@ -14,43 +14,43 @@ SPDXID: "@@concurrentqueue+//"
 
 SPDXID: "@@core-identity+//3rdparty/config_ex/ConfigEx"
   name: "ConfigEx"
-  versionInfo: "24.0.4"
+  versionInfo: "25.0.3"
   licenseDeclared: "MIT"
   downloadLocation: https://github.com/microblink/config_ex
 
 SPDXID: "@@core-identity+//3rdparty/err/Err"
   name: "Err"
-  versionInfo: "24.0.4"
+  versionInfo: "25.0.3"
   licenseDeclared: "BSL-1.0"
   downloadLocation: https://github.com/microblink/err
 
 SPDXID: "@@core-identity+//3rdparty/functionoid/Functionoid"
   name: "Functionoid"
-  versionInfo: "24.0.4"
+  versionInfo: "25.0.3"
   licenseDeclared: "BSL-1.0"
   downloadLocation: https://github.com/microblink/functionoid
 
 SPDXID: "@@core-identity+//3rdparty/hash-library/Hash"
   name: "Hash"
-  versionInfo: "24.0.4"
+  versionInfo: "25.0.3"
   licenseDeclared: "Zlib"
   downloadLocation: https://github.com/stbrumme/hash-library
 
 SPDXID: "@@core-identity+//3rdparty/mmap/MMap"
   name: "MMap"
-  versionInfo: "24.0.4"
+  versionInfo: "25.0.3"
   licenseDeclared: "BSL-1.0"
   downloadLocation: https://github.com/microblink/mmap
 
 SPDXID: "@@core-identity+//3rdparty/pimpl/pimpl"
   name: "pimpl"
-  versionInfo: "24.0.4"
+  versionInfo: "25.0.3"
   licenseDeclared: "BSD-2-Clause"
   downloadLocation: https://github.com/microblink/pimpl
 
 SPDXID: "@@core-identity+//3rdparty/sweater/sweater"
   name: "sweater"
-  versionInfo: "24.0.4"
+  versionInfo: "25.0.3"
   licenseDeclared: "MIT"
   downloadLocation: https://github.com/microblink/sweater
 

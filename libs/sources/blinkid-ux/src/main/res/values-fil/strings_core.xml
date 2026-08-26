@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Kinakailangan ang pahintulot ng camera.</string>
-  <string name="mb_blinkid_close">Isara</string>
-  <string name="mb_blinkid_dialog_back_button">Bumalik</string>
-  <string name="mb_blinkid_dialog_done_button">Tapos na</string>
-  <string name="mb_blinkid_dialog_next_button">Susunod</string>
-  <string name="mb_blinkid_dialog_skip_button">Laktawan</string>
-  <string name="mb_blinkid_enable_camera">I-enable ang camera</string>
-  <string name="mb_blinkid_enable_permission_help">Ililipat ka ngayon sa mga setting ng pahintulot kung saan mo bibigyan ng pahintulot ang app.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Mangyaring pahintulutan ang camera sa mga setting ng pahintulot ng app.</string>
-  <string name="mb_blinkid_license_locked">Hindi magagamit ang pag-scan</string>
-  <string name="mb_blinkid_loading">Naglo-load…</string>
-  <string name="mb_blinkid_move_closer">Ilapit pa</string>
-  <string name="mb_blinkid_move_farther">Ilayo pa</string>
-  <string name="mb_blinkid_need_help_tooltip">Kailangan ng tulong?</string>
-  <string name="mb_blinkid_ok">OK</string>
-  <string name="mb_blinkid_retry">Subukan ulit</string>
-  <string name="mb_blinkid_warning">Babala</string>
+    <string name="mb_blinkid_camera_permission_required">Kinakailangan ang pahintulot ng camera.</string>
+    <string name="mb_blinkid_close">Isara</string>
+    <string name="mb_blinkid_dialog_back_button">Bumalik</string>
+    <string name="mb_blinkid_dialog_done_button">Tapos na</string>
+    <string name="mb_blinkid_dialog_next_button">Susunod</string>
+    <string name="mb_blinkid_dialog_skip_button">Laktawan</string>
+    <string name="mb_blinkid_enable_camera">I-enable ang camera</string>
+    <string name="mb_blinkid_enable_permission_help">Ililipat ka ngayon sa mga setting ng pahintulot kung saan mo bibigyan ng pahintulot ang app.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Mangyaring pahintulutan ang camera sa mga setting ng pahintulot ng app.</string>
+    <string name="mb_blinkid_license_locked">Hindi magagamit ang pag-scan</string>
+    <string name="mb_blinkid_loading">Naglo-load…</string>
+    <string name="mb_blinkid_move_closer">Ilapit pa</string>
+    <string name="mb_blinkid_move_farther">Ilayo pa</string>
+    <string name="mb_blinkid_need_help_tooltip">Kailangan ng tulong?</string>
+    <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_retry">Subukan ulit</string>
+    <string name="mb_blinkid_warning">Babala</string>
 </resources>

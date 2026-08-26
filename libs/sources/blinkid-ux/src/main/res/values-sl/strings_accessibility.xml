@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Zapusti skeniranje</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Bliskavica izključena</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Bliskavica vključena</string>
-  <string name="mb_blinkid_accessibility_next_page">Naslednja stran</string>
-  <string name="mb_blinkid_accessibility_previous_page">Prejšnja stran</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Pokaži zaslone s pomočjo</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Uspelo! Dokument skeniran</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Uspelo! Skenirana sprednja stran</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Izklopi svetilko</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Vklopi svetilko</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Zapusti skeniranje</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Bliskavica izključena</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Bliskavica vključena</string>
+    <string name="mb_blinkid_accessibility_next_page">Naslednja stran</string>
+    <string name="mb_blinkid_accessibility_previous_page">Prejšnja stran</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Pokaži zaslone s pomočjo</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Uspelo! Stran s številko kartice je skenirana</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Uspelo! Kartica je skenirana</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Uspelo! Dokument skeniran</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Uspelo! Skenirana sprednja stran</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Izklopi svetilko</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Vklopi svetilko</string>
 </resources>

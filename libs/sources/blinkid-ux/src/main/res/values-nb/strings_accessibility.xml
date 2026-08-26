@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Avslutt skanning</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Lommelykt av</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Lommelykt på</string>
-  <string name="mb_blinkid_accessibility_next_page">Neste side</string>
-  <string name="mb_blinkid_accessibility_previous_page">Forrige side</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Vis hjelpskjermer</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Skanning av dokument vellykket!</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Skanning av forsiden vellykket!</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Slå av lommelykt</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Slå på lommelykt</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Avslutt skanning</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Lommelykt av</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Lommelykt på</string>
+    <string name="mb_blinkid_accessibility_next_page">Neste side</string>
+    <string name="mb_blinkid_accessibility_previous_page">Forrige side</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Vis hjelpskjermer</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Kortnummersiden er skannet</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Kortet er skannet</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Skanning av dokument vellykket!</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Skanning av forsiden vellykket!</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Slå av lommelykt</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Slå på lommelykt</string>
 </resources>

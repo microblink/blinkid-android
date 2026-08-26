@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">ออกจากการสแกน</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">ปิดไฟฉาย</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">เปิดไฟฉาย</string>
-  <string name="mb_blinkid_accessibility_next_page">หน้าต่อจากนี้</string>
-  <string name="mb_blinkid_accessibility_previous_page">หน้าก่อน</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">แสดงหน้าจอวิธีใช้</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">สำเร็จ! สแกนเอกสารแล้ว</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">สำเร็จ! สแกนด้านหน้าแล้ว</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">ปิดไฟฉาย</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">เปิดไฟฉาย</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">ออกจากการสแกน</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">ปิดไฟฉาย</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">เปิดไฟฉาย</string>
+    <string name="mb_blinkid_accessibility_next_page">หน้าต่อจากนี้</string>
+    <string name="mb_blinkid_accessibility_previous_page">หน้าก่อน</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">แสดงหน้าจอวิธีใช้</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">สแกนบัตรด้านที่มีหมายเลขสำเร็จ!</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">สแกนบัตรสำเร็จ!</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">สำเร็จ! สแกนเอกสารแล้ว</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">สำเร็จ! สแกนด้านหน้าแล้ว</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">ปิดไฟฉาย</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">เปิดไฟฉาย</string>
 </resources>

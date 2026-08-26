@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Kamerabehörighet krävs.</string>
-  <string name="mb_blinkid_close">Stäng</string>
-  <string name="mb_blinkid_dialog_back_button">Tillbaka</string>
-  <string name="mb_blinkid_dialog_done_button">Klart</string>
-  <string name="mb_blinkid_dialog_next_button">Nästa</string>
-  <string name="mb_blinkid_dialog_skip_button">Hoppa över</string>
-  <string name="mb_blinkid_enable_camera">Aktivera kamera</string>
-  <string name="mb_blinkid_enable_permission_help">Du tas nu till behörighetsinställningarna där du behöver ge appen kamerabehörighet.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Var god och ge kamerabehörighet i appens behörighetsinställningar.</string>
-  <string name="mb_blinkid_license_locked">Skanning ej tillgänglig</string>
-  <string name="mb_blinkid_loading">Läser in …</string>
-  <string name="mb_blinkid_move_closer">Flytta närmare</string>
-  <string name="mb_blinkid_move_farther">Flytta längre bort</string>
-  <string name="mb_blinkid_need_help_tooltip">Behöver du hjälp?</string>
-  <string name="mb_blinkid_ok">OK</string>
-  <string name="mb_blinkid_retry">Försök igen</string>
-  <string name="mb_blinkid_warning">Varning</string>
+    <string name="mb_blinkid_camera_permission_required">Kamerabehörighet krävs.</string>
+    <string name="mb_blinkid_close">Stäng</string>
+    <string name="mb_blinkid_dialog_back_button">Tillbaka</string>
+    <string name="mb_blinkid_dialog_done_button">Klart</string>
+    <string name="mb_blinkid_dialog_next_button">Nästa</string>
+    <string name="mb_blinkid_dialog_skip_button">Hoppa över</string>
+    <string name="mb_blinkid_enable_camera">Aktivera kamera</string>
+    <string name="mb_blinkid_enable_permission_help">Du tas nu till behörighetsinställningarna där du behöver ge appen kamerabehörighet.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Var god och ge kamerabehörighet i appens behörighetsinställningar.</string>
+    <string name="mb_blinkid_license_locked">Skanning ej tillgänglig</string>
+    <string name="mb_blinkid_loading">Läser in …</string>
+    <string name="mb_blinkid_move_closer">Flytta närmare</string>
+    <string name="mb_blinkid_move_farther">Flytta längre bort</string>
+    <string name="mb_blinkid_need_help_tooltip">Behöver du hjälp?</string>
+    <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_retry">Försök igen</string>
+    <string name="mb_blinkid_warning">Varning</string>
 </resources>

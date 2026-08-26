@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Cameratoegang is vereist.</string>
-  <string name="mb_blinkid_close">Sluiten</string>
-  <string name="mb_blinkid_dialog_back_button">Terug</string>
-  <string name="mb_blinkid_dialog_done_button">Gereed</string>
-  <string name="mb_blinkid_dialog_next_button">Volgende</string>
-  <string name="mb_blinkid_dialog_skip_button">Overslaan</string>
-  <string name="mb_blinkid_enable_camera">Camera inschakelen</string>
-  <string name="mb_blinkid_enable_permission_help">U wordt nu omgeleid naar de toegangsinstellingen waar u de app toegangsrechten tot de camera moet geven.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Geef alstublieft cameratoegang via de toegangsinstellingen van de app.</string>
-  <string name="mb_blinkid_license_locked">Scannen niet beschikbaar</string>
-  <string name="mb_blinkid_loading">Laden…</string>
-  <string name="mb_blinkid_move_closer">Beweeg dichterbij</string>
-  <string name="mb_blinkid_move_farther">Beweeg verder weg</string>
-  <string name="mb_blinkid_need_help_tooltip">Hulp nodig?</string>
-  <string name="mb_blinkid_ok">OK</string>
-  <string name="mb_blinkid_retry">Probeer opnieuw</string>
-  <string name="mb_blinkid_warning">Waarschuwing</string>
+    <string name="mb_blinkid_camera_permission_required">Cameratoegang is vereist.</string>
+    <string name="mb_blinkid_close">Sluiten</string>
+    <string name="mb_blinkid_dialog_back_button">Terug</string>
+    <string name="mb_blinkid_dialog_done_button">Gereed</string>
+    <string name="mb_blinkid_dialog_next_button">Volgende</string>
+    <string name="mb_blinkid_dialog_skip_button">Overslaan</string>
+    <string name="mb_blinkid_enable_camera">Camera inschakelen</string>
+    <string name="mb_blinkid_enable_permission_help">U wordt nu omgeleid naar de toegangsinstellingen waar u de app toegangsrechten tot de camera moet geven.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Geef alstublieft cameratoegang via de toegangsinstellingen van de app.</string>
+    <string name="mb_blinkid_license_locked">Scannen niet beschikbaar</string>
+    <string name="mb_blinkid_loading">Laden…</string>
+    <string name="mb_blinkid_move_closer">Beweeg dichterbij</string>
+    <string name="mb_blinkid_move_farther">Beweeg verder weg</string>
+    <string name="mb_blinkid_need_help_tooltip">Hulp nodig?</string>
+    <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_retry">Probeer opnieuw</string>
+    <string name="mb_blinkid_warning">Waarschuwing</string>
 </resources>

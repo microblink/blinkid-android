@@ -12,6 +12,7 @@ com.microblink.blinkid.core.ping.config
 com.microblink.blinkid.core.ping.pinglets
 com.microblink.blinkid.core.ping.util
 com.microblink.blinkid.core.resources
+com.microblink.blinkid.core.resources.ota.model
 com.microblink.blinkid.core.result
 com.microblink.blinkid.core.result.barcode
 com.microblink.blinkid.core.result.classinfo

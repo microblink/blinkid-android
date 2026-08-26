@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">離開掃描</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">關閉閃光燈</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">開啟閃光燈</string>
-  <string name="mb_blinkid_accessibility_next_page">下一頁</string>
-  <string name="mb_blinkid_accessibility_previous_page">前一頁</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">顯示幫助螢幕</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">成功！文件已掃描</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">成功！正面已掃描</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">關閉手電筒</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">打開手電筒</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">離開掃描</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">關閉閃光燈</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">開啟閃光燈</string>
+    <string name="mb_blinkid_accessibility_next_page">下一頁</string>
+    <string name="mb_blinkid_accessibility_previous_page">前一頁</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">顯示幫助螢幕</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">成功了！有卡號的一面已掃描。</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">成功了！卡片已掃描。</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">成功！文件已掃描</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">成功！正面已掃描</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">關閉手電筒</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">打開手電筒</string>
 </resources>

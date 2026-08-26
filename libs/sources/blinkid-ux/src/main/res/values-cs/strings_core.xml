@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Je vyžadováno povolení přístupu k fotoaparátu</string>
-  <string name="mb_blinkid_close">Zavřít</string>
-  <string name="mb_blinkid_dialog_back_button">Zpět</string>
-  <string name="mb_blinkid_dialog_done_button">Hotovo</string>
-  <string name="mb_blinkid_dialog_next_button">Další</string>
-  <string name="mb_blinkid_dialog_skip_button">Přeskočit</string>
-  <string name="mb_blinkid_enable_camera">Povolit přístup k fotoaparátu</string>
-  <string name="mb_blinkid_enable_permission_help">Nyní se zobrazí nastavení oprávnění, kde je nutné aplikaci povolit přístup k fotoaparátu.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Povolte prosím aplikaci přístup k fotoaparátu v nastavení oprávnění.</string>
-  <string name="mb_blinkid_license_locked">Skenování není k dispozici</string>
-  <string name="mb_blinkid_loading">Načítání…</string>
-  <string name="mb_blinkid_move_closer">Kousek blíž</string>
-  <string name="mb_blinkid_move_farther">Kousek dál</string>
-  <string name="mb_blinkid_need_help_tooltip">Potřebujete pomoct?</string>
-  <string name="mb_blinkid_ok">OK</string>
-  <string name="mb_blinkid_retry">Opakovat</string>
-  <string name="mb_blinkid_warning">Upozornění</string>
+    <string name="mb_blinkid_camera_permission_required">Je vyžadováno povolení přístupu k fotoaparátu</string>
+    <string name="mb_blinkid_close">Zavřít</string>
+    <string name="mb_blinkid_dialog_back_button">Zpět</string>
+    <string name="mb_blinkid_dialog_done_button">Hotovo</string>
+    <string name="mb_blinkid_dialog_next_button">Další</string>
+    <string name="mb_blinkid_dialog_skip_button">Přeskočit</string>
+    <string name="mb_blinkid_enable_camera">Povolit přístup k fotoaparátu</string>
+    <string name="mb_blinkid_enable_permission_help">Nyní se zobrazí nastavení oprávnění, kde je nutné aplikaci povolit přístup k fotoaparátu.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Povolte prosím aplikaci přístup k fotoaparátu v nastavení oprávnění.</string>
+    <string name="mb_blinkid_license_locked">Skenování není k dispozici</string>
+    <string name="mb_blinkid_loading">Načítání…</string>
+    <string name="mb_blinkid_move_closer">Kousek blíž</string>
+    <string name="mb_blinkid_move_farther">Kousek dál</string>
+    <string name="mb_blinkid_need_help_tooltip">Potřebujete pomoct?</string>
+    <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_retry">Opakovat</string>
+    <string name="mb_blinkid_warning">Upozornění</string>
 </resources>

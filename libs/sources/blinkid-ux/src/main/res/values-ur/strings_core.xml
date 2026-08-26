@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">کیمرہ کی اجازت درکار ہے۔</string>
-  <string name="mb_blinkid_close">بند کریں</string>
-  <string name="mb_blinkid_dialog_back_button">پیچھے</string>
-  <string name="mb_blinkid_dialog_done_button">ہو گیا</string>
-  <string name="mb_blinkid_dialog_next_button">اگلا</string>
-  <string name="mb_blinkid_dialog_skip_button">چھوڑ دیں</string>
-  <string name="mb_blinkid_enable_camera">کیمرہ فعال کریں</string>
-  <string name="mb_blinkid_enable_permission_help">اب آپ کو اجازتوں کی سیٹنگز پر لے جایا جائے گا جہاں آپ کو ایپ کو کیمرہ کی اجازت دینی ہوگی۔</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">براہ کرم ایپ کی اجازتوں کی سیٹنگز میں کیمرہ کی اجازت دیں۔</string>
-  <string name="mb_blinkid_license_locked">اسکیننگ دستیاب نہیں ہے</string>
-  <string name="mb_blinkid_loading">لوڈ ہو رہا ہے…</string>
-  <string name="mb_blinkid_move_closer">اور قریب جائیں</string>
-  <string name="mb_blinkid_move_farther">اور دور جائیں</string>
-  <string name="mb_blinkid_need_help_tooltip">مدد چاہیے؟</string>
-  <string name="mb_blinkid_ok">ٹھیک ہے</string>
-  <string name="mb_blinkid_retry">دوبارہ کوشش کریں</string>
-  <string name="mb_blinkid_warning">انتباہ</string>
+    <string name="mb_blinkid_camera_permission_required">کیمرہ کی اجازت درکار ہے۔</string>
+    <string name="mb_blinkid_close">بند کریں</string>
+    <string name="mb_blinkid_dialog_back_button">پیچھے</string>
+    <string name="mb_blinkid_dialog_done_button">ہو گیا</string>
+    <string name="mb_blinkid_dialog_next_button">اگلا</string>
+    <string name="mb_blinkid_dialog_skip_button">چھوڑ دیں</string>
+    <string name="mb_blinkid_enable_camera">کیمرہ فعال کریں</string>
+    <string name="mb_blinkid_enable_permission_help">اب آپ کو اجازتوں کی سیٹنگز پر لے جایا جائے گا جہاں آپ کو ایپ کو کیمرہ کی اجازت دینی ہوگی۔</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">براہ کرم ایپ کی اجازتوں کی سیٹنگز میں کیمرہ کی اجازت دیں۔</string>
+    <string name="mb_blinkid_license_locked">اسکیننگ دستیاب نہیں ہے</string>
+    <string name="mb_blinkid_loading">لوڈ ہو رہا ہے…</string>
+    <string name="mb_blinkid_move_closer">اور قریب جائیں</string>
+    <string name="mb_blinkid_move_farther">اور دور جائیں</string>
+    <string name="mb_blinkid_need_help_tooltip">مدد چاہیے؟</string>
+    <string name="mb_blinkid_ok">ٹھیک ہے</string>
+    <string name="mb_blinkid_retry">دوبارہ کوشش کریں</string>
+    <string name="mb_blinkid_warning">انتباہ</string>
 </resources>

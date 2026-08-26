@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Sair de digitalização</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Lanterna desligada</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Lanterna ligada</string>
-  <string name="mb_blinkid_accessibility_next_page">Página seguinte</string>
-  <string name="mb_blinkid_accessibility_previous_page">Página anterior</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Mostrar ecrãs de ajuda</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Documento digitalizado com sucesso!</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Lado da frente digitalizado com sucesso!</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Desligar lanterna</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Ligar lanterna</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Sair de digitalização</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Lanterna desligada</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Lanterna ligada</string>
+    <string name="mb_blinkid_accessibility_next_page">Página seguinte</string>
+    <string name="mb_blinkid_accessibility_previous_page">Página anterior</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Mostrar ecrãs de ajuda</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Sucesso! Número do cartão digitalizado</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Sucesso! Cartão digitalizado</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Documento digitalizado com sucesso!</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Lado da frente digitalizado com sucesso!</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Desligar lanterna</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Ligar lanterna</string>
 </resources>

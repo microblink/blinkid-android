@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Acha kuskani</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Tochi imezimwa</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Tochi imewashwa</string>
-  <string name="mb_blinkid_accessibility_next_page">Ukurasa unaofuata</string>
-  <string name="mb_blinkid_accessibility_previous_page">Ukurasa uliotangulia</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Onyesha skrini za usaidizi</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Imemaliza! Hati imeskaniwa</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Imemaliza! Upande wa mbele umeskaniwa</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Zima tochi</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Washa tochi</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Acha kuskani</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Tochi imezimwa</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Tochi imewashwa</string>
+    <string name="mb_blinkid_accessibility_next_page">Ukurasa unaofuata</string>
+    <string name="mb_blinkid_accessibility_previous_page">Ukurasa uliotangulia</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Onyesha skrini za usaidizi</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Imemaliza! Upande wa namba ya kadi umeskaniwa</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Imemaliza! Kadi imeskaniwa</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Imemaliza! Hati imeskaniwa</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Imemaliza! Upande wa mbele umeskaniwa</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Zima tochi</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Washa tochi</string>
 </resources>

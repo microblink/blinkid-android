@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Ieșiți din scanare</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Lanterna stinsă</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Lanterna aprinsă</string>
-  <string name="mb_blinkid_accessibility_next_page">Pagina următoare</string>
-  <string name="mb_blinkid_accessibility_previous_page">Pagina anterioară</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Afișați ecranele de ajutor</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Excelent! Documentul a fost scanat</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Excelent! Partea din față a fost scanată</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Opriți lanterna</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Porniți lanterna</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Ieșiți din scanare</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Lanterna stinsă</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Lanterna aprinsă</string>
+    <string name="mb_blinkid_accessibility_next_page">Pagina următoare</string>
+    <string name="mb_blinkid_accessibility_previous_page">Pagina anterioară</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Afișați ecranele de ajutor</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Succes! Fața cu numărul cardului scanată</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Succes! Card scanat</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Excelent! Documentul a fost scanat</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Excelent! Partea din față a fost scanată</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Opriți lanterna</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Porniți lanterna</string>
 </resources>

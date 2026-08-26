@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Salir del escaneo</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Linterna apagada</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Linterna encendida</string>
-  <string name="mb_blinkid_accessibility_next_page">Página siguiente</string>
-  <string name="mb_blinkid_accessibility_previous_page">Página anterior</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Mostrar pantallas de ayuda</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">¡Bien! Documento escaneado</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">¡Bien! Cara frontal escaneada</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Apagar linterna</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Encender linterna</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Salir del escaneo</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Linterna apagada</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Linterna encendida</string>
+    <string name="mb_blinkid_accessibility_next_page">Página siguiente</string>
+    <string name="mb_blinkid_accessibility_previous_page">Página anterior</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Mostrar pantallas de ayuda</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">¡Perfecto! Lado con el número de la tarjeta escaneado</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">¡Perfecto! Tarjeta escaneada</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">¡Bien! Documento escaneado</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">¡Anverso escaneado!</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Apagar linterna</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Encender linterna</string>
 </resources>

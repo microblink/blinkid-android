@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Tutup pemindaian</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Lampu mati</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Lampu menyala</string>
-  <string name="mb_blinkid_accessibility_next_page">Halaman selanjutnya</string>
-  <string name="mb_blinkid_accessibility_previous_page">Halaman sebelumnya</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Tampilkan layar bantuan</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Berhasil! Dokumen dipindai</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Berhasil! Sisi depan dipindai</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Matikan senter</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Nyalakan senter</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Tutup pemindaian</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Lampu mati</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Lampu menyala</string>
+    <string name="mb_blinkid_accessibility_next_page">Halaman selanjutnya</string>
+    <string name="mb_blinkid_accessibility_previous_page">Halaman sebelumnya</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Tampilkan layar bantuan</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Berhasil! Sisi nomor kartu sudah dipindai</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Berhasil! Kartu sudah dipindai</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Berhasil! Dokumen dipindai</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Berhasil! Sisi depan dipindai</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Matikan senter</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Nyalakan senter</string>
 </resources>

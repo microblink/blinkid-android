@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Kamera izni gerekli.</string>
-  <string name="mb_blinkid_close">Kapat</string>
-  <string name="mb_blinkid_dialog_back_button">Geri</string>
-  <string name="mb_blinkid_dialog_done_button">Bitti</string>
-  <string name="mb_blinkid_dialog_next_button">Sonraki</string>
-  <string name="mb_blinkid_dialog_skip_button">Atla</string>
-  <string name="mb_blinkid_enable_camera">Kamerayı etkinleştir</string>
-  <string name="mb_blinkid_enable_permission_help">Şimdi, uygulamaya kamera izni vermen gereken izin ayarlarına yönlendirileceksin.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Uygulama izin ayarlarında lütfen kamera izni ver.</string>
-  <string name="mb_blinkid_license_locked">Tarama kullanılamıyor</string>
-  <string name="mb_blinkid_loading">Yükleniyor…</string>
-  <string name="mb_blinkid_move_closer">Yaklaş</string>
-  <string name="mb_blinkid_move_farther">Uzaklaş</string>
-  <string name="mb_blinkid_need_help_tooltip">Yardıma mı ihtiyacın var?</string>
-  <string name="mb_blinkid_ok">Tamam</string>
-  <string name="mb_blinkid_retry">Tekrar dene</string>
-  <string name="mb_blinkid_warning">Uyarı</string>
+    <string name="mb_blinkid_camera_permission_required">Kamera izni gerekli.</string>
+    <string name="mb_blinkid_close">Kapat</string>
+    <string name="mb_blinkid_dialog_back_button">Geri</string>
+    <string name="mb_blinkid_dialog_done_button">Bitti</string>
+    <string name="mb_blinkid_dialog_next_button">Sonraki</string>
+    <string name="mb_blinkid_dialog_skip_button">Atla</string>
+    <string name="mb_blinkid_enable_camera">Kamerayı etkinleştir</string>
+    <string name="mb_blinkid_enable_permission_help">Şimdi, uygulamaya kamera izni vermen gereken izin ayarlarına yönlendirileceksin.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Uygulama izin ayarlarında lütfen kamera izni ver.</string>
+    <string name="mb_blinkid_license_locked">Tarama kullanılamıyor</string>
+    <string name="mb_blinkid_loading">Yükleniyor…</string>
+    <string name="mb_blinkid_move_closer">Yaklaş</string>
+    <string name="mb_blinkid_move_farther">Uzaklaş</string>
+    <string name="mb_blinkid_need_help_tooltip">Yardıma mı ihtiyacın var?</string>
+    <string name="mb_blinkid_ok">Tamam</string>
+    <string name="mb_blinkid_retry">Tekrar dene</string>
+    <string name="mb_blinkid_warning">Uyarı</string>
 </resources>

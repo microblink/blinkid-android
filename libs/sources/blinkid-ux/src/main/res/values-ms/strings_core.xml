@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Kebenaran kamera diperlukan.</string>
-  <string name="mb_blinkid_close">Tutup</string>
-  <string name="mb_blinkid_dialog_back_button">Kembali</string>
-  <string name="mb_blinkid_dialog_done_button">Siap</string>
-  <string name="mb_blinkid_dialog_next_button">Seterusnya</string>
-  <string name="mb_blinkid_dialog_skip_button">Langkau</string>
-  <string name="mb_blinkid_enable_camera">Dayakan kamera</string>
-  <string name="mb_blinkid_enable_permission_help">Anda kini akan dibawa kepada tetapan kebenaran untuk anda memberikan kebenaran kamera kepada aplikasi.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Sila berikan kebenaran kepada kamera melalui tetapan kebenaran aplikasi.</string>
-  <string name="mb_blinkid_license_locked">Pengimbasan tidak tersedia</string>
-  <string name="mb_blinkid_loading">Memuatkan…</string>
-  <string name="mb_blinkid_move_closer">Dekatkan lagi</string>
-  <string name="mb_blinkid_move_farther">Jauhkan lagi</string>
-  <string name="mb_blinkid_need_help_tooltip">Perlukan bantuan?</string>
-  <string name="mb_blinkid_ok">Okey</string>
-  <string name="mb_blinkid_retry">Cuba semula</string>
-  <string name="mb_blinkid_warning">Amaran</string>
+    <string name="mb_blinkid_camera_permission_required">Kebenaran kamera diperlukan.</string>
+    <string name="mb_blinkid_close">Tutup</string>
+    <string name="mb_blinkid_dialog_back_button">Kembali</string>
+    <string name="mb_blinkid_dialog_done_button">Siap</string>
+    <string name="mb_blinkid_dialog_next_button">Seterusnya</string>
+    <string name="mb_blinkid_dialog_skip_button">Langkau</string>
+    <string name="mb_blinkid_enable_camera">Dayakan kamera</string>
+    <string name="mb_blinkid_enable_permission_help">Anda kini akan dibawa kepada tetapan kebenaran untuk anda memberikan kebenaran kamera kepada aplikasi.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Sila berikan kebenaran kepada kamera melalui tetapan kebenaran aplikasi.</string>
+    <string name="mb_blinkid_license_locked">Pengimbasan tidak tersedia</string>
+    <string name="mb_blinkid_loading">Memuatkan…</string>
+    <string name="mb_blinkid_move_closer">Dekatkan lagi</string>
+    <string name="mb_blinkid_move_farther">Jauhkan lagi</string>
+    <string name="mb_blinkid_need_help_tooltip">Perlukan bantuan?</string>
+    <string name="mb_blinkid_ok">Okey</string>
+    <string name="mb_blinkid_retry">Cuba semula</string>
+    <string name="mb_blinkid_warning">Amaran</string>
 </resources>

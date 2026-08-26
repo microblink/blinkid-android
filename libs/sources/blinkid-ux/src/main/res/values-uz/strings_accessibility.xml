@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Skanerlashdan chiqish</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Chaqnoq oʻchiq</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Chaqniq yoniq</string>
-  <string name="mb_blinkid_accessibility_next_page">Keyingi sahifa</string>
-  <string name="mb_blinkid_accessibility_previous_page">Avvalgi sahifa</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Yordam ekranlarini chiqarish</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Muvaffaqiyat! Hujjat skanerlandi</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Muvaffaqiyat! Old tomon skanerlandi</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Chaqnoqni oʻchirish</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Chaqnoqni yoqish</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Skanerlashdan chiqish</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Chaqnoq oʻchiq</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Chaqniq yoniq</string>
+    <string name="mb_blinkid_accessibility_next_page">Keyingi sahifa</string>
+    <string name="mb_blinkid_accessibility_previous_page">Avvalgi sahifa</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Yordam ekranlarini chiqarish</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Muvaffaqiyatli! Kartaning raqam tomoni skanerlandi</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Muvaffaqiyatli! Karta skanerlandi</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Muvaffaqiyat! Hujjat skanerlandi</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Muvaffaqiyat! Old tomon skanerlandi</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Chaqnoqni oʻchirish</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Chaqnoqni yoqish</string>
 </resources>

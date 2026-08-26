@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Den Scanvorgang beenden</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Taschenlampe aus</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Taschenlampe an</string>
-  <string name="mb_blinkid_accessibility_next_page">Nächste Seite</string>
-  <string name="mb_blinkid_accessibility_previous_page">Vorherige Seite</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Hilfebildschirme anzeigen</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Erfolg! Dokument gescannt</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Erfolg! Vorderseite gescannt</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Taschenlampe ausschalten</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Taschenlampe einschalten</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Den Scanvorgang beenden</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Blitzlicht aus</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Blitzlicht an</string>
+    <string name="mb_blinkid_accessibility_next_page">Nächste Seite</string>
+    <string name="mb_blinkid_accessibility_previous_page">Vorherige Seite</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Hilfebildschirme anzeigen</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Erfolg! Nummernseite der Karte gescannt.</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Erfolg! Karte gescannt.</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Erfolg! Dokument gescannt</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Erfolg! Vorderseite gescannt</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Blitzlicht ausschalten</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Blitzlicht einschalten</string>
 </resources>

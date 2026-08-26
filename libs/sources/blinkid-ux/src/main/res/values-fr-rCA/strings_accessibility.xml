@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Quitter le balayage</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Lampe de poche éteinte</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Lampe de poche allumée</string>
-  <string name="mb_blinkid_accessibility_next_page">Page suivante</string>
-  <string name="mb_blinkid_accessibility_previous_page">Page précédente</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Afficher les écrans d\'aide</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Succès ! Document numérisé</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Succès ! Face avant numérisée</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Éteindre la lampe de poche</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Allumer la lampe de poche</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Quitter le balayage</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Lampe de poche éteinte</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Lampe de poche allumée</string>
+    <string name="mb_blinkid_accessibility_next_page">Page suivante</string>
+    <string name="mb_blinkid_accessibility_previous_page">Page précédente</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Afficher les écrans d\'aide</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Réussite ! Côté du numéro de la carte numérisé</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Réussite ! Carte numérisée</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Succès ! Document numérisé</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Succès ! Face avant numérisée</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Éteindre la lampe de poche</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Allumer la lampe de poche</string>
 </resources>

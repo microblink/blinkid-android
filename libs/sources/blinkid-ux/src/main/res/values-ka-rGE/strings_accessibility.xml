@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">სკანირების ეტაპიდან გასვლა</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">ფანარი გამორთულია</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">ფანარი ჩართულია</string>
-  <string name="mb_blinkid_accessibility_next_page">შემდეგი გვერდი</string>
-  <string name="mb_blinkid_accessibility_previous_page">წინა გვერდი</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">ინსტრუქციების ამსახველი გვერდების ჩვენება</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">წარმატებული! დოკუმენტი დასკანერებულია</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">წარმატებული! წინა მხარე დასკანერებულია</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">ფანრის გამორთვა</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">ფანრის ჩართვა</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">სკანირების ეტაპიდან გასვლა</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">ფანარი გამორთულია</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">ფანარი ჩართულია</string>
+    <string name="mb_blinkid_accessibility_next_page">შემდეგი გვერდი</string>
+    <string name="mb_blinkid_accessibility_previous_page">წინა გვერდი</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">ინსტრუქციების ამსახველი გვერდების ჩვენება</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">წარმატებული! ბარათის ნომრის მხარე დასკანერებულია</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">წარმატებული! ბარათი დასკანერებულია</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">წარმატებული! დოკუმენტი დასკანერებულია</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">წარმატებული! წინა მხარე დასკანერებულია</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">ფანრის გამორთვა</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">ფანრის ჩართვა</string>
 </resources>

@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">مجوز دوربین لازم است.</string>
-  <string name="mb_blinkid_close">بستن</string>
-  <string name="mb_blinkid_dialog_back_button">برگشت</string>
-  <string name="mb_blinkid_dialog_done_button">انجام شد</string>
-  <string name="mb_blinkid_dialog_next_button">بعدی</string>
-  <string name="mb_blinkid_dialog_skip_button">پرش</string>
-  <string name="mb_blinkid_enable_camera">فعال کردن دوربین</string>
-  <string name="mb_blinkid_enable_permission_help">اکنون به تنظیمات مجوزها هدایت می‌شوید که در آنجا باید به برنامه اجازه دوربین بدهید.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">لطفاً در تنظیمات دسترسی برنامه، اجازه دوربین را بدهید.</string>
-  <string name="mb_blinkid_license_locked">اسکن در دسترس نیست</string>
-  <string name="mb_blinkid_loading">در حال بارگذاری…</string>
-  <string name="mb_blinkid_move_closer">نزدیکتر حرکت کن</string>
-  <string name="mb_blinkid_move_farther">دورتر حرکت کن</string>
-  <string name="mb_blinkid_need_help_tooltip">به کمک نیاز دارید؟</string>
-  <string name="mb_blinkid_ok">باشه</string>
-  <string name="mb_blinkid_retry">دوباره امتحان کنید</string>
-  <string name="mb_blinkid_warning">هشدار</string>
+    <string name="mb_blinkid_camera_permission_required">مجوز دوربین لازم است.</string>
+    <string name="mb_blinkid_close">بستن</string>
+    <string name="mb_blinkid_dialog_back_button">برگشت</string>
+    <string name="mb_blinkid_dialog_done_button">انجام شد</string>
+    <string name="mb_blinkid_dialog_next_button">بعدی</string>
+    <string name="mb_blinkid_dialog_skip_button">پرش</string>
+    <string name="mb_blinkid_enable_camera">فعال کردن دوربین</string>
+    <string name="mb_blinkid_enable_permission_help">اکنون به تنظیمات مجوزها هدایت می‌شوید که در آنجا باید به برنامه اجازه دوربین بدهید.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">لطفاً در تنظیمات دسترسی برنامه، اجازه دوربین را بدهید.</string>
+    <string name="mb_blinkid_license_locked">اسکن در دسترس نیست</string>
+    <string name="mb_blinkid_loading">در حال بارگذاری…</string>
+    <string name="mb_blinkid_move_closer">نزدیکتر حرکت کن</string>
+    <string name="mb_blinkid_move_farther">دورتر حرکت کن</string>
+    <string name="mb_blinkid_need_help_tooltip">به کمک نیاز دارید؟</string>
+    <string name="mb_blinkid_ok">باشه</string>
+    <string name="mb_blinkid_retry">دوباره امتحان کنید</string>
+    <string name="mb_blinkid_warning">هشدار</string>
 </resources>

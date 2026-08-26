@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Stoppen met scannen</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Zaklamp uit</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Zaklamp aan</string>
-  <string name="mb_blinkid_accessibility_next_page">Volgende pagina</string>
-  <string name="mb_blinkid_accessibility_previous_page">Vorige pagina</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Hulpschermen tonen</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Succes! Document gescand</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Succes! Voorkant gescand</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Zaklamp uitschakelen</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Zaklamp inschakelen</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Stoppen met scannen</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Zaklamp uit</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Zaklamp aan</string>
+    <string name="mb_blinkid_accessibility_next_page">Volgende pagina</string>
+    <string name="mb_blinkid_accessibility_previous_page">Vorige pagina</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Hulpschermen tonen</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Geslaagd! Kaartnummerzijde gescand.</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Geslaagd! Kaart gescand.</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Succes! Document gescand</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Succes! Voorkant gescand</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Zaklamp uitschakelen</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Zaklamp inschakelen</string>
 </resources>

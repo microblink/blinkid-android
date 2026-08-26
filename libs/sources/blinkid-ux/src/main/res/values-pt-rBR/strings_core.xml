@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">É necessária permissão para câmera.</string>
-  <string name="mb_blinkid_close">Fechar</string>
-  <string name="mb_blinkid_dialog_back_button">Voltar</string>
-  <string name="mb_blinkid_dialog_done_button">Concluído</string>
-  <string name="mb_blinkid_dialog_next_button">Próximo</string>
-  <string name="mb_blinkid_dialog_skip_button">Pular</string>
-  <string name="mb_blinkid_enable_camera">Habilitar câmera</string>
-  <string name="mb_blinkid_enable_permission_help">Agora você será direcionado para as configurações de permissão, onde precisará conceder permissão para a câmera no aplicativo.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Conceda a permissão para a câmera nas configurações de permissão do aplicativo.</string>
-  <string name="mb_blinkid_license_locked">Digitalização indisponível</string>
-  <string name="mb_blinkid_loading">Carregando…</string>
-  <string name="mb_blinkid_move_closer">Aproxime</string>
-  <string name="mb_blinkid_move_farther">Afaste</string>
-  <string name="mb_blinkid_need_help_tooltip">Precisa de ajuda?</string>
-  <string name="mb_blinkid_ok">OK</string>
-  <string name="mb_blinkid_retry">Tentar novamente</string>
-  <string name="mb_blinkid_warning">Aviso</string>
+    <string name="mb_blinkid_camera_permission_required">É necessária permissão para câmera.</string>
+    <string name="mb_blinkid_close">Fechar</string>
+    <string name="mb_blinkid_dialog_back_button">Voltar</string>
+    <string name="mb_blinkid_dialog_done_button">Concluído</string>
+    <string name="mb_blinkid_dialog_next_button">Próximo</string>
+    <string name="mb_blinkid_dialog_skip_button">Pular</string>
+    <string name="mb_blinkid_enable_camera">Habilitar câmera</string>
+    <string name="mb_blinkid_enable_permission_help">Agora você será direcionado para as configurações de permissão, onde precisará conceder permissão para a câmera no aplicativo.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Conceda a permissão para a câmera nas configurações de permissão do aplicativo.</string>
+    <string name="mb_blinkid_license_locked">Digitalização indisponível</string>
+    <string name="mb_blinkid_loading">Carregando…</string>
+    <string name="mb_blinkid_move_closer">Aproxime</string>
+    <string name="mb_blinkid_move_farther">Afaste</string>
+    <string name="mb_blinkid_need_help_tooltip">Precisa de ajuda?</string>
+    <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_retry">Tentar novamente</string>
+    <string name="mb_blinkid_warning">Aviso</string>
 </resources>

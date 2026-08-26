@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Zatvori skeniranje</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Bljeskalica isključena</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Bljeskalica uključena</string>
-  <string name="mb_blinkid_accessibility_next_page">Sljedeća stranica</string>
-  <string name="mb_blinkid_accessibility_previous_page">Prethodna stranica</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Prikaži pomoć</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Uspjeh! Dokument skeniran</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Uspjeh! Prednja strana skenirana</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Ugasi bljeskalicu</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Upali bljeskalicu</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Zatvori skeniranje</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Bljeskalica isključena</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Bljeskalica uključena</string>
+    <string name="mb_blinkid_accessibility_next_page">Sljedeća stranica</string>
+    <string name="mb_blinkid_accessibility_previous_page">Prethodna stranica</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Prikaži pomoć</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Uspjeh! Strana s brojem kartice skenirana</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Uspjeh! Kartica skenirana</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Uspjeh! Dokument skeniran</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Uspjeh! Prednja strana skenirana</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Ugasi bljeskalicu</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Upali bljeskalicu</string>
 </resources>
