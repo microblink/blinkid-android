@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Ìgbaniláàyè fún kámẹ́rà nílò.</string>
-  <string name="mb_blinkid_close">Pàdé</string>
-  <string name="mb_blinkid_dialog_back_button">Padà</string>
-  <string name="mb_blinkid_dialog_done_button">Parí</string>
-  <string name="mb_blinkid_dialog_next_button">Tó kàn</string>
-  <string name="mb_blinkid_dialog_skip_button">Fò ó</string>
-  <string name="mb_blinkid_enable_camera">Fún kámẹ́rà ní ìyọ̀nda</string>
-  <string name="mb_blinkid_enable_permission_help">Yó wá gbé ọ lọ sí ààyè ètò ìgbaniláàyè níbi tí ọ ti nílò láti fún kámẹ́rà ní ìyọ̀nda sí áàpù náà</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Jọ̀wọ́ fún kámẹ́rà ní ìyọ̀nda nínú ètò ìgbaniláàyè fún ohun èlò lórí fóònù rẹ</string>
-  <string name="mb_blinkid_license_locked">Kò sí àṣẹ láti ya àwòrán</string>
-  <string name="mb_blinkid_loading">Ó ń kó ra jọ pọ̀…</string>
-  <string name="mb_blinkid_move_closer">Sún mọ́ síi</string>
-  <string name="mb_blinkid_move_farther">Sún jìnnà síi</string>
-  <string name="mb_blinkid_need_help_tooltip">Ṣé o nílò ìrànlọ́wọ́?</string>
-  <string name="mb_blinkid_ok">Ó DÁA</string>
-  <string name="mb_blinkid_retry">Tún gbìyànjú síi</string>
-  <string name="mb_blinkid_warning">Ìkìlọ̀</string>
+    <string name="mb_blinkid_camera_permission_required">Ìgbaniláàyè fún kámẹ́rà nílò.</string>
+    <string name="mb_blinkid_close">Pàdé</string>
+    <string name="mb_blinkid_dialog_back_button">Padà</string>
+    <string name="mb_blinkid_dialog_done_button">Parí</string>
+    <string name="mb_blinkid_dialog_next_button">Tó kàn</string>
+    <string name="mb_blinkid_dialog_skip_button">Fò ó</string>
+    <string name="mb_blinkid_enable_camera">Fún kámẹ́rà ní ìyọ̀nda</string>
+    <string name="mb_blinkid_enable_permission_help">Yó wá gbé ọ lọ sí ààyè ètò ìgbaniláàyè níbi tí ọ ti nílò láti fún kámẹ́rà ní ìyọ̀nda sí áàpù náà</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Jọ̀wọ́ fún kámẹ́rà ní ìyọ̀nda nínú ètò ìgbaniláàyè fún ohun èlò lórí fóònù rẹ</string>
+    <string name="mb_blinkid_license_locked">Kò sí àṣẹ láti ya àwòrán</string>
+    <string name="mb_blinkid_loading">Ó ń kó ra jọ pọ̀…</string>
+    <string name="mb_blinkid_move_closer">Sún mọ́ síi</string>
+    <string name="mb_blinkid_move_farther">Sún jìnnà síi</string>
+    <string name="mb_blinkid_need_help_tooltip">Ṣé o nílò ìrànlọ́wọ́?</string>
+    <string name="mb_blinkid_ok">Ó DÁA</string>
+    <string name="mb_blinkid_retry">Tún gbìyànjú síi</string>
+    <string name="mb_blinkid_warning">Ìkìlọ̀</string>
 </resources>

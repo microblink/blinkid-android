@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">اسکیننگ سے باہر نکلیں</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">فلیش لائٹ آف ہے</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">فلیش لائٹ آن ہے</string>
-  <string name="mb_blinkid_accessibility_next_page">اگلا صفحہ</string>
-  <string name="mb_blinkid_accessibility_previous_page">پچھلا صفحہ</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">مدد کی اسکرینیں دکھائیں</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">کامیابی! دستاویز اسکین ہو گئی ہے</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">کامیابی! سامنے کا رخ اسکین ہو گیا ہے</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">فلیش لائٹ آف کریں</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">فلیش لائٹ آن کریں</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">اسکیننگ سے باہر نکلیں</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">فلیش لائٹ آف ہے</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">فلیش لائٹ آن ہے</string>
+    <string name="mb_blinkid_accessibility_next_page">اگلا صفحہ</string>
+    <string name="mb_blinkid_accessibility_previous_page">پچھلا صفحہ</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">مدد کی اسکرینیں دکھائیں</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">کامیابی! کارڈ نمبر والی سائیڈ اسکین ہو گئی ہے</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">کامیابی! کارڈ اسکین ہو گیا ہے</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">کامیابی! دستاویز اسکین ہو گئی ہے</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">کامیابی! سامنے کا رخ اسکین ہو گیا ہے</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">فلیش لائٹ آف کریں</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">فلیش لائٹ آن کریں</string>
 </resources>

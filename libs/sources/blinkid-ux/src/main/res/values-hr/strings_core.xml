@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Potrebna je dozvola za pristup kameri.</string>
-  <string name="mb_blinkid_close">Zatvori</string>
-  <string name="mb_blinkid_dialog_back_button">Natrag</string>
-  <string name="mb_blinkid_dialog_done_button">OK</string>
-  <string name="mb_blinkid_dialog_next_button">Dalje</string>
-  <string name="mb_blinkid_dialog_skip_button">Preskoči</string>
-  <string name="mb_blinkid_enable_camera">Dozvolite pristup kameri</string>
-  <string name="mb_blinkid_enable_permission_help">Bit ćete odvedeni na postavke sustava gdje morate aplikaciji dozvoliti pristup kameri.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Dozvolite pristup kameri u postavkama aplikacije.</string>
-  <string name="mb_blinkid_license_locked">Skeniranje nije dostupno</string>
-  <string name="mb_blinkid_loading">Učitavanje…</string>
-  <string name="mb_blinkid_move_closer">Približite dokument</string>
-  <string name="mb_blinkid_move_farther">Udaljite dokument</string>
-  <string name="mb_blinkid_need_help_tooltip">Trebate pomoć?</string>
-  <string name="mb_blinkid_ok">U redu</string>
-  <string name="mb_blinkid_retry">U redu</string>
-  <string name="mb_blinkid_warning">Upozorenje</string>
+    <string name="mb_blinkid_camera_permission_required">Potrebna je dozvola za pristup kameri.</string>
+    <string name="mb_blinkid_close">Zatvori</string>
+    <string name="mb_blinkid_dialog_back_button">Natrag</string>
+    <string name="mb_blinkid_dialog_done_button">OK</string>
+    <string name="mb_blinkid_dialog_next_button">Dalje</string>
+    <string name="mb_blinkid_dialog_skip_button">Preskoči</string>
+    <string name="mb_blinkid_enable_camera">Dozvolite pristup kameri</string>
+    <string name="mb_blinkid_enable_permission_help">Bit ćete odvedeni na postavke sustava gdje morate aplikaciji dozvoliti pristup kameri.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Dozvolite pristup kameri u postavkama aplikacije.</string>
+    <string name="mb_blinkid_license_locked">Skeniranje nije dostupno</string>
+    <string name="mb_blinkid_loading">Učitavanje…</string>
+    <string name="mb_blinkid_move_closer">Približite dokument</string>
+    <string name="mb_blinkid_move_farther">Udaljite dokument</string>
+    <string name="mb_blinkid_need_help_tooltip">Trebate pomoć?</string>
+    <string name="mb_blinkid_ok">U redu</string>
+    <string name="mb_blinkid_retry">U redu</string>
+    <string name="mb_blinkid_warning">Upozorenje</string>
 </resources>

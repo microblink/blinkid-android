@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">क्यामेरा अनुमति आवश्यक छ।</string>
-  <string name="mb_blinkid_close">बन्द गर्नुहोस्</string>
-  <string name="mb_blinkid_dialog_back_button">पछाडि</string>
-  <string name="mb_blinkid_dialog_done_button">भयो</string>
-  <string name="mb_blinkid_dialog_next_button">अर्को</string>
-  <string name="mb_blinkid_dialog_skip_button">स्किप गर्नुहोस्</string>
-  <string name="mb_blinkid_enable_camera">क्यामेरा इनेबल गर्नुहोस्</string>
-  <string name="mb_blinkid_enable_permission_help">तपाईंलाई अनुमति सेटिङमा लगिने छ जहाँ तपाईंले एपमा क्यामेरा अनुमति दिन आवश्यक छ।</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">कृपया एप अनुमति सेटिङमा क्यामेरा अनुमति दिनुहोस्।</string>
-  <string name="mb_blinkid_license_locked">स्क्यानिङ उपलब्ध छैन</string>
-  <string name="mb_blinkid_loading">लोड हुँदैछ…</string>
-  <string name="mb_blinkid_move_closer">नजिक जानुहोस्</string>
-  <string name="mb_blinkid_move_farther">पर जानुहोस्</string>
-  <string name="mb_blinkid_need_help_tooltip">सहयोग चाहिन्छ?</string>
-  <string name="mb_blinkid_ok">ओके</string>
-  <string name="mb_blinkid_retry">पुन: प्रयास गर्नुहोस्</string>
-  <string name="mb_blinkid_warning">चेतावनी</string>
+    <string name="mb_blinkid_camera_permission_required">क्यामेरा अनुमति आवश्यक छ।</string>
+    <string name="mb_blinkid_close">बन्द गर्नुहोस्</string>
+    <string name="mb_blinkid_dialog_back_button">पछाडि</string>
+    <string name="mb_blinkid_dialog_done_button">भयो</string>
+    <string name="mb_blinkid_dialog_next_button">अर्को</string>
+    <string name="mb_blinkid_dialog_skip_button">स्किप गर्नुहोस्</string>
+    <string name="mb_blinkid_enable_camera">क्यामेरा इनेबल गर्नुहोस्</string>
+    <string name="mb_blinkid_enable_permission_help">तपाईंलाई अनुमति सेटिङमा लगिने छ जहाँ तपाईंले एपमा क्यामेरा अनुमति दिन आवश्यक छ।</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">कृपया एप अनुमति सेटिङमा क्यामेरा अनुमति दिनुहोस्।</string>
+    <string name="mb_blinkid_license_locked">स्क्यानिङ उपलब्ध छैन</string>
+    <string name="mb_blinkid_loading">लोड हुँदैछ…</string>
+    <string name="mb_blinkid_move_closer">नजिक जानुहोस्</string>
+    <string name="mb_blinkid_move_farther">पर जानुहोस्</string>
+    <string name="mb_blinkid_need_help_tooltip">सहयोग चाहिन्छ?</string>
+    <string name="mb_blinkid_ok">ओके</string>
+    <string name="mb_blinkid_retry">पुन: प्रयास गर्नुहोस्</string>
+    <string name="mb_blinkid_warning">चेतावनी</string>
 </resources>

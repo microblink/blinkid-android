@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">스캔 종료</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">손전등 꺼짐</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">손전등 켜짐</string>
-  <string name="mb_blinkid_accessibility_next_page">다음 페이지</string>
-  <string name="mb_blinkid_accessibility_previous_page">이전 페이지</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">도움말 화면 표시</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">문서 스캔 완료</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">앞면 스캔 완료</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">손전등 끄기</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">손전등 켜기</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">스캔 종료</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">손전등 꺼짐</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">손전등 켜짐</string>
+    <string name="mb_blinkid_accessibility_next_page">다음 페이지</string>
+    <string name="mb_blinkid_accessibility_previous_page">이전 페이지</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">도움말 화면 표시</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">카드 번호 면 스캔 완료!</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">카드 스캔 완료!</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">문서 스캔 완료</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">앞면 스캔 완료</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">손전등 끄기</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">손전등 켜기</string>
 </resources>

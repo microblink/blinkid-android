@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">דרושה הרשאה למצלמה.</string>
-  <string name="mb_blinkid_close">סגור</string>
-  <string name="mb_blinkid_dialog_back_button">חזור</string>
-  <string name="mb_blinkid_dialog_done_button">בוצע</string>
-  <string name="mb_blinkid_dialog_next_button">הבא</string>
-  <string name="mb_blinkid_dialog_skip_button">דלג</string>
-  <string name="mb_blinkid_enable_camera">אפשר/י מצלמה</string>
-  <string name="mb_blinkid_enable_permission_help">כעת תועבר/י להגדרת הרשאות ושם עליך לתת לאפליקציה הרשאת מצלמה.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">נא לתת לאפליקציה הרשאת מצלמה בהגדרת הרשאות.</string>
-  <string name="mb_blinkid_license_locked">סריקה לא זמינה</string>
-  <string name="mb_blinkid_loading">טְעִינָה…</string>
-  <string name="mb_blinkid_move_closer">קרב/י</string>
-  <string name="mb_blinkid_move_farther">התרחק/י</string>
-  <string name="mb_blinkid_need_help_tooltip">זקוקים לעזרה?</string>
-  <string name="mb_blinkid_ok">בסדר</string>
-  <string name="mb_blinkid_retry">לנסות שוב</string>
-  <string name="mb_blinkid_warning">אזהרה</string>
+    <string name="mb_blinkid_camera_permission_required">דרושה הרשאה למצלמה.</string>
+    <string name="mb_blinkid_close">סגור</string>
+    <string name="mb_blinkid_dialog_back_button">חזור</string>
+    <string name="mb_blinkid_dialog_done_button">בוצע</string>
+    <string name="mb_blinkid_dialog_next_button">הבא</string>
+    <string name="mb_blinkid_dialog_skip_button">דלג</string>
+    <string name="mb_blinkid_enable_camera">אפשר/י מצלמה</string>
+    <string name="mb_blinkid_enable_permission_help">כעת תועבר/י להגדרת הרשאות ושם עליך לתת לאפליקציה הרשאת מצלמה.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">נא לתת לאפליקציה הרשאת מצלמה בהגדרת הרשאות.</string>
+    <string name="mb_blinkid_license_locked">סריקה לא זמינה</string>
+    <string name="mb_blinkid_loading">טְעִינָה…</string>
+    <string name="mb_blinkid_move_closer">קרב/י</string>
+    <string name="mb_blinkid_move_farther">התרחק/י</string>
+    <string name="mb_blinkid_need_help_tooltip">זקוקים לעזרה?</string>
+    <string name="mb_blinkid_ok">בסדר</string>
+    <string name="mb_blinkid_retry">לנסות שוב</string>
+    <string name="mb_blinkid_warning">אזהרה</string>
 </resources>

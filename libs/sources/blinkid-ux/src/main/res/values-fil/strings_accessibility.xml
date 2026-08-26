@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Lumabas sa pag-scan</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Patay ang flashligh</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Bukas ang flashlight</string>
-  <string name="mb_blinkid_accessibility_next_page">Susunod na pahina</string>
-  <string name="mb_blinkid_accessibility_previous_page">Nakaraang pahina</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Ipakita ang mga screen ng tulong</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Tagumpay! Na-scan ang dokumento</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Tagumpay! Na-scan ang harap na bahagi</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Patayin ang flashlight</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Buksan ang flashlight</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Lumabas sa pag-scan</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Patay ang flashligh</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Bukas ang flashlight</string>
+    <string name="mb_blinkid_accessibility_next_page">Susunod na pahina</string>
+    <string name="mb_blinkid_accessibility_previous_page">Nakaraang pahina</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Ipakita ang mga screen ng tulong</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Tagumpay! Na-scan ang numero na bahagi ng card</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Tagumpay! Na-scan ang card</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Tagumpay! Na-scan ang dokumento</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Tagumpay! Na-scan ang harap na bahagi</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Patayin ang flashlight</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Buksan ang flashlight</string>
 </resources>

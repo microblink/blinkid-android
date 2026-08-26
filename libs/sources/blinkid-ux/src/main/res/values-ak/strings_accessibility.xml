@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Fi skaane</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Flaahye kanea adum</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Flaahye kanea si so</string>
-  <string name="mb_blinkid_accessibility_next_page">Peegye a edi hɔ</string>
-  <string name="mb_blinkid_accessibility_previous_page">Peegye a edi anim</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Da mmoa skriin ahorow adi</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Ayɛ yie! Wɔaskaane nhoma no</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Ayɛ yie! Wɔaskaane anim</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Dum flaahye kanea</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Sɔ flaahye kanea</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Fi skaane</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Flaahye kanea adum</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Flaahye kanea si so</string>
+    <string name="mb_blinkid_accessibility_next_page">Peegye a edi hɔ</string>
+    <string name="mb_blinkid_accessibility_previous_page">Peegye a edi anim</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Da mmoa skriin ahorow adi</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Ayɛ yie! Kaade nɔma fa no askaane</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Ayɛ yie! Woaskaane kaade no</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Ayɛ yie! Wɔaskaane nhoma no</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Ayɛ yie! Wɔaskaane anim</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Dum flaahye kanea</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Sɔ flaahye kanea</string>
 </resources>

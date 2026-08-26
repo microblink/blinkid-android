@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">ከመቃኘት ውጣ</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">የእጅ ባትሪውን ጠፍቷል</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">የእጅ ባትሪውን በርቷል</string>
-  <string name="mb_blinkid_accessibility_next_page">ቀጣይ ገጽ</string>
-  <string name="mb_blinkid_accessibility_previous_page">ያለፈው ገጽ</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">የእገዛ ማያ ገጾችን አሳይ</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">ተሳክቷል! ሰነድ ተቃኝቷል</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">ተሳክቷል! የፊት ጎኑ ተቃኝቷል</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">የእጅ ባትሪውን ያጥፉ</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">የእጅ ባትሪውን ያብሩ</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">ከመቃኘት ውጣ</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">የእጅ ባትሪውን ጠፍቷል</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">የእጅ ባትሪውን በርቷል</string>
+    <string name="mb_blinkid_accessibility_next_page">ቀጣይ ገጽ</string>
+    <string name="mb_blinkid_accessibility_previous_page">ያለፈው ገጽ</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">የእገዛ ማያ ገጾችን አሳይ</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">ተሳክቷል! የካርድ ቁጥር ጎኑ ተቃኝቷል</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">ተሳክቷል! ካርዱ ተቃኝቷል</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">ተሳክቷል! ሰነድ ተቃኝቷል</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">ተሳክቷል! የፊት ጎኑ ተቃኝቷል</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">የእጅ ባትሪውን ያጥፉ</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">የእጅ ባትሪውን ያብሩ</string>
 </resources>

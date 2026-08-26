@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Autorizzazione per la fotocamera obbligatoria.</string>
-  <string name="mb_blinkid_close">Chiudi</string>
-  <string name="mb_blinkid_dialog_back_button">Indietro</string>
-  <string name="mb_blinkid_dialog_done_button">Fatto</string>
-  <string name="mb_blinkid_dialog_next_button">Avanti</string>
-  <string name="mb_blinkid_dialog_skip_button">Salta</string>
-  <string name="mb_blinkid_enable_camera">Abilita fotocamera</string>
-  <string name="mb_blinkid_enable_permission_help">Ora verrai portato alle impostazioni di autorizzazione, dove devi fornire l\'autorizzazione per la fotocamera all\'app.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Fornisci l\'autorizzazione per la fotocamera nelle impostazioni di autorizzazione dell\'app.</string>
-  <string name="mb_blinkid_license_locked">Scansione non disponibile</string>
-  <string name="mb_blinkid_loading">Caricamento…</string>
-  <string name="mb_blinkid_move_closer">Avvicinati</string>
-  <string name="mb_blinkid_move_farther">Spostati più lontano</string>
-  <string name="mb_blinkid_need_help_tooltip">Ti serve aiuto?</string>
-  <string name="mb_blinkid_ok">OK</string>
-  <string name="mb_blinkid_retry">Riprova</string>
-  <string name="mb_blinkid_warning">Avviso</string>
+    <string name="mb_blinkid_camera_permission_required">Autorizzazione per la fotocamera obbligatoria.</string>
+    <string name="mb_blinkid_close">Chiudi</string>
+    <string name="mb_blinkid_dialog_back_button">Indietro</string>
+    <string name="mb_blinkid_dialog_done_button">Fatto</string>
+    <string name="mb_blinkid_dialog_next_button">Avanti</string>
+    <string name="mb_blinkid_dialog_skip_button">Salta</string>
+    <string name="mb_blinkid_enable_camera">Abilita fotocamera</string>
+    <string name="mb_blinkid_enable_permission_help">Ora verrai portato alle impostazioni di autorizzazione, dove dovrai fornire l\'autorizzazione per l\'uso della fotocamera all\'app.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Per favore autorizza l\'uso della fotocamera nelle impostazioni di autorizzazione dell\'app.</string>
+    <string name="mb_blinkid_license_locked">Scansione non disponibile</string>
+    <string name="mb_blinkid_loading">Caricamento…</string>
+    <string name="mb_blinkid_move_closer">Avvicinati</string>
+    <string name="mb_blinkid_move_farther">Spostati più lontano</string>
+    <string name="mb_blinkid_need_help_tooltip">Ti serve aiuto?</string>
+    <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_retry">Riprova</string>
+    <string name="mb_blinkid_warning">Avviso</string>
 </resources>

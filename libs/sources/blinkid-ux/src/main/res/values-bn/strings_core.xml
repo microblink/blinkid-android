@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">ক্যামেরার অনুমতি আবশ্যক।</string>
-  <string name="mb_blinkid_close">বন্ধ করুন</string>
-  <string name="mb_blinkid_dialog_back_button">পেছনে</string>
-  <string name="mb_blinkid_dialog_done_button">সম্পন্ন</string>
-  <string name="mb_blinkid_dialog_next_button">পরবর্তী</string>
-  <string name="mb_blinkid_dialog_skip_button">বাদ দিন</string>
-  <string name="mb_blinkid_enable_camera">ক্যামেরা চালু করুন</string>
-  <string name="mb_blinkid_enable_permission_help">আপনাকে এখন অনুমতির সেটিংসে নিয়ে যাওয়া হবে, যেখানে আপনাকে অ্যাপটিকে ক্যামেরার অনুমতি দিতে হবে।</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">অ্যাপের অনুমতির সেটিংসে গিয়ে ক্যামেরার অনুমতি দিন।</string>
-  <string name="mb_blinkid_license_locked">স্ক্যানিং উপলব্ধ নয়</string>
-  <string name="mb_blinkid_loading">লোড হচ্ছে…</string>
-  <string name="mb_blinkid_move_closer">আরও কাছে যান</string>
-  <string name="mb_blinkid_move_farther">আরও দূরে যান</string>
-  <string name="mb_blinkid_need_help_tooltip">সাহায্য দরকার?</string>
-  <string name="mb_blinkid_ok">ঠিক আছে</string>
-  <string name="mb_blinkid_retry">পুনরায় চেষ্টা করুন</string>
-  <string name="mb_blinkid_warning">সতর্কতা</string>
+    <string name="mb_blinkid_camera_permission_required">ক্যামেরার অনুমতি আবশ্যক।</string>
+    <string name="mb_blinkid_close">বন্ধ করুন</string>
+    <string name="mb_blinkid_dialog_back_button">পেছনে</string>
+    <string name="mb_blinkid_dialog_done_button">সম্পন্ন</string>
+    <string name="mb_blinkid_dialog_next_button">পরবর্তী</string>
+    <string name="mb_blinkid_dialog_skip_button">বাদ দিন</string>
+    <string name="mb_blinkid_enable_camera">ক্যামেরা চালু করুন</string>
+    <string name="mb_blinkid_enable_permission_help">আপনাকে এখন অনুমতির সেটিংসে নিয়ে যাওয়া হবে, যেখানে আপনাকে অ্যাপটিকে ক্যামেরার অনুমতি দিতে হবে।</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">অ্যাপের অনুমতির সেটিংসে গিয়ে ক্যামেরার অনুমতি দিন।</string>
+    <string name="mb_blinkid_license_locked">স্ক্যানিং উপলব্ধ নয়</string>
+    <string name="mb_blinkid_loading">লোড হচ্ছে…</string>
+    <string name="mb_blinkid_move_closer">আরও কাছে যান</string>
+    <string name="mb_blinkid_move_farther">আরও দূরে যান</string>
+    <string name="mb_blinkid_need_help_tooltip">সাহায্য দরকার?</string>
+    <string name="mb_blinkid_ok">ঠিক আছে</string>
+    <string name="mb_blinkid_retry">পুনরায় চেষ্টা করুন</string>
+    <string name="mb_blinkid_warning">সতর্কতা</string>
 </resources>

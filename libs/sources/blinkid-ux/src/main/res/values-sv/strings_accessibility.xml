@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Avsluta skanning</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Ficklampa av</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Ficklampa på</string>
-  <string name="mb_blinkid_accessibility_next_page">Nästa sida</string>
-  <string name="mb_blinkid_accessibility_previous_page">Föregående sida</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Visa hjälpskärmar</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Lyckades! Skannat dokument</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Lyckades! Framsidan skannad</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Stäng av ficklampan</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Slå på ficklampan</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Avsluta skanning</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Ficklampa av</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Ficklampa på</string>
+    <string name="mb_blinkid_accessibility_next_page">Nästa sida</string>
+    <string name="mb_blinkid_accessibility_previous_page">Föregående sida</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Visa hjälpskärmar</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Lyckades! Kortets nummersida skannat</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Lyckades! Kort skannat</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Lyckades! Skannat dokument</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Lyckades! Framsidan skannad</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Stäng av ficklampan</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Slå på ficklampan</string>
 </resources>

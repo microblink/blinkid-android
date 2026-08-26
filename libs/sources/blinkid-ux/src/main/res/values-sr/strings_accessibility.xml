@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_accessibility_exit_scanning">Završi skeniranje</string>
-  <string name="mb_blinkid_accessibility_flashlight_off">Lampa isključena</string>
-  <string name="mb_blinkid_accessibility_flashlight_on">Lampa isključena</string>
-  <string name="mb_blinkid_accessibility_next_page">Sledeća stranica</string>
-  <string name="mb_blinkid_accessibility_previous_page">Prethodna stranica</string>
-  <string name="mb_blinkid_accessibility_show_help_screens">Prikaži pomoć</string>
-  <string name="mb_blinkid_accessibility_success_document_scanned">Uspeh! Dokument skeniran</string>
-  <string name="mb_blinkid_accessibility_success_first_side_scanned">Uspeh! Prednja strana skenirana</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_off">Isključi lampu</string>
-  <string name="mb_blinkid_accessibility_turn_flashlight_on">Upali lampu</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Završi skeniranje</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Lampa isključena</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Lampa uključena</string>
+    <string name="mb_blinkid_accessibility_next_page">Sledeća stranica</string>
+    <string name="mb_blinkid_accessibility_previous_page">Prethodna stranica</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Prikaži pomoć</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Uspešno! Strana sa brojem kartice je skenirana</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Uspešno! Kartica je skenirana</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Uspeh! Dokument skeniran</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Uspeh! Prednja strana skenirana</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Isključi lampu</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Upali lampu</string>
 </resources>

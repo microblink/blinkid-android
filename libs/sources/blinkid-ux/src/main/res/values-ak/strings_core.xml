@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="mb_blinkid_camera_permission_required">Kamara pɛmihyen ho hia.</string>
-  <string name="mb_blinkid_close">Tum</string>
-  <string name="mb_blinkid_dialog_back_button">Akyire</string>
-  <string name="mb_blinkid_dialog_done_button">Awiei</string>
-  <string name="mb_blinkid_dialog_next_button">Nea Edi Hɔ</string>
-  <string name="mb_blinkid_dialog_skip_button">Twam</string>
-  <string name="mb_blinkid_enable_camera">Ma kamara kwan</string>
-  <string name="mb_blinkid_enable_permission_help">Wɔde wo bɛkɔ pɛmihyen sɛtins baabia ɛsɛ sɛ woma app no kamara pɛmihyen kwa.</string>
-  <string name="mb_blinkid_enable_permission_help_instant_app">Ma kamara no kwan wɔ app no pɛmihyen sɛtins mu.</string>
-  <string name="mb_blinkid_license_locked">Skanin nni hɔ</string>
-  <string name="mb_blinkid_loading">Ɛloade…</string>
-  <string name="mb_blinkid_move_closer">Bɛn ho</string>
-  <string name="mb_blinkid_move_farther">Kɔ akyirikyiri</string>
-  <string name="mb_blinkid_need_help_tooltip">Wohia mmoa?</string>
-  <string name="mb_blinkid_ok">OK</string>
-  <string name="mb_blinkid_retry">San yɛ bio</string>
-  <string name="mb_blinkid_warning">Kɔkɔbɔ</string>
+    <string name="mb_blinkid_camera_permission_required">Kamara pɛmihyen ho hia.</string>
+    <string name="mb_blinkid_close">Tum</string>
+    <string name="mb_blinkid_dialog_back_button">Akyire</string>
+    <string name="mb_blinkid_dialog_done_button">Awiei</string>
+    <string name="mb_blinkid_dialog_next_button">Nea Edi Hɔ</string>
+    <string name="mb_blinkid_dialog_skip_button">Twam</string>
+    <string name="mb_blinkid_enable_camera">Ma kamara kwan</string>
+    <string name="mb_blinkid_enable_permission_help">Wɔde wo bɛkɔ pɛmihyen sɛtins baabia ɛsɛ sɛ woma app no kamara pɛmihyen kwa.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Ma kamara no kwan wɔ app no pɛmihyen sɛtins mu.</string>
+    <string name="mb_blinkid_license_locked">Skanin nni hɔ</string>
+    <string name="mb_blinkid_loading">Ɛloade…</string>
+    <string name="mb_blinkid_move_closer">Bɛn ho</string>
+    <string name="mb_blinkid_move_farther">Kɔ akyirikyiri</string>
+    <string name="mb_blinkid_need_help_tooltip">Wohia mmoa?</string>
+    <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_retry">San yɛ bio</string>
+    <string name="mb_blinkid_warning">Kɔkɔbɔ</string>
 </resources>
