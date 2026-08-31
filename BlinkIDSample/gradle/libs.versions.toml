@@ -1,5 +1,5 @@
 [versions]
-blinkIdSdkVersion = "8001.0.1"
+blinkIdSdkVersion = "8001.0.2"
 
 agp = "9.1.0"
 foundationAndroid = "1.11.2"
