@@ -50,15 +50,27 @@ class MainViewModel : ViewModel() {
 
     val inactivityTimeoutDuration = 10000.milliseconds
 
-    val blinkIdUxSettings = BlinkIdUxSettings(
-        // Customize step timeout duration, which is used to set the duration of the scanning step
-        // during the scanning session before a timeout is triggered. This timer will reset whenever
-        // one side of the document is successfully scanned or when the barcode step is triggered.
-        stepTimeoutDuration = stepTimeoutDuration,
-        // Customize inactivity timeout duration, which is used to set the duration of inactivity
-        // during the scanning session (time without UI state changes) before a timeout is triggered.
-        inactivityTimeoutDuration = inactivityTimeoutDuration
-    )
+    // Scanning UX settings applied on the next scanning session.
+    var passportOnly by mutableStateOf(false)
+        private set
+
+    fun updatePassportOnly(enabled: Boolean) {
+        passportOnly = enabled
+    }
+
+    val blinkIdUxSettings
+        get() = BlinkIdUxSettings(
+            // Customize step timeout duration, which is used to set the duration of the scanning step
+            // during the scanning session before a timeout is triggered. This timer will reset whenever
+            // one side of the document is successfully scanned or when the barcode step is triggered.
+            stepTimeoutDuration = stepTimeoutDuration,
+            // Customize inactivity timeout duration, which is used to set the duration of inactivity
+            // during the scanning session (time without UI state changes) before a timeout is triggered.
+            inactivityTimeoutDuration = inactivityTimeoutDuration,
+            // Enable the passport-only scanning flow, which allows only passports and guides the user
+            // to the data page with passport specific onboarding, help screens and instructions.
+            passportOnly = passportOnly
+        )
 
     val cameraSettings = CameraSettings()
 
@@ -130,6 +142,22 @@ class MainViewModel : ViewModel() {
             mrzModule = null
         )
     )
+
+    // Alternatively, use one of the use-case factories to get session settings preconfigured
+    // for a common scanning scenario. The returned settings can be further customized with copy().
+    //
+    // Scanning a document with the camera:
+    // val scanningSessionSettings = BlinkIdSessionSettings.documentVideo(
+    //     DocumentVideoUseCase(
+    //         scenario = DocumentScenario.General,
+    //         quality = VideoQualityProfile.Balanced,
+    //         captureEnvironment = VideoCaptureEnvironment.HandHeld
+    //     )
+    // )
+    //
+    // Scanning only the barcode, searched for directly in the camera frame
+    // without document detection:
+    // val scanningSessionSettings = BlinkIdSessionSettings.standaloneBarcode()
 
     val frameProcessResultCallback: ((FrameProcessResultHandle) -> Unit) =
         { handle: FrameProcessResultHandle ->

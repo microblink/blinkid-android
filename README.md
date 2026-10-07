@@ -25,6 +25,7 @@ The list of all supported documents and result fields can be found [here](https:
 * [Choosing between Composable and default scanning activity](#activity-vs-compose)
 * [Customizing the look and the UX](#customizing-the-look)
   * [Simple customizations](#simple-customizations)
+    * [Preconfigured session settings](#use-case-session-settings)
   * [Advanced customizations](#advanced-customizations)
 * [Changing default strings and localization](#changing-strings-and-localization)
   * [Defining your own string resources for UI elements](#using-own-string-resources)
@@ -322,7 +323,8 @@ BlinkIdCameraScanningScreen(
         inactivityTimeoutDuration = yourInactivityTimeoutDuration,
         allowHapticFeedback = true, // or false
         classFilter = null, // all documents are accepted by default
-        redactionSettingsResolver = null // customize redaction settings for scanned documents
+        redactionSettingsResolver = null, // customize redaction settings for scanned documents
+        passportOnly = false // set to true to accept only passports, with passport specific instructions
     ),
     /* UI settings options */
     uiSettings = UiSettings(
@@ -358,6 +360,34 @@ BlinkIdCameraScanningScreen(
 ```
 
 For a complete reference on available customization options, see [UiSettings](https://microblink.github.io/blinkid-android/blinkid-ux/com.microblink.blinkid.ux/-ui-settings/index.html) API docs.
+
+### <a name="use-case-session-settings"></a> Preconfigured session settings
+
+Instead of configuring every `BlinkIdSessionSettings` option by hand, you can start from one of the use-case factories, which return session settings preconfigured for a common scanning scenario:
+
+```kotlin
+// scanning a document with the camera
+val videoSettings = BlinkIdSessionSettings.documentVideo(
+    DocumentVideoUseCase(
+        scenario = DocumentScenario.General, // or MrzMandatory, MrzOnly, BarcodeOnly
+        quality = VideoQualityProfile.Balanced, // or HighSpeed, HighAccuracy, Permissive
+        captureEnvironment = VideoCaptureEnvironment.HandHeld // or Stationary
+    )
+)
+
+// extracting data from still images, e.g. with the low-level API
+val photoSettings = BlinkIdSessionSettings.documentPhoto(
+    DocumentPhotoUseCase(
+        scenario = DocumentScenario.General,
+        quality = PhotoQualityProfile.Balanced // or HighAccuracy, Permissive
+    )
+)
+
+// scanning only the barcode, without document detection
+val barcodeSettings = BlinkIdSessionSettings.standaloneBarcode()
+```
+
+The returned settings can be further customized with `copy()` before they are passed to the scanning session.
 
 ## <a name="advanced-customizations"></a> Advanced customizations
 

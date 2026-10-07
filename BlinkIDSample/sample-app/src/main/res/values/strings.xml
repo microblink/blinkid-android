@@ -14,6 +14,9 @@
     <string name="settings_fail_if_ota_fails_desc" translatable="false">Abort SDK initialization when an OTA update check or download fails</string>
     <string name="settings_ota_service_url" translatable="false">OTA service URL</string>
     <string name="settings_ota_service_url_desc" translatable="false">Base URL used to check for and download OTA resources</string>
+    <string name="settings_scanning" translatable="false">Scanning</string>
+    <string name="settings_passport_only" translatable="false">Passport only</string>
+    <string name="settings_passport_only_desc" translatable="false">Allow only passports and guide the user to the data page with passport specific instructions</string>
     <string name="settings_done" translatable="false">Done</string>
     <string name="settings_cancel" translatable="false">Cancel</string>
     <string name="cd_settings" translatable="false">Open settings</string>

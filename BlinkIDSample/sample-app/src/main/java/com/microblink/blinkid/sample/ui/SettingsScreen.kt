@@ -105,6 +105,20 @@ fun SettingsScreen(
                 value = viewModel.otaServiceUrl,
                 onClick = { showOtaUrlDialog = true }
             )
+
+            Text(
+                text = stringResource(R.string.settings_scanning),
+                style = MaterialTheme.typography.titleSmall,
+                color = Cobalt800,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+            )
+
+            SettingsSwitchItem(
+                title = stringResource(R.string.settings_passport_only),
+                description = stringResource(R.string.settings_passport_only_desc),
+                checked = viewModel.passportOnly,
+                onCheckedChange = viewModel::updatePassportOnly
+            )
         }
     }
 

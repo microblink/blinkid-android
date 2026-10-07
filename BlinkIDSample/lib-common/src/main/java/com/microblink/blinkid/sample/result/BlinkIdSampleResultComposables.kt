@@ -317,6 +317,18 @@ fun BlinkIdSampleResultScreen(
                             "Visa type",
                             value = result.visaType?.values?.joinToString(" ")
                         ),
+                        SampleResult(
+                            "Vehicle number",
+                            value = result.vehicleNumber?.values?.joinToString(" ")
+                        ),
+                        SampleResult(
+                            "Passport number",
+                            value = result.passportNumber?.values?.joinToString(" ")
+                        ),
+                        SampleResult(
+                            "Traffic participant number",
+                            value = result.trafficParticipantNumber?.values?.joinToString(" ")
+                        ),
                         SampleDateStringResult("Date of birth", result.dateOfBirth),
                         SampleDateStringResult("Date of issue", result.dateOfIssue),
                         SampleDateStringResult("Date of expiry", result.dateOfExpiry),
@@ -608,6 +620,18 @@ fun VizResultTab(pageNum: Int, result: VizResult): SampleResultTab {
             SampleResult(
                 "Visa type",
                 value = result.visaType?.values?.joinToString(" ")
+            ),
+            SampleResult(
+                "Vehicle number",
+                value = result.vehicleNumber?.values?.joinToString(" ")
+            ),
+            SampleResult(
+                "Passport number",
+                value = result.passportNumber?.values?.joinToString(" ")
+            ),
+            SampleResult(
+                "Traffic participant number",
+                value = result.trafficParticipantNumber?.values?.joinToString(" ")
             ),
             SampleDateStringResult(
                 "Date of birth",

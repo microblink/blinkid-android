@@ -95,6 +95,14 @@ class MainActivity : ComponentActivity() {
                                             )
                                         )
                                     )
+                                    // Alternatively, use the document photo use-case factory, which
+                                    // preconfigures the session settings for still images:
+                                    // BlinkIdSessionSettings.documentPhoto(
+                                    //     DocumentPhotoUseCase(
+                                    //         scenario = DocumentScenario.General,
+                                    //         quality = PhotoQualityProfile.Balanced
+                                    //     )
+                                    // )
                                 ).getOrNull()
                                 var result: Result<BlinkIdProcessResult>? = null
 
