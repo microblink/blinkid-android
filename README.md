@@ -80,7 +80,7 @@ Add _BlinkID_ as a dependency in module level `build.gradle(.kts)`:
 
 ```
 dependencies {
-    implementation("com.microblink:blinkid-ux:8001.0.0")
+    implementation("com.microblink:blinkid-ux:8002.0.0")
 }
 ```
 

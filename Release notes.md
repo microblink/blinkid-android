@@ -1,5 +1,224 @@
 # Release notes
 
+## v8002.0.0
+
+### What's new
+- Simplified integration & settings presets
+  - We've introduced an intuitive presets system to replace complex scanning flags, allowing developers to configure BlinkID for specific use cases with minimal code:
+    - Targeted presets: Instantly optimize the SDK for Image, Video, Standalone Barcode, or Verification workflows.
+    - Performance tuning: Fine-tune extraction with single-setting adjustments for quality (Balanced, High Speed, or High Accuracy) and operational environment (Stationary vs. Handheld).
+- Global barcode & document expansion
+  - Upgraded barcode & QR engine: Core scanning architecture upgrades deliver faster and more resilient recognition across 1D and 2D barcodes.
+  - Expanded document support: Added dedicated barcode and QR parsing for Argentina DNI and Philippines IDs.
+  - 
+
+### Bug fixes
+- Passport card scanning flow: Fixed an issue where the scanning workflow would occasionally skip the back side of passport cards.
+- Single image mode cropping: Resolved edge cases in single image mode where document crop detection could fail or return inaccurate bounds.
+- Centenarian date logic: Solved two-digit birth-year rollover edge cases in MRZ and date parsing, ensuring precise age calculation for individuals aged 100+.
+
+### New documents support
+- Bahrain - Vehicle Ownership Certificate
+- British Virgin Islands - DL
+- British Virgin Islands - Passport
+- British Virgin Islands - Rigid Passport
+- China - DL
+- Colombia - Consular ID
+- Congo - ID
+- Dominican Republic - Consular ID
+- Dominican Republic - Residence Permit
+- Ethiopia - Rigid Passport
+- Fiji - Passport
+- Honduras - Consular ID
+- Hong Kong - DL
+- Iraq - DL
+- Iraq - Vehicle Registration
+- Jordan - Rigid Passport
+- Kazakhstan - DL
+- Liechtenstein - Passport
+- Liechtenstein - Rigid Passport
+- Moldova - Resident ID
+- Namibia - DL
+- Niger - DL
+- Northern Mariana Islands - DL
+- Somalia - ID
+- Suriname - Rigid Passport
+- Syria - DL
+- Syria - Resident ID
+- Tajikistan - DL
+- UAE - Golden Card
+- Yemen - ID
+
+### New document versions for supported documents
+- China - DL
+- Colombia - Passport
+- Dominican Republic - DL
+- Gambia - Passport
+- Japan - Residence Permit
+- Kyrgyzstan - DL
+- Kyrgyzstan - ID
+- Moldova - DL
+- Moldova - Rigid Passport
+- Paraguay - DL
+- Tajikistan - Rigid Passport
+- USA, Montana - DL
+- USA, Montana - ID
+- USA, Nebraska - DL
+- USA, Nebraska - ID
+- USA, Oklahoma - DL
+- USA, Oklahoma - ID
+- Virgin Islands of the United States - DL
+- Virgin Islands of the United States - ID
+
+### New extracted fields from documents
+- `documentAdditionalNumber` replaced by `cardAccessNumber`:
+  - Austria - ID
+  - Austria - Residence Permit
+  - Austria - Rigid Passport
+  - Austria - Rigid Refugee Passport
+  - Bulgaria - ID
+  - Cameroon - Rigid Passport
+  - Costa Rica - Rigid Passport
+  - Croatia - ID
+  - Croatia - Residence Permit
+  - Cyprus - Residence Permit
+  - Czechia - ID
+  - Czechia - Residence Permit
+  - Denmark - Residence Permit
+  - Dominican Republic - ID
+  - Ecuador - ID
+  - Ecuador - Passport
+  - Estonia - ID
+  - Estonia - Residence Permit
+  - Finland - Alien ID
+  - Finland - ID
+  - Finland - Residence Permit
+  - Finland - Rigid Passport
+  - France - ID
+  - Gambia - ID
+  - Georgia - ID
+  - Georgia - Residence Permit
+  - Georgia - Rigid Passport
+  - Germany - ID
+  - Germany - eID
+  - Germany - Residence Permit
+  - Greece - ID
+  - Greece - Residence Permit
+  - Haiti - Passport
+  - Hungary - Residence Permit
+  - Iceland - Passport
+  - Ireland - Residence Permit
+  - Italy - Residence Permit
+  - Ivory Coast - ID
+  - Kosovo - ID
+  - Kosovo - Passport
+  - Latvia - Alien ID
+  - Latvia - ID
+  - Latvia - Residence Permit
+  - Liechtenstein - ID
+  - Lithuania - ID
+  - Lithuania - Residence Permit
+  - Luxembourg - ID
+  - Luxembourg - Residence Permit
+  - Luxembourg - Rigid Passport
+  - Malta - ID
+  - Malta - Residence Permit
+  - Moldova - ID
+  - Montenegro - ID
+  - Montenegro - Rigid Passport
+  - Namibia - Passport
+  - Netherlands - ID
+  - Netherlands - Residence Permit
+  - Netherlands - Rigid Passport
+  - Norway - ID
+  - Norway - Residence Permit
+  - Norway - Rigid Passport
+  - Peru - Minors ID
+  - Poland - ID
+  - Poland - Residence Permit
+  - Portugal - ID
+  - Portugal - Residence Permit
+  - Romania - ID
+  - Slovakia - ID
+  - Slovakia - Residence Permit
+  - Slovenia - Residence Permit
+  - Spain - ID
+  - Spain - Passport
+  - Sweden - ID
+  - Sweden - Residence Permit
+  - Sweden - Social Security Card
+  - Switzerland - Residence Permit
+  - Uganda - Passport
+- `documentOptionalAdditionalNumber` replaced by `cardAccessNumber`:
+  - Bulgaria - Residence Permit
+  - France - Residence Permit
+  - Italy - ID
+  - Peru - ID
+  - Spain - Residence Permit
+- `documentAdditionalNumber` replaced by `passportNumber`:
+  - Zambia - Residence Permit
+- Added `parentInfo` support:
+  - Brazil - Alien ID
+  - Brazil - DL
+  - Brazil - Passport
+- Added support for extracting Cyrillic `firstName`, `lastName`, `nationality`, and `sex`:
+  - Kyrgyzstan - ID
+
+### API changes
+
+#### Breaking changes
+- `CountryId.VirginIslandsBritish` has been renamed to `CountryId.BritishVirginIslands`.
+
+#### Additive changes
+- New preset factories on `BlinkIdSessionSettings` (companion object, `@JvmStatic`) that return a fully configured `BlinkIdSessionSettings`:
+  - `documentVideo(useCase: DocumentVideoUseCase = DocumentVideoUseCase())`: live document scanning from a camera stream.
+  - `documentPhoto(useCase: DocumentPhotoUseCase = DocumentPhotoUseCase())`: document scanning from a single photo or gallery image; sets `inputImageSource` to `Photo`.
+  - `standaloneBarcode()`: standalone barcode scanning without document detection; barcodes are searched for directly in the frame.
+  - `verifyCapture()`: BlinkID Verify live capture; enables face image extraction, input and barcode image return, and disables result aggregation.
+  ```kotlin
+  val sessionSettings = BlinkIdSessionSettings.documentVideo(
+      DocumentVideoUseCase(
+          scenario = DocumentScenario.MrzMandatory,
+          quality = VideoQualityProfile.HighAccuracy,
+          captureEnvironment = VideoCaptureEnvironment.Stationary
+      )
+  )
+  ```
+- New use case classes (package `com.microblink.blinkid.core.settings.usecase`):
+  - `DocumentVideoUseCase`: `scenario` (`DocumentScenario`, default `General`), `quality` (`VideoQualityProfile`, default `Balanced`), `captureEnvironment` (`VideoCaptureEnvironment`, default `HandHeld`)
+  - `DocumentPhotoUseCase`: `scenario` (`DocumentScenario`, default `General`), `quality` (`PhotoQualityProfile`, default `Balanced`)
+- New enums:
+  - `DocumentScenario`
+    - `General`: default module topology for general ID scanning
+    - `MrzMandatory`: automatic scan with mandatory MRZ presence; VIZ and barcode modules remain enabled
+    - `MrzOnly`: MRZ extraction only; VIZ and barcode modules disabled; single-side scan with mandatory MRZ presence
+    - `BarcodeOnly`: barcode extraction from a detected document; VIZ and MRZ modules disabled; single-side scan with mandatory barcode presence; document detection stays enabled (unlike `standaloneBarcode()`)
+  - `VideoQualityProfile`
+    - `Balanced`
+    - `HighSpeed`: selects the fastest acceptable frame and lowers sensitivity level for blur/glare/tilt
+    - `HighAccuracy`: raises quality thresholds, requires a face image, and disables multi-frame aggregation
+    - `Permissive`: lowers quality thresholds and disables blur/glare/tilt/lighting rejection
+  - `VideoCaptureEnvironment`
+    - `HandHeld`: default hand-held mobile camera capture
+    - `Stationary`: allows the document to reach the frame edge
+  - `PhotoQualityProfile`
+    - `Balanced`
+    - `HighAccuracy`: raises quality thresholds and requires face image extraction
+    - `Permissive`: lowers quality thresholds and disables rejection and VIZ character validation
+- `vehicleNumber`, `passportNumber`, and `trafficParticipantNumber` added to `BlinkIdScanningResult` and `VizResult`.
+- `VehicleNumber`, `PassportNumber`, and `TrafficParticipantNumber` added to `FieldType`.
+- `SpecifiedResidenceCard`, `GoldenCard`, `VehicleOwnershipCertificate`, and `ByIdCard` added to `DocumentTypeId`.
+- `NorthernIreland` added to `RegionId`.
+
+### Other platform features
+- Passport-only extraction mode: new `passportOnly` flag in `BlinkIdUxSettings`. It accepts only passport booklets and guides the user to the data page with dedicated onboarding, help screens, and scanning instructions. Passport help/onboarding strings can be customized through the new `blinkIdPassportHelpDialogsStrings` in `BlinkIdSdkStrings`.
+- Configurable help tooltip timing: new `helpTooltipShowDelay` and `helpTooltipHideDelay` (`Duration`) in `BlinkIdUxSettings` (`helpTooltipShowDelayMs` / `helpTooltipHideDelayMs` in the Java-friendly constructor). If the show delay is zero or negative, the tooltip is never shown automatically.
+- Custom SDK strings provided through `BlinkIdSdkStrings` are now also applied to the shared UX components.
+- OTA resilience: if the engine rejects the cached OTA resources, the SDK now automatically retries initialization with the bundled resources instead of failing.
+- Updated `compileSdk`/`targetSdk` to 37 (Android 17) and NDK to r30.
+
+
+
 ## v8001.0.0
 
 ### What's new
