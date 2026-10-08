@@ -25,6 +25,27 @@
     <string name="settings_capture_environment_desc" translatable="false">Hand-held mobile capture or a stationary setup where the document may reach the frame edge</string>
     <string name="settings_passport_only" translatable="false">Passport only</string>
     <string name="settings_passport_only_desc" translatable="false">Allow only passports and guide the user to the data page with passport specific instructions</string>
+    <string name="settings_redaction" translatable="false">Redaction</string>
+    <string name="settings_custom_redaction" translatable="false">Custom redaction</string>
+    <string name="settings_custom_redaction_desc" translatable="false">Use custom redaction settings for every scanned document instead of the SDK defaults</string>
+    <string name="settings_redaction_mode" translatable="false">Redaction mode</string>
+    <string name="settings_redaction_mode_desc" translatable="false">Whether data is redacted from the result, the images or both</string>
+    <string name="settings_redacted_fields" translatable="false">Redacted fields</string>
+    <string name="settings_redacted_fields_desc" translatable="false">Fields removed from the result and covered on the images</string>
+    <string name="settings_redacted_fields_none" translatable="false">None</string>
+    <string name="settings_redacted_fields_selected" translatable="false">%1$d selected</string>
+    <string name="settings_include_default_fields" translatable="false">Include default fields</string>
+    <string name="settings_include_default_fields_desc" translatable="false">Also redact the fields the SDK redacts by default for the scanned document</string>
+    <string name="settings_document_number_redaction" translatable="false">Partially redact document number</string>
+    <string name="settings_document_number_redaction_desc" translatable="false">Redact the document number while keeping some of its digits visible</string>
+    <string name="settings_document_number_prefix" translatable="false">Visible leading digits</string>
+    <string name="settings_document_number_prefix_desc" translatable="false">Number of digits at the beginning of the document number that remain visible</string>
+    <string name="settings_document_number_suffix" translatable="false">Visible trailing digits</string>
+    <string name="settings_document_number_suffix_desc" translatable="false">Number of digits at the end of the document number that remain visible</string>
+    <string name="settings_redact_mrz" translatable="false">Redact MRZ</string>
+    <string name="settings_redact_mrz_desc" translatable="false">Redact the entire MRZ result</string>
+    <string name="settings_redact_barcode" translatable="false">Redact barcode</string>
+    <string name="settings_redact_barcode_desc" translatable="false">Redact the entire barcode result</string>
     <string name="settings_done" translatable="false">Done</string>
     <string name="settings_cancel" translatable="false">Cancel</string>
     <string name="cd_settings" translatable="false">Open settings</string>

@@ -26,6 +26,7 @@ The list of all supported documents and result fields can be found [here](https:
 * [Customizing the look and the UX](#customizing-the-look)
   * [Simple customizations](#simple-customizations)
     * [Preconfigured session settings](#use-case-session-settings)
+    * [Redaction](#redaction)
   * [Advanced customizations](#advanced-customizations)
 * [Changing default strings and localization](#changing-strings-and-localization)
   * [Defining your own string resources for UI elements](#using-own-string-resources)
@@ -388,6 +389,45 @@ val barcodeSettings = BlinkIdSessionSettings.standaloneBarcode()
 ```
 
 The returned settings can be further customized with `copy()` before they are passed to the scanning session. You can try out the presets in the settings screen of the sample app (`sample-app`).
+
+### <a name="redaction"></a> Redaction
+
+Redaction removes sensitive data from the scanning result before it is returned to your app. For every scanned document the SDK applies the redaction required for that document class by default. To customize it, pass a `RedactionSettingsResolver` to `BlinkIdUxSettings.redactionSettingsResolver`. The resolver receives the `DocumentClassInfo` of the scanned document right before the result is finalized, and returns the `RedactionSettings` for it, or `null` to keep the SDK defaults for that document.
+
+| Property | Default | Description |
+| --- | --- | --- |
+| `redactionMode` | `RedactionMode.FullResult` | Where the data is redacted: `None`, `ImageOnly`, `ResultFieldsOnly` or `FullResult` (both result fields and images). |
+| `fields` | — | The `FieldType`s to redact. |
+| `documentNumberRedactionSettings` | — | Partially redacts the document number, keeping `prefixDigitsVisible` digits at the beginning and `suffixDigitsVisible` digits at the end visible. `null` disables partial redaction. |
+| `redactMrz` | `false` | Redacts the entire MRZ result. |
+| `redactBarcode` | `false` | Redacts the entire barcode result. |
+
+```kotlin
+@Parcelize
+class MyRedactionSettingsResolver : RedactionSettingsResolver {
+    override fun resolveRedactionSettings(classInfo: DocumentClassInfo): RedactionSettings? {
+        // keep the SDK defaults for all documents except Croatian ones
+        if (classInfo.country?.id != CountryId.Croatia) return null
+
+        // start from the SDK defaults for this document and redact a few more fields
+        val defaults = RedactionSettings.getDefaultRedactionSettings(classInfo)
+        return defaults.copy(
+            fields = defaults.fields + listOf(FieldType.Address, FieldType.DateOfBirth),
+            // keep only the last 4 digits of the document number visible
+            documentNumberRedactionSettings = DocumentNumberRedactionSettings(
+                prefixDigitsVisible = 0U,
+                suffixDigitsVisible = 4U
+            )
+        )
+    }
+}
+
+val uxSettings = BlinkIdUxSettings(
+    redactionSettingsResolver = MyRedactionSettingsResolver()
+)
+```
+
+The resolver must be `Parcelable`, because the UX settings are passed between components. You can try out the redaction options in the settings screen of the sample app (`sample-app`).
 
 ## <a name="advanced-customizations"></a> Advanced customizations
 

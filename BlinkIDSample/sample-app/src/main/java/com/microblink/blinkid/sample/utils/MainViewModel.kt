@@ -3,17 +3,23 @@ package com.microblink.blinkid.sample.utils
 import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.microblink.blinkid.core.BlinkIdSdk
 import com.microblink.blinkid.core.BlinkIdSdkSettings
+import com.microblink.blinkid.core.result.FieldType
 import com.microblink.blinkid.core.session.BlinkIdScanningResult
 import com.microblink.blinkid.core.session.BlinkIdSessionSettings
 import com.microblink.blinkid.core.session.InputImageSource
 import com.microblink.blinkid.core.session.ScanningMode
+import com.microblink.blinkid.core.settings.DocumentNumberRedactionSettings
 import com.microblink.blinkid.core.settings.OtaResourcesConfig
+import com.microblink.blinkid.core.settings.RedactionMode
+import com.microblink.blinkid.core.settings.RedactionSettings
+import com.microblink.blinkid.core.settings.RedactionSettingsResolver
 import com.microblink.blinkid.core.settings.ResourcesConfig
 import com.microblink.blinkid.core.settings.ScanningSettings
 import com.microblink.blinkid.core.settings.scanning.BarcodeModuleSettings
@@ -68,6 +74,94 @@ class MainViewModel : ViewModel() {
         passportOnly = enabled
     }
 
+    // Redaction settings applied on the next scanning session.
+    // When custom redaction is disabled, the SDK applies its default redaction for each document.
+    var customRedactionEnabled by mutableStateOf(false)
+        private set
+
+    var redactionMode by mutableStateOf(RedactionMode.FullResult)
+        private set
+
+    var redactedFields by mutableStateOf(emptyList<FieldType>())
+        private set
+
+    var includeDefaultRedactedFields by mutableStateOf(true)
+        private set
+
+    var documentNumberRedactionEnabled by mutableStateOf(false)
+        private set
+
+    var documentNumberPrefixDigitsVisible by mutableIntStateOf(0)
+        private set
+
+    var documentNumberSuffixDigitsVisible by mutableIntStateOf(0)
+        private set
+
+    var redactMrz by mutableStateOf(false)
+        private set
+
+    var redactBarcode by mutableStateOf(false)
+        private set
+
+    fun updateCustomRedactionEnabled(enabled: Boolean) {
+        customRedactionEnabled = enabled
+    }
+
+    fun updateRedactionMode(mode: RedactionMode) {
+        redactionMode = mode
+    }
+
+    fun updateRedactedFields(fields: List<FieldType>) {
+        redactedFields = fields
+    }
+
+    fun updateIncludeDefaultRedactedFields(enabled: Boolean) {
+        includeDefaultRedactedFields = enabled
+    }
+
+    fun updateDocumentNumberRedactionEnabled(enabled: Boolean) {
+        documentNumberRedactionEnabled = enabled
+    }
+
+    fun updateDocumentNumberPrefixDigitsVisible(digits: Int) {
+        documentNumberPrefixDigitsVisible = digits.coerceIn(0, UByte.MAX_VALUE.toInt())
+    }
+
+    fun updateDocumentNumberSuffixDigitsVisible(digits: Int) {
+        documentNumberSuffixDigitsVisible = digits.coerceIn(0, UByte.MAX_VALUE.toInt())
+    }
+
+    fun updateRedactMrz(enabled: Boolean) {
+        redactMrz = enabled
+    }
+
+    fun updateRedactBarcode(enabled: Boolean) {
+        redactBarcode = enabled
+    }
+
+    private fun createRedactionSettingsResolver(): RedactionSettingsResolver? {
+        if (!customRedactionEnabled) return null
+        return SampleRedactionSettingsResolver(
+            redactionSettings = RedactionSettings(
+                // Defines whether the data is redacted from the result, the images or both.
+                redactionMode = redactionMode,
+                // Fields that are removed from the result and/or covered on the images.
+                fields = redactedFields,
+                // Partially redact the document number, keeping the defined number of digits
+                // at the beginning and at the end visible.
+                documentNumberRedactionSettings = if (documentNumberRedactionEnabled) {
+                    DocumentNumberRedactionSettings(
+                        prefixDigitsVisible = documentNumberPrefixDigitsVisible.toUByte(),
+                        suffixDigitsVisible = documentNumberSuffixDigitsVisible.toUByte()
+                    )
+                } else null,
+                redactMrz = redactMrz,
+                redactBarcode = redactBarcode
+            ),
+            includeDefaultFields = includeDefaultRedactedFields
+        )
+    }
+
     val blinkIdUxSettings
         get() = BlinkIdUxSettings(
             // Customize step timeout duration, which is used to set the duration of the scanning step
@@ -79,7 +173,10 @@ class MainViewModel : ViewModel() {
             inactivityTimeoutDuration = inactivityTimeoutDuration,
             // Enable the passport-only scanning flow, which allows only passports and guides the user
             // to the data page with passport specific onboarding, help screens and instructions.
-            passportOnly = passportOnly
+            passportOnly = passportOnly,
+            // Customize which data is redacted from the scanning result for each scanned document.
+            // Defaults to null, meaning the SDK's default redaction settings are applied.
+            redactionSettingsResolver = createRedactionSettingsResolver()
         )
 
     val cameraSettings = CameraSettings()
