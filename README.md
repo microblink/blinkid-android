@@ -590,7 +590,7 @@ Add _blinkid-core_ library as a dependency in module level `build.gradle(.kts)`:
 
 ```
 dependencies {
-    implementation("com.microblink:blinkid-core:8001.0.0")
+    implementation("com.microblink:blinkid-core:8002.0.0")
 }
 ```
 
@@ -765,8 +765,8 @@ Here is the SDK size, calculated for supported ABIs:
 
 | ABI | Download size | Install size |
 | --- |:-------------:|:------------:|
-| armeabi-v7a |    4.59 MB    |   6.13 MB    |
-| arm64-v8a |    4.87 MB    |   7.54 MB    |
+| armeabi-v7a |    4.48 MB    |    5.9 MB    |
+| arm64-v8a |    4.71 MB    |   7.14 MB    |
 
 SDK size is calculated as application size increases when _BlinkID_ SDK is added, with all its dependencies included.
 
