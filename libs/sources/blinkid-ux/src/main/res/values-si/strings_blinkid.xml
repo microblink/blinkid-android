@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">ලේඛනයේ ඉදිරිපස හෝ පිටුපස පැත්තේ පතුලේ, ඔබට ඊතල (&lt;&lt; හෝ &gt;&gt;) මගින් වෙන් වූ පේළි 2 කට හෝ 3 කට බෙදුණු දිගු අක්ෂර මාලාවක් දක්නට ලැබෙනු ඇත.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">ලේඛනයේ MRZ එක ඇති තැන සොයා ගන්න</string>
     <string name="mb_blinkid_onboarding_dialog_title">සියලු විස්තර පෙනෙන පරිදි තබා ගන්න</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">ඔබගේ විදේශ ගමන් බලපත්‍රය, ඔබගේ ඡායාරූපය සහ පුද්ගලික තොරතුරු ඇති පිටුවට විවෘත කරන්න. මෙම පිටුවේ ඔබගේ නම, උපන් දිනය, විදේශ ගමන් බලපත්‍ර අංකය සහ වෙනත් හඳුනාගැනීමේ තොරතුරු ඇත.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">විදේශ ගමන් බලපත්‍රයේ දත්ත පිටුව විවෘත කරන්න</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">ඔබේ ඡායාරූපය සහ පුද්ගලික තොරතුරු ඇති පිටුවට විදේශ ගමන් බලපත්‍රය විවෘත කරන්න. විදේශ ගමන් බලපත්‍රයට හොඳින් ආලෝකය ලැබෙන බව තහවුරු කරන්න. සියලුම ක්ෂේත්‍ර සම්පූර්ණයෙන් පෙනෙන බව තහවුරු කරන්න.</string>
+    <string name="mb_blinkid_passport_onboarding_title">ඔබගේ විදේශ ගමන් බලපත්‍රය විවෘත කරන්න</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">ලේඛනයේ දත්ත සහිත පිටුව ස්කෑන් කරන්න</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">ලේඛනයට හොඳින් ආලෝකය වැටෙන බවත්, සම්පූර්ණයෙන් පෙනෙන බවත්, දිලිසීමෙන් තොර බවත් සහතික කර ගන්න.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">නැවත උත්සාහ කරන්න</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">දකුණු පිටුවට යන්න</string>
     <string name="mb_blinkid_scanning_wrong_page_top">මුදුන් පිටුවට යන්න</string>
     <string name="mb_blinkid_scanning_wrong_side">ලේඛනය අනෙක් පිට හරවන්න</string>
+    <string name="mb_blinkid_screen_detected">ලේඛනය සරල පසුබිමක් මත තබන්න</string>
     <string name="mb_blinkid_top_page_instructions">මුදුන් පිටුව ස්කෑන් කරන්න</string>
     <string name="mb_blinkid_unsupported_document_message">සහාය දක්වන ලේඛනයක ඉදිරි පැත්ත ස්කෑන් කරන්න.</string>
     <string name="mb_blinkid_unsupported_document_title">ලේඛනය හඳුනාගත නොහැක</string>

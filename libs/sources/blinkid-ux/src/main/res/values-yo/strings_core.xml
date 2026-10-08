@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Ìgbaniláàyè fún kámẹ́rà nílò.</string>
     <string name="mb_blinkid_close">Pàdé</string>
+    <string name="mb_blinkid_consent_description">Fipamọ́ àti/tàbí wọlé sí ìwífún ti ara rẹ fún ìmúdájú ìdánimọ̀ rẹ.</string>
+    <string name="mb_blinkid_consent_no">Má fọ̀wọ́ sí</string>
+    <string name="mb_blinkid_consent_privacy_link">Àkíyèsí Ìpamọ́ Àṣírí</string>
+    <string name="mb_blinkid_consent_privacy_notice">Àwọn yíyàn rẹ ń ràn wá lọ́wọ́ láti dáàbò bo ìwífún ti ara rẹ àti láti mú ìmọ̀ ẹ̀rọ wa sunwọ̀n sí i, nígbà tí a ń tẹ̀lé àwọn ìlànà gíga jù lọ fún ìpamọ́ àṣírí dátà, gẹ́gẹ́ bí a ṣe ṣàlàyé nínú %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Mo fọ̀wọ́ sí lílo ìwífún ti ara mi láti ọwọ́ olùpèsè fún ìmúgbòòrò ìmọ̀ ẹ̀rọ rẹ.</string>
+    <string name="mb_blinkid_consent_title">A nílò ìfọ̀wọ́sí rẹ láti:</string>
+    <string name="mb_blinkid_consent_yes">Fọ̀wọ́ sí</string>
     <string name="mb_blinkid_dialog_back_button">Padà</string>
     <string name="mb_blinkid_dialog_done_button">Parí</string>
     <string name="mb_blinkid_dialog_next_button">Tó kàn</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Sún jìnnà síi</string>
     <string name="mb_blinkid_need_help_tooltip">Ṣé o nílò ìrànlọ́wọ́?</string>
     <string name="mb_blinkid_ok">Ó DÁA</string>
+    <string name="mb_blinkid_optional">Kì í ṣe dandan</string>
+    <string name="mb_blinkid_privacy_notice">Àkíyèsí ìpamọ́ àṣírí</string>
     <string name="mb_blinkid_retry">Tún gbìyànjú síi</string>
     <string name="mb_blinkid_warning">Ìkìlọ̀</string>
 </resources>

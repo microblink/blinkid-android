@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Na dole przedniej lub tylnej strony dokumentu znajdziesz długi ciąg znaków, podzielony na 2 lub 3 wiersze i oddzielony strzałkami (&lt;&lt; lub &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Znajdź strefę MRZ na dokumencie</string>
     <string name="mb_blinkid_onboarding_dialog_title">Wszystkie szczegóły powinny być widoczne</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Otwórz paszport na stronie ze zdjęciem i danymi osobowymi. Na tej stronie znajdują się Twoje imię i nazwisko, data urodzenia, numer paszportu oraz inne dane identyfikacyjne.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Otwórz paszport na stronie z danymi</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Otwórz paszport na stronie ze zdjęciem i danymi osobowymi. Upewnij się, że paszport jest dobrze oświetlony. Wszystkie pola muszą być w pełni widoczne.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Otwórz paszport</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Zeskanuj stronę dokumentu z danymi</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Upewnij się, że dokument jest dobrze oświetlony, w pełni widoczny i bez odblasków.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Spróbuj ponownie</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Przejdź do prawej strony</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Przejdź do górnej strony</string>
     <string name="mb_blinkid_scanning_wrong_side">Odwróć dokument</string>
+    <string name="mb_blinkid_screen_detected">Umieść dokument na jednolitym tle</string>
     <string name="mb_blinkid_top_page_instructions">Zeskanuj górną stronę</string>
     <string name="mb_blinkid_unsupported_document_message">Zeskanuj przednią stronę obsługiwanego dokumentu.</string>
     <string name="mb_blinkid_unsupported_document_title">Nie rozpoznano dokumentu</string>

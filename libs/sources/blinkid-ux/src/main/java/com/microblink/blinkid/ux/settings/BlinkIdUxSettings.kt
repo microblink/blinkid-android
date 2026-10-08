@@ -9,6 +9,8 @@ import com.microblink.blinkid.core.result.classinfo.RegionId
 import com.microblink.blinkid.core.result.classinfo.DocumentTypeId
 import com.microblink.blinkid.core.settings.RedactionSettingsResolver
 import kotlinx.parcelize.RawValue
+import com.microblink.blinkid.ux.components.needHelpTooltipDefaultDurationMs
+import com.microblink.blinkid.ux.components.needHelpTooltipDefaultTimeToAppearMs
 
 /**
  * Configuration settings for the scanning UX.
@@ -22,6 +24,12 @@ import kotlinx.parcelize.RawValue
  * @param classFilter Defines which specific document classes are allowed during scanning.
  * Each document class is defined by the trio of [CountryId], [RegionId], and [DocumentTypeId]. Defaults to null, meaning all classes are allowed.
  * @param redactionSettingsResolver Defines how to resolve `RedactionSettings` for a given document class.
+ * @param passportOnly Enables the passport-only scanning flow, with passport specific instructions, onboarding and help screens.
+ * Only passport documents are allowed. If [classFilter] is also set, documents must pass both filters. Defaults to false.
+ * @param helpTooltipShowDelay Duration before the help tooltip is shown.
+ * If less than or equal to [Duration.ZERO], the help tooltip won't be shown automatically.
+ * @param helpTooltipHideDelay Duration before the help tooltip is hidden.
+ * If less than or equal to [Duration.ZERO], the help tooltip won't be hidden automatically. Defaults to 5 seconds.
  */
 @Parcelize
 data class BlinkIdUxSettings(
@@ -30,7 +38,10 @@ data class BlinkIdUxSettings(
     val allowHapticFeedback: Boolean = true,
     val allowScanSound: Boolean = true,
     val classFilter: ClassFilter? = null,
-    val redactionSettingsResolver: @RawValue RedactionSettingsResolver? = null
+    val redactionSettingsResolver: @RawValue RedactionSettingsResolver? = null,
+    val passportOnly: Boolean = false,
+    val helpTooltipShowDelay: Duration = needHelpTooltipDefaultTimeToAppearMs.milliseconds,
+    val helpTooltipHideDelay: Duration = needHelpTooltipDefaultDurationMs.milliseconds
 ) : Parcelable {
     /**
      * Constructor for easier Java implementation.
@@ -47,6 +58,12 @@ data class BlinkIdUxSettings(
      * @param classFilter Defines which specific document classes are allowed during scanning.
      * Each document class is defined by the trio of [CountryId], [RegionId], and [DocumentTypeId]. Defaults to null, meaning all classes are allowed.
      * @param redactionSettingsResolver Defines how to resolve `RedactionSettings` for a given document class.
+     * @param passportOnly Enables the passport-only scanning flow, with passport specific instructions, onboarding and help screens.
+     * Only passport documents are allowed. If [classFilter] is also set, documents must pass both filters. Defaults to false.
+     * @param helpTooltipShowDelayMs Duration before the help tooltip is shown in milliseconds.
+     * If less than or equal to 0, the help tooltip won't be shown automatically.
+     * @param helpTooltipHideDelayMs Duration before the help tooltip is hidden in milliseconds.
+     * If less than or equal to 0, the help tooltip won't be hidden automatically. Defaults to 5000.
      */
     @JvmOverloads constructor(
         stepTimeoutDurationMs: Int,
@@ -54,13 +71,19 @@ data class BlinkIdUxSettings(
         allowHapticFeedback: Boolean = true,
         allowScanSound: Boolean = true,
         classFilter: ClassFilter? = null,
-        redactionSettingsResolver: RedactionSettingsResolver? = null
+        redactionSettingsResolver: RedactionSettingsResolver? = null,
+        passportOnly: Boolean = false,
+        helpTooltipShowDelayMs: Int = needHelpTooltipDefaultTimeToAppearMs.toInt(),
+        helpTooltipHideDelayMs: Int = needHelpTooltipDefaultDurationMs.toInt()
     ) : this(
         stepTimeoutDuration = stepTimeoutDurationMs.milliseconds,
         inactivityTimeoutDuration = inactivityTimeoutDuration.milliseconds,
         allowHapticFeedback = allowHapticFeedback,
         allowScanSound = allowScanSound,
         classFilter = classFilter,
-        redactionSettingsResolver = redactionSettingsResolver
+        redactionSettingsResolver = redactionSettingsResolver,
+        passportOnly = passportOnly,
+        helpTooltipShowDelay = helpTooltipShowDelayMs.milliseconds,
+        helpTooltipHideDelay = helpTooltipHideDelayMs.milliseconds
     )
 }

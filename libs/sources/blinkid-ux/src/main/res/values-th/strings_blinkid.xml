@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">คุณจะพบชุดอักขระยาวที่ด้านล่างของส่วนหน้าหรือส่วนหลังของเอกสาร แยกออกเป็น 2 หรือ 3 บรรทัดและคั่นด้วยลูกศร (&lt;&lt; หรือ &gt;&gt;)</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">ค้นหา MRZ บนเอกสาร</string>
     <string name="mb_blinkid_onboarding_dialog_title">สังเกตว่ารายละเอียดมองเห็นได้ชัด</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">เปิดหนังสือเดินทางไปที่หน้าที่มีรูปถ่ายและข้อมูลส่วนบุคคลของคุณ หน้านี้จะแสดงชื่อ วันเกิด หมายเลขหนังสือเดินทาง และข้อมูลระบุตัวตนอื่นๆ</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">เปิดหนังสือเดินทางที่หน้าข้อมูล</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">เตรียมหนังสือเดินทางโดยเปิดไปที่หน้าที่มีรูปถ่ายและข้อมูลส่วนบุคคลของคุณ ตรวจสอบให้แน่ใจว่าหนังสือเดินทางอยู่ในบริเวณที่มีแสงสว่างเพียงพอ ต้องมองเห็นข้อมูลทุกช่องอย่างครบถ้วน</string>
+    <string name="mb_blinkid_passport_onboarding_title">เปิดหนังสือเดินทางของคุณ</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">สแกนหน้าข้อมูลของเอกสาร</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">ตรวจสอบว่าเอกสารของคุณเห็นได้ครบถ้วนดีและไม่มีแสงสะท้อน</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">ลองอีกครั้ง</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">ย้ายไปยังหน้าด้านขวา</string>
     <string name="mb_blinkid_scanning_wrong_page_top">ย้ายไปยังหน้าบนสุด</string>
     <string name="mb_blinkid_scanning_wrong_side">พลิกเอกสาร</string>
+    <string name="mb_blinkid_screen_detected">วางเอกสารบนพื้นหลังเรียบ</string>
     <string name="mb_blinkid_top_page_instructions">สแกนหน้าบนสุด</string>
     <string name="mb_blinkid_unsupported_document_message">สแกนด้านหน้าของเอกสารที่ได้รับการรองรับ</string>
     <string name="mb_blinkid_unsupported_document_title">ไม่รู้จักเอกสาร</string>

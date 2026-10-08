@@ -13,14 +13,20 @@ enum class BlinkIdExtractionMode {
 
     DocumentWithBarcode,
 
-    DocumentWithMrz
+    DocumentWithMrz,
+
+    PassportOnly
 }
 
 /**
  * Maps the current [BlinkIdSessionSettings] to the corresponding [BlinkIdExtractionMode]
  * based on which extraction modules are enabled.
+ *
+ * @param passportOnly Whether passport-only scanning is enabled through [com.microblink.blinkid.ux.settings.BlinkIdUxSettings.passportOnly].
+ * Takes precedence over the module configuration.
  */
-fun BlinkIdSessionSettings.toBlinkIdExtractionMode(): BlinkIdExtractionMode {
+@JvmOverloads
+fun BlinkIdSessionSettings.toBlinkIdExtractionMode(passportOnly: Boolean = false): BlinkIdExtractionMode {
     val documentCaptureEnabled = scanningSettings.documentCaptureModule != null
     val barcodeEnabled = scanningSettings.barcodeModule != null
     val barcodePresenceMandatory = scanningSettings.barcodeModule?.presenceMandatory == true
@@ -31,6 +37,9 @@ fun BlinkIdSessionSettings.toBlinkIdExtractionMode(): BlinkIdExtractionMode {
 
 
     return when {
+        passportOnly ->
+            BlinkIdExtractionMode.PassportOnly
+
         documentCaptureEnabled && barcodeEnabled && barcodePresenceMandatory && isSingleSideScan && !mrzEnabled && !vizEnabled ->
             BlinkIdExtractionMode.DocumentWithBarcode
 

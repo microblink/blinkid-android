@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">مطلوب إذن بالوصول إلى الكاميرا.</string>
     <string name="mb_blinkid_close">إغلاق</string>
+    <string name="mb_blinkid_consent_description">تخزين المعلومات الشخصية و/أو الوصول إليها لغرض التحقق من هويتك.</string>
+    <string name="mb_blinkid_consent_no">لا أوافق</string>
+    <string name="mb_blinkid_consent_privacy_link">إشعار الخصوصية</string>
+    <string name="mb_blinkid_consent_privacy_notice">تساعدنا اختياراتك على حماية معلوماتك الشخصية وتحسين تقنيتنا مع الحفاظ على أعلى معايير خصوصية البيانات، كما هو موضح في %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">أوافق على استخدام مقدّم الخدمة لبياناتي الشخصية بغرض تحسين تقنياته.</string>
+    <string name="mb_blinkid_consent_title">نحتاج إلى موافقتك على:</string>
+    <string name="mb_blinkid_consent_yes">أوافق</string>
     <string name="mb_blinkid_dialog_back_button">عودة</string>
     <string name="mb_blinkid_dialog_done_button">انتهى</string>
     <string name="mb_blinkid_dialog_next_button">التالي</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">انقل إلى موضع أبعد</string>
     <string name="mb_blinkid_need_help_tooltip">هل تحتاج مساعدة؟</string>
     <string name="mb_blinkid_ok">نعم</string>
+    <string name="mb_blinkid_optional">اختياري</string>
+    <string name="mb_blinkid_privacy_notice">إشعار الخصوصية</string>
     <string name="mb_blinkid_retry">إعادة المحاولة</string>
     <string name="mb_blinkid_warning">تحذير</string>
 </resources>

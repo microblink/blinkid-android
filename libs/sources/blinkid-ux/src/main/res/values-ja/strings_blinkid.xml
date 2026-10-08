@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">書類の表面または裏面の下部に、「&lt;&lt;」または「&gt;&gt;」で区切られた2～3行の長い文字列があります。</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">書類のMRZを探してください</string>
     <string name="mb_blinkid_onboarding_dialog_title">すべての詳細が見えるようにしてください</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">パスポートの顔写真と個人情報が記載されたページを開いてください。このページには、氏名、生年月日、パスポート番号などの本人確認情報が記載されています。</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">パスポートの顔写真と個人情報が記載されたページを開く</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">写真と個人情報が記載されたページを開いてください。パスポート全体に十分な光が当たっていることを確認してください。すべての項目が完全に見えるようにしてください。</string>
+    <string name="mb_blinkid_passport_onboarding_title">パスポートを開いてください</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">書類のデータページをスキャンしてください</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">書類全体が十分に明るく写り、すべてが画面内に収まり、反射がないことを確認してください。</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">再試行</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">右ページへ移動</string>
     <string name="mb_blinkid_scanning_wrong_page_top">トップページへ移動</string>
     <string name="mb_blinkid_scanning_wrong_side">書類を反転してください</string>
+    <string name="mb_blinkid_screen_detected">書類を無地の背景に置いてください</string>
     <string name="mb_blinkid_top_page_instructions">上のページをスキャンする</string>
     <string name="mb_blinkid_unsupported_document_message">サポートされている書類の表側をスキャンしてください。</string>
     <string name="mb_blinkid_unsupported_document_title">ドキュメントが認識されません</string>

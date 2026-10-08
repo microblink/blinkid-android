@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Heimildar myndavélar er krafist.</string>
     <string name="mb_blinkid_close">Loka</string>
+    <string name="mb_blinkid_consent_description">Vistun og/eða aðgangi að persónuupplýsingum í þeim tilgangi að staðfesta auðkenni þitt.</string>
+    <string name="mb_blinkid_consent_no">Samþykkja ekki</string>
+    <string name="mb_blinkid_consent_privacy_link">persónuverndartilkynningunni</string>
+    <string name="mb_blinkid_consent_privacy_notice">Val þitt hjálpar okkur að vernda persónuupplýsingar þínar og bæta tækni okkar um leið og við fylgjum ströngustu kröfum um persónuvernd, eins og lýst er í %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Ég samþykki að þjónustuveitan noti persónuupplýsingar mínar til að bæta tækni sína.</string>
+    <string name="mb_blinkid_consent_title">Við þurfum samþykki þitt fyrir:</string>
+    <string name="mb_blinkid_consent_yes">Samþykkja</string>
     <string name="mb_blinkid_dialog_back_button">Til baka</string>
     <string name="mb_blinkid_dialog_done_button">Lokið</string>
     <string name="mb_blinkid_dialog_next_button">Áfram</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Færið fjær</string>
     <string name="mb_blinkid_need_help_tooltip">Þarftu aðstoð?</string>
     <string name="mb_blinkid_ok">Í lagi</string>
+    <string name="mb_blinkid_optional">Valfrjálst</string>
+    <string name="mb_blinkid_privacy_notice">Persónuverndartilkynning</string>
     <string name="mb_blinkid_retry">Reynið aftur</string>
     <string name="mb_blinkid_warning">Viðvörun</string>
 </resources>

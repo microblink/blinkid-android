@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Autorizzazione per la fotocamera obbligatoria.</string>
     <string name="mb_blinkid_close">Chiudi</string>
+    <string name="mb_blinkid_consent_description">Conservare e/o accedere alle informazioni personali allo scopo di verificare la tua identità.</string>
+    <string name="mb_blinkid_consent_no">Non acconsento</string>
+    <string name="mb_blinkid_consent_privacy_link">Informativa sulla privacy</string>
+    <string name="mb_blinkid_consent_privacy_notice">Le tue scelte ci aiutano a proteggere le tue informazioni personali e a migliorare la nostra tecnologia, mantenendo i più elevati standard di riservatezza dei dati, come descritto nell\'%1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Acconsento all\'utilizzo dei miei dati personali da parte del fornitore per ottimizzare la propria tecnologia.</string>
+    <string name="mb_blinkid_consent_title">Abbiamo bisogno del tuo consenso per:</string>
+    <string name="mb_blinkid_consent_yes">Acconsento</string>
     <string name="mb_blinkid_dialog_back_button">Indietro</string>
     <string name="mb_blinkid_dialog_done_button">Fatto</string>
     <string name="mb_blinkid_dialog_next_button">Avanti</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Spostati più lontano</string>
     <string name="mb_blinkid_need_help_tooltip">Ti serve aiuto?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Facoltativo</string>
+    <string name="mb_blinkid_privacy_notice">Informativa sulla privacy</string>
     <string name="mb_blinkid_retry">Riprova</string>
     <string name="mb_blinkid_warning">Avviso</string>
 </resources>

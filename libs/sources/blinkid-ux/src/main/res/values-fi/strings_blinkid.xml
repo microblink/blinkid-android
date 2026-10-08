@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Löydät asiakirjan etu- tai kääntöpuolen alareunasta pitkän merkkijonon, joka on jaettu 2 tai 3 riville ja jonka osat on erotettu toisistaan nuolilla (&lt;&lt; tai &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Etsi asiakirjan MRZ</string>
     <string name="mb_blinkid_onboarding_dialog_title">Pidä kaikki tiedot näkyvissä</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Avaa passi sivulle, jolla ovat valokuvasi ja henkilötietosi. Sivulla näkyvät nimesi, syntymäaikasi, passinumerosi ja muut tunnistetietosi.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Avaa passi tietosivun kohdalta</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Avaa passi sivulle, jolla ovat kuvasi ja henkilötietosi. Varmista, että passi on hyvin valaistu. Kaikkien kenttien on oltava kokonaan näkyvissä.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Avaa passi</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Skannaa asiakirjan tietosivu</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Varmista, että asiakirja on hyvin valaistu, se näkyy kokonaisuudessaan eikä siinä ole heijastuksia.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Yritä uudelleen</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Siirry oikealle sivulle</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Siirry yläsivulle</string>
     <string name="mb_blinkid_scanning_wrong_side">Käännä asiakirja ympäri</string>
+    <string name="mb_blinkid_screen_detected">Siirrä asiakirja yksiväriselle taustalle</string>
     <string name="mb_blinkid_top_page_instructions">Skannaa yläsivu</string>
     <string name="mb_blinkid_unsupported_document_message">Skannaa tuetun asiakirjan etupuoli.</string>
     <string name="mb_blinkid_unsupported_document_title">Asiakirjaa ei tunnistettu</string>

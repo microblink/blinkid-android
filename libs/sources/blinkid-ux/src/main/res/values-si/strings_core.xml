@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">කැමරා අවසරය අවශ්‍ය වේ.</string>
     <string name="mb_blinkid_close">වසන්න</string>
+    <string name="mb_blinkid_consent_description">ඔබගේ අනන්‍යතාව තහවුරු කිරීම සඳහා පුද්ගලික තොරතුරු ගබඩා කිරීම සහ/හෝ ඒවාට ප්‍රවේශ වීම.</string>
+    <string name="mb_blinkid_consent_no">එකඟ නොවන්න</string>
+    <string name="mb_blinkid_consent_privacy_link">රහස්‍යතා නිවේදනයේ</string>
+    <string name="mb_blinkid_consent_privacy_notice">%1$s විස්තර කර ඇති පරිදි, ඔබගේ තේරීම් ඔබගේ පුද්ගලික තොරතුරු ආරක්ෂා කිරීමට සහ දත්ත රහස්‍යතාවේ ඉහළම ප්‍රමිතීන් පවත්වාගෙන යමින් අපගේ තාක්ෂණය වැඩිදියුණු කිරීමට අපට උපකාරී වේ.</string>
+    <string name="mb_blinkid_consent_privacy_switch">එහි තාක්ෂණය ප්‍රශස්ත කිරීමේ අරමුණින් සැපයුම්කරු විසින් මගේ පුද්ගලික දත්ත භාවිත කිරීමට මම එකඟ වෙමි.</string>
+    <string name="mb_blinkid_consent_title">පහත දේ කිරීමට අපට ඔබගේ එකඟතාව අවශ්‍යයි:</string>
+    <string name="mb_blinkid_consent_yes">එකඟ වන්න</string>
     <string name="mb_blinkid_dialog_back_button">ආපසු</string>
     <string name="mb_blinkid_dialog_done_button">කළා</string>
     <string name="mb_blinkid_dialog_next_button">ඊලඟ</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">මදක් ඈත් කරන්න</string>
     <string name="mb_blinkid_need_help_tooltip">උදව් අවශ්‍ය ද?</string>
     <string name="mb_blinkid_ok">හරි</string>
+    <string name="mb_blinkid_optional">වෛකල්පික</string>
+    <string name="mb_blinkid_privacy_notice">රහස්‍යතා නිවේදනය</string>
     <string name="mb_blinkid_retry">නැවත උත්සාහ කරන්න</string>
     <string name="mb_blinkid_warning">අවවාදයයි</string>
 </resources>

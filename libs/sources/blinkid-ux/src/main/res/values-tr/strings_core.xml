@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Kamera izni gerekli.</string>
     <string name="mb_blinkid_close">Kapat</string>
+    <string name="mb_blinkid_consent_description">Kimliğinizi doğrulamak amacıyla kişisel bilgilerin depolanması ve/veya bunlara erişilmesi.</string>
+    <string name="mb_blinkid_consent_no">Onay verme</string>
+    <string name="mb_blinkid_consent_privacy_link">Gizlilik Bildirimi\'nde</string>
+    <string name="mb_blinkid_consent_privacy_notice">Seçimleriniz, %1$s açıklandığı üzere, en yüksek veri gizliliği standartlarını korurken kişisel bilgilerinizi korumamıza ve teknolojimizi geliştirmemize yardımcı olur.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Sağlayıcının teknolojisini iyileştirmek amacıyla kişisel verilerimi kullanmasına onay veriyorum.</string>
+    <string name="mb_blinkid_consent_title">Şunlar için onayınıza ihtiyacımız var:</string>
+    <string name="mb_blinkid_consent_yes">Onay ver</string>
     <string name="mb_blinkid_dialog_back_button">Geri</string>
     <string name="mb_blinkid_dialog_done_button">Bitti</string>
     <string name="mb_blinkid_dialog_next_button">Sonraki</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Uzaklaş</string>
     <string name="mb_blinkid_need_help_tooltip">Yardıma mı ihtiyacın var?</string>
     <string name="mb_blinkid_ok">Tamam</string>
+    <string name="mb_blinkid_optional">İsteğe bağlı</string>
+    <string name="mb_blinkid_privacy_notice">Gizlilik Bildirimi</string>
     <string name="mb_blinkid_retry">Tekrar dene</string>
     <string name="mb_blinkid_warning">Uyarı</string>
 </resources>

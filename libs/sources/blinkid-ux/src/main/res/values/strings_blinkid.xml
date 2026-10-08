@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">You’ll find a long string of characters at the bottom of the front or back of the document, split into 2 or 3 lines and separated by arrows (&lt;&lt; or &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Locate MRZ on the document</string>
     <string name="mb_blinkid_onboarding_dialog_title">Keep all the details visible</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Open your passport to the page with your photo and personal details. This page shows your name, date of birth, passport number, and other identifying information.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Open passport to show data page</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Prepare your passport by opening it to the page that contains your photo and personal information. Make sure the passport is well lit. All fields must be fully visible.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Open your passport</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Scan the data page of a document</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Make sure the document is well lit, fully visible, and free of glare.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Retry</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Move to the right page</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Move to the top page</string>
     <string name="mb_blinkid_scanning_wrong_side">Flip the document</string>
+    <string name="mb_blinkid_screen_detected">Move the document to a plain background</string>
     <string name="mb_blinkid_top_page_instructions">Scan the top page</string>
     <string name="mb_blinkid_unsupported_document_message">Scan the front side of a supported document.</string>
     <string name="mb_blinkid_unsupported_document_title">Document not recognized</string>

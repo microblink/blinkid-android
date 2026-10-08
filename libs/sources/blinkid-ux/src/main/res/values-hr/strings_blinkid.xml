@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Na dnu prednje ili stražnje strane dokumenta pronaći ćete dugačak niz znakova, raspoređen u 2 ili 3 retka i odvojen strelicama (&lt;&lt; ili &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Locirajte MRZ na dokumentu</string>
     <string name="mb_blinkid_onboarding_dialog_title">Pazite da su svi detalji vidljivi</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Otvorite putovnicu na stranici s fotografijom i osobnim podacima. Na toj se stranici nalaze vaše ime, datum rođenja, broj putovnice i drugi identifikacijski podaci.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Otvorite putovnicu na stranici s podacima</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Otvorite putovnicu na stranici s fotografijom i osobnim podacima. Provjerite je li putovnica dobro osvijetljena. Svi podaci s dokumenta trebaju biti vidljivi.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Otvorite putovnicu</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Skenirajte stranicu s podacima dokumenta</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Pripazite da je dokument dobro osvijetljen, u potpunosti vidljiv i bez odsjaja.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">U redu</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Prijeđite na desnu stranicu</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Prijeđite na gornju stranicu</string>
     <string name="mb_blinkid_scanning_wrong_side">Okrenite dokument</string>
+    <string name="mb_blinkid_screen_detected">Premjestite dokument na neutralnu pozadinu</string>
     <string name="mb_blinkid_top_page_instructions">Skenirajte gornju stranicu</string>
     <string name="mb_blinkid_unsupported_document_message">Ponovite skeniranje prednje strane podržanog dokumenta.</string>
     <string name="mb_blinkid_unsupported_document_title">Dokument nije prepoznat</string>

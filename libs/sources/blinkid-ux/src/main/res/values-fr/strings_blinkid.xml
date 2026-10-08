@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Vous trouverez une longue chaîne de caractères en bas du recto ou du verso du document, divisée en deux ou trois lignes et séparée par des flèches (&lt;&lt; ou &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Repérez MRZ sur le document</string>
     <string name="mb_blinkid_onboarding_dialog_title">Gardez tous les détails visibles</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Ouvrez votre passeport à la page comportant votre photo et vos informations personnelles. Cette page indique votre nom, votre date de naissance, votre numéro de passeport et d’autres informations d’identité.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Ouvrez votre passeport à la page d’identité</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Ouvrez votre passeport à la page contenant votre photo et vos informations personnelles. Assurez-vous que le passeport est bien éclairé. Tous les champs doivent être entièrement visibles.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Ouvrez votre passeport</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Scanner la page de données du document</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Assurez-vous que le document est bien éclairé, entièrement visible et sans reflet.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Réessayez</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Aller à la page de droite</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Aller à la première page</string>
     <string name="mb_blinkid_scanning_wrong_side">Retournez le document</string>
+    <string name="mb_blinkid_screen_detected">Placez le document sur un fond uni</string>
     <string name="mb_blinkid_top_page_instructions">Scanner la première page</string>
     <string name="mb_blinkid_unsupported_document_message">Scannez le recto d\'un document pris en charge.</string>
     <string name="mb_blinkid_unsupported_document_title">Document non reconnu</string>

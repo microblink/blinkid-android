@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Wubehu nkyerɛwde atenten bi wɔ krataa no ase wɔ n’anim anaa n’akyi, a wɔakyekyɛ mu ayɛ no nkyerɛwde 2 anaa 3 na wɔde aro (&lt;&lt; anaa &gt;&gt;) atew ntam.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Hwehwɛ MRZ wɔ krataa no so</string>
     <string name="mb_blinkid_onboarding_dialog_title">Hwɛ sɛ wobehu afa nyinaa</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Bue wo akwantuo krataa no kɔ krataafa a wo mfonini ne wo ho nsɛm wɔ so no so. Krataafa yi kyerɛ wo din, da a wɔwoo wo, wo akwantuo krataa nɔma, ne nsɛm afoforo a wɔde hu wo.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Bue akwantuo krataa no kɔ nsɛm krataafa no so</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Siesie wo akwantu krataa no na bue no wɔ krataafa a wo mfonini ne wo ho nsɛm wɔ so. Hwɛ sɛ hann hyerɛn so yiye. Ɛsɛ sɛ wotumi hu nsɛm a ɛwɔ so nyinaa yiye.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Bue wo akwantu krataa no</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Skane krataa no akyi nsɛm</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Hwɛ hu sɛ nkekae biara nni krataa no so, wotumi hu no yiye, na asum biara nni so.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">San yɛ bio</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Dane kɔ nifa so</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Dane kɔ soro</string>
     <string name="mb_blinkid_scanning_wrong_side">Dane krataa no</string>
+    <string name="mb_blinkid_screen_detected">Fa krataa no kɔ baabi a biribiara nni akyi</string>
     <string name="mb_blinkid_top_page_instructions">Skane soro</string>
     <string name="mb_blinkid_unsupported_document_message">Skane krataa a ɛsɔpɔɔte no anim.</string>
     <string name="mb_blinkid_unsupported_document_title">Yɛnnye krataa yi ntom</string>

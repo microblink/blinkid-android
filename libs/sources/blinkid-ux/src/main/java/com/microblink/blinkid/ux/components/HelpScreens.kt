@@ -120,14 +120,21 @@ fun HelpScreens(
                     .padding(horizontal = 20.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
+                val (backInteractionSource, backIsFocused) = rememberFocusInteraction()
                 Button(
-                    modifier = Modifier.semantics {
-                        traversalIndex = 2f
-                    },
+                    modifier = Modifier
+                        .semantics {
+                            traversalIndex = 2f
+                        }
+                        .doubleFocusBorder(
+                            focused = backIsFocused.value,
+                            shape = ButtonDefaults.shape
+                        ),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Transparent,
                         contentColor = MaterialTheme.colorScheme.primary
                     ),
+                    interactionSource = backInteractionSource,
                     onClick = {
                         if (pagerState.canScrollBackward) {
                             coroutineScope.launch {
@@ -143,14 +150,21 @@ fun HelpScreens(
                         style = SdkTheme.sdkTypography.helpDialogButton
                     )
                 }
+                val (nextInteractionSource, nextIsFocused) = rememberFocusInteraction()
                 Button(
-                    modifier = Modifier.semantics {
-                        traversalIndex = 2f
-                    },
+                    modifier = Modifier
+                        .semantics {
+                            traversalIndex = 2f
+                        }
+                        .doubleFocusBorder(
+                            focused = nextIsFocused.value,
+                            shape = ButtonDefaults.shape
+                        ),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Transparent,
                         contentColor = MaterialTheme.colorScheme.primary
                     ),
+                    interactionSource = nextInteractionSource,
                     onClick = {
                         if (pagerState.canScrollForward) {
                             coroutineScope.launch {

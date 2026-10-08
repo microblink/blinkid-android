@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Dokumenta priekšpuses vai aizmugures apakšdaļā jūs atradīsiet garu virkni rakstzīmju, kas ir izvietota 2–3 rindās un sadalīta ar bultiņām (&lt;&lt; vai &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Atrodiet dokumentā MRZ</string>
     <string name="mb_blinkid_onboarding_dialog_title">Paturēt redzamu visu detalizēto informāciju</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Atveriet pasi lapā ar savu fotoattēlu un personas datiem. Šajā lapā ir norādīts jūsu vārds, dzimšanas datums, pases numurs un cita identifikācijas informācija.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Atveriet pasi datu lapā</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Atveriet pasi lappusē, kurā ir jūsu fotoattēls un personas informācija. Pārliecinieties, ka pase ir labi apgaismota. Visiem laukiem jābūt pilnībā redzamiem.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Atveriet pasi</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Skenēt dokumenta datu lapu</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Pārliecinieties, ka dokuments ir labi apgaismots, pilnībā redzams un to neietekmē atspīdums.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Mēģināt no jauna</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Pārvietot uz labo lapu</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Pārvietot uz augšējo lapu</string>
     <string name="mb_blinkid_scanning_wrong_side">Apvērst dokumentu</string>
+    <string name="mb_blinkid_screen_detected">Novietojiet dokumentu uz vienkrāsaina fona</string>
     <string name="mb_blinkid_top_page_instructions">Skenēt augšējo lapu</string>
     <string name="mb_blinkid_unsupported_document_message">Skenējiet atbalstītā dokumenta priekšpusi.</string>
     <string name="mb_blinkid_unsupported_document_title">Dokuments nav atpazīts</string>

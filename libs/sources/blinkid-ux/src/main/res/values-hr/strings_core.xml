@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Potrebna je dozvola za pristup kameri.</string>
     <string name="mb_blinkid_close">Zatvori</string>
+    <string name="mb_blinkid_consent_description">Pohranu i/ili pristup osobnim podacima u svrhu provjere vašeg identiteta.</string>
+    <string name="mb_blinkid_consent_no">Ne prihvaćam</string>
+    <string name="mb_blinkid_consent_privacy_link">Izjavi o zaštiti osobnih podataka</string>
+    <string name="mb_blinkid_consent_privacy_notice">Vaši odabiri pomažu nam zaštititi vaše osobne podatke i unaprijediti našu tehnologiju uz održavanje najviših standarda privatnosti podataka, kako je opisano u %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Dajem privolu pružatelju usluge za upotrebu mojih osobnih podataka u svrhu optimizacije njegove tehnologije.</string>
+    <string name="mb_blinkid_consent_title">Potrebna nam je vaša privola za:</string>
+    <string name="mb_blinkid_consent_yes">Prihvaćam</string>
     <string name="mb_blinkid_dialog_back_button">Natrag</string>
     <string name="mb_blinkid_dialog_done_button">OK</string>
     <string name="mb_blinkid_dialog_next_button">Dalje</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Udaljite dokument</string>
     <string name="mb_blinkid_need_help_tooltip">Trebate pomoć?</string>
     <string name="mb_blinkid_ok">U redu</string>
+    <string name="mb_blinkid_optional">Neobavezno</string>
+    <string name="mb_blinkid_privacy_notice">Izjava o zaštiti osobnih podataka</string>
     <string name="mb_blinkid_retry">U redu</string>
     <string name="mb_blinkid_warning">Upozorenje</string>
 </resources>

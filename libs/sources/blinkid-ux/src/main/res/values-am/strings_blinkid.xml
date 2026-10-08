@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">በሰነዱ ፊት ወይም ጀርባ የታችኛው ክፍል ላይ፣ በ2 ወይም 3 መስመሮች የተከፈለና በቀስቶች (&lt;&lt; ወይም &gt;&gt;) የተለያየ ረጅም የቁምፊዎች ተርታ ያገኛሉ።</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">የሰነዱ የMRZ ገፅን ያግኙ</string>
     <string name="mb_blinkid_onboarding_dialog_title">ሁሉንም ዝርዝሮች እንዲታዩ ያድርጉ</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">ፓስፖርትዎን ፎቶዎ እና የግል መረጃዎ ባሉበት ገጽ ላይ ይክፈቱ። ይህ ገጽ ስምዎን፣ የትውልድ ቀንዎን፣ የፓስፖርት ቁጥርዎን እና ሌሎች መለያ መረጃዎችን ያሳያል።</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">የመረጃ ገጹ እንዲታይ ፓስፖርትዎን ይክፈቱ</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">ፓስፖርትዎን ፎቶዎ እና የግል መረጃዎ የሚገኙበት ገጽ ላይ ይክፈቱ። በፓስፖርቱ ላይ በቂ ብርሃን መኖሩን ያረጋግጡ። ሁሉም መስኮች ሙሉ በሙሉ መታየት አለባቸው።</string>
+    <string name="mb_blinkid_passport_onboarding_title">ፓስፖርትዎን ይክፈቱ</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">የሰነዱ የመረጃ ገፅን ይቃኙ</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">የሰነዱ ቦታ በቂ ብርሃን እንደሚያገኝ፣ በደንብ እንደሚታይና ነጸብራቅ እንደሌለበት ያረጋግጡ።</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">እንደገና ይሞክሩ</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">ወደ ቀኝ ገጽ ይሂዱ</string>
     <string name="mb_blinkid_scanning_wrong_page_top">ወደ ላይኛው ገጽ ተንቀሳቅስ</string>
     <string name="mb_blinkid_scanning_wrong_side">ሰነዱን ይገልብጡት</string>
+    <string name="mb_blinkid_screen_detected">ሰነዱን ወጥ በሆነ ዳራ ላይ ያስቀምጡ</string>
     <string name="mb_blinkid_top_page_instructions">የላይኛውን ገጽ ይቃኙ</string>
     <string name="mb_blinkid_unsupported_document_message">ተቀባይነት ያለው ሰነድ የፊት ገፅን ይቃኙ።</string>
     <string name="mb_blinkid_unsupported_document_title">ሰነድ አልታወቀም</string>

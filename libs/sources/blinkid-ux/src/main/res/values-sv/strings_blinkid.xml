@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Längst ner på dokumentets fram- eller baksida finns två eller tre rader med tecken som separeras av pilar (&lt;&lt; eller &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Leta reda på dokumentets MRZ-kod</string>
     <string name="mb_blinkid_onboarding_dialog_title">Håll alla uppgifter synliga</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Öppna passet på sidan med ditt foto och dina personuppgifter. På den här sidan finns ditt namn, födelsedatum, passnummer och annan identifierande information.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Öppna passet på sidan med personuppgifter</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Öppna ditt pass på sidan med ditt foto och dina personuppgifter. Se till att passet är väl upplyst. Alla fält måste vara helt synliga.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Öppna ditt pass</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Skanna dokumentets datasida</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Kontrollera att belysningen är god och att hela dokumentet är synligt och fritt från reflektioner.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Försök igen</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Flytta till den högra sidan</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Flytta till den översta sidan</string>
     <string name="mb_blinkid_scanning_wrong_side">Vänd på dokumentet</string>
+    <string name="mb_blinkid_screen_detected">Flytta dokumentet till en enfärgad bakgrund</string>
     <string name="mb_blinkid_top_page_instructions">Skanna den översta sidan</string>
     <string name="mb_blinkid_unsupported_document_message">Skanna framsidan på ett dokument som stöds.</string>
     <string name="mb_blinkid_unsupported_document_title">Dokumentet kändes inte igen</string>

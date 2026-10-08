@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Utapata mfululizo mrefu wa herufi chini ya sehemu ya mbele au nyuma ya hati, uliogawanywa katika mistari 2 au 3 na kutenganishwa na mishale (&lt;&lt; au &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Tafuta MRZ kwenye hati</string>
     <string name="mb_blinkid_onboarding_dialog_title">Hakikisha kila kitu kinaonekana</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Fungua pasipoti yako kwenye ukurasa wenye picha na maelezo yako binafsi. Ukurasa huu unaonyesha jina lako, tarehe ya kuzaliwa, nambari ya pasipoti na maelezo mengine ya utambulisho.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Fungua pasipoti kwenye ukurasa wa taarifa</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Andaa pasipoti yako kwa kuifungua kwenye ukurasa wenye picha yako na taarifa zako binafsi. Hakikisha pasipoti imeangaziwa vizuri. Sehemu zote lazima zionekane wazi.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Fungua pasipoti yako</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Skani ukurasa wa data wa hati</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Hakikisha hati ina mwanga wa kutosha, inaonekana vizuri, na haina mng\'ao.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Jaribu tena</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Nenda kwenye ukurasa wa kulia</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Nenda kwenye ukurasa wa juu</string>
     <string name="mb_blinkid_scanning_wrong_side">Geuza hati</string>
+    <string name="mb_blinkid_screen_detected">Weka hati kwenye mandharinyuma yasiyo na vitu</string>
     <string name="mb_blinkid_top_page_instructions">Skani ukurasa wa juu</string>
     <string name="mb_blinkid_unsupported_document_message">Skani upande wa mbele wa hati inayokubalika.</string>
     <string name="mb_blinkid_unsupported_document_title">Hati imeshindwa kutambuliwa</string>

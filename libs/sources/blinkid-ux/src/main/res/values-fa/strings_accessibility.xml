@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mb_blinkid_accessibility_exit_scanning">خروج از اسکن</string>
-    <string name="mb_blinkid_accessibility_flashlight_off">چراغ قوه خاموش</string>
-    <string name="mb_blinkid_accessibility_flashlight_on">چراغ قوه روشن</string>
-    <string name="mb_blinkid_accessibility_next_page">صفحه بعد</string>
-    <string name="mb_blinkid_accessibility_previous_page">صفحه قبلی</string>
-    <string name="mb_blinkid_accessibility_show_help_screens">نمایش صفحات راهنما</string>
-    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">با موفقیت انجام شد! شماره کارت اسکن شد</string>
-    <string name="mb_blinkid_accessibility_success_card_scanned">با موفقیت انجام شد! کارت اسکن شد</string>
-    <string name="mb_blinkid_accessibility_success_document_scanned">با موفقیت اسکن شد! سند اسکن شد</string>
-    <string name="mb_blinkid_accessibility_success_first_side_scanned">با موفقیت اسکن از جلو انجام شد!</string>
-    <string name="mb_blinkid_accessibility_turn_flashlight_off">چراغ قوه را خاموش کنید</string>
-    <string name="mb_blinkid_accessibility_turn_flashlight_on">روشن کردن چراغ قوه</string>
+    <string name="mb_blinkid_accessibility_exit_scanning">Khoruj az esken</string>
+    <string name="mb_blinkid_accessibility_flashlight_off">Cheragh-qoveh khamush ast</string>
+    <string name="mb_blinkid_accessibility_flashlight_on">Cheragh-qoveh roshan ast</string>
+    <string name="mb_blinkid_accessibility_next_page">Safhe-ye ba\'d</string>
+    <string name="mb_blinkid_accessibility_previous_page">Safhe-ye ghabli</string>
+    <string name="mb_blinkid_accessibility_show_help_screens">Safhehâ-ye rahnamâ râ neshân dahid</string>
+    <string name="mb_blinkid_accessibility_success_card_number_side_scanned">Samte shomâre-ye kart bâ movaffaghiyat eskan shod</string>
+    <string name="mb_blinkid_accessibility_success_card_scanned">Kart bâ movaffaghiyat eskan shod</string>
+    <string name="mb_blinkid_accessibility_success_document_scanned">Sanad bâ movaffaghiyat eskan shod</string>
+    <string name="mb_blinkid_accessibility_success_first_side_scanned">Movafagh. Ruy-e jelo esken shod</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_off">Cheragh-qoveh ra khamush konid</string>
+    <string name="mb_blinkid_accessibility_turn_flashlight_on">Cheragh-qoveh ra roshan konid</string>
 </resources>
