@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Na spodnjem delu sprednje ali zadnje strani dokumenta boste našli dolg niz znakov, razdeljen v dve ali tri vrstice ter ločen s puščicami (&lt;&lt; ali &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Poiščite strojno berljivo območje na dokumentu</string>
     <string name="mb_blinkid_onboarding_dialog_title">Vidni morajo biti vsi podatki</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Odprite potni list na strani s fotografijo in osebnimi podatki. Na tej strani so vaše ime, datum rojstva, številka potnega lista in drugi identifikacijski podatki.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Odprite potni list na strani s podatki</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Pripravite potni list tako, da ga odprete na strani s fotografijo in osebnimi podatki. Poskrbite, da je potni list dobro osvetljen. Vsa polja morajo biti v celoti vidna.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Odprite potni list</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Optično preberite podatkovno stran dokumenta</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Poskrbite, da bo dokument dobro osvetljen, v celoti viden in brez odsevov.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Poskusi znova</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Premaknite se na desno stran</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Premaknite se na prvo stran</string>
     <string name="mb_blinkid_scanning_wrong_side">Obrnite dokument</string>
+    <string name="mb_blinkid_screen_detected">Premaknite dokument na enobarvno ozadje</string>
     <string name="mb_blinkid_top_page_instructions">Skenirajte prvo stran</string>
     <string name="mb_blinkid_unsupported_document_message">Optično preberite sprednjo stran podprtega dokumenta</string>
     <string name="mb_blinkid_unsupported_document_title">Dokument ni prepoznan</string>

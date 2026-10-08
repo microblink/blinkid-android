@@ -30,8 +30,8 @@ internal const val reticleDashRotationAnimationDurationMs = 550
 internal const val reticleDashAppearAnimationDurationMs = 1000
 internal const val reticleDashAppearDelayDurationMs = 550
 
-internal const val needHelpTooltipDurationMs = 5000L
-const val needHelpTooltipDefaultTimeToAppearMs = 10000L
+const val needHelpTooltipDefaultDurationMs = 5000L
+const val needHelpTooltipDefaultTimeToAppearMs = 11000L
 const val uiCountingWindowDurationMs = 1500L
 
 internal const val shortHapticFeedbackDurationMs = 100L

@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Kinakailangan ang pahintulot ng camera.</string>
     <string name="mb_blinkid_close">Isara</string>
+    <string name="mb_blinkid_consent_description">Mag-imbak at/o mag-access ng personal na impormasyon upang beripikahin ang iyong pagkakakilanlan.</string>
+    <string name="mb_blinkid_consent_no">Hindi ako pumapayag</string>
+    <string name="mb_blinkid_consent_privacy_link">Paunawa sa Privacy</string>
+    <string name="mb_blinkid_consent_privacy_notice">Makakatulong sa amin ang iyong mga pagpili na protektahan ang iyong personal na impormasyon at pahusayin ang aming teknolohiya, habang pinananatili namin ang pinakamataas na pamantayan sa privacy ng data, gaya ng inilalarawan sa %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Pumapayag akong gamitin ng provider ang aking personal na data upang pahusayin ang teknolohiya nito.</string>
+    <string name="mb_blinkid_consent_title">Kailangan namin ang iyong pahintulot para sa sumusunod:</string>
+    <string name="mb_blinkid_consent_yes">Pumapayag ako</string>
     <string name="mb_blinkid_dialog_back_button">Bumalik</string>
     <string name="mb_blinkid_dialog_done_button">Tapos na</string>
     <string name="mb_blinkid_dialog_next_button">Susunod</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Ilayo pa</string>
     <string name="mb_blinkid_need_help_tooltip">Kailangan ng tulong?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Opsyonal</string>
+    <string name="mb_blinkid_privacy_notice">Paunawa sa Privacy</string>
     <string name="mb_blinkid_retry">Subukan ulit</string>
     <string name="mb_blinkid_warning">Babala</string>
 </resources>

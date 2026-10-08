@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Камера рұқсаты қажет.</string>
     <string name="mb_blinkid_close">Жабу</string>
+    <string name="mb_blinkid_consent_description">Жеке басыңызды растау мақсатында жеке ақпаратты сақтауға және/немесе оған қол жеткізуге.</string>
+    <string name="mb_blinkid_consent_no">Келіспеймін</string>
+    <string name="mb_blinkid_consent_privacy_link">Құпиялылық туралы хабарламада</string>
+    <string name="mb_blinkid_consent_privacy_notice">Таңдауларыңыз %1$s сипатталғандай деректер құпиялылығының ең жоғары стандарттарын сақтай отырып, жеке ақпаратыңызды қорғауға және технологиямызды жақсартуға көмектеседі.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Қызмет көрсетушінің өз технологиясын оңтайландыру мақсатында менің жеке деректерімді пайдалануына келісім беремін.</string>
+    <string name="mb_blinkid_consent_title">Келесі әрекеттерге келісіміңіз қажет:</string>
+    <string name="mb_blinkid_consent_yes">Келісемін</string>
     <string name="mb_blinkid_dialog_back_button">Артқа қайту</string>
     <string name="mb_blinkid_dialog_done_button">Дайын</string>
     <string name="mb_blinkid_dialog_next_button">Келесі</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Алыстаңыз</string>
     <string name="mb_blinkid_need_help_tooltip">Көмек керек пе?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Міндетті емес</string>
+    <string name="mb_blinkid_privacy_notice">Құпиялылық туралы хабарлама</string>
     <string name="mb_blinkid_retry">Қайталау</string>
     <string name="mb_blinkid_warning">Ескерту</string>
 </resources>

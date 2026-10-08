@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Az okmény elején vagy hátoldalán egy hosszú karaktersort talál, amely 2 vagy 3 sorra van osztva, valamint (&lt;&lt; vagy &gt;&gt;) nyilak választják el.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Keresse meg az MRZ kódot az okmányon</string>
     <string name="mb_blinkid_onboarding_dialog_title">Az összes adat legyen látható</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Nyissa ki az útlevelét a fényképét és személyes adatait tartalmazó oldalnál. Ezen az oldalon szerepel a neve, születési ideje, útlevélszáma és más azonosító adatai.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Nyissa ki az útlevelét az adatokat tartalmazó oldalnál</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Nyissa ki az útlevelét annál az oldalnál, amelyen a fényképe és személyes adatai szerepelnek. Gondoskodjon róla, hogy az útlevél jól meg legyen világítva. Minden mezőnek teljesen láthatónak kell lennie.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Nyissa ki az útlevelét</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">A dokumentum adatlapjának beolvasása</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Ügyeljen rá, hogy az okmány jól meg legyen világítva, teljesen látható legyen és ne legyen rajta becsillanás.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Próbálja újra</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Áthelyezés a jobb oldali oldalra</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Áthelyezés a legfelső oldalra</string>
     <string name="mb_blinkid_scanning_wrong_side">Fordítsa meg a dokumentumot</string>
+    <string name="mb_blinkid_screen_detected">Helyezze a dokumentumot egyszínű háttér elé</string>
     <string name="mb_blinkid_top_page_instructions">A felső oldal beolvasása</string>
     <string name="mb_blinkid_unsupported_document_message">Szkennelje be egy támogatott dokumentum elülső oldalát.</string>
     <string name="mb_blinkid_unsupported_document_title">A dokumentum nincs felismerve</string>

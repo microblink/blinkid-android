@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Kamerazugriffsberechtigung ist erforderlich.</string>
     <string name="mb_blinkid_close">Schließen</string>
+    <string name="mb_blinkid_consent_description">die Speicherung und/oder den Zugriff auf personenbezogene Daten zur Überprüfung Ihrer Identität.</string>
+    <string name="mb_blinkid_consent_no">Nicht einwilligen</string>
+    <string name="mb_blinkid_consent_privacy_link">Datenschutzinformation</string>
+    <string name="mb_blinkid_consent_privacy_notice">Ihre Auswahl hilft uns, Ihre personenbezogenen Daten zu schützen und unsere Technologie zu verbessern, wobei wir die höchsten Datenschutzstandards einhalten, wie in der %1$s beschrieben.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Ich willige ein, dass der Anbieter meine personenbezogenen Daten zur Optimierung seiner Technologie verwendet.</string>
+    <string name="mb_blinkid_consent_title">Wir benötigen Ihre Einwilligung für:</string>
+    <string name="mb_blinkid_consent_yes">Einwilligen</string>
     <string name="mb_blinkid_dialog_back_button">Zurück</string>
     <string name="mb_blinkid_dialog_done_button">Fertig</string>
     <string name="mb_blinkid_dialog_next_button">Weiter</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Bewegen Sie sich weiter weg</string>
     <string name="mb_blinkid_need_help_tooltip">Brauchen Sie Hilfe?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Optional</string>
+    <string name="mb_blinkid_privacy_notice">Datenschutzhinweis</string>
     <string name="mb_blinkid_retry">Wiederholen</string>
     <string name="mb_blinkid_warning">Warnung</string>
 </resources>

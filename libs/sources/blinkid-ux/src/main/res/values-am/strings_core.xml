@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">የካሜራ ፈቃድ ያስፈልጋል።</string>
     <string name="mb_blinkid_close">ዝጋ</string>
+    <string name="mb_blinkid_consent_description">ማንነትዎን ለማረጋገጥ የግል መረጃን ማከማቸት እና/ወይም ማግኘት።</string>
+    <string name="mb_blinkid_consent_no">አልስማማም</string>
+    <string name="mb_blinkid_consent_privacy_link">የግላዊነት ማስታወቂያ</string>
+    <string name="mb_blinkid_consent_privacy_notice">ምርጫዎችዎ የግል መረጃዎን እንድንጠብቅ እና %1$s በሚገልጸው መሠረት ከፍተኛዎቹን የውሂብ ግላዊነት መስፈርቶች እየጠበቅን ቴክኖሎጂያችንን እንድናሻሽል ይረዱናል።</string>
+    <string name="mb_blinkid_consent_privacy_switch">ቴክኖሎጂውን ለማሻሻል አቅራቢው የግል ውሂቤን እንዲጠቀም እስማማለሁ።</string>
+    <string name="mb_blinkid_consent_title">ለሚከተሉት የእርስዎ ፈቃድ ያስፈልገናል፦</string>
+    <string name="mb_blinkid_consent_yes">እስማማለሁ</string>
     <string name="mb_blinkid_dialog_back_button">ተመለስ</string>
     <string name="mb_blinkid_dialog_done_button">ተከናውኗል</string>
     <string name="mb_blinkid_dialog_next_button">ቀጣይ</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">ራቅ ብለው ይሂዱ</string>
     <string name="mb_blinkid_need_help_tooltip">እርዳታ ይፈልጋሉ?</string>
     <string name="mb_blinkid_ok">እሺ</string>
+    <string name="mb_blinkid_optional">አማራጭ</string>
+    <string name="mb_blinkid_privacy_notice">የግላዊነት ማስታወቂያ</string>
     <string name="mb_blinkid_retry">እንደገና ይሞክሩ</string>
     <string name="mb_blinkid_warning">ማስጠንቀቂያ</string>
 </resources>

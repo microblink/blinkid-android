@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">کیمرہ کی اجازت درکار ہے۔</string>
     <string name="mb_blinkid_close">بند کریں</string>
+    <string name="mb_blinkid_consent_description">آپ کی شناخت کی تصدیق کے مقصد سے ذاتی معلومات محفوظ رکھنا اور/یا ان تک رسائی حاصل کرنا۔</string>
+    <string name="mb_blinkid_consent_no">رضامندی نہ دیں</string>
+    <string name="mb_blinkid_consent_privacy_link">رازداری کے نوٹس</string>
+    <string name="mb_blinkid_consent_privacy_notice">آپ کے انتخاب ہماری مدد کرتے ہیں کہ ہم آپ کی ذاتی معلومات کا تحفظ کریں اور ڈیٹا کی رازداری کے اعلیٰ ترین معیارات برقرار رکھتے ہوئے اپنی ٹیکنالوجی بہتر بنائیں، جیسا کہ %1$s میں بیان کیا گیا ہے۔</string>
+    <string name="mb_blinkid_consent_privacy_switch">میں فراہم کنندہ کی جانب سے اپنی ٹیکنالوجی بہتر بنانے کے مقصد سے میرے ذاتی ڈیٹا کے استعمال پر رضامند ہوں۔</string>
+    <string name="mb_blinkid_consent_title">ہمیں آپ کی رضامندی درکار ہے:</string>
+    <string name="mb_blinkid_consent_yes">رضامندی دیں</string>
     <string name="mb_blinkid_dialog_back_button">پیچھے</string>
     <string name="mb_blinkid_dialog_done_button">ہو گیا</string>
     <string name="mb_blinkid_dialog_next_button">اگلا</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">اور دور جائیں</string>
     <string name="mb_blinkid_need_help_tooltip">مدد چاہیے؟</string>
     <string name="mb_blinkid_ok">ٹھیک ہے</string>
+    <string name="mb_blinkid_optional">اختیاری</string>
+    <string name="mb_blinkid_privacy_notice">رازداری کا نوٹس</string>
     <string name="mb_blinkid_retry">دوبارہ کوشش کریں</string>
     <string name="mb_blinkid_warning">انتباہ</string>
 </resources>

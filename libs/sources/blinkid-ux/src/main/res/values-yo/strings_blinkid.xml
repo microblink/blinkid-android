@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Wàá rí àwọn òǹkọ̀wé tó gùn gan-an ní ìsàlẹ̀ iwájú tàbí ẹ̀yìn ìwé àkọsílẹ̀ náà, tó pín sí àwọn ilà 2 tàbí 3 tí àwọn àmì ọfà là láàárín (&lt;&lt; or &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Ṣàwárí MRZ lórí ìwé àkọsílẹ̀ náà</string>
     <string name="mb_blinkid_onboarding_dialog_title">Jẹ́ kí gbogbo àwọn ìsọfúnni náà hàn kedere</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Ṣí ìwé ìrìnnà rẹ sí ojú-ewé tí ó ní fọ́tò rẹ àti àwọn ìwífún ti ara ẹni. Ojú-ewé yìí ní orúkọ rẹ, ọjọ́ ìbí, nọ́mbà ìwé ìrìnnà, àti àwọn ìwífún ìdánimọ̀ míì.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Ṣí ìwé ìrìnnà sí ojú-ewé ìwífún</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Múra ìwé ìrìnnà rẹ sílẹ̀ nípa ṣíṣí i sí ojúewé tí ó ní àwòrán rẹ àti ìwífúnni ara ẹni. Rí i dájú pé ìwé ìrìnnà náà wà lábẹ́ ìmọ́lẹ̀ tó dára. Gbogbo àwọn ààyè gbọ́dọ̀ hàn ní kíkún.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Ṣí ìwé ìrìnnà rẹ</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Ṣe ẹ̀dà àwòrán ojú-ìwé ẹ̀gbà ìwé àkọsílẹ̀ náà</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Ríi dájú pé ìmọ́lẹ̀ tàn sórí ìwé àkọsílẹ̀ náà dáadáa, hàn kedere pátápátá, àti pé kò ní ìtànyòò.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Tún gbìyànjú síi</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Lọ sí ojú-ìwé ọ̀tún</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Lọ sí ojú-ìwé òkè</string>
     <string name="mb_blinkid_scanning_wrong_side">Yí ìwé àkọsílẹ̀ padà</string>
+    <string name="mb_blinkid_screen_detected">Gbé ìwé-ẹ̀rí náà sí iwájú abẹ́lẹ̀ tí kò ní àwòrán</string>
     <string name="mb_blinkid_top_page_instructions">Ṣe ẹ̀dà àwòrán ojú-ìwé òkè</string>
     <string name="mb_blinkid_unsupported_document_message">Ṣe ẹ̀dà àwòrán iwájú ìwé àkọsílẹ̀ tó nílò.</string>
     <string name="mb_blinkid_unsupported_document_title">A kò rí ìdámọ̀ ìwé àkọsílẹ̀ ṣe</string>

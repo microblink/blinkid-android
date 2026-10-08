@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">নথির সামনের বা পেছনের অংশের নিচের দিকে আপনি অক্ষর ও চিহ্নের একটি দীর্ঘ সারি দেখতে পাবেন, যা দুই বা তিনটি লাইনে বিভক্ত এবং তীরচিহ্ন (&lt;&lt; বা &gt;&gt;) দ্বারা আলাদা করা।</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">নথিতে MRZ খুঁজে বের করুন</string>
     <string name="mb_blinkid_onboarding_dialog_title">সমস্ত বিবরণ দৃশ্যমান রাখুন</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">আপনার ছবি ও ব্যক্তিগত তথ্য রয়েছে এমন পৃষ্ঠাটি খুলুন। এই পৃষ্ঠায় আপনার নাম, জন্মতারিখ, পাসপোর্ট নম্বর এবং অন্যান্য পরিচয়সংক্রান্ত তথ্য থাকে।</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">পাসপোর্টের তথ্যসংবলিত পৃষ্ঠাটি খুলুন</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">ছবিসহ ব্যক্তিগত তথ্য থাকা পৃষ্ঠাটি খুলে আপনার পাসপোর্ট প্রস্তুত করুন। পাসপোর্টটি পর্যাপ্ত আলোতে রাখুন। সব তথ্য সম্পূর্ণভাবে দৃশ্যমান থাকতে হবে।</string>
+    <string name="mb_blinkid_passport_onboarding_title">আপনার পাসপোর্ট খুলুন</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">ডকুমেন্টের ডেটা পৃষ্ঠা স্ক্যান করুন</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">নিশ্চিত করুন যে নথিতে পর্যাপ্ত আলো রয়েছে, এটি সম্পূর্ণ দৃশ্যমান এবং এতে কোনো চকচকে ভাব নেই।</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">পুনরায় চেষ্টা করুন</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">ডান পৃষ্ঠায় যান</string>
     <string name="mb_blinkid_scanning_wrong_page_top">উপরের পৃষ্ঠায় যান</string>
     <string name="mb_blinkid_scanning_wrong_side">ডকুমেন্ট উল্টান</string>
+    <string name="mb_blinkid_screen_detected">ডকুমেন্টটি সাদামাটা পটভূমির ওপর রাখুন</string>
     <string name="mb_blinkid_top_page_instructions">উপরের পৃষ্ঠা স্ক্যান করুন</string>
     <string name="mb_blinkid_unsupported_document_message">সমর্থিত ডকুমেন্টের সামনের দিক স্ক্যান করুন</string>
     <string name="mb_blinkid_unsupported_document_title">ডকুমেন্ট সনাক্ত করা যায়নি</string>

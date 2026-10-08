@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Требуется разрешение на доступ к камере.</string>
     <string name="mb_blinkid_close">Закрыть</string>
+    <string name="mb_blinkid_consent_description">Хранение и/или доступ к персональной информации для подтверждения вашей личности.</string>
+    <string name="mb_blinkid_consent_no">Не даю согласия</string>
+    <string name="mb_blinkid_consent_privacy_link">Уведомлении о конфиденциальности</string>
+    <string name="mb_blinkid_consent_privacy_notice">Ваш выбор помогает нам защищать вашу личную информацию и совершенствовать наши технологии, соблюдая высочайшие стандарты конфиденциальности данных, описанные в %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Я даю согласие на использование моих персональных данных поставщиком для оптимизации его технологии.</string>
+    <string name="mb_blinkid_consent_title">Нам нужно ваше согласие на:</string>
+    <string name="mb_blinkid_consent_yes">Даю согласие</string>
     <string name="mb_blinkid_dialog_back_button">Назад</string>
     <string name="mb_blinkid_dialog_done_button">Готово</string>
     <string name="mb_blinkid_dialog_next_button">Далее</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Сместитесь подальше</string>
     <string name="mb_blinkid_need_help_tooltip">Нужна помощь?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Необязательно</string>
+    <string name="mb_blinkid_privacy_notice">Уведомление о конфиденциальности</string>
     <string name="mb_blinkid_retry">Попробовать еще</string>
     <string name="mb_blinkid_warning">Внимание</string>
 </resources>

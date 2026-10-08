@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Je vyžadováno povolení přístupu k fotoaparátu</string>
     <string name="mb_blinkid_close">Zavřít</string>
+    <string name="mb_blinkid_consent_description">Ukládáním a/nebo přístupem k osobním údajům za účelem ověření vaší identity.</string>
+    <string name="mb_blinkid_consent_no">Nesouhlasím</string>
+    <string name="mb_blinkid_consent_privacy_link">Oznámení o ochraně osobních údajů</string>
+    <string name="mb_blinkid_consent_privacy_notice">Vaše volby nám pomáhají chránit vaše osobní údaje a zlepšovat naši technologii při zachování nejvyšších standardů ochrany osobních údajů, jak je popsáno v %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Souhlasím s použitím svých osobních údajů poskytovatelem za účelem optimalizace jeho technologie.</string>
+    <string name="mb_blinkid_consent_title">Potřebujeme váš souhlas s následujícím:</string>
+    <string name="mb_blinkid_consent_yes">Souhlasím</string>
     <string name="mb_blinkid_dialog_back_button">Zpět</string>
     <string name="mb_blinkid_dialog_done_button">Hotovo</string>
     <string name="mb_blinkid_dialog_next_button">Další</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Kousek dál</string>
     <string name="mb_blinkid_need_help_tooltip">Potřebujete pomoct?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Volitelné</string>
+    <string name="mb_blinkid_privacy_notice">Oznámení o ochraně osobních údajů</string>
     <string name="mb_blinkid_retry">Opakovat</string>
     <string name="mb_blinkid_warning">Upozornění</string>
 </resources>

@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">V spodnej časti prednej alebo zadnej strany dokumentu nájdete dlhý reťazec znakov. Je rozdelená na 2 alebo 3 riadky a oddelená šípkami (&lt;&lt; alebo &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Nájdite na dokumente strojovo čitateľnú oblasť (MRZ)</string>
     <string name="mb_blinkid_onboarding_dialog_title">Udržujte všetky detaily viditeľné</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Otvorte pas na strane s vašou fotografiou a osobnými údajmi. Na tejto strane je uvedené vaše meno, dátum narodenia, číslo pasu a ďalšie identifikačné údaje.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Otvorte pas na strane s osobnými údajmi</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Pripravte si pas a otvorte ho na strane s vašou fotografiou a osobnými údajmi. Uistite sa, že je pas dobre osvetlený. Všetky údaje musia byť úplne viditeľné.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Otvorte pas</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Naskenujte stranu dokumentu s údajmi</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Uistite sa, že je dokument dobre osvetlený, plne viditeľný a bez odleskov.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Skúsiť znova</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Prejdite na stránku vpravo</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Prejdite na stránku hore</string>
     <string name="mb_blinkid_scanning_wrong_side">Otočte dokument</string>
+    <string name="mb_blinkid_screen_detected">Položte dokument na jednofarebné pozadie</string>
     <string name="mb_blinkid_top_page_instructions">Oskenujte stránku hore</string>
     <string name="mb_blinkid_unsupported_document_message">Naskenujte prednú stranu podporovaného dokumentu.</string>
     <string name="mb_blinkid_unsupported_document_title">Dokument nebol rozpoznaný</string>

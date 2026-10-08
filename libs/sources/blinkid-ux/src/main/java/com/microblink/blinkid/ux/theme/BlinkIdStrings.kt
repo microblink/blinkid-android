@@ -37,16 +37,20 @@ import kotlinx.parcelize.Parcelize
  *           However, if the scanning experience is changed in any way, onboarding and help screen instructions may also be adjusted.
  * @property blinkIdAccessibilityStrings Strings that are used by accessibility TalkBack service for specific
  *           buttons, labels, and actions.
+ * @property blinkIdPassportHelpDialogsStrings Strings used in onboarding and help dialogs for passport-only scanning mode.
+ *           These strings shouldn't be customized as they provide adequate instructions tailored specifically to our scanning experience.
+ *           However, if the scanning experience is changed in any way, onboarding and help screen instructions may also be adjusted.
  */
 @Immutable
 @Parcelize
-data class BlinkIdSdkStrings(
+data class BlinkIdSdkStrings @JvmOverloads constructor(
     val blinkIdScanningStrings: BlinkIdScanningStrings,
     val blinkIdDocumentHelpDialogsStrings: HelpDialogsStrings,
     val blinkIdBarcodeHelpDialogsStrings: HelpDialogsStrings,
     val blinkIdBarcodeIdHelpDialogsStrings: HelpDialogsStrings,
     val blinkIdMrzHelpDialogsStrings: HelpDialogsStrings,
-    val blinkIdAccessibilityStrings: AccessibilityStrings
+    val blinkIdAccessibilityStrings: AccessibilityStrings,
+    val blinkIdPassportHelpDialogsStrings: HelpDialogsStrings = PassportHelpDialogsDefaults
 ) : Parcelable, SdkStrings(
     ScanningStrings(
         blinkIdScanningStrings.instructionsFirstSide,
@@ -147,6 +151,29 @@ data class BlinkIdSdkStrings(
             )
         )
 
+        /**
+         * Default onboarding and help dialog strings for passport-only scanning mode.
+         *
+         * Can be used as a base when customizing [blinkIdPassportHelpDialogsStrings].
+         */
+        @JvmStatic
+        val PassportHelpDialogsDefaults = HelpDialogsStrings(
+            onboardingTitle = R.string.mb_blinkid_passport_onboarding_title,
+            onboardingMessage = R.string.mb_blinkid_passport_onboarding_subtitle,
+            helpTitles = listOf(
+                R.string.mb_blinkid_passport_help_open_passport_title,
+                R.string.mb_blinkid_help_screen_title1,
+                R.string.mb_blinkid_help_screen_title2,
+                R.string.mb_blinkid_help_screen_title3
+            ),
+            helpMessages = listOf(
+                R.string.mb_blinkid_passport_help_open_passport_subtitle,
+                R.string.mb_blinkid_help_screen_msg1,
+                R.string.mb_blinkid_help_screen_msg2,
+                R.string.mb_blinkid_help_screen_msg3,
+            )
+        )
+
         @JvmStatic
         val Default: BlinkIdSdkStrings =
             BlinkIdSdkStrings(
@@ -155,12 +182,9 @@ data class BlinkIdSdkStrings(
                 blinkIdBarcodeHelpDialogsStrings = BarcodeHelpDialogsDefaults,
                 blinkIdBarcodeIdHelpDialogsStrings = BarcodeIdHelpDialogsDefaults,
                 blinkIdMrzHelpDialogsStrings = MrzHelpDialogsDefaults,
-                blinkIdAccessibilityStrings = AccessibilityStrings.Default
+                blinkIdAccessibilityStrings = AccessibilityStrings.Default,
+                blinkIdPassportHelpDialogsStrings = PassportHelpDialogsDefaults
             )
-    }
-
-    init {
-        LocalBaseSdkStrings = staticCompositionLocalOf { Default }
     }
 }
 

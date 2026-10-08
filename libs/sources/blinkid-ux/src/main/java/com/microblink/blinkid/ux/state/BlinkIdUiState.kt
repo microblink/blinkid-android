@@ -48,6 +48,7 @@ enum class BlinkIdStatusMessage : StatusMessage {
     ScanBarcodeOnlyModule,
     ScanBarcodeIdModule,
     ScanMrzModule,
+    ScanPassportOnlyModule,
     ScanBarcode,
     RotateDocument,
     RotateDocumentShort,
@@ -78,6 +79,7 @@ enum class BlinkIdStatusMessage : StatusMessage {
             ScanBarcodeOnlyModule -> strings.instructionsBarcodeOnlyModule
             ScanBarcodeIdModule -> strings.instructionsBarcodeIdModule
             ScanMrzModule -> strings.instructionsMrzModule
+            ScanPassportOnlyModule -> strings.instructionsPassportDataPage
             ScanBarcode -> strings.instructionsBarcode
             RotateDocument -> null
             RotateDocumentShort -> null

@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Belgenin ön veya arka yüzünün alt kısmında 2 veya 3 satıra ayrılmış ve oklarla (&lt;&lt; veya &gt;&gt;) ayrılmış uzun bir karakter dizisi göreceksiniz.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Belgede MRZ\'yi bulun</string>
     <string name="mb_blinkid_onboarding_dialog_title">Tüm ayrıntıları görünür hâlde tut</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Pasaportunuzu, fotoğrafınızın ve kişisel bilgilerinizin bulunduğu sayfayı gösterecek şekilde açın. Bu sayfada adınız, doğum tarihiniz, pasaport numaranız ve diğer kimlik bilgileriniz yer alır.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Pasaportu bilgi sayfası görünecek şekilde açın</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Pasaportunuzu fotoğrafınızın ve kişisel bilgilerinizin bulunduğu sayfayı açarak hazırlayın. Pasaportun iyi aydınlatıldığından emin olun. Tüm alanlar tamamen görünür olmalıdır.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Pasaportunuzu açın</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Belgenin veri sayfasını tara.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Belgenin iyi aydınlatılmış ve tamamen görünür olmasına ve belge üzerinde bir parlama olmamasına dikkat edin.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Tekrar dene</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Sağdaki sayfaya geç</string>
     <string name="mb_blinkid_scanning_wrong_page_top">En üst sayfaya geç</string>
     <string name="mb_blinkid_scanning_wrong_side">Belgeyi çevir</string>
+    <string name="mb_blinkid_screen_detected">Belgeyi sade bir arka plana yerleştirin</string>
     <string name="mb_blinkid_top_page_instructions">En üst sayfayı tara</string>
     <string name="mb_blinkid_unsupported_document_message">Desteklenen bir belgenin ön tarafını tara.</string>
     <string name="mb_blinkid_unsupported_document_title">Belge tanınmadı</string>

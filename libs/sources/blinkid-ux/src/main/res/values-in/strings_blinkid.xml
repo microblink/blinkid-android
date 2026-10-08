@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Anda akan menemukan deretan karakter panjang di bagian bawah sisi depan atau belakang dokumen, terbagi menjadi 2 atau 3 baris dan dipisahkan oleh tanda panah (&lt;&lt; atau &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Temukan MRZ pada dokumen</string>
     <string name="mb_blinkid_onboarding_dialog_title">Pastikan semua detail terlihat</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Buka paspor Anda pada halaman yang memuat foto dan data pribadi Anda. Halaman ini menampilkan nama, tanggal lahir, nomor paspor, dan informasi identitas lainnya.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Buka paspor pada halaman data</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Buka paspor Anda pada halaman yang berisi foto dan informasi pribadi Anda. Pastikan paspor mendapatkan pencahayaan yang cukup. Semua kolom harus terlihat sepenuhnya.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Buka paspor Anda</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Memindai halaman data dokumen</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Pastikan dokumen cukup terang, terlihat sepenuhnya, dan bebas dari silau cahaya.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Coba Lagi</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Pindah ke halaman kanan</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Pindah ke halaman atas</string>
     <string name="mb_blinkid_scanning_wrong_side">Balik dokumen</string>
+    <string name="mb_blinkid_screen_detected">Pindahkan dokumen ke latar belakang polos</string>
     <string name="mb_blinkid_top_page_instructions">Pindai halaman atas</string>
     <string name="mb_blinkid_unsupported_document_message">Pindai sisi depan dokumen yang didukung.</string>
     <string name="mb_blinkid_unsupported_document_title">Dokumen tak dikenali</string>

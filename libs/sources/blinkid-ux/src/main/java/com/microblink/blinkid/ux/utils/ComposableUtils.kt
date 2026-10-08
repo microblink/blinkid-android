@@ -56,6 +56,16 @@ sealed class HelpScreenResources(
             R.drawable.mb_blinkid_help_mrz_page_three,
         ),
     )
+
+    data object Passport : HelpScreenResources(
+        onboardingImage = R.drawable.mb_blinkid_onboarding_passport,
+        helpPageImages = listOf(
+            R.drawable.mb_blinkid_help_passport_page_one,
+            R.drawable.mb_blinkid_help_passport_page_two,
+            R.drawable.mb_blinkid_help_passport_page_three,
+            R.drawable.mb_blinkid_help_passport_page_four,
+        ),
+    )
 }
 
 @Composable
@@ -83,6 +93,12 @@ fun fillHelpScreens(extractionMode: BlinkIdExtractionMode): HelpScreens {
             Pair(
                 HelpScreenResources.MrzDocument,
                 BlinkIdTheme.sdkStrings.blinkIdMrzHelpDialogsStrings
+            )
+
+        BlinkIdExtractionMode.PassportOnly ->
+            Pair(
+                HelpScreenResources.Passport,
+                BlinkIdTheme.sdkStrings.blinkIdPassportHelpDialogsStrings
             )
     }
 

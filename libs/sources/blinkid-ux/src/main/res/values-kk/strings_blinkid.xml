@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Құжаттың алдыңғы немесе артқы бетінің төменгі жағынан 2–3 жолдан тұратын таңбалар мен көрсеткілермен (&lt;&lt; немесе &gt;&gt;) бөлінген ұзын жолды табыңыз.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Машина оқитын аймақ жолағын табыңыз.</string>
     <string name="mb_blinkid_onboarding_dialog_title">Мәліметтердің барлығының көрініп тұрғанына көз жеткізіңіз</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Төлқұжатыңызды фотосуретіңіз бен жеке деректеріңіз бар бетке ашыңыз. Бұл бетте атыңыз, туған күніңіз, төлқұжат нөміріңіз және басқа да сәйкестендіру ақпараты көрсетілген.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Төлқұжатыңыздың деректер бетін ашыңыз</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Паспортыңыздың фотосуретіңіз бен жеке ақпаратыңыз бар бетін ашып қойыңыз. Паспортыңызға жарық жақсы түсетініне көз жеткізіңіз. Барлық өріс толық көрінуі керек.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Паспортыңызды ашыңыз</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Құжаттың деректер бетін сканерлеңіз</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Құжатты жарық жерге, толықтай көрінетінін және жарық шағылыспайтын жерге қойыңыз.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Қайталау</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Оң бетке өтіңіз</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Жоғарғы бетке ауысыңыз</string>
     <string name="mb_blinkid_scanning_wrong_side">Құжатты айналдырыңыз</string>
+    <string name="mb_blinkid_screen_detected">Құжатты біркелкі фонға қойыңыз</string>
     <string name="mb_blinkid_top_page_instructions">Жоғарғы бетті сканерлеңіз</string>
     <string name="mb_blinkid_unsupported_document_message">Қолдау көрсетілетін құжаттың алдыңғы жағын сканерлеңіз.</string>
     <string name="mb_blinkid_unsupported_document_title">Құжатын танылмады</string>

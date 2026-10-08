@@ -22,6 +22,7 @@ com.microblink.blinkid.core.result.viz
 com.microblink.blinkid.core.session
 com.microblink.blinkid.core.settings
 com.microblink.blinkid.core.settings.scanning
+com.microblink.blinkid.core.settings.usecase
 com.microblink.blinkid.core.utils
 com.microblink.blinkid.core.utils.ping
 module:blinkid-ux

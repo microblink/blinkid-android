@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Unahitaji kuruhusu kamera.</string>
     <string name="mb_blinkid_close">Funga</string>
+    <string name="mb_blinkid_consent_description">Kuhifadhi na/au kufikia taarifa za kibinafsi ili kuthibitisha utambulisho wako.</string>
+    <string name="mb_blinkid_consent_no">Usikubali</string>
+    <string name="mb_blinkid_consent_privacy_link">Taarifa ya Faragha</string>
+    <string name="mb_blinkid_consent_privacy_notice">Chaguo zako hutusaidia kulinda taarifa zako za kibinafsi na kuboresha teknolojia yetu huku tukidumisha viwango vya juu zaidi vya faragha ya data, kama ilivyoelezwa katika %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Ninakubali mtoa huduma atumie data yangu ya kibinafsi kuboresha teknolojia yake.</string>
+    <string name="mb_blinkid_consent_title">Tunahitaji idhini yako ili:</string>
+    <string name="mb_blinkid_consent_yes">Kubali</string>
     <string name="mb_blinkid_dialog_back_button">Nyuma</string>
     <string name="mb_blinkid_dialog_done_button">Umemaliza</string>
     <string name="mb_blinkid_dialog_next_button">Endelea</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Songa mbali</string>
     <string name="mb_blinkid_need_help_tooltip">Unahitaji usaidizi?</string>
     <string name="mb_blinkid_ok">Sawa</string>
+    <string name="mb_blinkid_optional">Hiari</string>
+    <string name="mb_blinkid_privacy_notice">Taarifa ya faragha</string>
     <string name="mb_blinkid_retry">Jaribu tena</string>
     <string name="mb_blinkid_warning">Onyo</string>
 </resources>

@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Nepieciešama kameras atļauja.</string>
     <string name="mb_blinkid_close">Aizvērt</string>
+    <string name="mb_blinkid_consent_description">Saglabātu personas informāciju un/vai piekļūtu tai, lai verificētu jūsu identitāti.</string>
+    <string name="mb_blinkid_consent_no">Nepiekrītu</string>
+    <string name="mb_blinkid_consent_privacy_link">Privātuma paziņojumā</string>
+    <string name="mb_blinkid_consent_privacy_notice">Jūsu izvēles palīdz mums aizsargāt jūsu personas informāciju un uzlabot mūsu tehnoloģiju, vienlaikus ievērojot augstākos datu privātuma standartus, kā aprakstīts %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Es piekrītu, ka pakalpojuma sniedzējs izmanto manus personas datus savas tehnoloģijas optimizēšanai.</string>
+    <string name="mb_blinkid_consent_title">Mums ir nepieciešama jūsu piekrišana, lai:</string>
+    <string name="mb_blinkid_consent_yes">Piekrītu</string>
     <string name="mb_blinkid_dialog_back_button">Atpakaļ</string>
     <string name="mb_blinkid_dialog_done_button">Gatavs</string>
     <string name="mb_blinkid_dialog_next_button">Nākamais</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Pārvietot tālāk</string>
     <string name="mb_blinkid_need_help_tooltip">Vai vajadzīga palīdzība?</string>
     <string name="mb_blinkid_ok">Labi</string>
+    <string name="mb_blinkid_optional">Neobligāti</string>
+    <string name="mb_blinkid_privacy_notice">Privātuma paziņojums</string>
     <string name="mb_blinkid_retry">Mēģināt no jauna</string>
     <string name="mb_blinkid_warning">Brīdinājums</string>
 </resources>

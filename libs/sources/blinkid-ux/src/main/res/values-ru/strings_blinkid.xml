@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Внизу, на лицевой или оборотной стороне документа, находится длинный перечень символов на 2 или 3 строках, разделенный стрелками (&lt;&lt; или &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Найдите в документе МСЗ</string>
     <string name="mb_blinkid_onboarding_dialog_title">Следите за тем, чтобы все элементы были видны</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Откройте паспорт на странице с фотографией и личными данными. На этой странице указаны ваше имя, дата рождения, номер паспорта и другие идентификационные данные.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Откройте паспорт на странице с данными</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Откройте паспорт на странице с фотографией и личными данными. Убедитесь, что паспорт хорошо освещён. Все поля должны быть полностью видны.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Откройте паспорт</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Отсканируйте страницу с данными документа</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Убедитесь, что документ хорошо освещен, полностью виден и нет бликов.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Попробовать еще</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Сместитесь на правую страницу</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Сместитесь на верхнюю страницу</string>
     <string name="mb_blinkid_scanning_wrong_side">Переверните документ</string>
+    <string name="mb_blinkid_screen_detected">Поместите документ на однотонный фон</string>
     <string name="mb_blinkid_top_page_instructions">Отсканируйте верхнюю страницу</string>
     <string name="mb_blinkid_unsupported_document_message">Отсканируйте лицевую сторону поддерживаемого документа.</string>
     <string name="mb_blinkid_unsupported_document_title">Документ не распознан</string>

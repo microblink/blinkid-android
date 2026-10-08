@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Απαιτείται άδεια για την κάμερα.</string>
     <string name="mb_blinkid_close">Κλείσιμο</string>
+    <string name="mb_blinkid_consent_description">Την αποθήκευση ή/και την πρόσβαση σε προσωπικές πληροφορίες με σκοπό την επαλήθευση της ταυτότητάς σας.</string>
+    <string name="mb_blinkid_consent_no">Δεν συναινώ</string>
+    <string name="mb_blinkid_consent_privacy_link">Δήλωση απορρήτου</string>
+    <string name="mb_blinkid_consent_privacy_notice">Οι επιλογές σας μάς βοηθούν να προστατεύουμε τις προσωπικές σας πληροφορίες και να βελτιώνουμε την τεχνολογία μας, διατηρώντας παράλληλα τα υψηλότερα πρότυπα προστασίας δεδομένων, όπως περιγράφεται στη %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Συναινώ στη χρήση των προσωπικών μου δεδομένων από τον πάροχο για τη βελτιστοποίηση της τεχνολογίας του.</string>
+    <string name="mb_blinkid_consent_title">Χρειαζόμαστε τη συγκατάθεσή σας για:</string>
+    <string name="mb_blinkid_consent_yes">Συναινώ</string>
     <string name="mb_blinkid_dialog_back_button">Πίσω</string>
     <string name="mb_blinkid_dialog_done_button">Τέλος</string>
     <string name="mb_blinkid_dialog_next_button">Επόμενο</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Απομακρυνθείτε</string>
     <string name="mb_blinkid_need_help_tooltip">Χρειάζεστε βοήθεια;</string>
     <string name="mb_blinkid_ok">Εντάξει</string>
+    <string name="mb_blinkid_optional">Προαιρετικό</string>
+    <string name="mb_blinkid_privacy_notice">Δήλωση απορρήτου</string>
     <string name="mb_blinkid_retry">Επανάληψη</string>
     <string name="mb_blinkid_warning">Προειδοποίηση</string>
 </resources>

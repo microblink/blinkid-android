@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">ستجد سلسلة طويلة من الأحرف في أسفل الصفحة الأمامية أو الخلفية للمستند، مقسمة إلى سطرين أو 3 أسطر ومفصولة بأسهم (&lt;&lt; أو &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">حدد مكان منطقة القراءة الآلية (MRZ) في المستند</string>
     <string name="mb_blinkid_onboarding_dialog_title">تأكد من وضوح جميع البيانات</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">افتح جواز سفرك على الصفحة التي تحتوي على صورتك وبياناتك الشخصية. تعرض هذه الصفحة اسمك وتاريخ ميلادك ورقم جواز سفرك وغيرها من المعلومات التعريفية.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">افتح جواز سفرك على صفحة البيانات</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">حضّر جواز سفرك بفتحه على الصفحة التي تحتوي على صورتك ومعلوماتك الشخصية. تأكد من أن جواز السفر مضاء جيدًا. يجب أن تكون جميع الحقول ظاهرة بالكامل.</string>
+    <string name="mb_blinkid_passport_onboarding_title">افتح جواز سفرك</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">قم بالمسح الضوئي لصفحة البيانات الخاصة بالمستند</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">تأكد من أن المستند مضاء جيدًا ومرئي بالكامل وخالٍ من الانعكاسات الضوئية.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">إعادة المحاولة</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">انتقل إلى الصفحة اليمنى</string>
     <string name="mb_blinkid_scanning_wrong_page_top">انتقل إلى الصفحة العليا</string>
     <string name="mb_blinkid_scanning_wrong_side">اقلب المستند</string>
+    <string name="mb_blinkid_screen_detected">ضع المستند على خلفية سادة</string>
     <string name="mb_blinkid_top_page_instructions">مسح الصفحة العليا ضوئياً</string>
     <string name="mb_blinkid_unsupported_document_message">امسح وجه مستند مدعوم.</string>
     <string name="mb_blinkid_unsupported_document_title">لم يتم التعرف على المستند</string>

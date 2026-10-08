@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">카메라 권한이 필요합니다.</string>
     <string name="mb_blinkid_close">닫기</string>
+    <string name="mb_blinkid_consent_description">신원 확인을 위해 개인정보를 저장하거나 개인정보에 접근하는 것.</string>
+    <string name="mb_blinkid_consent_no">동의하지 않습니다</string>
+    <string name="mb_blinkid_consent_privacy_link">개인정보 보호 고지</string>
+    <string name="mb_blinkid_consent_privacy_notice">귀하의 선택은 %1$s에 설명된 대로 최고 수준의 데이터 프라이버시 기준을 유지하면서 개인정보를 보호하고 당사의 기술을 개선하는 데 도움이 됩니다.</string>
+    <string name="mb_blinkid_consent_privacy_switch">본인은 제공업체가 기술 최적화를 위해 본인의 개인정보를 사용하는 데 동의합니다.</string>
+    <string name="mb_blinkid_consent_title">다음 사항에 동의해 주세요:</string>
+    <string name="mb_blinkid_consent_yes">동의합니다</string>
     <string name="mb_blinkid_dialog_back_button">뒤로</string>
     <string name="mb_blinkid_dialog_done_button">완료</string>
     <string name="mb_blinkid_dialog_next_button">다음</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">더 멀리 이동</string>
     <string name="mb_blinkid_need_help_tooltip">도움이 필요하신가요?</string>
     <string name="mb_blinkid_ok">확인</string>
+    <string name="mb_blinkid_optional">선택 사항</string>
+    <string name="mb_blinkid_privacy_notice">개인정보 보호 고지</string>
     <string name="mb_blinkid_retry">다시 시도</string>
     <string name="mb_blinkid_warning">경고</string>
 </resources>

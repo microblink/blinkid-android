@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">您可以在文件正面或背面的底部找到一長串字元，通常會分成 2 到 3 行，並以箭頭符號 (&lt;&lt; 或 &gt;&gt;) 分隔。</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">找到文件上的 MRZ</string>
     <string name="mb_blinkid_onboarding_dialog_title">保持所有細節清楚可見</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">請將護照翻到包含相片和個人資料的頁面。此頁面會顯示您的姓名、出生日期、護照號碼及其他身分識別資訊。</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">將護照翻到資料頁</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">請將護照翻開至包含相片和個人資料的頁面。確保光線充足，且護照上的所有欄位均完整可見。</string>
+    <string name="mb_blinkid_passport_onboarding_title">翻開護照</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">掃描文件的資料頁</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">確保文件處於光線充足的環境中、完整入鏡，且沒有反光。</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">重試</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">移動到右頁</string>
     <string name="mb_blinkid_scanning_wrong_page_top">移動到頂部頁面</string>
     <string name="mb_blinkid_scanning_wrong_side">翻轉文件</string>
+    <string name="mb_blinkid_screen_detected">請將文件移至純色背景前</string>
     <string name="mb_blinkid_top_page_instructions">掃描上方頁面</string>
     <string name="mb_blinkid_unsupported_document_message">掃描受支援文件的正面。</string>
     <string name="mb_blinkid_unsupported_document_title">無法辨識文件</string>

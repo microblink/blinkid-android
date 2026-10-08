@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Veți găsi un șir lung de caractere în partea de jos a documentului, pe fața sau pe spatele acestuia, întins pe 2 sau 3 rânduri și separat prin săgeți (&lt;&lt; sau &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Găsiți MRZ pe document</string>
     <string name="mb_blinkid_onboarding_dialog_title">Asigurați vizibilitatea tuturor detaliilor</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Deschideți pașaportul la pagina cu fotografia și datele dumneavoastră personale. Această pagină conține numele, data nașterii, numărul pașaportului și alte informații de identificare.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Deschideți pașaportul la pagina cu date personale</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Deschideți pașaportul la pagina care conține fotografia și datele dumneavoastră personale. Asigurați-vă că pașaportul este bine iluminat. Toate câmpurile trebuie să fie complet vizibile.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Deschideți pașaportul</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Scanați pagina de date a documentului</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Asigurați-vă că documentul este bine iluminat, vizibil în întregime și fără nicio reflexie.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Reîncercare</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Treceți la pagina dreaptă</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Treceți la prima pagină</string>
     <string name="mb_blinkid_scanning_wrong_side">Întoarceți documentul</string>
+    <string name="mb_blinkid_screen_detected">Mutați documentul pe un fundal simplu</string>
     <string name="mb_blinkid_top_page_instructions">Scanați prima pagină</string>
     <string name="mb_blinkid_unsupported_document_message">Scanați fața unui document suportat.</string>
     <string name="mb_blinkid_unsupported_document_title">Documentul nu a fost recunoscut</string>

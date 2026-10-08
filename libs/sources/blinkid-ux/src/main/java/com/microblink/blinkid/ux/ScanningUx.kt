@@ -47,6 +47,7 @@ import com.microblink.blinkid.ux.components.Reticle
 import com.microblink.blinkid.ux.components.TorchButton
 import com.microblink.blinkid.ux.components.longHapticFeedback
 import com.microblink.blinkid.ux.components.longHapticFeedbackDurationMs
+import com.microblink.blinkid.ux.components.needHelpTooltipDefaultDurationMs
 import com.microblink.blinkid.ux.components.playScanBeep
 import com.microblink.blinkid.ux.components.preloadScanBeep
 import com.microblink.blinkid.ux.components.releaseScanBeep
@@ -61,6 +62,8 @@ import com.microblink.blinkid.ux.state.ScanSoundState
 import com.microblink.blinkid.ux.state.ProcessingState
 import com.microblink.blinkid.ux.state.ReticleState
 import com.microblink.blinkid.ux.state.StatusMessage
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.milliseconds
 
 /**
  * Composable function that provides the user interface for the scanning screen,
@@ -94,6 +97,7 @@ import com.microblink.blinkid.ux.state.StatusMessage
  * @param onHelpScreensDisplayRequested A callback function invoked when help screens should be displayed.
  * @param onHelpScreensCloseRequested A callback function invoked when help screens should be closed.
  * @param onChangeHelpTooltipVisibility A callback function invoked when the visibility of the help tooltip should change.
+ * @param helpTooltipHideDelay How long the help tooltip stays displayed before it is hidden.
  *
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -117,7 +121,8 @@ fun ScanningUx(
     onChangeOnboardingDialogVisibility: (Boolean) -> Unit,
     onHelpScreensDisplayRequested: () -> Unit,
     onHelpScreensCloseRequested: (allPagesDisplayed: Boolean) -> Unit,
-    onChangeHelpTooltipVisibility: (Boolean) -> Unit
+    onChangeHelpTooltipVisibility: (Boolean) -> Unit,
+    helpTooltipHideDelay: Duration = needHelpTooltipDefaultDurationMs.milliseconds
 ) {
     Box(
         Modifier
@@ -166,7 +171,8 @@ fun ScanningUx(
                     uiState.helpButtonDisplayed,
                     uiState.helpTooltipDisplayed,
                     onHelpScreensDisplayRequested,
-                    onChangeHelpTooltipVisibility
+                    onChangeHelpTooltipVisibility,
+                    helpTooltipHideDelay
                 )
             }
             if (showProductionOverlay) ProductionOverlay(

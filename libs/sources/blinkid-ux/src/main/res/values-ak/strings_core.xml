@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Kamara pɛmihyen ho hia.</string>
     <string name="mb_blinkid_close">Tum</string>
+    <string name="mb_blinkid_consent_description">Kora wo ankasa ho nsɛm so na/anaa nya ho kwan de gye wo nipasu tom.</string>
+    <string name="mb_blinkid_consent_no">Mmpene so</string>
+    <string name="mb_blinkid_consent_privacy_link">Kokoamsɛm ho amanneɛbɔ</string>
+    <string name="mb_blinkid_consent_privacy_notice">Nneɛma a woapaw no boa yɛn ma yɛbɔ wo ankasa ho nsɛm ho ban na yɛma yɛn mfiridwuma tu mpɔn, bere a yɛkɔ so di data kokoamsɛm ho gyinapɛn a ɛkorɔn sen biara so sɛnea wɔaka no %1$s no mu.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Mepene so sɛ ɔdemafo no de me ankasa ho nsɛm bedi dwuma de ama ne mfiridwuma atu mpɔn.</string>
+    <string name="mb_blinkid_consent_title">Yehia wo pene na yɛatumi:</string>
+    <string name="mb_blinkid_consent_yes">Pene so</string>
     <string name="mb_blinkid_dialog_back_button">Akyire</string>
     <string name="mb_blinkid_dialog_done_button">Awiei</string>
     <string name="mb_blinkid_dialog_next_button">Nea Edi Hɔ</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Kɔ akyirikyiri</string>
     <string name="mb_blinkid_need_help_tooltip">Wohia mmoa?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Wopɛ a</string>
+    <string name="mb_blinkid_privacy_notice">Kokoamsɛm ho amanneɛbɔ</string>
     <string name="mb_blinkid_retry">San yɛ bio</string>
     <string name="mb_blinkid_warning">Kɔkɔbɔ</string>
 </resources>

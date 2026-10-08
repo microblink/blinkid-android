@@ -83,12 +83,19 @@ fun ErrorDialog(
                 }
                 Spacer(Modifier.height(20.dp))
                 // TODO: add no ripple clickable to the entire material theme
+                val (interactionSource, isFocused) = rememberFocusInteraction()
                 Button(
-                    modifier = Modifier.align(Alignment.End),
+                    modifier = Modifier
+                        .align(Alignment.End)
+                        .doubleFocusBorder(
+                            focused = isFocused.value,
+                            shape = ButtonDefaults.shape
+                        ),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color.Transparent,
                         contentColor = MaterialTheme.colorScheme.primary
                     ),
+                    interactionSource = interactionSource,
                     onClick = onButtonClick
                 ) {
                     Text(

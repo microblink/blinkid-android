@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">U zult een lange reeks tekens vinden onderaan de voor- of achterzijde van het document, verdeeld over 2 of 3 lijnen en gescheiden door pijlen (&lt;&lt; of &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Lokaliseer MRZ op het document</string>
     <string name="mb_blinkid_onboarding_dialog_title">Zorg ervoor dat alle gegevens zichtbaar zijn</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Open uw paspoort op de pagina met uw foto en persoonsgegevens. Op deze pagina staan uw naam, geboortedatum, paspoortnummer en andere identificerende gegevens.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Open uw paspoort op de gegevenspagina</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Open uw paspoort op de pagina met uw foto en persoonsgegevens. Zorg dat het paspoort goed verlicht is. Alle velden moeten volledig zichtbaar zijn.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Open uw paspoort</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Scan de pagina met gegevens van het document</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Zorg ervoor dat het document goed verlicht en volledig zichtbaar is en of er geen schitteringen op te zien zijn.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Probeer opnieuw</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Ga naar de rechterpagina</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Ga naar de bovenste pagina</string>
     <string name="mb_blinkid_scanning_wrong_side">Draai het document om</string>
+    <string name="mb_blinkid_screen_detected">Leg het document op een egale achtergrond</string>
     <string name="mb_blinkid_top_page_instructions">Scan de bovenste pagina</string>
     <string name="mb_blinkid_unsupported_document_message">Scan de voorzijde van een ondersteund document.</string>
     <string name="mb_blinkid_unsupported_document_title">Document niet herkend</string>

@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">تاسو به د سند د مخ یا شا په ښکته برخه کې د کرکټرونو یوه اوږده لیکه وګورئ چې په 2 یا 3 کرښو وېشل شوې ده او د (&lt;&lt; یا &gt;&gt;) وېکتور نښو په وسیله جلا شوې دي.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">MRZ په سند ومومئ</string>
     <string name="mb_blinkid_onboarding_dialog_title">ټول جزئیات ښکاره وساتئ</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">د خپل پاسپورټ هغه پاڼه پرانیزئ چې عکس او شخصي معلومات مو پکې دي. دا پاڼه ستاسو نوم، د زېږون نېټه، د پاسپورټ شمېره او نور د پېژندنې معلومات ښيي.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">د پاسپورټ د معلوماتو پاڼه پرانیزئ</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">خپل پاسپورټ هغې پاڼې ته پرانیزئ چې ستاسو عکس او شخصي معلومات پکې دي. ډاډ ترلاسه کړئ چې پاسپورټ ښه روښانه دی. ټولې برخې باید په بشپړه توګه ښکاره وي.</string>
+    <string name="mb_blinkid_passport_onboarding_title">خپل پاسپورټ پرانیزئ</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">د سند د معلوماتو پاڼه سکین کړئ</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">ډاډ حاصل کړئ چې سند ښه روښانه، په بشپړ ډول د لیدو وړ دی او هېڅ د رڼا وړانګې پرې نشته.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">بیا هڅه وکړئ</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">ښي پاڼې ته لاړ شئ</string>
     <string name="mb_blinkid_scanning_wrong_page_top">پورته پاڼې ته لاړ شئ</string>
     <string name="mb_blinkid_scanning_wrong_side">سند واړوئ</string>
+    <string name="mb_blinkid_screen_detected">سند پر ساده شالید کېږدئ</string>
     <string name="mb_blinkid_top_page_instructions">پورته پاڼه سکین کړئ</string>
     <string name="mb_blinkid_unsupported_document_message">د ملاتړ شوي سند مخکینۍ برخه سکین کړئ.</string>
     <string name="mb_blinkid_unsupported_document_title">سند و نه پېژندل شو</string>

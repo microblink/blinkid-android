@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Hujjatning old yoki orqa tomonining pastki qismida 2 yoki 3 qatorga boʻlingan va strelkalar (&lt;&lt; yoki &gt;&gt;) bilan ajratilgan uzun belgilar qatorini topasiz.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Hujjatdan MRZ\'ni toping</string>
     <string name="mb_blinkid_onboarding_dialog_title">Barcha tafsilotlar koʻrinib tursin</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Pasportingizning fotosuratingiz va shaxsiy ma’lumotlaringiz joylashgan sahifasini oching. Bu sahifada ismingiz, tug‘ilgan sanangiz, pasport raqamingiz va shaxsni aniqlovchi boshqa ma’lumotlar ko‘rsatilgan.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Pasportning ma’lumotlar sahifasini oching</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Pasportingizni fotosuratingiz va shaxsiy ma’lumotlaringiz bor sahifasidan ochib tayyorlang. Pasport yaxshi yoritilganiga ishonch hosil qiling. Barcha maydonlar to‘liq ko‘rinishi kerak.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Pasportingizni oching</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Hujjatning maʼlumotlar sahifasini skanerlang</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Hujjat yaxshi yoritilgan, toʻliq koʻrinadigan va unda yaltiroq joylar yoʻq ekanligiga ishonch hosil qiling.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Qayta urining</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Oʻng sahifaga oʻting</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Yuqori sahifaga oʻting</string>
     <string name="mb_blinkid_scanning_wrong_side">Hujjatni boshqa tomonga aylantiring</string>
+    <string name="mb_blinkid_screen_detected">Hujjatni bir xil rangli fon ustiga qo‘ying</string>
     <string name="mb_blinkid_top_page_instructions">Yuqori sahifani skanerlang</string>
     <string name="mb_blinkid_unsupported_document_message">Dastaklanadigan hujjatning old tomonini skanerlang</string>
     <string name="mb_blinkid_unsupported_document_title">Hujjat aniqlanmadi</string>

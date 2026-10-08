@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Za ka nemi dogon jerin haruffa a kasa a gaba ko bayan takardar, raba shi zuwa layuka 2 ko 3 kuma a raba da kibiyoyi (&lt;&lt; ko &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Nemi MRZ akan takardar</string>
     <string name="mb_blinkid_onboarding_dialog_title">A daidaita yadda za a riƙa ganin dukkannin bayanan</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Buɗe fasfonku zuwa shafin da ke ɗauke da hotonku da bayananku na sirri. Wannan shafin yana nuna sunanku, ranar haihuwarku, lambar fasfo, da sauran bayanan tantancewa.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Buɗe fasfo don nuna shafin bayanai</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Buɗe fasfo ɗinka zuwa shafin da ke ɗauke da hotonka da bayananka na sirri. Tabbatar fasfon yana da isasshen haske. Dukkan filayen dole ne su bayyana gaba ɗaya.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Buɗe fasfo ɗinka</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Ɗauki hoton shafin bayanan takardar</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Tabbatar cewa an haska takardar da kyau, ana gani cikakke, kuma ba wani dishi-dishi.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Sake gwadawa</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Koma zuwa shafin dama</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Koma zuwa shafin sama</string>
     <string name="mb_blinkid_scanning_wrong_side">Juya takardar</string>
+    <string name="mb_blinkid_screen_detected">Matsar da takardar zuwa wurin da bayansa babu abubuwa</string>
     <string name="mb_blinkid_top_page_instructions">Ɗauki hoton shafin sama</string>
     <string name="mb_blinkid_unsupported_document_message">A ɗauki hoton gaban takardar ƙarin bayanin.</string>
     <string name="mb_blinkid_unsupported_document_title">Ba a gane takarda ba</string>

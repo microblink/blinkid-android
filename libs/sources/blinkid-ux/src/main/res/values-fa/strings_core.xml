@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mb_blinkid_camera_permission_required">مجوز دوربین لازم است.</string>
-    <string name="mb_blinkid_close">بستن</string>
-    <string name="mb_blinkid_dialog_back_button">برگشت</string>
-    <string name="mb_blinkid_dialog_done_button">انجام شد</string>
-    <string name="mb_blinkid_dialog_next_button">بعدی</string>
-    <string name="mb_blinkid_dialog_skip_button">پرش</string>
-    <string name="mb_blinkid_enable_camera">فعال کردن دوربین</string>
-    <string name="mb_blinkid_enable_permission_help">اکنون به تنظیمات مجوزها هدایت می‌شوید که در آنجا باید به برنامه اجازه دوربین بدهید.</string>
-    <string name="mb_blinkid_enable_permission_help_instant_app">لطفاً در تنظیمات دسترسی برنامه، اجازه دوربین را بدهید.</string>
-    <string name="mb_blinkid_license_locked">اسکن در دسترس نیست</string>
-    <string name="mb_blinkid_loading">در حال بارگذاری…</string>
-    <string name="mb_blinkid_move_closer">نزدیکتر حرکت کن</string>
-    <string name="mb_blinkid_move_farther">دورتر حرکت کن</string>
-    <string name="mb_blinkid_need_help_tooltip">به کمک نیاز دارید؟</string>
-    <string name="mb_blinkid_ok">باشه</string>
-    <string name="mb_blinkid_retry">دوباره امتحان کنید</string>
-    <string name="mb_blinkid_warning">هشدار</string>
+    <string name="mb_blinkid_camera_permission_required">Ejaze-ye dorbin lazem ast.</string>
+    <string name="mb_blinkid_close">Bastan</string>
+    <string name="mb_blinkid_consent_description">Zakhire va/ya dastresi be ettela\'at-e shakhsi baraye ta\'yid-e hoviat-e shoma.</string>
+    <string name="mb_blinkid_consent_no">Rezayat nemidaham</string>
+    <string name="mb_blinkid_consent_privacy_link">E\'lamie-ye harim-e khosusi</string>
+    <string name="mb_blinkid_consent_privacy_notice">Entekhabhaye shoma be ma komak mikonand ta ettela\'at-e shakhsi-ye shoma ra hefazat konim va fanavari-ye khod ra behbud dahim, dar hali ke balatarin standardhaye harim-e khosusi-ye dadeha ra, haman-tor ke dar %1$s tozih dade shode ast, hefz mikonim.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Man rezayat midaham ke era\'e-konande az dadehaye shakhsi-ye man baraye behine-sazi-ye fanavari-ye khod estefade konad.</string>
+    <string name="mb_blinkid_consent_title">Baraye mavared-e zir be rezayat-e shoma niaz darim:</string>
+    <string name="mb_blinkid_consent_yes">Rezayat midaham</string>
+    <string name="mb_blinkid_dialog_back_button">Bazgasht</string>
+    <string name="mb_blinkid_dialog_done_button">Anjam shod</string>
+    <string name="mb_blinkid_dialog_next_button">Ba\'di</string>
+    <string name="mb_blinkid_dialog_skip_button">Rad konid</string>
+    <string name="mb_blinkid_enable_camera">Dorbin ra fa\'al konid</string>
+    <string name="mb_blinkid_enable_permission_help">Hala be tanzimat-e dastresi hedayat mishavid; dar anja bayad ejaze-ye dorbin ra be barname bedahid.</string>
+    <string name="mb_blinkid_enable_permission_help_instant_app">Lotfan dar tanzimat-e dastresi-haye barname, ejaze-ye dorbin ra bedahid.</string>
+    <string name="mb_blinkid_license_locked">Eskan dar dastres nist</string>
+    <string name="mb_blinkid_loading">Dar hâl-e bârgiri…</string>
+    <string name="mb_blinkid_move_closer">Nazdik-tar biyayid</string>
+    <string name="mb_blinkid_move_farther">Door-tar beravid</string>
+    <string name="mb_blinkid_need_help_tooltip">Be rahnama niaz dârid?</string>
+    <string name="mb_blinkid_ok">Ta\'yid</string>
+    <string name="mb_blinkid_optional">Ekhtiâri</string>
+    <string name="mb_blinkid_privacy_notice">E\'lamie-ye harim-e khosusi</string>
+    <string name="mb_blinkid_retry">Dobâre talâsh konid</string>
+    <string name="mb_blinkid_warning">Hoshdâr</string>
 </resources>

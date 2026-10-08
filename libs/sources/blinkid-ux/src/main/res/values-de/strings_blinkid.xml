@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Am unteren Rand der Vorder- oder Rückseite des Dokuments finden Sie eine lange Zeichenfolge. Sie ist in 2 oder 3 Zeilen geteilt und durch Pfeile (&lt;&lt; oder &gt;&gt;) getrennt.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Finden Sie den MRZ auf dem Dokument</string>
     <string name="mb_blinkid_onboarding_dialog_title">Machen Sie alle Informationen sichtbar</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Öffnen Sie Ihren Reisepass auf der Seite mit Ihrem Foto und Ihren persönlichen Daten. Auf dieser Seite stehen Ihr Name, Ihr Geburtsdatum, Ihre Reisepassnummer und weitere Angaben zu Ihrer Person.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Öffnen Sie den Reisepass auf der Datenseite</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Öffnen Sie Ihren Reisepass auf der Seite mit Ihrem Foto und Ihren persönlichen Daten. Achten Sie auf eine gute Beleuchtung des Reisepasses. Alle Felder müssen vollständig sichtbar sein.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Öffnen Sie Ihren Reisepass</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Scannen Sie die Datenseite des Dokuments</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Achten Sie darauf, dass das Dokument gut belichtet und vollständig sichtbar ist und nicht blendet.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Wiederholen</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Zur rechten Seite wechseln</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Zur obersten Seite wechseln</string>
     <string name="mb_blinkid_scanning_wrong_side">Dokument wenden</string>
+    <string name="mb_blinkid_screen_detected">Legen Sie das Dokument auf einen einfarbigen Hintergrund</string>
     <string name="mb_blinkid_top_page_instructions">Oberste Seite scannen</string>
     <string name="mb_blinkid_unsupported_document_message">Scannen Sie die Vorderseite eines unterstützten Dokuments.</string>
     <string name="mb_blinkid_unsupported_document_title">Dokument nicht erkannt</string>
