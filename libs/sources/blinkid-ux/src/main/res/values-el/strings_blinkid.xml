@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Θα βρείτε μια μεγάλη αλληλουχία χαρακτήρων στο κάτω μέρος της μπροστινής ή της πίσω πλευράς του εγγράφου, διαχωρισμένη σε 2 ή 3 γραμμές με βέλη (&lt;&lt; ή &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Εντοπίστε το MRZ στο έγγραφο</string>
     <string name="mb_blinkid_onboarding_dialog_title">Φροντίστε όλες οι λεπτομέρειες να είναι ορατές</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Ανοίξτε το διαβατήριό σας στη σελίδα με τη φωτογραφία και τα προσωπικά σας στοιχεία. Σε αυτή τη σελίδα εμφανίζονται το όνομά σας, η ημερομηνία γέννησής σας, ο αριθμός διαβατηρίου σας και άλλα στοιχεία ταυτοποίησης.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Ανοίξτε το διαβατήριό σας στη σελίδα προσωπικών στοιχείων</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Προετοιμάστε το διαβατήριό σας ανοίγοντάς το στη σελίδα που περιέχει τη φωτογραφία και τα προσωπικά σας στοιχεία. Βεβαιωθείτε ότι το διαβατήριο φωτίζεται επαρκώς. Όλα τα πεδία πρέπει να είναι πλήρως ορατά.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Ανοίξτε το διαβατήριό σας</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Σαρώστε τη σελίδα δεδομένων του εγγράφου</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Βεβαιωθείτε ότι το έγγραφο είναι καλά φωτισμένο, πλήρως ορατό και δεν έχει αντανακλάσεις.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Επανάληψη</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Προχωρήστε στη δεξιά σελίδα</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Προχωρήστε στην πρώτη σελίδα</string>
     <string name="mb_blinkid_scanning_wrong_side">Αναποδογυρίστε το έγγραφο</string>
+    <string name="mb_blinkid_screen_detected">Μετακινήστε το έγγραφο σε απλό φόντο</string>
     <string name="mb_blinkid_top_page_instructions">Σαρώστε την πρώτη σελίδα</string>
     <string name="mb_blinkid_unsupported_document_message">Σαρώστε την μπροστινή όψη ενός υποστηριζόμενου εγγράφου.</string>
     <string name="mb_blinkid_unsupported_document_title">Το έγγραφο δεν αναγνωρίστηκε</string>

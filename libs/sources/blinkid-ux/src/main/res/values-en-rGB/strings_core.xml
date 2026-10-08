@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Camera permission is required.</string>
     <string name="mb_blinkid_close">Close</string>
+    <string name="mb_blinkid_consent_description">Store and/or access personal information for the purpose of verifying your identity.</string>
+    <string name="mb_blinkid_consent_no">Do not consent</string>
+    <string name="mb_blinkid_consent_privacy_link">Privacy Notice</string>
+    <string name="mb_blinkid_consent_privacy_notice">Your choices help us protect your personal information and improve our technology while maintaining the highest standards of data privacy as described in the %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">I consent to the use of my personal data by the provider for the purpose of optimising its technology.</string>
+    <string name="mb_blinkid_consent_title">We need your consent to:</string>
+    <string name="mb_blinkid_consent_yes">Consent</string>
     <string name="mb_blinkid_dialog_back_button">Back</string>
     <string name="mb_blinkid_dialog_done_button">Done</string>
     <string name="mb_blinkid_dialog_next_button">Next</string>
@@ -12,9 +19,11 @@
     <string name="mb_blinkid_license_locked">Scanning not available</string>
     <string name="mb_blinkid_loading">Loading…</string>
     <string name="mb_blinkid_move_closer">Move closer</string>
-    <string name="mb_blinkid_move_farther">Move farther</string>
+    <string name="mb_blinkid_move_farther">Move farther away</string>
     <string name="mb_blinkid_need_help_tooltip">Need help?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Optional</string>
+    <string name="mb_blinkid_privacy_notice">Privacy notice</string>
     <string name="mb_blinkid_retry">Retry</string>
     <string name="mb_blinkid_warning">Warning</string>
 </resources>

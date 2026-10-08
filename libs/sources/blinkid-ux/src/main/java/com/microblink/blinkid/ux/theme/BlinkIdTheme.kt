@@ -29,11 +29,12 @@ fun BlinkIdSdkTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {
+    val sdkStrings = uiSettings.sdkStrings as? BlinkIdSdkStrings ?: BlinkIdTheme.sdkStrings
     CompositionLocalProvider(
         LocalBaseUiColors provides (uiSettings.uiColors
             ?: if (darkTheme) UiColors.DefaultDark else UiColors.Default),
-        LocalBaseBlinkIdSdkStrings provides (uiSettings.sdkStrings as? BlinkIdSdkStrings
-            ?: BlinkIdTheme.sdkStrings),
+        LocalBaseBlinkIdSdkStrings provides sdkStrings,
+        LocalBaseSdkStrings provides sdkStrings,
         LocalTheme provides if (darkTheme) DarkColorScheme else LightColorScheme,
         LocalTypography provides (uiSettings.typography ?: SdkTypography(null))
     ) {

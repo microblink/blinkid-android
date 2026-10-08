@@ -4,7 +4,7 @@ SPDXID: SPDXRef-DOCUMENT
 DocumentName: //BlinkID:BlinkID
 Creator: Person: jenkins
 Creator: Tool: https//github.com/bazelbuild/rules_license/tools:write_sbom
-Created: 2026-08-31-13:14:10Z
+Created: 2026-10-08-07:51:06Z
 
 ##### Package: //BlinkID:BlinkID
 SPDXID: "@@concurrentqueue+//"
@@ -14,43 +14,43 @@ SPDXID: "@@concurrentqueue+//"
 
 SPDXID: "@@core-identity+//3rdparty/config_ex/ConfigEx"
   name: "ConfigEx"
-  versionInfo: "25.0.4"
+  versionInfo: "27.0.1"
   licenseDeclared: "MIT"
   downloadLocation: https://github.com/microblink/config_ex
 
 SPDXID: "@@core-identity+//3rdparty/err/Err"
   name: "Err"
-  versionInfo: "25.0.4"
+  versionInfo: "27.0.1"
   licenseDeclared: "BSL-1.0"
   downloadLocation: https://github.com/microblink/err
 
 SPDXID: "@@core-identity+//3rdparty/functionoid/Functionoid"
   name: "Functionoid"
-  versionInfo: "25.0.4"
+  versionInfo: "27.0.1"
   licenseDeclared: "BSL-1.0"
   downloadLocation: https://github.com/microblink/functionoid
 
 SPDXID: "@@core-identity+//3rdparty/hash-library/Hash"
   name: "Hash"
-  versionInfo: "25.0.4"
+  versionInfo: "27.0.1"
   licenseDeclared: "Zlib"
   downloadLocation: https://github.com/stbrumme/hash-library
 
 SPDXID: "@@core-identity+//3rdparty/mmap/MMap"
   name: "MMap"
-  versionInfo: "25.0.4"
+  versionInfo: "27.0.1"
   licenseDeclared: "BSL-1.0"
   downloadLocation: https://github.com/microblink/mmap
 
 SPDXID: "@@core-identity+//3rdparty/pimpl/pimpl"
   name: "pimpl"
-  versionInfo: "25.0.4"
+  versionInfo: "27.0.1"
   licenseDeclared: "BSD-2-Clause"
   downloadLocation: https://github.com/microblink/pimpl
 
 SPDXID: "@@core-identity+//3rdparty/sweater/sweater"
   name: "sweater"
-  versionInfo: "25.0.4"
+  versionInfo: "27.0.1"
   licenseDeclared: "MIT"
   downloadLocation: https://github.com/microblink/sweater
 
@@ -115,17 +115,17 @@ SPDXID: "@@libjpeg_turbo+//"
 
 SPDXID: "@@libpng+//"
   name: "libpng"
-  versionInfo: "1.6.54"
+  versionInfo: "1.6.58.bcr.1"
   licenseDeclared: "libpng-2.0"
 
 SPDXID: "@@opencv+//"
   name: "opencv"
-  versionInfo: "5.0.0.mb.2"
+  versionInfo: "5.0.0.mb.4"
   licenseDeclared: "Apache-2.0"
 
 SPDXID: "@@protobuf+//"
   name: "protobuf"
-  versionInfo: "35.1"
+  versionInfo: "36.2"
 
 SPDXID: "@@pthreadpool+//"
   name: "pthreadpool"
@@ -145,5 +145,5 @@ SPDXID: "@@xnnpack+//"
 
 SPDXID: "@@zlib+//"
   name: "zlib"
-  versionInfo: "1.3.2.mb.1"
+  versionInfo: "1.3.2.mb.2"
   licenseDeclared: "Zlib"

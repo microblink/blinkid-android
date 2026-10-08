@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">დოკუმენტის წინა ან უკანა მხარეს, ქვედა ნაწილში ნახავთ სიმბოლოების გრძელ მიმდევრობას, რომელიც დაყოფილია 2 ან 3 სტრიქონად და შეიცავს გამყოფ ნიშნებს &lt;&lt; ან &gt;&gt;.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">მოძებნეთ MRZ დოკუმენტზე</string>
     <string name="mb_blinkid_onboarding_dialog_title">ყველა დეტალი უნდა ჩანდეს</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">გადაშალეთ პასპორტი იმ გვერდზე, სადაც თქვენი ფოტო და პირადი მონაცემებია. ამ გვერდზე მითითებულია თქვენი სახელი, დაბადების თარიღი, პასპორტის ნომერი და სხვა საიდენტიფიკაციო ინფორმაცია.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">გადაშალეთ პასპორტი მონაცემების გვერდზე</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">მოამზადეთ პასპორტი: გადაშალეთ იმ გვერდზე, სადაც თქვენი ფოტო და პირადი ინფორმაციაა. დარწმუნდით, რომ პასპორტი კარგად არის განათებული. ყველა ველი სრულად უნდა ჩანდეს.</string>
+    <string name="mb_blinkid_passport_onboarding_title">გადაშალეთ პასპორტი</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">დაასკანერეთ დოკუმენტის მონაცემების გვერდი</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">დარწმუნდით, რომ დოკუმენტი კარგად არის განათებული, სრულად ჩანს კადრში და არ აქვს ანარეკლი.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">ხელახლა ცდა</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">გადადით მარჯვენა გვერდზე</string>
     <string name="mb_blinkid_scanning_wrong_page_top">გადადით ზედა გვერდზე</string>
     <string name="mb_blinkid_scanning_wrong_side">ამოატრიალეთ დოკუმენტი</string>
+    <string name="mb_blinkid_screen_detected">დოკუმენტი ერთფეროვან ფონზე მოათავსეთ</string>
     <string name="mb_blinkid_top_page_instructions">დაასკანერეთ ზედა გვერდი</string>
     <string name="mb_blinkid_unsupported_document_message">დაასკანერეთ მხარდაჭერილი დოკუმენტის წინა მხარე.</string>
     <string name="mb_blinkid_unsupported_document_title">დოკუმენტის ამოცნობა ვერ მოხერხდა</string>

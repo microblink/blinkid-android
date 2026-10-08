@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Du finner en lang rekke med tegn på bunnen av forsiden eller baksiden av dokumentet, delt inn i 2–3 linjer og skilt med piler (&lt;&lt; eller &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Finn MRZ på dokumentet</string>
     <string name="mb_blinkid_onboarding_dialog_title">La alle detaljene være synlige</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Åpne passet på siden med bildet ditt og personopplysningene dine. Denne siden viser navnet ditt, fødselsdatoen, passnummeret og annen identifiserende informasjon.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Åpne passet på informasjonssiden</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Åpne passet på siden med bilde og personopplysninger. Sørg for at passet er godt belyst. Alle feltene må være fullt synlige.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Åpne passet</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Skann datasiden av dokumentet</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Sørg for at dokumentet er godt opplyst, helt synlig og uten gjenskinn.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Prøv på nytt</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Flytt til den høyre siden</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Flytt til toppen av siden</string>
     <string name="mb_blinkid_scanning_wrong_side">Snu dokumentet</string>
+    <string name="mb_blinkid_screen_detected">Flytt dokumentet til en ensfarget bakgrunn</string>
     <string name="mb_blinkid_top_page_instructions">Skann den øverste siden</string>
     <string name="mb_blinkid_unsupported_document_message">Skann forsiden av et støttet dokument.</string>
     <string name="mb_blinkid_unsupported_document_title">Dokument ikke gjenkjent</string>

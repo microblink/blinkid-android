@@ -20,8 +20,8 @@
     <string name="mb_blinkid_help_screen_mrz_msg1">Siguradhing hindi mo natatakpan ng daliri ang mga bahagi ng MRZ. Tingnan din kung may mga reflection sa MRZ na dahilan para hindi mabasa ito.</string>
     <string name="mb_blinkid_help_screen_mrz_title1">Panatilihing nakikita ang MRZ</string>
     <string name="mb_blinkid_help_screen_msg1">Siguraduhin na hindi natatakpak ng iyong daliri ang mga bahagi ng dokumento, pati na ang pinakababang mga linya. Gayon rin, tingnan rin kung may mga hologram reflection na maaaring makatakip sa mga field ng dokumento.</string>
-    <string name="mb_blinkid_help_screen_msg2">Iwasan ang direktang nakakasilaw na liwanag dahil umaaninag ito mula sa dokumento at puwedeng gawing hindi nababasa ang mga bahagi ng dokumento. Kung hindi mo mabasa ang data sa dokuemnto, hindi rin ito makikita ng camera.</string>
-    <string name="mb_blinkid_help_screen_msg3">Panatilihing ito gumagalaw ang telepono at dokumento habang nag-i-scan. Puwedeng maging malabo at hindi nababasa ang data sa dokumento kapag gumalaw.</string>
+    <string name="mb_blinkid_help_screen_msg2">Iwasan ang matinding direktang liwanag dahil maaari itong magdulot ng silaw sa dokumento at hindi mabasa ang ilang bahagi nito. Kung hindi mo mabasa ang impormasyon sa dokumento, hindi rin ito makikita ng camera.</string>
+    <string name="mb_blinkid_help_screen_msg3">Panatilihing hindi gumagalaw ang telepono at dokumento habang nag-scan. Maaaring lumabo ang larawan kapag gumalaw ang alinman sa mga ito at hindi mabasa ang impormasyon sa dokumento.</string>
     <string name="mb_blinkid_help_screen_title1">Panatilihing nakikita ang lahat ng field</string>
     <string name="mb_blinkid_help_screen_title2">Tingnan kung may nakakasilaw na liwanag</string>
     <string name="mb_blinkid_help_screen_title3">Panatilihing hindi gumagalaw habang nag-i-scan</string>
@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Makakakita ka ng mahabang string ng mga character sa ibaba ng harap o likod ng dokumento. Nahahati ito sa 2 o 3 linya at pinaghihiwalay ng mga arrow (&lt;&lt; o &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Hanapin ang MRZ sa dokumento</string>
     <string name="mb_blinkid_onboarding_dialog_title">Panatilihing nakikita ang lahat ng detalye</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Buksan ang iyong pasaporte sa pahinang may larawan at personal na detalye. Makikita sa pahinang ito ang iyong pangalan, petsa ng kapanganakan, numero ng pasaporte, at iba pang impormasyong tumutukoy sa iyong pagkakakilanlan.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Buksan ang pasaporte sa pahina ng datos</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Ihanda ang iyong pasaporte sa pamamagitan ng pagbubukas nito sa pahinang may larawan at personal mong impormasyon. Tiyaking maliwanag ang pasaporte. Dapat ganap na nakikita ang lahat ng field.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Buksan ang iyong pasaporte</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">I-scan ang pahina ng data ng dokumento</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Siguraduhing sapat na naiilawan ang dokumento, ganap na nakikita, at walang glare.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Subukan ulit</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Pumunta sa kanang page</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Pumunta sa itaas ng page</string>
     <string name="mb_blinkid_scanning_wrong_side">Baligtarin ang dokumento</string>
+    <string name="mb_blinkid_screen_detected">Ilipat ang dokumento sa harap ng payak na background</string>
     <string name="mb_blinkid_top_page_instructions">I-scan ang itaas ng page</string>
     <string name="mb_blinkid_unsupported_document_message">I-scan ang unahang bahagi ng isang suportadong dokumento.</string>
     <string name="mb_blinkid_unsupported_document_title">Hindi nababasa ang dokumento</string>

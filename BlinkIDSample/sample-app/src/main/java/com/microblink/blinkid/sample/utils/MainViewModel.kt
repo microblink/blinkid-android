@@ -3,22 +3,32 @@ package com.microblink.blinkid.sample.utils
 import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.microblink.blinkid.core.BlinkIdSdk
 import com.microblink.blinkid.core.BlinkIdSdkSettings
+import com.microblink.blinkid.core.result.FieldType
 import com.microblink.blinkid.core.session.BlinkIdScanningResult
 import com.microblink.blinkid.core.session.BlinkIdSessionSettings
 import com.microblink.blinkid.core.session.InputImageSource
 import com.microblink.blinkid.core.session.ScanningMode
+import com.microblink.blinkid.core.settings.DocumentNumberRedactionSettings
 import com.microblink.blinkid.core.settings.OtaResourcesConfig
+import com.microblink.blinkid.core.settings.RedactionMode
+import com.microblink.blinkid.core.settings.RedactionSettings
+import com.microblink.blinkid.core.settings.RedactionSettingsResolver
 import com.microblink.blinkid.core.settings.ResourcesConfig
 import com.microblink.blinkid.core.settings.ScanningSettings
 import com.microblink.blinkid.core.settings.scanning.BarcodeModuleSettings
 import com.microblink.blinkid.core.settings.scanning.DocumentCaptureModuleSettings
 import com.microblink.blinkid.core.settings.scanning.VizModuleSettings
+import com.microblink.blinkid.core.settings.usecase.DocumentScenario
+import com.microblink.blinkid.core.settings.usecase.DocumentVideoUseCase
+import com.microblink.blinkid.core.settings.usecase.VideoCaptureEnvironment
+import com.microblink.blinkid.core.settings.usecase.VideoQualityProfile
 import com.microblink.blinkid.sample.config.BlinkIdConfig.licenseKey
 import com.microblink.blinkid.sample.result.BlinkIdResultHolder
 import com.microblink.blinkid.ux.UiSettings
@@ -26,14 +36,20 @@ import com.microblink.blinkid.ux.camera.CameraSettings
 import com.microblink.blinkid.ux.scanning.FrameProcessResultHandle
 import com.microblink.blinkid.ux.scanning.FrameProcessResultHandle.LastFrameResult
 import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
+import kotlin.time.Duration.Companion.milliseconds
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlin.time.Duration.Companion.milliseconds
 
 private const val TAG = "MainViewModel"
+
+enum class SessionPreset {
+    Custom,
+    DocumentVideo,
+    StandaloneBarcode
+}
 
 data class MainState(
     val error: String? = null,
@@ -50,15 +66,118 @@ class MainViewModel : ViewModel() {
 
     val inactivityTimeoutDuration = 10000.milliseconds
 
-    val blinkIdUxSettings = BlinkIdUxSettings(
-        // Customize step timeout duration, which is used to set the duration of the scanning step
-        // during the scanning session before a timeout is triggered. This timer will reset whenever
-        // one side of the document is successfully scanned or when the barcode step is triggered.
-        stepTimeoutDuration = stepTimeoutDuration,
-        // Customize inactivity timeout duration, which is used to set the duration of inactivity
-        // during the scanning session (time without UI state changes) before a timeout is triggered.
-        inactivityTimeoutDuration = inactivityTimeoutDuration
-    )
+    // Scanning UX settings applied on the next scanning session.
+    var passportOnly by mutableStateOf(false)
+        private set
+
+    fun updatePassportOnly(enabled: Boolean) {
+        passportOnly = enabled
+    }
+
+    // Redaction settings applied on the next scanning session.
+    // When custom redaction is disabled, the SDK applies its default redaction for each document.
+    var customRedactionEnabled by mutableStateOf(false)
+        private set
+
+    var redactionMode by mutableStateOf(RedactionMode.FullResult)
+        private set
+
+    var redactedFields by mutableStateOf(emptyList<FieldType>())
+        private set
+
+    var includeDefaultRedactedFields by mutableStateOf(true)
+        private set
+
+    var documentNumberRedactionEnabled by mutableStateOf(false)
+        private set
+
+    var documentNumberPrefixDigitsVisible by mutableIntStateOf(0)
+        private set
+
+    var documentNumberSuffixDigitsVisible by mutableIntStateOf(0)
+        private set
+
+    var redactMrz by mutableStateOf(false)
+        private set
+
+    var redactBarcode by mutableStateOf(false)
+        private set
+
+    fun updateCustomRedactionEnabled(enabled: Boolean) {
+        customRedactionEnabled = enabled
+    }
+
+    fun updateRedactionMode(mode: RedactionMode) {
+        redactionMode = mode
+    }
+
+    fun updateRedactedFields(fields: List<FieldType>) {
+        redactedFields = fields
+    }
+
+    fun updateIncludeDefaultRedactedFields(enabled: Boolean) {
+        includeDefaultRedactedFields = enabled
+    }
+
+    fun updateDocumentNumberRedactionEnabled(enabled: Boolean) {
+        documentNumberRedactionEnabled = enabled
+    }
+
+    fun updateDocumentNumberPrefixDigitsVisible(digits: Int) {
+        documentNumberPrefixDigitsVisible = digits.coerceIn(0, UByte.MAX_VALUE.toInt())
+    }
+
+    fun updateDocumentNumberSuffixDigitsVisible(digits: Int) {
+        documentNumberSuffixDigitsVisible = digits.coerceIn(0, UByte.MAX_VALUE.toInt())
+    }
+
+    fun updateRedactMrz(enabled: Boolean) {
+        redactMrz = enabled
+    }
+
+    fun updateRedactBarcode(enabled: Boolean) {
+        redactBarcode = enabled
+    }
+
+    private fun createRedactionSettingsResolver(): RedactionSettingsResolver? {
+        if (!customRedactionEnabled) return null
+        return SampleRedactionSettingsResolver(
+            redactionSettings = RedactionSettings(
+                // Defines whether the data is redacted from the result, the images or both.
+                redactionMode = redactionMode,
+                // Fields that are removed from the result and/or covered on the images.
+                fields = redactedFields,
+                // Partially redact the document number, keeping the defined number of digits
+                // at the beginning and at the end visible.
+                documentNumberRedactionSettings = if (documentNumberRedactionEnabled) {
+                    DocumentNumberRedactionSettings(
+                        prefixDigitsVisible = documentNumberPrefixDigitsVisible.toUByte(),
+                        suffixDigitsVisible = documentNumberSuffixDigitsVisible.toUByte()
+                    )
+                } else null,
+                redactMrz = redactMrz,
+                redactBarcode = redactBarcode
+            ),
+            includeDefaultFields = includeDefaultRedactedFields
+        )
+    }
+
+    val blinkIdUxSettings
+        get() = BlinkIdUxSettings(
+            // Customize step timeout duration, which is used to set the duration of the scanning step
+            // during the scanning session before a timeout is triggered. This timer will reset whenever
+            // one side of the document is successfully scanned or when the barcode step is triggered.
+            stepTimeoutDuration = stepTimeoutDuration,
+            // Customize inactivity timeout duration, which is used to set the duration of inactivity
+            // during the scanning session (time without UI state changes) before a timeout is triggered.
+            inactivityTimeoutDuration = inactivityTimeoutDuration,
+            // Enable the passport-only scanning flow, which allows only passports and guides the user
+            // to the data page with passport specific onboarding, help screens and instructions.
+            passportOnly = passportOnly,
+            // Customize which data is redacted from the scanning result for each scanned document.
+            // Defaults to null, meaning the SDK's default redaction settings are applied.
+            redactionSettingsResolver = createRedactionSettingsResolver()
+        )
 
     val cameraSettings = CameraSettings()
 
@@ -98,7 +217,7 @@ class MainViewModel : ViewModel() {
     var bitmapSaved: LastFrameResult? by mutableStateOf(null)
         private set
 
-    val scanningSessionSettings = BlinkIdSessionSettings(
+    private val customSessionSettings = BlinkIdSessionSettings(
         inputImageSource = InputImageSource.Video,
         scanningMode = ScanningMode.Automatic,
         scanningSettings = ScanningSettings(
@@ -130,6 +249,57 @@ class MainViewModel : ViewModel() {
             mrzModule = null
         )
     )
+
+    // Session settings preset applied on the next scanning session.
+    // Custom uses the customSessionSettings defined above, while the other presets use the
+    // use-case factories, which return session settings preconfigured for a common scenario.
+    var sessionPreset by mutableStateOf(SessionPreset.Custom)
+        private set
+
+    var documentScenario by mutableStateOf(DocumentScenario.General)
+        private set
+
+    var videoQualityProfile by mutableStateOf(VideoQualityProfile.Balanced)
+        private set
+
+    var videoCaptureEnvironment by mutableStateOf(VideoCaptureEnvironment.HandHeld)
+        private set
+
+    fun updateSessionPreset(preset: SessionPreset) {
+        sessionPreset = preset
+    }
+
+    fun updateDocumentScenario(scenario: DocumentScenario) {
+        documentScenario = scenario
+    }
+
+    fun updateVideoQualityProfile(profile: VideoQualityProfile) {
+        videoQualityProfile = profile
+    }
+
+    fun updateVideoCaptureEnvironment(environment: VideoCaptureEnvironment) {
+        videoCaptureEnvironment = environment
+    }
+
+    val scanningSessionSettings: BlinkIdSessionSettings
+        get() = when (sessionPreset) {
+            SessionPreset.Custom -> customSessionSettings
+            // Scanning a document with the camera. The returned settings can be further
+            // customized with copy() before they are passed to the scanning session.
+            SessionPreset.DocumentVideo -> BlinkIdSessionSettings.documentVideo(
+                DocumentVideoUseCase(
+                    // Which modules are used and which of them are mandatory (e.g. MRZ only).
+                    scenario = documentScenario,
+                    // Balance between capture speed and result accuracy.
+                    quality = videoQualityProfile,
+                    // Hand-held mobile capture or a stationary device (e.g. a kiosk).
+                    captureEnvironment = videoCaptureEnvironment
+                )
+            )
+            // Scanning only the barcode, searched for directly in the camera frame
+            // without document detection.
+            SessionPreset.StandaloneBarcode -> BlinkIdSessionSettings.standaloneBarcode()
+        }
 
     val frameProcessResultCallback: ((FrameProcessResultHandle) -> Unit) =
         { handle: FrameProcessResultHandle ->

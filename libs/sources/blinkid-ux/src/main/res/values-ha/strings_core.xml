@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Akwai buƙatar ba wa kamera izini</string>
     <string name="mb_blinkid_close">Rufe</string>
+    <string name="mb_blinkid_consent_description">Adanawa da/ko samun damar bayanan sirri domin tabbatar da shaidarka.</string>
+    <string name="mb_blinkid_consent_no">Ƙi yarda</string>
+    <string name="mb_blinkid_consent_privacy_link">Sanarwar Sirri</string>
+    <string name="mb_blinkid_consent_privacy_notice">Zaɓukanka suna taimaka mana mu kare bayananka na sirri da inganta fasaharmu, yayin da muke kiyaye mafi girman ƙa\'idodin sirrin bayanai kamar yadda aka bayyana a cikin %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Na yarda mai ba da sabis ya yi amfani da bayanan sirri na don inganta fasaharsa.</string>
+    <string name="mb_blinkid_consent_title">Muna buƙatar yardarka don:</string>
+    <string name="mb_blinkid_consent_yes">Amince</string>
     <string name="mb_blinkid_dialog_back_button">Baya</string>
     <string name="mb_blinkid_dialog_done_button">Kammala</string>
     <string name="mb_blinkid_dialog_next_button">Gaba</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Matsa baya</string>
     <string name="mb_blinkid_need_help_tooltip">Ana buƙatar taimako?</string>
     <string name="mb_blinkid_ok">YA YI</string>
+    <string name="mb_blinkid_optional">Na zaɓi</string>
+    <string name="mb_blinkid_privacy_notice">Sanarwar sirri</string>
     <string name="mb_blinkid_retry">Sake gwadawa</string>
     <string name="mb_blinkid_warning">Gargaɗi</string>
 </resources>

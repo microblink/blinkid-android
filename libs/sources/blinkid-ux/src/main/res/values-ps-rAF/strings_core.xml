@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">د کیمرې اجازه اړینه ده.</string>
     <string name="mb_blinkid_close">تړل</string>
+    <string name="mb_blinkid_consent_description">ستاسو د هویت د تایید لپاره شخصي معلومات ذخیره او/یا ورته لاسرسی ولرو.</string>
+    <string name="mb_blinkid_consent_no">رضایت نه ورکوم</string>
+    <string name="mb_blinkid_consent_privacy_link">د محرمیت په خبرتیا</string>
+    <string name="mb_blinkid_consent_privacy_notice">ستاسو انتخابونه له موږ سره مرسته کوي چې ستاسو شخصي معلومات خوندي کړو او خپله ټکنالوژي ښه کړو، په داسې حال کې چې د معلوماتو د محرمیت تر ټولو لوړ معیارونه ساتو، لکه څنګه چې %1$s کې بیان شوي دي.</string>
+    <string name="mb_blinkid_consent_privacy_switch">زه رضایت ورکوم چې وړاندې کوونکی زما شخصي معلومات د خپلې ټکنالوژۍ د ښه کولو لپاره وکاروي.</string>
+    <string name="mb_blinkid_consent_title">موږ ستاسو رضایت ته اړتیا لرو چې:</string>
+    <string name="mb_blinkid_consent_yes">رضایت ورکوم</string>
     <string name="mb_blinkid_dialog_back_button">شاته</string>
     <string name="mb_blinkid_dialog_done_button">وشو</string>
     <string name="mb_blinkid_dialog_next_button">بل</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">نور لاړ شه</string>
     <string name="mb_blinkid_need_help_tooltip">تاسو مرستې ته اړتیا لرئ؟</string>
     <string name="mb_blinkid_ok">سمه ده</string>
+    <string name="mb_blinkid_optional">اختیاري</string>
+    <string name="mb_blinkid_privacy_notice">د محرمیت خبرتیا</string>
     <string name="mb_blinkid_retry">بیا هڅه وکړئ</string>
     <string name="mb_blinkid_warning">خبرداری</string>
 </resources>

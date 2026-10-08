@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">អ្នកនឹងឃើញសំណុំអក្សរវែងនៅខាងក្រោមនៃផ្នែកខាងមុខ ឬខាងក្រោយរបស់ឯកសារ ដែលត្រូវបានចែកជា 2 ឬ 3 បន្ទាត់ និងញែកដោយសញ្ញាព្រួញ (&lt;&lt; ឬ &gt;&gt;)។</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">រកមើលទីតាំង MRZ នៅលើឯកសារ</string>
     <string name="mb_blinkid_onboarding_dialog_title">រក្សាព័ត៌មានលម្អិតទាំងអស់ដែលអាចមើលឃើញ</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">បើកលិខិតឆ្លងដែនរបស់អ្នកទៅទំព័រដែលមានរូបថត និងព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នក។ ទំព័រនេះបង្ហាញឈ្មោះ ថ្ងៃខែឆ្នាំកំណើត លេខលិខិតឆ្លងដែន និងព័ត៌មានសម្គាល់អត្តសញ្ញាណផ្សេងទៀតរបស់អ្នក។</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">បើកលិខិតឆ្លងដែនទៅទំព័រទិន្នន័យ</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">បើកលិខិតឆ្លងដែនរបស់អ្នកទៅទំព័រដែលមានរូបថត និងព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នក។ សូមប្រាកដថាលិខិតឆ្លងដែនមានពន្លឺគ្រប់គ្រាន់។ វាលព័ត៌មានទាំងអស់ត្រូវតែមើលឃើញពេញលេញ។</string>
+    <string name="mb_blinkid_passport_onboarding_title">បើកលិខិតឆ្លងដែនរបស់អ្នក</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">ស្កេនទំព័រទិន្នន័យនៃឯកសារ</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">ត្រូវប្រាកដថា ឯកសារភ្លឺច្បាស់ មើលឃើញពេញ និងគ្មានចំណាំងពន្លឺ។</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">ព្យាយាមម្តងទៀត</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">ផ្លាស់ទីទៅទំព័រខាងស្តាំ</string>
     <string name="mb_blinkid_scanning_wrong_page_top">ផ្លាស់ទីទៅទំព័រកំពូល</string>
     <string name="mb_blinkid_scanning_wrong_side">ត្រឡប់ឯកសារ</string>
+    <string name="mb_blinkid_screen_detected">ផ្លាស់ទីឯកសារទៅលើផ្ទៃខាងក្រោយសាមញ្ញ</string>
     <string name="mb_blinkid_top_page_instructions">ស្កេនទំព័រកំពូល</string>
     <string name="mb_blinkid_unsupported_document_message">ស្កេនផ្នែកខាងមុខនៃឯកសារដែលគាំទ្រ។</string>
     <string name="mb_blinkid_unsupported_document_title">ឯកសារមិនត្រូវបានទទួលស្គាល់ទេ។</string>

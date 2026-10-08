@@ -150,7 +150,7 @@ fun BlinkIdCameraScanningScreen(
         }
     }
 
-    val extractionMode = sessionSettings.toBlinkIdExtractionMode()
+    val extractionMode = sessionSettings.toBlinkIdExtractionMode(uxSettings.passportOnly)
 
     BlinkIdSdkTheme(uiSettings) {
         val snackbarWarningMessage =
@@ -213,7 +213,8 @@ fun BlinkIdCameraScanningScreen(
                     viewModel::changeOnboardingDialogVisibility,
                     viewModel::onHelpScreensDisplayRequested,
                     viewModel::onHelpScreensCloseRequested,
-                    viewModel::changeHelpTooltipVisibility
+                    viewModel::changeHelpTooltipVisibility,
+                    helpTooltipHideDelay = uxSettings.helpTooltipHideDelay
                 )
             }
         }

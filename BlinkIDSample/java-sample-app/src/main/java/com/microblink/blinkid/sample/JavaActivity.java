@@ -35,6 +35,9 @@ public class JavaActivity extends AppCompatActivity {
         BlinkIdSdkSettings sdkSettings = new BlinkIdSdkSettings(licenseKey);
         CameraSettings cameraSettings = new CameraSettings();
         BlinkIdSessionSettings sessionSettings = new BlinkIdSessionSettings();
+        // Alternatively, use one of the use-case factories for preconfigured session settings:
+        // BlinkIdSessionSettings sessionSettings = BlinkIdSessionSettings.documentVideo();
+        // BlinkIdSessionSettings sessionSettings = BlinkIdSessionSettings.standaloneBarcode();
         BlinkIdUxSettings uxSettings = new BlinkIdUxSettings(15000, 10000);
         BlinkIdScanActivitySettings activitySettings = new BlinkIdScanActivitySettings(sdkSettings, sessionSettings, uxSettings, cameraSettings);
 

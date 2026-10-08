@@ -22,7 +22,7 @@
     <string name="mb_blinkid_help_screen_msg1">Controlla di non stare coprendo parte del documento, comprese le ultime righe, con un dito. Fai attenzione anche ai riflessi olografici situati sui campi del documento.</string>
     <string name="mb_blinkid_help_screen_msg2">Evita la luce intensa diretta, perché questa si riflette sul documento e può rendere illeggibili alcune sue parti. Se non riesci a leggere i dati sul documento, neanche la fotocamera potrà vederli.</string>
     <string name="mb_blinkid_help_screen_msg3">Cerca di tenere fermi il telefono e il documento durante la scansione. Muoverli può rendere l\'immagine sfocata e i dati sul documento illeggibili.</string>
-    <string name="mb_blinkid_help_screen_title1">Fai in modo tutti i campi siano visibili</string>
+    <string name="mb_blinkid_help_screen_title1">Mantieni tutti i campi visibili</string>
     <string name="mb_blinkid_help_screen_title2">Attenzione alla luce intensa</string>
     <string name="mb_blinkid_help_screen_title3">Resta immobile durante la scansione</string>
     <string name="mb_blinkid_increase_lighting_intensity">Sposta in un punto più illuminato</string>
@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Troverai una lunga serie di caratteri nella parte inferiore del fronte o del retro del documento, suddivisa in 2 o 3 righe e separata da frecce (&lt;&lt; o &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Individua l\'MRZ sul documento</string>
     <string name="mb_blinkid_onboarding_dialog_title">Fai in modo tutti i dati siano visibili</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Apri il passaporto alla pagina con la foto e i dati personali. Questa pagina riporta il tuo nome, la data di nascita, il numero di passaporto e altre informazioni identificative.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Apri il passaporto alla pagina dei dati</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Apri il passaporto alla pagina con la foto e i dati personali. Assicurati che il passaporto sia ben illuminato. Tutti i campi devono essere completamente visibili.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Apri il passaporto</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Scansiona la pagina dei dati del documento</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Assicurati che il documento sia ben illuminato, interamente visibile e senza riflessi.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Riprova</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Muovi alla pagina di destra</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Muovi alla pagina in alto</string>
     <string name="mb_blinkid_scanning_wrong_side">Girare il documento</string>
+    <string name="mb_blinkid_screen_detected">Sposta il documento su uno sfondo uniforme</string>
     <string name="mb_blinkid_top_page_instructions">Scansiona la pagina in alto</string>
     <string name="mb_blinkid_unsupported_document_message">Scansiona il lato anteriore di un documento supportato.</string>
     <string name="mb_blinkid_unsupported_document_title">Documento non riconosciuto</string>

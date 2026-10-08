@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">문서의 앞면 또는 뒷면 하단에서 화살표(&lt;&lt; 또는 &gt;&gt;)로 구분된 2~3줄의 긴 문자열을 찾을 수 있습니다.</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">문서에서 MRZ를 찾으세요</string>
     <string name="mb_blinkid_onboarding_dialog_title">모든 세부 내용들이 보이도록 해주세요</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">여권의 사진과 개인정보가 있는 페이지를 펼치세요. 이 페이지에는 이름, 생년월일, 여권 번호 및 기타 신원 정보가 표시되어 있습니다.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">여권의 신원 정보 페이지를 펼치세요</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">사진과 개인정보가 있는 페이지가 보이도록 여권을 펼치세요. 여권을 밝은 곳에 두세요. 모든 항목이 완전히 보이도록 하세요.</string>
+    <string name="mb_blinkid_passport_onboarding_title">여권을 펼치세요</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">문서의 데이터 페이지를 스캔하세요</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">문서에 빛이 충분하고, 전체가 보이며, 빛이 반사되지 않는지 확인하세요.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">다시 시도</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">오른쪽 페이지로 이동하세요</string>
     <string name="mb_blinkid_scanning_wrong_page_top">상단 페이지로 이동하세요</string>
     <string name="mb_blinkid_scanning_wrong_side">문서를 뒤집어 주세요</string>
+    <string name="mb_blinkid_screen_detected">문서를 단색 배경에 놓으세요</string>
     <string name="mb_blinkid_top_page_instructions">상단 페이지를 스캔하세요</string>
     <string name="mb_blinkid_unsupported_document_message">사용 가능한 문서의 앞면을 스캔하세요.</string>
     <string name="mb_blinkid_unsupported_document_title">문서 인식 실패</string>

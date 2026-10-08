@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Kebenaran kamera diperlukan.</string>
     <string name="mb_blinkid_close">Tutup</string>
+    <string name="mb_blinkid_consent_description">Menyimpan dan/atau mengakses maklumat peribadi untuk tujuan mengesahkan identiti anda.</string>
+    <string name="mb_blinkid_consent_no">Tidak bersetuju</string>
+    <string name="mb_blinkid_consent_privacy_link">Notis Privasi</string>
+    <string name="mb_blinkid_consent_privacy_notice">Pilihan anda membantu kami melindungi maklumat peribadi anda dan menambah baik teknologi kami sambil mengekalkan standard privasi data tertinggi seperti yang diterangkan dalam %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Saya bersetuju dengan penggunaan data peribadi saya oleh penyedia untuk tujuan mengoptimumkan teknologinya.</string>
+    <string name="mb_blinkid_consent_title">Kami memerlukan persetujuan anda untuk:</string>
+    <string name="mb_blinkid_consent_yes">Setuju</string>
     <string name="mb_blinkid_dialog_back_button">Kembali</string>
     <string name="mb_blinkid_dialog_done_button">Siap</string>
     <string name="mb_blinkid_dialog_next_button">Seterusnya</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Jauhkan lagi</string>
     <string name="mb_blinkid_need_help_tooltip">Perlukan bantuan?</string>
     <string name="mb_blinkid_ok">Okey</string>
+    <string name="mb_blinkid_optional">Pilihan</string>
+    <string name="mb_blinkid_privacy_notice">Notis privasi</string>
     <string name="mb_blinkid_retry">Cuba semula</string>
     <string name="mb_blinkid_warning">Amaran</string>
 </resources>

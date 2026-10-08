@@ -151,14 +151,17 @@ fun OnboardingDialogContent(
                 style = SdkTheme.sdkTypography.onboardingText
             )
         }
+        val (interactionSource, isFocused) = rememberFocusInteraction()
         Button(
             modifier = Modifier
                 .weight(0.15f)
-                .align(Alignment.End),
+                .align(Alignment.End)
+                .doubleFocusBorder(focused = isFocused.value, shape = ButtonDefaults.shape),
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color.Transparent,
                 contentColor = MaterialTheme.colorScheme.primary
             ),
+            interactionSource = interactionSource,
             onClick = {
                 onDismissOnboardingDialog()
             }) {

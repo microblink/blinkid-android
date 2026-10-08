@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Sunt necesare permisiunile pentru camera foto.</string>
     <string name="mb_blinkid_close">Închide</string>
+    <string name="mb_blinkid_consent_description">Stocarea și/sau accesarea datelor cu caracter personal în scopul verificării identității dumneavoastră.</string>
+    <string name="mb_blinkid_consent_no">Nu sunt de acord</string>
+    <string name="mb_blinkid_consent_privacy_link">Politica de confidențialitate</string>
+    <string name="mb_blinkid_consent_privacy_notice">Opțiunile dumneavoastră ne ajută să vă protejăm informațiile cu caracter personal și să ne îmbunătățim tehnologia, menținând totodată cele mai înalte standarde de confidențialitate a datelor, astfel cum sunt descrise în %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Sunt de acord ca furnizorul să utilizeze datele mele cu caracter personal pentru optimizarea tehnologiei sale.</string>
+    <string name="mb_blinkid_consent_title">Avem nevoie de consimțământul dumneavoastră pentru:</string>
+    <string name="mb_blinkid_consent_yes">Sunt de acord</string>
     <string name="mb_blinkid_dialog_back_button">Înapoi</string>
     <string name="mb_blinkid_dialog_done_button">Terminat</string>
     <string name="mb_blinkid_dialog_next_button">Următorul</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Îndepărtați</string>
     <string name="mb_blinkid_need_help_tooltip">Aveți nevoie de ajutor?</string>
     <string name="mb_blinkid_ok">Bine</string>
+    <string name="mb_blinkid_optional">Opțional</string>
+    <string name="mb_blinkid_privacy_notice">Notificare privind confidențialitatea</string>
     <string name="mb_blinkid_retry">Reîncercare</string>
     <string name="mb_blinkid_warning">Avertizare</string>
 </resources>

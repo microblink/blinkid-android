@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Você encontrará uma longa sequência de caracteres na parte inferior da frente ou do verso do documento, dividida em 2 ou 3 linhas e separada por símbolos de seta (&lt;&lt; ou &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Localize a MRZ no documento</string>
     <string name="mb_blinkid_onboarding_dialog_title">Mantenha todos os detalhes visíveis</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Abra seu passaporte na página com sua foto e seus dados pessoais. Essa página mostra seu nome, data de nascimento, número do passaporte e outras informações de identificação.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Abra o passaporte na página de dados</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Prepare seu passaporte, abrindo-o na página que contém sua foto e informações pessoais. Verifique se o passaporte está bem iluminado. Todos os campos devem estar totalmente visíveis.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Abra seu passaporte</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Digitalize a página de dados do documento</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Certifique-se de que o documento esteja bem iluminado, totalmente visível e sem reflexos.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Tentar novamente</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Mova para a página direita</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Mova para a página superior</string>
     <string name="mb_blinkid_scanning_wrong_side">Vire o documento</string>
+    <string name="mb_blinkid_screen_detected">Coloque o documento sobre um fundo liso</string>
     <string name="mb_blinkid_top_page_instructions">Digitalize a página superior</string>
     <string name="mb_blinkid_unsupported_document_message">Digitalize a frente de um documento suportado.</string>
     <string name="mb_blinkid_unsupported_document_title">Documento não reconhecido</string>

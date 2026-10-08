@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Kamera ruxsati zarur.</string>
     <string name="mb_blinkid_close">Yopish</string>
+    <string name="mb_blinkid_consent_description">Shaxsingizni tasdiqlash maqsadida shaxsiy maʼlumotlarni saqlash va/yoki ularga kirish.</string>
+    <string name="mb_blinkid_consent_no">Rozilik bermaslik</string>
+    <string name="mb_blinkid_consent_privacy_link">Maxfiylik bildirishnomasida</string>
+    <string name="mb_blinkid_consent_privacy_notice">Tanlovlaringiz shaxsiy maʼlumotlaringizni himoya qilishga va %1$s bayon etilganidek, maʼlumotlar maxfiyligining eng yuqori standartlariga rioya qilgan holda texnologiyamizni yaxshilashga yordam beradi.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Provayder o‘z texnologiyasini optimallashtirish maqsadida mening shaxsiy maʼlumotlarimdan foydalanishiga roziman.</string>
+    <string name="mb_blinkid_consent_title">Quyidagilar uchun roziligingizni soʻraymiz:</string>
+    <string name="mb_blinkid_consent_yes">Rozilik berish</string>
     <string name="mb_blinkid_dialog_back_button">Ortga</string>
     <string name="mb_blinkid_dialog_done_button">Tayyor</string>
     <string name="mb_blinkid_dialog_next_button">Keyingisi</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Uzoqlashtiring</string>
     <string name="mb_blinkid_need_help_tooltip">Yordam kerakmi?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Ixtiyoriy</string>
+    <string name="mb_blinkid_privacy_notice">Maxfiylik bildirishnomasi</string>
     <string name="mb_blinkid_retry">Qayta urining</string>
     <string name="mb_blinkid_warning">Ogohlantirish</string>
 </resources>

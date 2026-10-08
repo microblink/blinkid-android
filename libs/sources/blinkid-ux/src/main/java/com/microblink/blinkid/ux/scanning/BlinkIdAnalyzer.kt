@@ -20,6 +20,7 @@ import com.microblink.blinkid.ux.ScanningUxEventHandler
 import com.microblink.blinkid.ux.camera.ImageAnalyzer
 import com.microblink.blinkid.ux.camera.TimeoutCause
 import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
+import com.microblink.blinkid.ux.settings.resolveClassFilter
 import com.microblink.blinkid.ux.utils.ErrorReason
 import com.microblink.blinkid.ux.utils.UxPingletTracker
 import kotlinx.coroutines.CancellationException
@@ -78,6 +79,8 @@ class BlinkIdAnalyzer(
 
     private val scanningUxTranslator = BlinkIdScanningUxTranslator()
 
+    private val classFilter = uxSettings.resolveClassFilter()
+
     /**
      * Analyzes a single camera frame.
      *
@@ -114,7 +117,7 @@ class BlinkIdAnalyzer(
                                 MbLog.w(TAG) { "processing has been canceled" }
                             } else {
                                 sessionProcessResult.getOrNull()?.let { processResult ->
-                                    uxSettings.classFilter?.let { classFilter ->
+                                    classFilter?.let { classFilter ->
                                         processResult.inputImageAnalysisResult.documentClassInfo?.let { documentClassInfo ->
                                             if (!classFilter.classAllowed(documentClassInfo)) {
                                                 onErrorAnalysis(ErrorReason.ErrorDocumentClassFiltered)

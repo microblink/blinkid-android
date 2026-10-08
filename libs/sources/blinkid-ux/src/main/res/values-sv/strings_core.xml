@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Kamerabehörighet krävs.</string>
     <string name="mb_blinkid_close">Stäng</string>
+    <string name="mb_blinkid_consent_description">Lagring av och/eller åtkomst till personuppgifter i syfte att verifiera din identitet.</string>
+    <string name="mb_blinkid_consent_no">Samtyck inte</string>
+    <string name="mb_blinkid_consent_privacy_link">integritetsmeddelandet</string>
+    <string name="mb_blinkid_consent_privacy_notice">Dina val hjälper oss att skydda dina personuppgifter och förbättra vår teknik, samtidigt som vi upprätthåller de högsta standarderna för dataskydd enligt beskrivningen i %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Jag samtycker till att leverantören använder mina personuppgifter för att optimera sin teknik.</string>
+    <string name="mb_blinkid_consent_title">Vi behöver ditt samtycke till:</string>
+    <string name="mb_blinkid_consent_yes">Samtyck</string>
     <string name="mb_blinkid_dialog_back_button">Tillbaka</string>
     <string name="mb_blinkid_dialog_done_button">Klart</string>
     <string name="mb_blinkid_dialog_next_button">Nästa</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Flytta längre bort</string>
     <string name="mb_blinkid_need_help_tooltip">Behöver du hjälp?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Valfritt</string>
+    <string name="mb_blinkid_privacy_notice">Integritetsmeddelande</string>
     <string name="mb_blinkid_retry">Försök igen</string>
     <string name="mb_blinkid_warning">Varning</string>
 </resources>

@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">तपाईंले कागजातको अगाडि वा पछाडिको भागको तल्लो तर्फ अक्षर र अंकहरूको एउटा लामो लहर भेट्टाउनुहुनेछ, जुन 2 वा 3 हरफमा विभाजित भई तीरका चिह्नहरू (&lt;&lt; वा &gt;&gt;) द्वारा छुट्याइएको हुन्छ।</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">कागजातको MRZ भएको भाग पत्ता लगाउनुहोस्</string>
     <string name="mb_blinkid_onboarding_dialog_title">विवरणहरू देखिनेगरी राख्नुहोस्</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">फोटो र व्यक्तिगत विवरण भएको पृष्ठमा आफ्नो राहदानी खोल्नुहोस्। यस पृष्ठमा तपाईंको नाम, जन्ममिति, राहदानी नम्बर र अन्य पहिचानसम्बन्धी जानकारी हुन्छ।</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">राहदानीको विवरण पृष्ठ खोल्नुहोस्</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">तस्बिर र व्यक्तिगत जानकारी भएको पृष्ठमा आफ्नो राहदानी खोलेर तयार राख्नुहोस्। राहदानीमा पर्याप्त प्रकाश परेको सुनिश्चित गर्नुहोस्। सबै विवरणहरू पूर्ण रूपमा देखिनुपर्छ।</string>
+    <string name="mb_blinkid_passport_onboarding_title">आफ्नो राहदानी खोल्नुहोस्</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">कागजको डाटा पृष्ठ स्क्यान गर्नुहोस्</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">कागजात पर्याप्त उज्यालोमा रहेको, पूर्ण रूपमा देखिएको र नचम्किएको हुनुपर्छ।</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">पुन: प्रयास गर्नुहोस्</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">दायाँ पृष्ठमा जानुहोस्</string>
     <string name="mb_blinkid_scanning_wrong_page_top">माथिल्लो पृष्ठमा जानुहोस्</string>
     <string name="mb_blinkid_scanning_wrong_side">कागजात फ्लिप गर्नुहोस्</string>
+    <string name="mb_blinkid_screen_detected">कागजातलाई सादा पृष्ठभूमिमा राख्नुहोस्</string>
     <string name="mb_blinkid_top_page_instructions">माथिल्लो पृष्ठ स्क्यान गर्नुहोस्</string>
     <string name="mb_blinkid_unsupported_document_message">सपोर्ट हुने कागजातको अगाडि पट्टिको भाग स्क्यान गर्नुहोस्।</string>
     <string name="mb_blinkid_unsupported_document_title">कागजात पहिचान हुन सकेन</string>

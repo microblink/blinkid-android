@@ -24,7 +24,6 @@ import com.microblink.blinkid.ux.camera.CameraHardwareInfoHelper
 import com.microblink.blinkid.ux.camera.CameraInputDetails
 import com.microblink.blinkid.ux.camera.CameraViewModel
 import com.microblink.blinkid.ux.camera.TimeoutCause
-import com.microblink.blinkid.ux.components.needHelpTooltipDefaultTimeToAppearMs
 import com.microblink.blinkid.ux.components.uiCountingWindowDurationMs
 import com.microblink.blinkid.ux.scanning.BlinkIdAnalyzer
 import com.microblink.blinkid.ux.scanning.BlinkIdDocumentLocatedLocation
@@ -98,11 +97,12 @@ internal class BlinkIdUxViewModel(
     private var isStateTimeoutActive: Boolean = true
 
     private val initialStatusMessage: StatusMessage =
-        when (sessionSettings.toBlinkIdExtractionMode()) {
+        when (sessionSettings.toBlinkIdExtractionMode(uxSettings.passportOnly)) {
             BlinkIdExtractionMode.FullDocument -> CommonStatusMessage.ScanFirstSide
             BlinkIdExtractionMode.BarcodeOnly -> BlinkIdStatusMessage.ScanBarcodeOnlyModule
             BlinkIdExtractionMode.DocumentWithBarcode -> BlinkIdStatusMessage.ScanBarcodeIdModule
             BlinkIdExtractionMode.DocumentWithMrz -> BlinkIdStatusMessage.ScanMrzModule
+            BlinkIdExtractionMode.PassportOnly -> BlinkIdStatusMessage.ScanPassportOnlyModule
         }
 
     private val _uiState = MutableStateFlow(BlinkIdUiState(statusMessage = initialStatusMessage))
@@ -121,10 +121,11 @@ internal class BlinkIdUxViewModel(
 
     private var cameraHardwareInfoReported = false
 
-    private val helpTooltipTimer =
+    // the help tooltip is never shown automatically if the show delay is not positive
+    private val helpTooltipTimer = if (!uxSettings.helpTooltipShowDelay.isPositive()) null else
         object : CountDownTimer(
-            needHelpTooltipDefaultTimeToAppearMs,
-            needHelpTooltipDefaultTimeToAppearMs
+            uxSettings.helpTooltipShowDelay.inWholeMilliseconds,
+            uxSettings.helpTooltipShowDelay.inWholeMilliseconds
         ) {
             override fun onTick(millisUntilFinished: Long) {
             }
@@ -581,7 +582,7 @@ internal class BlinkIdUxViewModel(
         statusCounter.reset()
         return if (mostFrequent.isNotEmpty()) {
             when (mostFrequent[0]) {
-                BlinkIdStatusMessage.RotateDocument, CommonStatusMessage.ScanFirstSide, BlinkIdStatusMessage.ScanBarcodeOnlyModule, BlinkIdStatusMessage.ScanBarcodeIdModule, BlinkIdStatusMessage.ScanMrzModule, CommonStatusMessage.ScanSecondSide, BlinkIdStatusMessage.ScanBarcode, BlinkIdStatusMessage.PassportScanTopPage, BlinkIdStatusMessage.PassportScanLeftPage, BlinkIdStatusMessage.PassportScanRightPage, BlinkIdStatusMessage.PassportScanBarcodePage -> {
+                BlinkIdStatusMessage.RotateDocument, CommonStatusMessage.ScanFirstSide, BlinkIdStatusMessage.ScanBarcodeOnlyModule, BlinkIdStatusMessage.ScanBarcodeIdModule, BlinkIdStatusMessage.ScanMrzModule, BlinkIdStatusMessage.ScanPassportOnlyModule, CommonStatusMessage.ScanSecondSide, BlinkIdStatusMessage.ScanBarcode, BlinkIdStatusMessage.PassportScanTopPage, BlinkIdStatusMessage.PassportScanLeftPage, BlinkIdStatusMessage.PassportScanRightPage, BlinkIdStatusMessage.PassportScanBarcodePage -> {
                     Pair(ProcessingState.Sensing, mostFrequent[0])
                 }
 
@@ -638,7 +639,7 @@ internal class BlinkIdUxViewModel(
     fun lifecyclePauseAnalysis() {
         imageAnalyzer?.pauseAnalysis()
         newStateTimestamp = null
-        helpTooltipTimer.cancel()
+        helpTooltipTimer?.cancel()
         statusCounter.reset()
         isStateTimeoutActive = false
         firstImageTimestamp?.let { stateTimeoutDurationBeforePause = System.nanoTime() - it }
@@ -647,7 +648,7 @@ internal class BlinkIdUxViewModel(
     fun lifecycleResumeAnalysis() {
         if (!_uiState.value.onboardingDialogDisplayed && !_uiState.value.helpDisplayed && _uiState.value.errorState == ErrorState.NoError) {
             imageAnalyzer?.resumeAnalysis()
-            helpTooltipTimer.start()
+            helpTooltipTimer?.start()
             firstImageTimestamp?.let { _ ->
                 firstImageTimestamp = System.nanoTime() - (stateTimeoutDurationBeforePause ?: 0L)
             }
@@ -752,9 +753,9 @@ internal class BlinkIdUxViewModel(
     fun changeHelpTooltipVisibility(show: Boolean) {
         if (_uiState.value.helpButtonDisplayed) {
             if (show) {
-                helpTooltipTimer.cancel()
+                helpTooltipTimer?.cancel()
             } else {
-                helpTooltipTimer.start()
+                helpTooltipTimer?.start()
             }
             _uiState.update {
                 it.copy(helpTooltipDisplayed = show)
@@ -804,7 +805,7 @@ internal class BlinkIdUxViewModel(
     }
 
     fun onRetryTimeout() {
-        helpTooltipTimer.cancel()
+        helpTooltipTimer?.cancel()
         _uiState.update {
             it.copy(
                 errorState = ErrorState.NoError,
@@ -818,7 +819,7 @@ internal class BlinkIdUxViewModel(
         viewModelScope.launch {
             imageAnalyzer?.restartAnalysis()
         }
-        helpTooltipTimer.start()
+        helpTooltipTimer?.start()
     }
 
     fun onHapticFeedbackCompleted() {

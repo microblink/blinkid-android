@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">دستاویز کے اگلے یا پچھلے رخ کے نچلے حصے میں حروف کی ایک طویل لڑی موجود ہوگی، جو 2 یا 3 سطروں میں تقسیم اور تیر کے نشانات (&lt;&lt; یا &gt;&gt;) سے جدا ہوگی۔</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">دستاویز پر MRZ تلاش کریں</string>
     <string name="mb_blinkid_onboarding_dialog_title">تمام تفصیلات نمایاں رکھیں</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">اپنا پاسپورٹ اس صفحے پر کھولیں جس پر آپ کی تصویر اور ذاتی معلومات موجود ہوں۔ اس صفحے پر آپ کا نام، تاریخِ پیدائش، پاسپورٹ نمبر اور دیگر شناختی معلومات درج ہوتی ہیں۔</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">پاسپورٹ کا معلومات والا صفحہ کھولیں</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">اپنا پاسپورٹ اس صفحے پر کھول کر تیار کریں جس میں آپ کی تصویر اور ذاتی معلومات ہوں۔ یقینی بنائیں کہ پاسپورٹ پر مناسب روشنی ہو۔ تمام خانے مکمل طور پر نظر آنے چاہئیں۔</string>
+    <string name="mb_blinkid_passport_onboarding_title">اپنا پاسپورٹ کھولیں</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">دستاویز کے ڈیٹا صفحہ کو اسکین کریں</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">یقینی بنائیں کہ دستاویز پر مناسب روشنی پڑ رہی ہو، وہ مکمل طور پر نظر آ رہی ہو اور اس پر چمک نہ ہو۔</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">دوبارہ کوشش کریں</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">دائیں صفحے پر جائیں</string>
     <string name="mb_blinkid_scanning_wrong_page_top">اوپری صفحے پر جائیں</string>
     <string name="mb_blinkid_scanning_wrong_side">دستاویز کو پلٹیں</string>
+    <string name="mb_blinkid_screen_detected">دستاویز کو سادہ پس منظر کے سامنے رکھیں</string>
     <string name="mb_blinkid_top_page_instructions">اوپری صفحے کو اسکین کریں</string>
     <string name="mb_blinkid_unsupported_document_message">معاونت یافتہ دستاویز کے سامنے والے حصے کو اسکین کریں۔</string>
     <string name="mb_blinkid_unsupported_document_title">دستاویز شناخت نہیں ہوئی</string>

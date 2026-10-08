@@ -12,6 +12,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.milliseconds
 
 @Composable
 fun HelpBox(
@@ -19,7 +21,8 @@ fun HelpBox(
     helpScreensButtonDisplayed: Boolean,
     helpTooltipDisplayed: Boolean,
     onDisplayHelpRequested: () -> Unit,
-    onChangeHelpTooltipState: (Boolean) -> Unit
+    onChangeHelpTooltipState: (Boolean) -> Unit,
+    helpTooltipHideDelay: Duration = needHelpTooltipDefaultDurationMs.milliseconds
 ) {
     var _helpScreensButtonDisplayed by rememberSaveable {
         mutableStateOf(helpScreensButtonDisplayed)
@@ -34,7 +37,8 @@ fun HelpBox(
             modifier,
             onChangeHelpTooltipState,
             onDisplayHelpRequested,
-            helpTooltipDisplayed
+            helpTooltipDisplayed,
+            helpTooltipHideDelay
         )
     }
 }

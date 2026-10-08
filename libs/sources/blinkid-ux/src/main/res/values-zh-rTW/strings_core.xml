@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">需要相機權限。</string>
     <string name="mb_blinkid_close">關閉</string>
+    <string name="mb_blinkid_consent_description">儲存及／或存取個人資訊，以驗證您的身分。</string>
+    <string name="mb_blinkid_consent_no">不同意</string>
+    <string name="mb_blinkid_consent_privacy_link">隱私權聲明</string>
+    <string name="mb_blinkid_consent_privacy_notice">您的選擇有助於我們保護您的個人資訊，並在維持最高資料隱私標準的同時改善我們的技術，如%1$s所述。</string>
+    <string name="mb_blinkid_consent_privacy_switch">我同意服務提供者為最佳化其技術而使用我的個人資料。</string>
+    <string name="mb_blinkid_consent_title">我們需要徵得您的同意，以便：</string>
+    <string name="mb_blinkid_consent_yes">同意</string>
     <string name="mb_blinkid_dialog_back_button">背面</string>
     <string name="mb_blinkid_dialog_done_button">完成</string>
     <string name="mb_blinkid_dialog_next_button">下一步</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">再離遠一點</string>
     <string name="mb_blinkid_need_help_tooltip">需要協助嗎？</string>
     <string name="mb_blinkid_ok">好的</string>
+    <string name="mb_blinkid_optional">選填</string>
+    <string name="mb_blinkid_privacy_notice">隱私權聲明</string>
     <string name="mb_blinkid_retry">重試</string>
     <string name="mb_blinkid_warning">警告</string>
 </resources>

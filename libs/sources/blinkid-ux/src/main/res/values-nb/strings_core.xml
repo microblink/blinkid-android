@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Kameratillatelse er nødvendig.</string>
     <string name="mb_blinkid_close">Lukk</string>
+    <string name="mb_blinkid_consent_description">Å lagre og/eller få tilgang til personopplysninger for å bekrefte identiteten din.</string>
+    <string name="mb_blinkid_consent_no">Ikke samtykk</string>
+    <string name="mb_blinkid_consent_privacy_link">personvernerklæringen</string>
+    <string name="mb_blinkid_consent_privacy_notice">Valgene dine hjelper oss med å beskytte personopplysningene dine og forbedre teknologien vår, samtidig som vi opprettholder de høyeste standardene for personvern, slik det er beskrevet i %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Jeg samtykker til at leverandøren bruker personopplysningene mine til å optimalisere teknologien sin.</string>
+    <string name="mb_blinkid_consent_title">Vi trenger samtykket ditt til:</string>
+    <string name="mb_blinkid_consent_yes">Samtykk</string>
     <string name="mb_blinkid_dialog_back_button">Tilbake</string>
     <string name="mb_blinkid_dialog_done_button">Ferdig</string>
     <string name="mb_blinkid_dialog_next_button">Neste</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Flytt lenger bort</string>
     <string name="mb_blinkid_need_help_tooltip">Trenger du hjelp?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">Valgfritt</string>
+    <string name="mb_blinkid_privacy_notice">Personvernerklæring</string>
     <string name="mb_blinkid_retry">Prøv på nytt</string>
     <string name="mb_blinkid_warning">Advarsel</string>
 </resources>

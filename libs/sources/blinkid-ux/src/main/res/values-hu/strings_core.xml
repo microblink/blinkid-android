@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Szükséges a kamera engedélyezése.</string>
     <string name="mb_blinkid_close">Bezárás</string>
+    <string name="mb_blinkid_consent_description">Személyes adatainak tárolásához és/vagy azokhoz való hozzáféréshez személyazonossága ellenőrzése céljából.</string>
+    <string name="mb_blinkid_consent_no">Nem járulok hozzá</string>
+    <string name="mb_blinkid_consent_privacy_link">Adatvédelmi tájékoztatóban</string>
+    <string name="mb_blinkid_consent_privacy_notice">Döntései segítenek személyes adatainak védelmében és technológiánk fejlesztésében, miközben az %1$s leírtaknak megfelelően fenntartjuk az adatvédelem legmagasabb szintjét.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Hozzájárulok ahhoz, hogy a szolgáltató technológiájának optimalizálása céljából felhasználja személyes adataimat.</string>
+    <string name="mb_blinkid_consent_title">Az Ön hozzájárulására van szükségünk a következőkhöz:</string>
+    <string name="mb_blinkid_consent_yes">Hozzájárulok</string>
     <string name="mb_blinkid_dialog_back_button">Vissza</string>
     <string name="mb_blinkid_dialog_done_button">Kész</string>
     <string name="mb_blinkid_dialog_next_button">Következő</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Menjen távolabb</string>
     <string name="mb_blinkid_need_help_tooltip">Segíthetünk bármiben?</string>
     <string name="mb_blinkid_ok">Rendben</string>
+    <string name="mb_blinkid_optional">Nem kötelező</string>
+    <string name="mb_blinkid_privacy_notice">Adatvédelmi tájékoztató</string>
     <string name="mb_blinkid_retry">Próbálja újra</string>
     <string name="mb_blinkid_warning">Figyelmeztetés</string>
 </resources>

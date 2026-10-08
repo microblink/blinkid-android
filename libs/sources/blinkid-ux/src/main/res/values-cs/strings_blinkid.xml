@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">Ve spodní části přední či zadní strany dokumentu najdete dlouhý řetězec znaků, který je rozdělený do 2 nebo 3 řádků a přerušovaný šipkami (&lt;&lt; nebo &gt;&gt;).</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">Vyhledejte na dokumentu MRZ kód</string>
     <string name="mb_blinkid_onboarding_dialog_title">Všechny detaily musejí být ve viditelném stavu</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">Otevřete pas na stránce s fotografií a osobními údaji. Na této stránce je uvedeno vaše jméno, datum narození, číslo pasu a další identifikační údaje.</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">Otevřete pas na stránce s údaji</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">Otevřete pas na stránce s fotografií a osobními údaji. Zajistěte, aby byl pas dobře osvětlený. Všechna pole musí být plně viditelná.</string>
+    <string name="mb_blinkid_passport_onboarding_title">Otevřete pas</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">Naskenujte datovou stránku dokumentu</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">Ujistěte se, že je dokument dobře osvětlený, zcela viditelný a bez odlesků.</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">Opakovat</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">Přesuňte se na pravou stránku</string>
     <string name="mb_blinkid_scanning_wrong_page_top">Přesuňte se na horní stránku</string>
     <string name="mb_blinkid_scanning_wrong_side">Překlopit dokument</string>
+    <string name="mb_blinkid_screen_detected">Přesuňte dokument na jednobarevné pozadí</string>
     <string name="mb_blinkid_top_page_instructions">Naskenujte horní stránku</string>
     <string name="mb_blinkid_unsupported_document_message">Naskenujte přední stranu podporovaného dokumentu.</string>
     <string name="mb_blinkid_unsupported_document_title">Dokument nebyl rozpoznán</string>

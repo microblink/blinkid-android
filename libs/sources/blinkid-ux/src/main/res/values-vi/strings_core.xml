@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">Quyền sử dụng camera là bắt buộc.</string>
     <string name="mb_blinkid_close">Đóng</string>
+    <string name="mb_blinkid_consent_description">Lưu trữ và/hoặc truy cập thông tin cá nhân nhằm xác minh danh tính của bạn.</string>
+    <string name="mb_blinkid_consent_no">Không đồng ý</string>
+    <string name="mb_blinkid_consent_privacy_link">Thông báo quyền riêng tư</string>
+    <string name="mb_blinkid_consent_privacy_notice">Các lựa chọn của bạn giúp chúng tôi bảo vệ thông tin cá nhân của bạn và cải thiện công nghệ, đồng thời duy trì các tiêu chuẩn cao nhất về quyền riêng tư dữ liệu như được mô tả trong %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">Tôi đồng ý cho nhà cung cấp sử dụng dữ liệu cá nhân của mình để tối ưu hóa công nghệ của họ.</string>
+    <string name="mb_blinkid_consent_title">Chúng tôi cần sự đồng ý của bạn để:</string>
+    <string name="mb_blinkid_consent_yes">Đồng ý</string>
     <string name="mb_blinkid_dialog_back_button">Quay lại</string>
     <string name="mb_blinkid_dialog_done_button">Đã xong</string>
     <string name="mb_blinkid_dialog_next_button">Tiếp theo</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">Di chuyển xa hơn</string>
     <string name="mb_blinkid_need_help_tooltip">Bạn cần trợ giúp?</string>
     <string name="mb_blinkid_ok">Được rồi</string>
+    <string name="mb_blinkid_optional">Không bắt buộc</string>
+    <string name="mb_blinkid_privacy_notice">Thông báo quyền riêng tư</string>
     <string name="mb_blinkid_retry">Thử lại</string>
     <string name="mb_blinkid_warning">Cảnh báo</string>
 </resources>

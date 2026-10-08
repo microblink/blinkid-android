@@ -20,7 +20,7 @@
     <string name="mb_blinkid_help_screen_mrz_msg1">确保手指没有遮挡机读区。此外，请留意机读区上的反光，反光可能导致机读区无法读取。</string>
     <string name="mb_blinkid_help_screen_mrz_title1">保持机读区可见</string>
     <string name="mb_blinkid_help_screen_msg1">确保不要用手指遮盖文件的任意部分，包括底部边线。同时注意全息图在文件字段的反射。</string>
-    <string name="mb_blinkid_help_screen_msg2">避免强光直射，因为它会在文件中反射出来 ，可能造成文件的某些地方不可读。如果您不能读取文件上的数据，那么它也不会被相机看到。</string>
+    <string name="mb_blinkid_help_screen_msg2">避免强光直射证件，以免反光导致证件上的部分信息无法读取。如果您看不清证件上的信息，摄像头也无法清晰拍摄。</string>
     <string name="mb_blinkid_help_screen_msg3">扫描时尽量保持手机和文件不动。移动可能造成图像模糊，使文件数据不可读。</string>
     <string name="mb_blinkid_help_screen_title1">保持所有字段可见</string>
     <string name="mb_blinkid_help_screen_title2">注意强光直射</string>
@@ -41,6 +41,10 @@
     <string name="mb_blinkid_onboarding_dialog_mrz_id_message">您将在文件正面或反面的底部找到一长串字符，分为 2 到 3 行，并由箭头（&lt;&lt; 或 &gt;&gt;）分隔。</string>
     <string name="mb_blinkid_onboarding_dialog_mrz_id_title">找到文件上的机读区</string>
     <string name="mb_blinkid_onboarding_dialog_title">保持所有细节可见</string>
+    <string name="mb_blinkid_passport_help_open_passport_subtitle">请打开护照，翻到包含照片和个人信息的页面。该页面显示您的姓名、出生日期、护照号码和其他身份信息。</string>
+    <string name="mb_blinkid_passport_help_open_passport_title">打开护照，翻到个人信息页</string>
+    <string name="mb_blinkid_passport_onboarding_subtitle">请打开护照，翻到包含照片和个人信息的页面。确保护照页面光线充足。所有字段均须完整可见。</string>
+    <string name="mb_blinkid_passport_onboarding_title">打开护照</string>
     <string name="mb_blinkid_passport_scan_data_page_instructions">扫描文档的数据页</string>
     <string name="mb_blinkid_recognition_timeout_dialog_message">确保文件光线充足、完全可见且无眩光。</string>
     <string name="mb_blinkid_recognition_timeout_dialog_retry_button">重试</string>
@@ -50,6 +54,7 @@
     <string name="mb_blinkid_scanning_wrong_page_right">移动至右侧页面</string>
     <string name="mb_blinkid_scanning_wrong_page_top">移动至顶部页面</string>
     <string name="mb_blinkid_scanning_wrong_side">翻转文档</string>
+    <string name="mb_blinkid_screen_detected">请将证件移至纯色背景前</string>
     <string name="mb_blinkid_top_page_instructions">扫描顶部页面</string>
     <string name="mb_blinkid_unsupported_document_message">扫描支持文件类型的正面。</string>
     <string name="mb_blinkid_unsupported_document_title">文档无法识别</string>

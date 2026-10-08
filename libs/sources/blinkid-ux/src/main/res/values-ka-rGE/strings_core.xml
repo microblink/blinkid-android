@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">საჭიროა კამერაზე წვდომა.</string>
     <string name="mb_blinkid_close">დახურვა</string>
+    <string name="mb_blinkid_consent_description">თქვენი პირადობის დასადასტურებლად პერსონალური ინფორმაციის შენახვაზე და/ან მასზე წვდომაზე.</string>
+    <string name="mb_blinkid_consent_no">არ ვეთანხმები</string>
+    <string name="mb_blinkid_consent_privacy_link">კონფიდენციალურობის შეტყობინებაში</string>
+    <string name="mb_blinkid_consent_privacy_notice">თქვენი არჩევანი გვეხმარება, დავიცვათ თქვენი პერსონალური ინფორმაცია და გავაუმჯობესოთ ჩვენი ტექნოლოგია მონაცემთა კონფიდენციალურობის უმაღლესი სტანდარტების დაცვით, როგორც ეს აღწერილია %1$s.</string>
+    <string name="mb_blinkid_consent_privacy_switch">ვეთანხმები, რომ მომსახურების მომწოდებელმა ჩემი პერსონალური მონაცემები თავისი ტექნოლოგიის ოპტიმიზაციის მიზნით გამოიყენოს.</string>
+    <string name="mb_blinkid_consent_title">გვჭირდება თქვენი თანხმობა შემდეგზე:</string>
+    <string name="mb_blinkid_consent_yes">ვეთანხმები</string>
     <string name="mb_blinkid_dialog_back_button">უკან</string>
     <string name="mb_blinkid_dialog_done_button">დასრულდა</string>
     <string name="mb_blinkid_dialog_next_button">შემდეგი</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">გადადით მოშორებით</string>
     <string name="mb_blinkid_need_help_tooltip">დახმარება გჭირდებათ?</string>
     <string name="mb_blinkid_ok">OK</string>
+    <string name="mb_blinkid_optional">არასავალდებულო</string>
+    <string name="mb_blinkid_privacy_notice">კონფიდენციალურობის შეტყობინება</string>
     <string name="mb_blinkid_retry">ხელახლა ცდა</string>
     <string name="mb_blinkid_warning">გაფრთხილება</string>
 </resources>

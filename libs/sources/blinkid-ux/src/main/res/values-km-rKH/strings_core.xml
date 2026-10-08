@@ -2,6 +2,13 @@
 <resources>
     <string name="mb_blinkid_camera_permission_required">តម្រូវឱ្យមានការអនុញ្ញាតពីកាមេរ៉ា។</string>
     <string name="mb_blinkid_close">បិទ</string>
+    <string name="mb_blinkid_consent_description">រក្សាទុក និង/ឬចូលប្រើព័ត៌មានផ្ទាល់ខ្លួន ដើម្បីផ្ទៀងផ្ទាត់អត្តសញ្ញាណរបស់អ្នក។</string>
+    <string name="mb_blinkid_consent_no">មិនយល់ព្រម</string>
+    <string name="mb_blinkid_consent_privacy_link">សេចក្តីជូនដំណឹងអំពីឯកជនភាព</string>
+    <string name="mb_blinkid_consent_privacy_notice">ជម្រើសរបស់អ្នកជួយយើងការពារព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នក និងកែលម្អបច្ចេកវិទ្យារបស់យើង ខណៈពេលរក្សាបាននូវស្តង់ដារខ្ពស់បំផុតនៃភាពឯកជនទិន្នន័យ ដូចដែលបានពិពណ៌នាក្នុង%1$s។</string>
+    <string name="mb_blinkid_consent_privacy_switch">ខ្ញុំយល់ព្រមឱ្យអ្នកផ្តល់សេវាប្រើប្រាស់ទិន្នន័យផ្ទាល់ខ្លួនរបស់ខ្ញុំ ដើម្បីបង្កើនប្រសិទ្ធភាពបច្ចេកវិទ្យារបស់ខ្លួន។</string>
+    <string name="mb_blinkid_consent_title">យើងត្រូវការការយល់ព្រមពីអ្នក ដើម្បី៖</string>
+    <string name="mb_blinkid_consent_yes">យល់ព្រម</string>
     <string name="mb_blinkid_dialog_back_button">ត្រឡប់មកវិញ</string>
     <string name="mb_blinkid_dialog_done_button">រួចរាល់</string>
     <string name="mb_blinkid_dialog_next_button">បន្ទាប់</string>
@@ -15,6 +22,8 @@
     <string name="mb_blinkid_move_farther">ផ្លាស់ទីទៅឆ្ងាយ</string>
     <string name="mb_blinkid_need_help_tooltip">ត្រូវការជំនួយ?</string>
     <string name="mb_blinkid_ok">យល់ព្រម</string>
+    <string name="mb_blinkid_optional">ស្រេចចិត្ត</string>
+    <string name="mb_blinkid_privacy_notice">សេចក្តីជូនដំណឹងអំពីឯកជនភាព</string>
     <string name="mb_blinkid_retry">ព្យាយាមម្តងទៀត</string>
     <string name="mb_blinkid_warning">ការព្រមាន</string>
 </resources>

@@ -29,13 +29,16 @@ import com.microblink.blinkid.ux.R
 import com.microblink.blinkid.ux.theme.SdkTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.milliseconds
 
 @Composable
 fun NeedHelpTooltip(
     modifier: Modifier,
     onChangeHelpTooltipState: (Boolean) -> Unit,
     onDisplayHelpRequested: () -> Unit,
-    activateHelpTooltip: Boolean
+    activateHelpTooltip: Boolean,
+    hideDelay: Duration = needHelpTooltipDefaultDurationMs.milliseconds
 ) {
     val scope = rememberCoroutineScope()
 
@@ -50,11 +53,14 @@ fun NeedHelpTooltip(
     LaunchedEffect(activateHelpTooltip) {
         if (activateHelpTooltip) {
             helpTooltipDisplayed = true
-            delay(needHelpTooltipDurationMs)
-            scope.launch {
-                helpTooltipDisplayed = false
+            // the help tooltip is never hidden automatically if the hide delay is not positive
+            if (hideDelay.isPositive()) {
+                delay(hideDelay)
+                scope.launch {
+                    helpTooltipDisplayed = false
+                }
+                onChangeHelpTooltipState(false)
             }
-            onChangeHelpTooltipState(false)
         }
     }
 

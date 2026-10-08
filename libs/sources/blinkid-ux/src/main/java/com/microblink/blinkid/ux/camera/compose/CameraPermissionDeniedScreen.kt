@@ -11,8 +11,6 @@ import android.content.Intent
 import android.provider.Settings
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -24,13 +22,10 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -44,6 +39,8 @@ import androidx.compose.ui.unit.sp
 import androidx.core.app.ActivityCompat.shouldShowRequestPermissionRationale
 import androidx.core.net.toUri
 import com.microblink.blinkid.ux.R
+import com.microblink.blinkid.ux.components.doubleFocusBorder
+import com.microblink.blinkid.ux.components.rememberFocusInteraction
 import com.microblink.blinkid.ux.theme.Black
 import com.microblink.blinkid.ux.theme.Cobalt
 import com.microblink.blinkid.ux.theme.White
@@ -69,8 +66,8 @@ import com.microblink.blinkid.ux.theme.White
 fun CameraPermissionDeniedScreen(requestCameraPermission: () -> Unit) {
     val shouldShowDialog = remember { mutableStateOf(false) }
     val context = LocalContext.current
-    var isFocusedSettingsButton by remember { mutableStateOf(false) }
-    var isFocusedOkButton by remember { mutableStateOf(false) }
+    val (settingsInteractionSource, isFocusedSettingsButton) = rememberFocusInteraction()
+    val (okInteractionSource, isFocusedOkButton) = rememberFocusInteraction()
 
     Box(
         modifier = Modifier
@@ -107,21 +104,13 @@ fun CameraPermissionDeniedScreen(requestCameraPermission: () -> Unit) {
 
             Button(
                 modifier = Modifier
-                    .then(
-                        if (isFocusedSettingsButton)
-                            Modifier.border(
-                                width = 2.dp,
-                                color = Cobalt,
-                                shape = ButtonDefaults.shape
-                            )
-                        else Modifier
-                    )
                     .padding(horizontal = 6.dp, vertical = 1.dp)
-                    .focusable()
-                    .onFocusChanged { focusState ->
-                        isFocusedSettingsButton = focusState.isFocused
-                    },
+                    .doubleFocusBorder(
+                        focused = isFocusedSettingsButton.value,
+                        shape = ButtonDefaults.shape
+                    ),
                 colors = ButtonDefaults.buttonColors().copy(containerColor = Cobalt),
+                interactionSource = settingsInteractionSource,
                 onClick = {
                     val shouldShowRequestPermissionRationale = (context as? Activity)?.let {
                         shouldShowRequestPermissionRationale(it, Manifest.permission.CAMERA)
@@ -155,21 +144,13 @@ fun CameraPermissionDeniedScreen(requestCameraPermission: () -> Unit) {
                 confirmButton = {
                     Button(
                         modifier = Modifier
-                            .then(
-                                if (isFocusedOkButton)
-                                    Modifier.border(
-                                        width = 2.dp,
-                                        color = Cobalt,
-                                        shape = ButtonDefaults.shape
-                                    )
-                                else Modifier
-                            )
                             .padding(horizontal = 6.dp, vertical = 1.dp)
-                            .focusable()
-                            .onFocusChanged { focusState ->
-                                isFocusedOkButton = focusState.isFocused
-                            },
+                            .doubleFocusBorder(
+                                focused = isFocusedOkButton.value,
+                                shape = ButtonDefaults.shape
+                            ),
                         colors = ButtonDefaults.buttonColors().copy(containerColor = Cobalt),
+                        interactionSource = okInteractionSource,
                         onClick = {
                             shouldShowDialog.value = false
                             context.startActivity(
