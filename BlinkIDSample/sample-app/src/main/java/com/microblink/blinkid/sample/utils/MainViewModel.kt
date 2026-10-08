@@ -19,6 +19,10 @@ import com.microblink.blinkid.core.settings.ScanningSettings
 import com.microblink.blinkid.core.settings.scanning.BarcodeModuleSettings
 import com.microblink.blinkid.core.settings.scanning.DocumentCaptureModuleSettings
 import com.microblink.blinkid.core.settings.scanning.VizModuleSettings
+import com.microblink.blinkid.core.settings.usecase.DocumentScenario
+import com.microblink.blinkid.core.settings.usecase.DocumentVideoUseCase
+import com.microblink.blinkid.core.settings.usecase.VideoCaptureEnvironment
+import com.microblink.blinkid.core.settings.usecase.VideoQualityProfile
 import com.microblink.blinkid.sample.config.BlinkIdConfig.licenseKey
 import com.microblink.blinkid.sample.result.BlinkIdResultHolder
 import com.microblink.blinkid.ux.UiSettings
@@ -26,14 +30,20 @@ import com.microblink.blinkid.ux.camera.CameraSettings
 import com.microblink.blinkid.ux.scanning.FrameProcessResultHandle
 import com.microblink.blinkid.ux.scanning.FrameProcessResultHandle.LastFrameResult
 import com.microblink.blinkid.ux.settings.BlinkIdUxSettings
+import kotlin.time.Duration.Companion.milliseconds
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlin.time.Duration.Companion.milliseconds
 
 private const val TAG = "MainViewModel"
+
+enum class SessionPreset {
+    Custom,
+    DocumentVideo,
+    StandaloneBarcode
+}
 
 data class MainState(
     val error: String? = null,
@@ -110,7 +120,7 @@ class MainViewModel : ViewModel() {
     var bitmapSaved: LastFrameResult? by mutableStateOf(null)
         private set
 
-    val scanningSessionSettings = BlinkIdSessionSettings(
+    private val customSessionSettings = BlinkIdSessionSettings(
         inputImageSource = InputImageSource.Video,
         scanningMode = ScanningMode.Automatic,
         scanningSettings = ScanningSettings(
@@ -143,21 +153,56 @@ class MainViewModel : ViewModel() {
         )
     )
 
-    // Alternatively, use one of the use-case factories to get session settings preconfigured
-    // for a common scanning scenario. The returned settings can be further customized with copy().
-    //
-    // Scanning a document with the camera:
-    // val scanningSessionSettings = BlinkIdSessionSettings.documentVideo(
-    //     DocumentVideoUseCase(
-    //         scenario = DocumentScenario.General,
-    //         quality = VideoQualityProfile.Balanced,
-    //         captureEnvironment = VideoCaptureEnvironment.HandHeld
-    //     )
-    // )
-    //
-    // Scanning only the barcode, searched for directly in the camera frame
-    // without document detection:
-    // val scanningSessionSettings = BlinkIdSessionSettings.standaloneBarcode()
+    // Session settings preset applied on the next scanning session.
+    // Custom uses the customSessionSettings defined above, while the other presets use the
+    // use-case factories, which return session settings preconfigured for a common scenario.
+    var sessionPreset by mutableStateOf(SessionPreset.Custom)
+        private set
+
+    var documentScenario by mutableStateOf(DocumentScenario.General)
+        private set
+
+    var videoQualityProfile by mutableStateOf(VideoQualityProfile.Balanced)
+        private set
+
+    var videoCaptureEnvironment by mutableStateOf(VideoCaptureEnvironment.HandHeld)
+        private set
+
+    fun updateSessionPreset(preset: SessionPreset) {
+        sessionPreset = preset
+    }
+
+    fun updateDocumentScenario(scenario: DocumentScenario) {
+        documentScenario = scenario
+    }
+
+    fun updateVideoQualityProfile(profile: VideoQualityProfile) {
+        videoQualityProfile = profile
+    }
+
+    fun updateVideoCaptureEnvironment(environment: VideoCaptureEnvironment) {
+        videoCaptureEnvironment = environment
+    }
+
+    val scanningSessionSettings: BlinkIdSessionSettings
+        get() = when (sessionPreset) {
+            SessionPreset.Custom -> customSessionSettings
+            // Scanning a document with the camera. The returned settings can be further
+            // customized with copy() before they are passed to the scanning session.
+            SessionPreset.DocumentVideo -> BlinkIdSessionSettings.documentVideo(
+                DocumentVideoUseCase(
+                    // Which modules are used and which of them are mandatory (e.g. MRZ only).
+                    scenario = documentScenario,
+                    // Balance between capture speed and result accuracy.
+                    quality = videoQualityProfile,
+                    // Hand-held mobile capture or a stationary device (e.g. a kiosk).
+                    captureEnvironment = videoCaptureEnvironment
+                )
+            )
+            // Scanning only the barcode, searched for directly in the camera frame
+            // without document detection.
+            SessionPreset.StandaloneBarcode -> BlinkIdSessionSettings.standaloneBarcode()
+        }
 
     val frameProcessResultCallback: ((FrameProcessResultHandle) -> Unit) =
         { handle: FrameProcessResultHandle ->

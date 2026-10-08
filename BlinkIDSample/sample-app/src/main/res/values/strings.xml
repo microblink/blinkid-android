@@ -15,6 +15,14 @@
     <string name="settings_ota_service_url" translatable="false">OTA service URL</string>
     <string name="settings_ota_service_url_desc" translatable="false">Base URL used to check for and download OTA resources</string>
     <string name="settings_scanning" translatable="false">Scanning</string>
+    <string name="settings_session_preset" translatable="false">Session settings preset</string>
+    <string name="settings_session_preset_desc" translatable="false">Use the custom session settings from the sample, or settings preconfigured by a use-case factory</string>
+    <string name="settings_document_scenario" translatable="false">Document scenario</string>
+    <string name="settings_document_scenario_desc" translatable="false">Which parts of the document are extracted and which of them are mandatory</string>
+    <string name="settings_video_quality" translatable="false">Quality profile</string>
+    <string name="settings_video_quality_desc" translatable="false">Balance between capture speed and result accuracy</string>
+    <string name="settings_capture_environment" translatable="false">Capture environment</string>
+    <string name="settings_capture_environment_desc" translatable="false">Hand-held mobile capture or a stationary setup where the document may reach the frame edge</string>
     <string name="settings_passport_only" translatable="false">Passport only</string>
     <string name="settings_passport_only_desc" translatable="false">Allow only passports and guide the user to the data page with passport specific instructions</string>
     <string name="settings_done" translatable="false">Done</string>

@@ -387,7 +387,7 @@ val photoSettings = BlinkIdSessionSettings.documentPhoto(
 val barcodeSettings = BlinkIdSessionSettings.standaloneBarcode()
 ```
 
-The returned settings can be further customized with `copy()` before they are passed to the scanning session.
+The returned settings can be further customized with `copy()` before they are passed to the scanning session. You can try out the presets in the settings screen of the sample app (`sample-app`).
 
 ## <a name="advanced-customizations"></a> Advanced customizations
 
